@@ -1,0 +1,151 @@
+/* -------------------------------
+    Forms
+--------------------------------- */
+.ontario-form h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+.ontario-label {
+  color: #666;
+  font: 1rem "Open Sans", Arial, Helvetica, sans-serif !important;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.ontario-form input[type="checkbox"] + label {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .ontario-form-group:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+.ontario-dropdown {
+  background-color: #fff;
+  background-image: url(../images/ontario-material-dropdown-arrow-48px.svg);
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  padding-right: calc(1rem * 2.25);
+}
+
+.ontario-fieldset__legend {
+  margin-bottom: 2.5rem;
+}
+
+.ontario-fieldset__legend--title {
+  font-size: 2.0625rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.37;
+}
+
+.ontario-checkboxes__label--large,
+.ontario-radios__label--large {
+  font-weight: 600 !important; /* Have to apply the important because of DS limitations */
+  font-size: 1.125rem !important; /* Have to apply the important because of DS limitations */
+  line-height: 28px;
+}
+
+.ontario-checkboxes__item,
+.ontario-radios__item {
+  margin-bottom: 1.5rem;
+}
+
+.ontario-form__button-wrapper {
+  display: block;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.ontario-form--link,
+.ontario-form--link:visited {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-decoration: none;
+}
+
+.ontario-form--link:hover,
+.ontario-form--link:active,
+.ontario-form--link:focus {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.ontario-input--error {
+  border: 4px solid #cd0000;
+}
+
+.ontario-form__message-error {
+  background-color: #ffecee;
+  border-left: 4px solid #cd0000;
+  color: #cd0000;
+  padding: 1rem;
+  position: relative;
+  top: -1.5rem;
+}
+
+.ontario-form__message-success {
+  /* To appear underneath the main header*/
+  background: rgba(17, 136, 71, 0.12);
+  margin: 0;
+  padding: 0.9375rem 2rem 0.9375rem 0.9375rem;
+  position: relative;
+  top: -2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .ontario-form__message-success {
+    top: -1rem;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .ontario-form__message-success--icon {
+    padding: 0;
+  }
+}
+
+.ontario-form__title {
+  font: 1.5rem "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.0313rem;
+  line-height: 1.5;
+}
+
+.ontario-form__message-success--title{
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.ontario-form__heading {
+  font-size: 1.4375rem;
+  line-height: 1;
+}
+
+/* Search */
+.ontario-form-search__input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: none;
+}
+
+.ontario-form-search__button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.ontario-accordion__search--button-wrapper {
+  background-color: white;
+}
+
+/* Search Filters */
+.ontario-form-filters__label:before {
+  background-color: white;
+  left: 0.2rem;
+}
+
