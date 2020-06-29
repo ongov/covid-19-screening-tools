@@ -12,16 +12,16 @@ function reducer(state, action) {
       const { id, value } = action
       const updatedState = { ...state }
 
-      if (updatedState.q2 && updatedState.q2.hasOwnProperty(id)) {
-        delete updatedState.q2[id]
+      if (updatedState.q5 && updatedState.q5.hasOwnProperty(id)) {
+        delete updatedState.q5[id]
       } else {
-        if (!updatedState.q2) updatedState.q2 = {}
+        if (!updatedState.q5) updatedState.q5 = {}
         // This is the scenario "none of the above" was selected previous to this click
-        if (id === noSymptomsId || updatedState.q2.hasOwnProperty(noSymptomsId)) {
-          updatedState.q2 = {}
+        if (id === noSymptomsId || updatedState.q5.hasOwnProperty(noSymptomsId)) {
+          updatedState.q5 = {}
         }
 
-        updatedState.q2[id] = value
+        updatedState.q5[id] = value
       }
 
       updatedState.symptomScore = calculateTotalScore(updatedState)
@@ -30,46 +30,30 @@ function reducer(state, action) {
     }
     case "SYMPTOMS_CONTINUE_CLICKED": {
       let updatedState = { ...state }
-      if (!state.q2 || !Object.keys(state.q2).length) {
-        updatedState = { ...state, q2: {}, symptomScore: 0 }
-        updatedState.q2[noSymptomsId] = "0"
+      if (!state.q5 || !Object.keys(state.q5).length) {
+        updatedState = { ...state, q5: {}, symptomScore: 0 }
+        updatedState.q5[noSymptomsId] = "0"
       }
 
       return updatedState
     }
-    case "RETURN_DATE_CONTINUE_CLICKED": {
-      return { ...state, q15: action.returnDate }
-    }
-    case "POSTALCODE-X1X":
-    case "ONSET_RADIO_SELECTED":
     case "YES_NO_RESPONSE": {
       const updatedState = { ...state }
       updatedState[action.question] = action.response
       return updatedState
     }
-    case "SAT_START": {
+    case "CS_START": {
       return { in_progress: true }
     }
-    case "SAT_BACK_BUTTON_PRESSED": {
+    case "CS_BACK_BUTTON_PRESSED": {
       const newState = { ...state, in_progress: true }
 
       // We do this to hide the success bar accross the top if user goes back from results
       if (newState.contact_form_submitted_ok) delete newState.contact_form_submitted_ok
       return newState
     }
-    case "SAT_DONE": {
+    case "CS_DONE": {
       return { ...state, in_progress: false }
-    }
-    case "CONTACT_FORM_SUBMITTED_OK": {
-      return { ...state, contact_form_submitted_ok: true }
-    }
-    case "CONTACT_FORM_SUBMITTED_WITH_ERRORS": {
-      return { ...state, contact_form_submitted_ok: false }
-    }
-    case "CONTACT_FORM_RESUBMITTED": {
-      const newState = { ...state }
-      delete newState.contact_form_submitted_ok
-      return newState
     }
     default:
       throw new Error(`Bad Action Type: ${action.type}`)
@@ -77,9 +61,9 @@ function reducer(state, action) {
 }
 
 function calculateTotalScore(state) {
-  if (!state.q2) return 0
+  if (!state.q5) return 0
 
-  return Object.values(state.q2)
+  return Object.values(state.q5)
     .map(val => parseFloat(val))
     .reduce((acc, cur) => acc + cur, 0)
 }

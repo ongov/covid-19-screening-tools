@@ -14,14 +14,6 @@ const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) =>
   const state = useContext(GlobalStateContext)
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      (window.location.pathname.startsWith("/assessment-centre-locations") ||
-        window.location.pathname.startsWith("/emplacements-centres-devaluation"))
-    ) {
-      return
-    }
-
     if (process.env.GATSBY_IS_PROD_ENV && !state.in_progress) {
       navigate(general[lang].basePath, {
         replace: true,

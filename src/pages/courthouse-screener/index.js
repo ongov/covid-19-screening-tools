@@ -10,12 +10,14 @@ import CalloutNoBg from "../../components/callout-no-bg"
 import { GlobalDispatchContext } from "../../context/global-context-provider"
 import courthouses from "../../data/courthouses.json"
 
+const lang = "en"
+
 const IndexPage = () => {
   const dispatch = useContext(GlobalDispatchContext)
 
   const handleClick = () => {
-    dispatch({ type: "SAT_START" })
-    navigate("/self-assessment/severe-symptoms")
+    dispatch({ type: "CS_START" })
+    navigate("/courthouse-screener/travel")
   }
 
   function getCourthouseName(courthouse) {
@@ -25,8 +27,8 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout lang="en">
-      <SEO lang="en" />
+    <Layout lang={lang}>
+      <SEO lang={lang} />
       <nav role="navigation">
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">

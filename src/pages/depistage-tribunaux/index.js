@@ -1,85 +1,97 @@
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
+import styled from "styled-components"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Button from "../../components/button"
-import CalloutNoTitle from "../../components/callout-no-title"
 import CalloutNoBg from "../../components/callout-no-bg"
 import { GlobalDispatchContext } from "../../context/global-context-provider"
-import CalloutTested from "../../components/callout-have-you-been-tested"
+import courthouses from "../../data/courthouses.json"
+
+const lang = "fr"
 
 const IndexPage = () => {
   const dispatch = useContext(GlobalDispatchContext)
 
   const handleClick = () => {
-    dispatch({ type: "SAT_START" })
-    navigate("/autoevaluation/symptômes-graves")
+    dispatch({ type: "CS_START" })
+    navigate("/self-assessment/severe-symptoms")
+  }
+
+  function getCourthouseName(courthouse) {
+    return courthouse.court_name.toLowerCase().includes(courthouse.municipality.toLowerCase())
+      ? courthouse.court_name
+      : `${courthouse.municipality} - ${courthouse.court_name}`
   }
 
   return (
-    <Layout lang="fr">
-      <SEO lang="fr" />
+    <Layout lang={lang}>
+      <SEO lang={lang} />
       <nav role="navigation">
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">
             <ul className="ontario-breadcrumbs">
               <li>
-                <a href="https://www.ontario.ca/fr/page/gouvernement-de-lontario">Accueil</a>
+                <a href="https://www.ontario.ca/page/government-ontario">Home</a>
               </li>
               <li>
-                <a href="https://www.ontario.ca/fr/page/les-soins-de-sante-en-ontario">Les soins de santé en Ontario</a>
+                <a href="https://www.ontario.ca/page/health-care-ontario">Health and wellness</a>
               </li>
               <li>
-                <a href="https://covid-19.ontario.ca/fr">COVID-19</a>
+                <a href="https://covid-19.ontario.ca/">COVID-19</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <SkipNavContent>
-        <h1>Auto-évaluation pour la COVID-19</h1>
-        <CalloutNoBg
+        <h1>COVID-19 courthouse screening</h1>
+        {/* <CalloutNoBg
           message={
             <>
               <p>
-                <strong>Version 3.7</strong>
-                <br />
-                <strong>Dernière version : 23 juin 2020</strong>
-                <br />
-                Ajout de la fonction « enregistrer les résultats de l’auto-évaluation, clarification des symptômes et
-                amélioration du contenu en fonction des commentaires.
+                <strong>
+                  Version 1.0
+                  <br />
+                  Last updated: July 6, 2020
+                </strong>
               </p>
             </>
           }
-        />
-        <p className="ontario-lead-statement">
-          Faites cette auto-évaluation si vous craignez avoir été exposé à la COVID-19 (nouveau coronavirus) ou si vous
-          présentez des symptômes.
-        </p>
-
-        <p className="ontario-lead-statement">Vous obtiendrez une recommandation sur la prochaine étape à suivre.</p>
-
-        <p className="ontario-lead-statement">Vous pouvez également faire l’évaluation au nom de quelqu’un d’autre.</p>
-        <CalloutNoTitle
-          messagemain="S’il s’agit d’une urgence médicale, composez le 911."
-          message="Veuillez les informer de vos symptômes et indiquez si vous avez voyagé récemment."
-        />
+        /> */}
+        <p className="ontario-lead-statement">Answer the following questions before you enter an Ontario courthouse.</p>
+        <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
+        <p>If you are told you cannot enter, you will get information about what to do next.</p>
         <p className="ontario-margin-top-32-!">
-          L’auto-évaluation a uniquement pour but de vous aider et ne peut poser un diagnostic. Si vous avez des
-          questions d’ordre médical, consultez un fournisseur de soins de santé ou le{" "}
-          <a href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx">
-            bureau de santé publique de votre région
+          This screening is only meant for entering Ontario courthouses and cannot diagnose you. If you have medical
+          questions, consult a health care provider or your{" "}
+          <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx">
+            local public health unit
           </a>
           .
         </p>
-        <div className="ontario-text-center ontario-margin-top-40-!">
-          <Button text="Commencer l’auto-évaluation" clickHandler={handleClick} />
+        <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
+          <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
+            <label className="ontario-label" htmlFor="courthouseSelect">
+              Select the courthouse you wish to enter.
+            </label>
+            <select className="ontario-input ontario-dropdown" id="courthouseSelect">
+              <option disabled selected value></option>
+              {courthouses &&
+                courthouses.map((ch, i) => (
+                  <option key={`${ch.court_name}-${i}`} value={ch.court_name}>
+                    {getCourthouseName(ch)}
+                  </option>
+                ))}
+            </select>
+          </div>
+        </div>
+        <div className="ontario-text-center ontario-landing__button">
+          <Button text="Start courthouse assessment" clickHandler={handleClick} />
         </div>
       </SkipNavContent>
-
-      <CalloutTested lang="fr" />
     </Layout>
   )
 }

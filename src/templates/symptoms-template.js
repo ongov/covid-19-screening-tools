@@ -17,7 +17,7 @@ const SymptomsTemplate = ({ lang }) => {
   const handleContinueClick = () => {
     addSymptomsToGTMDataLayer(state)
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
-    navigate(`${general[lang].basePath}${questions[logic.q2.cont(state)][lang]}`)
+    navigate(`${general[lang].basePath}${questions[logic.q5.cont(state)][lang]}`)
   }
 
   return (
@@ -41,7 +41,7 @@ const SymptomsTemplate = ({ lang }) => {
                     text={symptoms[id][lang].text}
                     labelStyle="--large"
                     supplementaryText={symptoms[id][lang].sup_text || ""}
-                    checkboxState={state.q2 && state.q2.hasOwnProperty(id)}
+                    checkboxState={state.q5 && state.q5.hasOwnProperty(id)}
                     checkboxOnChange={() => dispatch({ type: "TOGGLE_SYMPTOM", id, value: symptoms[id].value })}
                   />
                 ))}

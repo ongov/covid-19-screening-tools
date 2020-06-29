@@ -1,23 +1,12 @@
-import social from "./social"
 import footer from "./footer"
 import questions from "./questions"
-import returnTemplate from "./return-template"
-import onsetTemplate from "./onset-template"
-import calloutSignup from "./callout-signup"
-import feedback from "./feedback"
-import contactForm from "./contact-form"
-import submissionSuccess from "./callout-submission-success"
-import ages from "./ages"
-import labResults from "./labresults"
-import resultsDate from "./time-stamp"
-import buttonFindCentre from "./button-find-centre"
 import outcomeContactCard from "./outcome-contact-card"
 
 const general = {
   en: {
     lang: "english",
     lang_abbr: "EN",
-    basePath: "/self-assessment/",
+    basePath: "/courthouse-screener/",
     title: "COVID-19 self-assessment",
     resultsTitle: "COVID-19 self-assessment result",
     backButtonText: "Back to previous page",
@@ -33,7 +22,7 @@ const general = {
   fr: {
     lang: "français",
     lang_abbr: "FR",
-    basePath: "/autoevaluation/",
+    basePath: "/depistage-tribunaux/",
     title: "COVID-19 auto-évaluation",
     resultsTitle: "Résultat de l’auto-évaluation pour la COVID-19",
     backButtonText: "Retour à la page précédente",
@@ -47,20 +36,4 @@ const general = {
   },
 }
 
-export {
-  general,
-  social,
-  footer,
-  questions,
-  returnTemplate,
-  onsetTemplate,
-  calloutSignup,
-  feedback,
-  contactForm,
-  submissionSuccess,
-  ages,
-  labResults,
-  resultsDate,
-  buttonFindCentre,
-  outcomeContactCard,
-}
+export { general, footer, questions, outcomeContactCard }
