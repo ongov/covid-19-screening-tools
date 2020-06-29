@@ -1,0 +1,336 @@
+[
+  {
+    "municipality": "Barrie",
+    "court_name": "Barrie Courthouse",
+    "address": "75 Mulcaster",
+    "phone": "705  739-6111",
+    "duty_counsel_phone": "705 726-4960"
+  },
+  {
+    "municipality": "Belleville (Quinte)",
+    "court_name": "Quinte Courthouse",
+    "address": "15 Bridge St W",
+    "phone": "613 962-9106 ext.2024",
+    "duty_counsel_phone": "613 962-9106 x 2750"
+  },
+  {
+    "municipality": "Brampton",
+    "court_name": "A. Grenville and William Davis",
+    "address": "7755 Hurontario St",
+    "phone": "905-456-4802",
+    "duty_counsel_phone": "905 456-4700  x5672"
+  },
+  {
+    "municipality": "Brantford",
+    "court_name": "Brantford Superior Courthouse",
+    "address": "70 Wellington St",
+    "phone": "519 752-7828",
+    "duty_counsel_phone": "519 756-1242 - Not on site"
+  },
+  {
+    "municipality": "Brantford",
+    "court_name": "Brantford Ontario Courthouse",
+    "address": "44 Queen Street",
+    "phone": "519-758-3460",
+    "duty_counsel_phone": "519 756-1242 - Not on site"
+  },
+  {
+    "municipality": "Chatham",
+    "court_name": "Chatham Courthouse",
+    "address": "425 Grand Ave",
+    "phone": "519 355-2200 ext. 2211",
+    "duty_counsel_phone": "519 354-6231"
+  },
+  {
+    "municipality": "Cornwall",
+    "court_name": "Cornwall Courthouse",
+    "address": "29 Second St W",
+    "phone": "613 933-7500",
+    "duty_counsel_phone": "613 932-6252  613 933-9300"
+  },
+  {
+    "municipality": "Guelph",
+    "court_name": "Guelph Courthouse (36 Wyndham St)",
+    "address": "36 Wyndham St S\r\n",
+    "phone": "519 826-4456",
+    "duty_counsel_phone": "519 826-4431 x 214"
+  },
+  {
+    "municipality": "Guelph",
+    "court_name": "Guelph Courthouse (74 Woolwich St)",
+    "address": "74 Woolwich St",
+    "phone": "519 826-4456",
+    "duty_counsel_phone": "519 824-4100"
+  },
+  {
+    "municipality": "Hamilton",
+    "court_name": "John Sopinka",
+    "address": "45 Main St E",
+    "phone": "905 645-5252 x. 3799",
+    "duty_counsel_phone": "905 522-5963"
+  },
+  {
+    "municipality": "Hamilton",
+    "court_name": "Hamilton Courthouse",
+    "address": "55 Main Street W",
+    "phone": "905 645-6250",
+    "duty_counsel_phone": "905 522-5963"
+  },
+  {
+    "municipality": "Kingston",
+    "court_name": "Kingston(Frontenac County) Court",
+    "address": "5 Court St\r\n\r\n",
+    "phone": "613 548-6811",
+    "duty_counsel_phone": "no duty counsel at SCJ"
+  },
+  {
+    "municipality": "Kingston",
+    "court_name": "Kingston Courthouse",
+    "address": "279 Wellington St",
+    "phone": "613 548-6200",
+    "duty_counsel_phone": "613 531-0504"
+  },
+  {
+    "municipality": "Kitchener (Waterloo Region)",
+    "court_name": "Waterloo Region Courthouse",
+    "address": "85 Frederick St",
+    "phone": "519-741-3293",
+    "duty_counsel_phone": "519-578-4561"
+  },
+  {
+    "municipality": "Lindsay",
+    "court_name": "Lindsay Courthouse",
+    "address": "440 Kent St W",
+    "phone": "705 324-1400",
+    "duty_counsel_phone": "416 436-4680"
+  },
+  {
+    "municipality": "London",
+    "court_name": "London Courthouse",
+    "address": "80 Dundas St",
+    "phone": "519-660-3050",
+    "duty_counsel_phone": "519-660-5095"
+  },
+  {
+    "municipality": "Milton",
+    "court_name": "Milton Courthouse",
+    "address": "491 Steeles Ave W",
+    "phone": "905-878-7285 x3466",
+    "duty_counsel_phone": "905-864-8616"
+  },
+  {
+    "municipality": "Newmarket",
+    "court_name": "Newmarket Courthouse",
+    "address": "50 Eagle St W",
+    "phone": "905-853-4870",
+    "duty_counsel_phone": "905-836-8580"
+  },
+  {
+    "municipality": "North Bay",
+    "court_name": "North Bay Courthouse",
+    "address": "360 Plouffe St",
+    "phone": "705-498-1810",
+    "duty_counsel_phone": "705-938-8671"
+  },
+  {
+    "municipality": "Orangeville",
+    "court_name": "County of Dufferin Courthouse",
+    "address": "10 Louisa St",
+    "phone": "519-941-5802 x320",
+    "duty_counsel_phone": "519-938-8671"
+  },
+  {
+    "municipality": "Oshawa (Durham)",
+    "court_name": "Lieutenant-Colonel Sharpe, DSO, MP. Courthouse ",
+    "address": "150 Bond St",
+    "phone": "905-743-2640",
+    "duty_counsel_phone": "905-732-3801"
+  },
+  {
+    "municipality": "Ottawa",
+    "court_name": "Ottawa Courthouse",
+    "address": "161 Elgin St",
+    "phone": "613-239-1260",
+    "duty_counsel_phone": "613-238-7931"
+  },
+  {
+    "municipality": "Owen Sound",
+    "court_name": "Owen Sound Courthouse",
+    "address": "611 9th Ave E",
+    "phone": "519-370-2444",
+    "duty_counsel_phone": "519-372-1124"
+  },
+  {
+    "municipality": "Pembroke",
+    "court_name": "Pembroke Renfrew County Courthouse",
+    "address": "297 Pembroke St E",
+    "phone": "613-639-9824",
+    "duty_counsel_phone": "613-735-3400"
+  },
+  {
+    "municipality": "Sarnia",
+    "court_name": "Sarnia Lampton County Courthouse",
+    "address": "700 Christina St N",
+    "phone": "519-333-2950 ext 2302",
+    "duty_counsel_phone": "519-337-1210"
+  },
+  {
+    "municipality": "SS Marie",
+    "court_name": "Sault Ste. Marie Courthouse",
+    "address": "426 Queen St E",
+    "phone": "705-945-8000 ext 406",
+    "duty_counsel_phone": "705-942-8448"
+  },
+  {
+    "municipality": "St Catharines",
+    "court_name": "Robert S. K. Welch  Courthouse",
+    "address": "59 Church St",
+    "phone": "905-988-6200 ext. 434",
+    "duty_counsel_phone": "905-685-8695"
+  },
+  {
+    "municipality": "St Thomas (Elgin County)",
+    "court_name": "Elgin County Courthouse",
+    "address": "4 Wellington St",
+    "phone": "519-631-4810",
+    "duty_counsel_phone": "519-631-4810"
+  },
+  {
+    "municipality": "Sudbury",
+    "court_name": "Sudbury Courthouse",
+    "address": "155 Elm St\r\n",
+    "phone": "705-564-7769",
+    "duty_counsel_phone": "705-674-2220"
+  },
+  {
+    "municipality": "Thunder Bay",
+    "court_name": "Thunder Bay Courthouse",
+    "address": "125 Brodie St N",
+    "phone": "807-626-7000",
+    "duty_counsel_phone": "807-577-1005"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "1000 Finch Ave. Courthouse",
+    "address": "1000 Finch Ave W",
+    "phone": "416 314-7276",
+    "duty_counsel_phone": "416 663-5560"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "Osgood Hall",
+    "address": "130 Queen St W",
+    "phone": "416 327-6247",
+    "duty_counsel_phone": "no duty counsel"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "1911 Eglinton Ave. Courthouse",
+    "address": "1911 Eglinton Ave E",
+    "phone": "416 325-0382",
+    "duty_counsel_phone": "416 757-8257"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "2201 Finch Courthouse",
+    "address": "2201 Finch Ave W",
+    "phone": "416 314-5758",
+    "duty_counsel_phone": "416 597-5890"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "311 Jarvis Courthouse",
+    "address": "311 Jarvis St",
+    "phone": "416 327-6991",
+    "duty_counsel_phone": "416 598-0200 x4361"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "330 University Ave. Courthouse",
+    "address": "330 University Ave",
+    "phone": "416 326-4405",
+    "duty_counsel_phone": "no duty counsel"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "361 University Ave. Courthouse",
+    "address": "361 University Ave",
+    "phone": "416 327-5558"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "393 Universtiy Ave. Courthouse",
+    "address": "393 University Ave",
+    "phone": "416 326-4405",
+    "duty_counsel_phone": "no duty  counsel"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "College Park Courts",
+    "address": "444 Yonge St",
+    "phone": "416 325-8964",
+    "duty_counsel_phone": "416 598-1260"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "45/47 Sheppard Ave. Courts",
+    "address": "45/47 Sheppard Ave E",
+    "phone": "416 326-3550"
+  },
+  {
+    "municipality": "Toronto",
+    "court_name": "Old City Hall",
+    "address": "60 Queen St W",
+    "phone": "416 327-5617",
+    "duty_counsel_phone": "416 594-9300"
+  },
+  {
+    "municipality": "Welland",
+    "court_name": "Welland Courthours",
+    "address": "102 East Main St",
+    "phone": "905 735-0010 ext. 210",
+    "duty_counsel_phone": "905 734- 8986"
+  },
+  {
+    "municipality": "Windsor",
+    "court_name": "Windsor Courthouse",
+    "address": "200 Chatham St E\r\n",
+    "phone": "519 973-6620",
+    "duty_counsel_phone": "519 256-4609"
+  },
+  {
+    "municipality": "Windsor",
+    "court_name": "Windsor Courthouse",
+    "address": "245 Windsor St",
+    "phone": "519 973-6620",
+    "duty_counsel_phone": "519 256-4609"
+  },
+  {
+    "municipality": "Kingston",
+    "court_name": "Kingston Courthouse",
+    "address": "469 Montreal St",
+    "phone": "613 548-6789",
+    "duty_counsel_phone": "613 531-7888"
+  },
+  {
+    "municipality": "Peterborough",
+    "court_name": "Peterborough Courthouse",
+    "address": "70 - 110 Simcoe St",
+    "phone": "705-876-3816",
+    "duty_counsel_phone": "705-743-5430"
+  },
+  {
+    "municipality": "Peterborough",
+    "court_name": "Peterborough Courthouse",
+    "address": "470 Water St",
+    "phone": "705-876-3815",
+    "duty_counsel_phone": "705-743-5430"
+  },
+  {
+    "municipality": "Sudbury",
+    "court_name": "Sudbury Courthouse",
+    "address": "159 Cedar St",
+    "phone": "705-564-7769",
+    "duty_counsel_phone": "705-674-2220"
+  }
+]

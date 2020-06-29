@@ -11,5 +11,3 @@ The tool takes the public through a series of questions to determine whether the
 To run during development, simply use `yarn develop` command.
 
 To build production version, use `yarn build`. Production build can be served locally using `yarn serve`.
-
-The form used in this version of the tool submits the data to an API URL set via the `GATSBY_OAG_API_URL` environment variable. In development, this is set to http://localhost:3000/api/sat-data.

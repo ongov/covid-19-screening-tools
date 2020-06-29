@@ -68,7 +68,6 @@ abbr[title] {
   .ontario-landing__button .ontario-button--primary {
     display: inline-block;
     margin-bottom: 2rem;
-    width: 80%;
   }
 }
 
@@ -378,7 +377,7 @@ abbr[title] {
   }
 }
 
-  /* List style */
+/* List style */
 .ontario-list--inline {
   margin: 0;
   padding: 0;

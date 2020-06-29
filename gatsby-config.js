@@ -6,7 +6,7 @@ module.exports = {
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
       og_url: `https://covid-19.ontario.ca/self-assessment`,
-      og_title: `COVID-19 Self Assessment for Ontarians`,
+      og_title: `COVID-19 Courthouse Screening Tool for Ontarians`,
       og_image: `https://covid-19.ontario.ca/covid-19-sat-assets/social_image_en.png`,
       og_locale: `en_CA`,
     },
@@ -24,6 +24,7 @@ module.exports = {
   assetPrefix: "covid-19-cs-assets",
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {
@@ -41,6 +42,7 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+        ignore: [`**/*\.inline\.svg`],
       },
     },
     {
@@ -55,6 +57,14 @@ module.exports = {
       options: {
         name: `fonts`,
         path: `${__dirname}/src/fonts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
       },
     },
     {

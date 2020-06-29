@@ -2017,7 +2017,7 @@ strong {
   font-weight: 600;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: calc(14 / 9);
-  margin: 0 calc(1rem + 0.75rem) 1.5rem 0;
+  margin: 0 0 1.75rem;
   min-width: 10rem;
   padding: calc((1rem + 0.25rem) / 2) 1.5rem;
   text-align: center;
