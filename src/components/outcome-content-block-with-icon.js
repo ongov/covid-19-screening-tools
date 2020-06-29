@@ -28,7 +28,7 @@ export default function({ lang, icon, heading, children }) {
     <Container>
       <Icon>{icon}</Icon>
       <Heading>{heading}</Heading>
-      <Content>{children}</Content>
+      {children && <Content>{children}</Content>}
     </Container>
   )
 }

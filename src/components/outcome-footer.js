@@ -13,7 +13,7 @@ const Icon = styled.div`
   display: inline-block;
   position: absolute;
   left: 1.5rem;
-  bottom: 2.5rem;
+  bottom: 2rem;
   background-color: #fff;
 `
 
