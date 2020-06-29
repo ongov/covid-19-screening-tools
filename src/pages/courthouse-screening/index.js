@@ -58,19 +58,13 @@ const IndexPage = () => {
       </nav>
       <SkipNavContent>
         <h1>COVID-19 courthouse screening</h1>
-        {/* <CalloutNoBg
+        <CalloutNoBg
           message={
-            <>
-              <p>
-                <strong>
-                  Version 1.0
-                  <br />
-                  Last updated: July 6, 2020
-                </strong>
-              </p>
-            </>
+            <p>
+              <strong>Last updated: July 6, 2020</strong>
+            </p>
           }
-        /> */}
+        />
         <p className="ontario-lead-statement">Answer the following questions before you enter an Ontario courthouse.</p>
         <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
         <p>If you are told you cannot enter, you will get information about what to do next.</p>

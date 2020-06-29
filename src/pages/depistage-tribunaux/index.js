@@ -12,12 +12,22 @@ import courthouses from "../../data/courthouses.json"
 
 const lang = "fr"
 
+const CenteredDiv = styled.div`
+  display: block;
+  margin: 0 auto;
+
+  button {
+    display: block;
+    margin: 0 auto 1.75rem;
+  }
+`
+
 const IndexPage = () => {
   const dispatch = useContext(GlobalDispatchContext)
 
   const handleClick = () => {
     dispatch({ type: "CS_START" })
-    navigate("/self-assessment/severe-symptoms")
+    navigate("/courthouse-screening/travel")
   }
 
   function getCourthouseName(courthouse) {
@@ -48,19 +58,13 @@ const IndexPage = () => {
       </nav>
       <SkipNavContent>
         <h1>COVID-19 courthouse screening</h1>
-        {/* <CalloutNoBg
+        <CalloutNoBg
           message={
-            <>
-              <p>
-                <strong>
-                  Version 1.0
-                  <br />
-                  Last updated: July 6, 2020
-                </strong>
-              </p>
-            </>
+            <p>
+              <strong>Last updated: July 6, 2020</strong>
+            </p>
           }
-        /> */}
+        />
         <p className="ontario-lead-statement">Answer the following questions before you enter an Ontario courthouse.</p>
         <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
         <p>If you are told you cannot enter, you will get information about what to do next.</p>
@@ -88,7 +92,9 @@ const IndexPage = () => {
             </select>
           </div>
         </div>
-        <Button text="Start courthouse assessment" clickHandler={handleClick} />
+        <CenteredDiv>
+          <Button text="Start courthouse assessment" clickHandler={handleClick} />
+        </CenteredDiv>
       </SkipNavContent>
     </Layout>
   )
