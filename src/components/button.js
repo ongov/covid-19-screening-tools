@@ -36,8 +36,17 @@ const StyledButton = styled.button`
     transition: background-color 0s, box-shadow 0.1s ease-in-out;
   }
 
-  &:last-child {
+  &:nth-child(2) {
     margin-left: 2.5rem;
+  }
+
+  @media screen and (max-width: 40em) {
+    display: block;
+    width: 100%;
+
+    &:nth-child(2) {
+      margin-left: auto;
+    }
   }
 `
 

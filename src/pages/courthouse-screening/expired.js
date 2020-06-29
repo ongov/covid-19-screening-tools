@@ -23,10 +23,7 @@ const HeadingExpired = styled(Expired)`
 `
 
 const RetakeButton = styled(Button)`
-  display: block;
-  margin: 0 auto;
-
-  @media screen and (max-width: 39.9375em) {
+  @media screen and (max-width: 40em) {
     margin: 0 1.5rem;
     max-width: calc(100% - 3rem);
   }

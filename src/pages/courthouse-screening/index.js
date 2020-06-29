@@ -12,6 +12,16 @@ import courthouses from "../../data/courthouses.json"
 
 const lang = "en"
 
+const CenteredDiv = styled.div`
+  display: block;
+  margin: 0 auto;
+
+  button {
+    display: block;
+    margin: 0 auto 1.75rem;
+  }
+`
+
 const IndexPage = () => {
   const dispatch = useContext(GlobalDispatchContext)
 
@@ -88,9 +98,9 @@ const IndexPage = () => {
             </select>
           </div>
         </div>
-        <div className="ontario-text-center ontario-landing__button">
+        <CenteredDiv>
           <Button text="Start courthouse assessment" clickHandler={handleClick} />
-        </div>
+        </CenteredDiv>
       </SkipNavContent>
     </Layout>
   )

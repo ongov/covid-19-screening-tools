@@ -88,9 +88,7 @@ const IndexPage = () => {
             </select>
           </div>
         </div>
-        <div className="ontario-text-center ontario-landing__button">
-          <Button text="Start courthouse assessment" clickHandler={handleClick} />
-        </div>
+        <Button text="Start courthouse assessment" clickHandler={handleClick} />
       </SkipNavContent>
     </Layout>
   )
