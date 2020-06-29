@@ -11,6 +11,7 @@ import ages from "./ages"
 import labResults from "./labresults"
 import resultsDate from "./time-stamp"
 import buttonFindCentre from "./button-find-centre"
+import outcomeContactCard from "./outcome-contact-card"
 
 const general = {
   en: {
@@ -61,4 +62,5 @@ export {
   labResults,
   resultsDate,
   buttonFindCentre,
+  outcomeContactCard,
 }
