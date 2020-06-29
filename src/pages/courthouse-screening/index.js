@@ -17,7 +17,7 @@ const IndexPage = () => {
 
   const handleClick = () => {
     dispatch({ type: "CS_START" })
-    navigate("/courthouse-screener/travel")
+    navigate("/courthouse-screening/travel")
   }
 
   function getCourthouseName(courthouse) {

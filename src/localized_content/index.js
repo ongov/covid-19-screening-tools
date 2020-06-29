@@ -6,7 +6,7 @@ const general = {
   en: {
     lang: "english",
     lang_abbr: "EN",
-    basePath: "/courthouse-screener/",
+    basePath: "/courthouse-screening/",
     title: "COVID-19 self-assessment",
     resultsTitle: "COVID-19 self-assessment result",
     backButtonText: "Back to previous page",

@@ -1,5 +1,5 @@
 {
-  "name": "covid-19-courthouse-screener",
+  "name": "covid-19-courthouse-screening",
   "private": true,
   "description": "covid-19 courthouse screener",
   "version": "0.0.1",
@@ -42,7 +42,7 @@
   ],
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "develop": "GATSBY_OAG_API_URL=http://localhost:3000/api/sat-data gatsby develop",
+    "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
