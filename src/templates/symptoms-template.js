@@ -7,14 +7,14 @@ import Question from "../components/question"
 import ContinueButton from "../components/continue-button"
 import { GlobalStateContext, GlobalDispatchContext } from "../context/global-context-provider"
 import Checkbox from "../components/checkbox"
-import { general, questions } from "../localized_content"
-import { symptomsTitle, symptoms, logic } from "../shared"
+import { general, symptomsTitle, symptoms } from "../localized_content"
+import { logic, questions } from "../shared"
 
 const SymptomsTemplate = ({ lang }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
 
-  const handleContinueClick = () => {
+  function handleContinueClick() {
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
     navigate(`${general[lang].basePath}${questions[logic.q5.cont(state)][lang]}`)
   }

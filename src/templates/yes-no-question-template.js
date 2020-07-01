@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Question from "../components/question"
 import YesNoButtons from "../components/yes-no-buttons"
-import { questions } from "../localized_content"
+import { questions } from "../shared"
 
 const QuestionTemplate = ({ lang, yesLink, noLink, children }) => {
   const state = useContext(GlobalStateContext)

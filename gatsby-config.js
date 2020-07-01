@@ -25,6 +25,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-build-date`,
     {
       resolve: `gatsby-plugin-react-helmet-canonical-urls`,
       options: {

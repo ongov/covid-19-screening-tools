@@ -1,5 +1,4 @@
-import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 import logic from "./logic"
-import months from "./date"
+import questions from "./questions"
 
-export { symptomsTitle, symptoms, noSymptomsId, logic, months }
+export { logic, questions }
