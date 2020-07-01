@@ -9,48 +9,41 @@ const noSymptomsId = "none_of_the_above"
 function reducer(state, action) {
   switch (action.type) {
     case "TOGGLE_SYMPTOM": {
-      const { id, value } = action
+      const { id } = action
       const updatedState = { ...state }
 
+      // Case where we are clicking an already checked checkbox
       if (updatedState.q5 && updatedState.q5.hasOwnProperty(id)) {
         delete updatedState.q5[id]
       } else {
         if (!updatedState.q5) updatedState.q5 = {}
-        // This is the scenario "none of the above" was selected previous to this click
+        // "none of the above" was clicked or it was checked previous to this click.
+        // We clear all other symptoms from the state as "none of the above" should
+        // alway be used by itself.
         if (id === noSymptomsId || updatedState.q5.hasOwnProperty(noSymptomsId)) {
           updatedState.q5 = {}
         }
 
-        updatedState.q5[id] = value
+        updatedState.q5[id] = true
       }
-
-      updatedState.symptomScore = calculateTotalScore(updatedState)
 
       return updatedState
     }
     case "SYMPTOMS_CONTINUE_CLICKED": {
       let updatedState = { ...state }
       if (!state.q5 || !Object.keys(state.q5).length) {
-        updatedState = { ...state, q5: {}, symptomScore: 0 }
-        updatedState.q5[noSymptomsId] = "0"
+        updatedState = { ...state, q5: {} }
+        updatedState.q5[noSymptomsId] = true
       }
-
       return updatedState
     }
-    case "YES_NO_RESPONSE": {
-      const updatedState = { ...state }
-      updatedState[action.question] = action.response
-      return updatedState
+    case "COURTHOUSE_SELECTED": {
+      const { courthouse } = action
+      return { ...state, courthouse }
     }
-    case "CS_START": {
-      return { in_progress: true }
-    }
+    case "CS_START":
     case "CS_BACK_BUTTON_PRESSED": {
-      const newState = { ...state, in_progress: true }
-
-      // We do this to hide the success bar accross the top if user goes back from results
-      if (newState.contact_form_submitted_ok) delete newState.contact_form_submitted_ok
-      return newState
+      return { ...state, in_progress: true }
     }
     case "CS_DONE": {
       return { ...state, in_progress: false }
@@ -59,30 +52,6 @@ function reducer(state, action) {
       throw new Error(`Bad Action Type: ${action.type}`)
   }
 }
-
-function calculateTotalScore(state) {
-  if (!state.q5) return 0
-
-  return Object.values(state.q5)
-    .map(val => parseFloat(val))
-    .reduce((acc, cur) => acc + cur, 0)
-}
-
-/*
-    q3 - healthcare workers
-    q4 - rural
-    q5 - at-risk
-    q6 - travel
-    q7 - exposure to covid-19
-    q8 - exposure to respiratory symptoms
-
-    r2 - symptomatic, self-isolate
-    r3 - practice physical distancing
-    r4 - at-risk, self-isolate
-    r5 - travel, self-isolate
-    r6 - possible exposure, self-isolate
-    r7 - call telehealth/doctor
-*/
 
 const GlobalContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)

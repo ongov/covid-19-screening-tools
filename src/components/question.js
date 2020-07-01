@@ -1,14 +1,26 @@
-import React from "react"
+import React, { useContext } from "react"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
+import styled from "styled-components"
+
 import "../stylesheets/forms.css"
 import "../stylesheets/question.css"
 
+import { GlobalStateContext } from "../context/global-context-provider"
 import { general } from "../localized_content"
 
+const Courthouse = styled.p`
+  font-weight: bold;
+  color: #666666;
+  margin-bottom: 0;
+`
+
 const Question = ({ lang, title, buttons, children }) => {
+  const state = useContext(GlobalStateContext)
+
   return (
     <div className="ontario-question-content__wrapper--outer">
+      {state && state.courthouse && <Courthouse>{state.courthouse.court_name}</Courthouse>}
       <h1>{title}</h1>
       <button
         className="ontario-button--tertiary ontario-form--link backBtn"

@@ -14,5 +14,8 @@ export default {
   q2: { yes: () => "r2", no: () => "q3" },
   q3: { yes: () => "r2", no: () => "q4" },
   q4: { yes: () => "r2", no: () => "q5" },
-  q5: { cont: state => (state.symptomScore ? "r2" : "r1") },
+  q5: {
+    cont: state =>
+      !state.q5 || !Object.keys(state.q5).length || state.q5.hasOwnProperty("none_of_the_above") ? "r1" : "r2",
+  },
 }

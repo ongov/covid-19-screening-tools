@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useState, useContext } from "react"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 import styled from "styled-components"
@@ -23,6 +23,7 @@ const CenteredDiv = styled.div`
 `
 
 const IndexPage = () => {
+  const [courthouse, setCourthouse] = useState(null)
   const dispatch = useContext(GlobalDispatchContext)
 
   const handleClick = () => {
@@ -81,7 +82,19 @@ const IndexPage = () => {
             <label className="ontario-label" htmlFor="courthouseSelect">
               Select the courthouse you wish to enter.
             </label>
-            <select className="ontario-input ontario-dropdown" id="courthouseSelect">
+            <select
+              className="ontario-input ontario-dropdown"
+              id="courthouseSelect"
+              onChange={e => {
+                console.log(e.target.value)
+                setCourthouse(e.target.value)
+                dispatch({
+                  type: "COURTHOUSE_SELECTED",
+                  courthouse: { ...courthouses.find(ch => ch.court_name === e.target.value) },
+                })
+              }}
+              value={courthouse}
+            >
               <option disabled selected value></option>
               {courthouses &&
                 courthouses.map((ch, i) => (
@@ -93,7 +106,7 @@ const IndexPage = () => {
           </div>
         </div>
         <CenteredDiv>
-          <Button text="Start courthouse assessment" clickHandler={handleClick} />
+          <Button text="Start courthouse assessment" clickHandler={handleClick} isDisabled={!courthouse} />
         </CenteredDiv>
       </SkipNavContent>
     </Layout>

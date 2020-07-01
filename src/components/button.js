@@ -36,6 +36,15 @@ const StyledButton = styled.button`
     transition: background-color 0s, box-shadow 0.1s ease-in-out;
   }
 
+  &:disabled,
+  &:hover:disabled,
+  &:active:disabled,
+  &:focus:disabled {
+    background-color: rgba(0, 102, 204, 0.3);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: default;
+  }
+
   &:nth-child(2) {
     margin-left: 2.5rem;
   }

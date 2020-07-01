@@ -1,5 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
+import { format } from "date-fns"
+import en from "date-fns/locale/en-CA"
 import styled from "styled-components"
+
+import { GlobalStateContext } from "../../context/global-context-provider"
 
 import OutcomeTemplate from "../../templates/outcome-template"
 import Header from "../../components/outcome-header"
@@ -22,29 +26,37 @@ const HeadingDeniedIcon = styled(CancelLarge)`
   background-color: ${Red};
 `
 
-const Denied = () => (
-  <OutcomeTemplate lang={lang}>
-    <Header
-      title={
-        <>
-          Windsor Courthouse
-          <br />
-          COVID-19 screening result
-        </>
-      }
-      heading={"Denied"}
-      icon={<HeadingDeniedIcon />}
-      color={Red}
-      titleColor={"#FFE0E2"}
-    />
-    <ContentBlock lang={lang} icon={<Warning />} heading={"You cannot enter Windsor Courthouse"}>
-      on July 6, 2020
-    </ContentBlock>
-    <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
-      <ContactCard lang={lang} dutyCounselNumber={"(416) 555 5555"} courthouseNumber={"(416) 777 7777"} />
-    </ContentBlock>
-    <Footer icon={<CancelSmall />} color={Red} />
-  </OutcomeTemplate>
-)
+const Denied = () => {
+  const { courthouse } = useContext(GlobalStateContext)
+
+  return (
+    <OutcomeTemplate lang={lang}>
+      <Header
+        title={
+          <>
+            {courthouse.court_name}
+            <br />
+            COVID-19 screening result
+          </>
+        }
+        heading={"Denied"}
+        icon={<HeadingDeniedIcon />}
+        color={Red}
+        titleColor={"#FFE0E2"}
+      />
+      <ContentBlock lang={lang} icon={<Warning />} heading={`You cannot enter ${courthouse.court_name}`}>
+        on {format(new Date(), "MMMM dd, yyyy", { locale: en })}
+      </ContentBlock>
+      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
+        <ContactCard
+          lang={lang}
+          dutyCounselNumber={courthouse.duty_counsel_phone}
+          courthouseNumber={courthouse.phone}
+        />
+      </ContentBlock>
+      <Footer icon={<CancelSmall />} color={Red} />
+    </OutcomeTemplate>
+  )
+}
 
 export default Denied

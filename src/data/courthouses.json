@@ -2,308 +2,418 @@
   {
     "municipality": "Barrie",
     "court_name": "Barrie Courthouse",
-    "address": "75 Mulcaster",
-    "phone": "705  739-6111",
-    "duty_counsel_phone": "705 726-4960"
+    "address": "75 Mulcaster, Barrie ON L4M 3P2",
+    "court_name_fr": "Palais de justice de Barrie",
+    "address_fr": "75, rue Mulcaster, Barrie ON L4M 3P2",
+    "phone": "705-739-6111",
+    "duty_counsel_phone": "705 726-4960",
+    "crowns_office": "705-739-6188"
   },
   {
     "municipality": "Belleville (Quinte)",
     "court_name": "Quinte Courthouse",
-    "address": "15 Bridge St W",
-    "phone": "613 962-9106 ext.2024",
-    "duty_counsel_phone": "613 962-9106 x 2750"
+    "address": "15 Bridge St W, Belleville ON K8P 0C7",
+    "court_name_fr": "Palais de justice de Belleville",
+    "address_fr": "15, rue Bridge Ouest, Belleville ON K8P 0C7",
+    "phone": "613-962-9106 ext.2024",
+    "duty_counsel_phone": "613 962-9106 x 2750",
+    "crowns_office": "613-962-0772"
   },
   {
     "municipality": "Brampton",
-    "court_name": "A. Grenville and William Davis",
-    "address": "7755 Hurontario St",
+    "court_name": "A. Grenville and William Davis ",
+    "address": "7755 Hurontario St, Brampton ON L6W 4T1",
+    "court_name_fr": "Palais de justice de Brampton (A. Grenville & William Davis)",
+    "address_fr": "7755, rue Hurontario, Brampton ON L6W 4T1",
     "phone": "905-456-4802",
-    "duty_counsel_phone": "905 456-4700  x5672"
+    "duty_counsel_phone": "905 456-4700  x5672",
+    "crowns_office": "905-456-4778"
   },
   {
     "municipality": "Brantford",
     "court_name": "Brantford Superior Courthouse",
-    "address": "70 Wellington St",
-    "phone": "519 752-7828",
-    "duty_counsel_phone": "519 756-1242 - Not on site"
+    "address": "70 Wellington St, Brantford ON N3T 2L9",
+    "court_name_fr": "Palais de justice de Brantford",
+    "address_fr": "70, rue Wellington, Brantford ON N3T 2L9",
+    "phone": "519-752-7828",
+    "duty_counsel_phone": "519 756-1242 - Not on site",
+    "crowns_office": "519-758-3480"
   },
   {
     "municipality": "Brantford",
     "court_name": "Brantford Ontario Courthouse",
-    "address": "44 Queen Street",
+    "address": "44 Queen Street, Brantford ON N3T 3B2",
+    "court_name_fr": "Palais de justice de Brantford",
+    "address_fr": "44, rue Queen, Brantford ON NeT 2L9",
     "phone": "519-758-3460",
-    "duty_counsel_phone": "519 756-1242 - Not on site"
+    "duty_counsel_phone": "519 756-1242 - Not on site",
+    "crowns_office": "519-758-3480"
   },
   {
     "municipality": "Chatham",
-    "court_name": "Chatham Courthouse",
-    "address": "425 Grand Ave",
-    "phone": "519 355-2200 ext. 2211",
-    "duty_counsel_phone": "519 354-6231"
+    "court_name": "Chatham Courthouse ",
+    "address": "425 Grand Ave, Chatham ON N7M 6M8",
+    "court_name_fr": "Palais de justice de Chatham",
+    "address_fr": "425, avenue Grand, Chatham ON N7M 6M8",
+    "phone": "519-355-2200 ext. 2211",
+    "duty_counsel_phone": "519 354-6231",
+    "crowns_office": "519-355-2240"
   },
   {
     "municipality": "Cornwall",
     "court_name": "Cornwall Courthouse",
-    "address": "29 Second St W",
-    "phone": "613 933-7500",
-    "duty_counsel_phone": "613 932-6252  613 933-9300"
+    "address": "29 Second St W, Cornwall ON K6J 1G3",
+    "court_name_fr": "Palais de justice de Cornwall",
+    "address_fr": "29, rue Second Ouest, Cornwall ON K6J 1G3",
+    "phone": "613-933-7500",
+    "duty_counsel_phone": "613 932-6252  613 933-9300",
+    "crowns_office": "613-932-5903"
   },
   {
     "municipality": "Guelph",
-    "court_name": "Guelph Courthouse (36 Wyndham St)",
-    "address": "36 Wyndham St S\r\n",
-    "phone": "519 826-4456",
-    "duty_counsel_phone": "519 826-4431 x 214"
+    "court_name": "Guelph Courthouse",
+    "address": "36 Wyndham St S, Guelph ON N1H 7J5",
+    "court_name_fr": "Palais de justice de Guelph",
+    "address_fr": "36, rue Wyndham, Guelph ON N1H 7J5",
+    "phone": "519-826-4456",
+    "duty_counsel_phone": "519 826-4431 x 214",
+    "crowns_office": "519-822-1031"
   },
   {
     "municipality": "Guelph",
-    "court_name": "Guelph Courthouse (74 Woolwich St)",
-    "address": "74 Woolwich St",
-    "phone": "519 826-4456",
-    "duty_counsel_phone": "519 824-4100"
+    "court_name": "Guelph Courthouse",
+    "address": "74 Woolwich St, Guelph ON N1H 3T9",
+    "court_name_fr": "Palais de justice de Guelph",
+    "address_fr": "74, rue Woolwich, Guelph ON N1H 3T9",
+    "phone": "519-826-4456",
+    "duty_counsel_phone": "519 824-4100 ",
+    "crowns_office": "519-822-1031"
   },
   {
     "municipality": "Hamilton",
     "court_name": "John Sopinka",
-    "address": "45 Main St E",
+    "address": "45 Main St E, Hamilton ON L8N 2B7",
+    "court_name_fr": "Palais de justice de Hamilton (John Sopinka)",
+    "address_fr": "45, rue Main Est, Hamilton ON L8N 2B7",
     "phone": "905 645-5252 x. 3799",
-    "duty_counsel_phone": "905 522-5963"
+    "duty_counsel_phone": "905 522-5963",
+    "crowns_office": "905-645-5262"
   },
   {
     "municipality": "Hamilton",
     "court_name": "Hamilton Courthouse",
-    "address": "55 Main Street W",
+    "address": "55 Main Street W, Hamilton ON L8P 1H4",
+    "court_name_fr": "Palais de justice de Hamilton",
+    "address_fr": "55, rue Main Ouest, Hamilton ON L8P 1H4",
     "phone": "905 645-6250",
-    "duty_counsel_phone": "905 522-5963"
+    "duty_counsel_phone": "905 522-5963",
+    "crowns_office": "905-645-5262"
   },
   {
     "municipality": "Kingston",
     "court_name": "Kingston(Frontenac County) Court",
-    "address": "5 Court St\r\n\r\n",
+    "address": "5 Court St, Kingston ON K7L 2N4",
+    "court_name_fr": "Palais de justice de Kingsotn (Cour de Frontenac)",
+    "address_fr": "5, rue Court, Kingston ON K7L 2N4",
     "phone": "613 548-6811",
-    "duty_counsel_phone": "no duty counsel at SCJ"
+    "duty_counsel_phone": "no duty counsel at SCJ",
+    "crowns_office": "613-548-6220"
   },
   {
     "municipality": "Kingston",
     "court_name": "Kingston Courthouse",
-    "address": "279 Wellington St",
+    "address": "279 Wellington St, Kingston ON K7K 6E1",
+    "court_name_fr": "Palais de justice de Kingston",
+    "address_fr": "279, rue Wellington, Kingston ON K7K 6E1",
     "phone": "613 548-6200",
-    "duty_counsel_phone": "613 531-0504"
+    "duty_counsel_phone": "613 531-0504",
+    "crowns_office": "613-548-6220"
   },
   {
     "municipality": "Kitchener (Waterloo Region)",
     "court_name": "Waterloo Region Courthouse",
-    "address": "85 Frederick St",
+    "address": "85 Frederick St, Kitchener ON N2H 0A7",
+    "court_name_fr": "Palais de justice de la région de Waterloo",
+    "address_fr": "85, rue Frederick, Kitchener ON N2H 0A7",
     "phone": "519-741-3293",
-    "duty_counsel_phone": "519-578-4561"
+    "duty_counsel_phone": "519-578-4561",
+    "crowns_office": "519-741-3222"
   },
   {
     "municipality": "Lindsay",
     "court_name": "Lindsay Courthouse",
-    "address": "440 Kent St W",
+    "address": "440 Kent St W, Lindsay ON K9V 6K2",
+    "court_name_fr": "Palais de justice de Lindsay",
+    "address_fr": "44, rue Kent Ouest, Lindsay ON K9V 6K2",
     "phone": "705 324-1400",
-    "duty_counsel_phone": "416 436-4680"
+    "duty_counsel_phone": "416 436-4680",
+    "crowns_office": "705-324-1420"
   },
   {
     "municipality": "London",
     "court_name": "London Courthouse",
-    "address": "80 Dundas St",
+    "address": "80 Dundas St, London ON N6A 6A3",
+    "court_name_fr": "Palais de justice de London",
+    "address_fr": "80, rue Dundas, London ON N6A 6A3",
     "phone": "519-660-3050",
-    "duty_counsel_phone": "519-660-5095"
+    "duty_counsel_phone": "519-660-5095",
+    "crowns_office": "519-660-3003"
   },
   {
     "municipality": "Milton",
     "court_name": "Milton Courthouse",
-    "address": "491 Steeles Ave W",
+    "address": "491 Steeles Ave W, Milton ON L9T 1Y7",
+    "court_name_fr": "Palais de justice de Milton",
+    "address_fr": "491, avenue Steeles Ouest, Milton ON L9T 1Y7",
     "phone": "905-878-7285 x3466",
-    "duty_counsel_phone": "905-864-8616"
+    "duty_counsel_phone": "905-864-8616",
+    "crowns_office": "905-878-7291"
   },
   {
     "municipality": "Newmarket",
-    "court_name": "Newmarket Courthouse",
-    "address": "50 Eagle St W",
+    "court_name": "Newmarket Courthouse ",
+    "address": "50 Eagle St W, Newmarket ON L3Y 6B1",
+    "court_name_fr": "Palais de justice de Newmarket",
+    "address_fr": "50, rue Eagle Ouest, Newmarket ON L3Y 6B1",
     "phone": "905-853-4870",
-    "duty_counsel_phone": "905-836-8580"
+    "duty_counsel_phone": "905-836-8580",
+    "crowns_office": "905-853-4800"
   },
   {
     "municipality": "North Bay",
     "court_name": "North Bay Courthouse",
-    "address": "360 Plouffe St",
+    "address": "360 Plouffe St, North Bay ON P1B 9L5",
+    "court_name_fr": "Palais de justice de North Bay",
+    "address_fr": "360, rue Plouffe, North Bay ON P1B 9L5",
     "phone": "705-498-1810",
-    "duty_counsel_phone": "705-938-8671"
+    "duty_counsel_phone": "705-938-8671",
+    "crowns_office": "705-495-8313"
   },
   {
     "municipality": "Orangeville",
     "court_name": "County of Dufferin Courthouse",
-    "address": "10 Louisa St",
+    "address": "10 Louisa St, Orangeville ON L9W 3P9",
+    "court_name_fr": "Palais de justice de Orangeville (Cour de Dufferin)",
+    "address_fr": "10, rue Louisa, Orangeville ON L9W 3P9",
     "phone": "519-941-5802 x320",
-    "duty_counsel_phone": "519-938-8671"
+    "duty_counsel_phone": "519-938-8671",
+    "crowns_office": "519-941-4471"
   },
   {
     "municipality": "Oshawa (Durham)",
-    "court_name": "Lieutenant-Colonel Sharpe, DSO, MP. Courthouse ",
-    "address": "150 Bond St",
+    "court_name": "Lieutenant-Colonel Sharpe, DSO, MP. Courthouse  ",
+    "address": "150 Bond St, Oshawa ON L1G 0A2",
+    "court_name_fr": "Palais de justice Samuel S. Sharpe, lieutenant-colonel, D.S.O., député",
+    "address_fr": "150, rue Bond, Oshawa ON L1G 0A2",
     "phone": "905-743-2640",
-    "duty_counsel_phone": "905-732-3801"
+    "duty_counsel_phone": "905-732-3801",
+    "crowns_office": "705-743-2700"
   },
   {
     "municipality": "Ottawa",
     "court_name": "Ottawa Courthouse",
-    "address": "161 Elgin St",
+    "address": "161 Elgin St, Ottawa ON K2P 2K1",
+    "court_name_fr": "Palais de justice d'Ottawa",
+    "address_fr": "161, rue Elgin, Ottawa ON K2P 2K1",
     "phone": "613-239-1260",
-    "duty_counsel_phone": "613-238-7931"
+    "duty_counsel_phone": "613-238-7931",
+    "crowns_office": "613-239-1200"
   },
   {
     "municipality": "Owen Sound",
     "court_name": "Owen Sound Courthouse",
-    "address": "611 9th Ave E",
+    "address": "611 9th Ave E, Owen Sound ON N4K 6Z4",
+    "court_name_fr": "Palais de justice d'Owen Sound",
+    "address_fr": "611, avenue 9th Est, Owen Sound ON N4K 6Z4",
     "phone": "519-370-2444",
-    "duty_counsel_phone": "519-372-1124"
+    "duty_counsel_phone": "519-372-1124",
+    "crowns_office": "519-370-2470"
   },
   {
     "municipality": "Pembroke",
     "court_name": "Pembroke Renfrew County Courthouse",
-    "address": "297 Pembroke St E",
+    "address": "297 Pembroke St E, Pembroke ON K8A 3K2",
+    "court_name_fr": "Palais de justice de Pembroke (Comte de Renfrew)",
+    "address_fr": "297, rue Pembroke Est, Pembroke ON K8A 3K2",
     "phone": "613-639-9824",
-    "duty_counsel_phone": "613-735-3400"
+    "duty_counsel_phone": "613-735-3400",
+    "crowns_office": "613-732-2261"
   },
   {
     "municipality": "Sarnia",
     "court_name": "Sarnia Lampton County Courthouse",
-    "address": "700 Christina St N",
+    "address": "700 Christina St N, Sarnia ON N7V 3C2",
+    "court_name_fr": "Palais de justice de Sarnia",
+    "address_fr": "700, rue Christina Nord, Sarnia ON N7V 3C2",
     "phone": "519-333-2950 ext 2302",
-    "duty_counsel_phone": "519-337-1210"
+    "duty_counsel_phone": "519-337-1210",
+    "crowns_office": "519-333-2980"
   },
   {
     "municipality": "SS Marie",
     "court_name": "Sault Ste. Marie Courthouse",
-    "address": "426 Queen St E",
+    "address": "426 Queen St E, Sault Ste. Marie ON P6A 6W2",
+    "court_name_fr": "Palais de justice de Sault Ste. Marie",
+    "address_fr": "426, rue Queen Est, Sault Ste. Marie ON P6A 6W2",
     "phone": "705-945-8000 ext 406",
-    "duty_counsel_phone": "705-942-8448"
+    "duty_counsel_phone": "705-942-8448",
+    "crowns_office": "705-945-8001"
   },
   {
     "municipality": "St Catharines",
     "court_name": "Robert S. K. Welch  Courthouse",
-    "address": "59 Church St",
+    "address": "59 Church St, St. Catharines ON L2R 7N8",
+    "court_name_fr": "Palais de justice de St. Catharines",
+    "address_fr": "59, rue Church, St. Catharines ON L2R 7N8",
     "phone": "905-988-6200 ext. 434",
-    "duty_counsel_phone": "905-685-8695"
+    "duty_counsel_phone": "905-685-8695",
+    "crowns_office": "905-685-4293"
   },
   {
     "municipality": "St Thomas (Elgin County)",
     "court_name": "Elgin County Courthouse",
-    "address": "4 Wellington St",
+    "address": "4 Wellington St, St. Thomas ON N5R 2P2",
+    "court_name_fr": "Palais de justice de St. Thomas",
+    "address_fr": "4, rue Wellington, St. Thomas ON N5R 2P2",
     "phone": "519-631-4810",
-    "duty_counsel_phone": "519-631-4810"
+    "duty_counsel_phone": "519-631-4810",
+    "crowns_office": "519-631-1506"
   },
   {
     "municipality": "Sudbury",
     "court_name": "Sudbury Courthouse",
-    "address": "155 Elm St\r\n",
+    "address": "155 Elm St, Sudbury ON P3C 1T9",
+    "court_name_fr": "Palais de justice de Sudbury",
+    "address_fr": "155, rue Elm, Sudbury ON P3C 1T9",
     "phone": "705-564-7769",
-    "duty_counsel_phone": "705-674-2220"
+    "duty_counsel_phone": "705-674-2220",
+    "crowns_office": "705-564-7698"
   },
   {
-    "municipality": "Thunder Bay",
+    "municipality": "Thunder Bay ",
     "court_name": "Thunder Bay Courthouse",
-    "address": "125 Brodie St N",
+    "address": "125 Brodie St N, Thunder Bay ON P7C 0A3",
+    "court_name_fr": "Palais de justice de Thunder Bay",
+    "address_fr": "125, rue Brodie Nord, Thunder Bay ON P7C 0A3",
     "phone": "807-626-7000",
-    "duty_counsel_phone": "807-577-1005"
+    "duty_counsel_phone": "807-577-1005",
+    "crowns_office": "807-626-7155"
   },
   {
     "municipality": "Toronto",
     "court_name": "1000 Finch Ave. Courthouse",
-    "address": "1000 Finch Ave W",
+    "address": "1000 Finch Ave W, Toronto ON M3J 2V5",
     "phone": "416 314-7276",
-    "duty_counsel_phone": "416 663-5560"
+    "duty_counsel_phone": "416 663-5560",
+    "crowns_office": "416-314-4222"
   },
   {
     "municipality": "Toronto",
     "court_name": "Osgood Hall",
-    "address": "130 Queen St W",
+    "address": "130 Queen St W, Toronto ON M5H 2N5",
     "phone": "416 327-6247",
-    "duty_counsel_phone": "no duty counsel"
+    "duty_counsel_phone": "no duty counsel ",
+    "crowns_office": "N/A"
   },
   {
     "municipality": "Toronto",
     "court_name": "1911 Eglinton Ave. Courthouse",
-    "address": "1911 Eglinton Ave E",
+    "address": "1911 Eglinton Ave E, Toronto ON M1L 4P4",
     "phone": "416 325-0382",
-    "duty_counsel_phone": "416 757-8257"
+    "duty_counsel_phone": "416 757-8257",
+    "crowns_office": "416-325-0342"
   },
   {
     "municipality": "Toronto",
     "court_name": "2201 Finch Courthouse",
-    "address": "2201 Finch Ave W",
+    "address": "2201 Finch Ave W, Toronto ON M9M 2Y9",
     "phone": "416 314-5758",
-    "duty_counsel_phone": "416 597-5890"
+    "duty_counsel_phone": "416 597-5890",
+    "crowns_office": "416-314-3936"
   },
   {
     "municipality": "Toronto",
     "court_name": "311 Jarvis Courthouse",
-    "address": "311 Jarvis St",
+    "address": "311 Jarvis St, Toronto ON M5B 2C4",
     "phone": "416 327-6991",
-    "duty_counsel_phone": "416 598-0200 x4361"
+    "duty_counsel_phone": "416 598-0200 x4361",
+    "crowns_office": "416-327-6845"
   },
   {
     "municipality": "Toronto",
     "court_name": "330 University Ave. Courthouse",
-    "address": "330 University Ave",
+    "address": "330 University Ave, Toronto ON M5G 1R7",
     "phone": "416 326-4405",
-    "duty_counsel_phone": "no duty counsel"
+    "duty_counsel_phone": "no duty counsel",
+    "crowns_office": "N/A"
   },
   {
     "municipality": "Toronto",
     "court_name": "361 University Ave. Courthouse",
-    "address": "361 University Ave",
-    "phone": "416 327-5558"
+    "address": "361 University Ave, Toronto ON M5G 1T3",
+    "phone": "416 327-5558",
+    "crowns_office": "416-327-5990"
   },
   {
     "municipality": "Toronto",
     "court_name": "393 Universtiy Ave. Courthouse",
-    "address": "393 University Ave",
+    "address": "393 University Ave, Toronto ON M5G 1E6",
     "phone": "416 326-4405",
-    "duty_counsel_phone": "no duty  counsel"
+    "duty_counsel_phone": "no duty  counsel ",
+    "crowns_office": "N/A"
   },
   {
     "municipality": "Toronto",
     "court_name": "College Park Courts",
-    "address": "444 Yonge St",
+    "address": "444 Yonge St, Toronto ON M5B 2H4",
     "phone": "416 325-8964",
-    "duty_counsel_phone": "416 598-1260"
+    "duty_counsel_phone": "416 598-1260",
+    "crowns_office": "416-325-8994"
   },
   {
     "municipality": "Toronto",
     "court_name": "45/47 Sheppard Ave. Courts",
-    "address": "45/47 Sheppard Ave E",
-    "phone": "416 326-3550"
+    "address": "45/47 Sheppard Ave E, Toronto ON M2N 5N1",
+    "phone": "416 326-3550",
+    "crowns_office": "N/A"
   },
   {
     "municipality": "Toronto",
-    "court_name": "Old City Hall",
-    "address": "60 Queen St W",
+    "court_name": "Old City Hall ",
+    "address": "60 Queen St W, Toronto ON M5H 2M4",
     "phone": "416 327-5617",
-    "duty_counsel_phone": "416 594-9300"
+    "duty_counsel_phone": "416 594-9300",
+    "crowns_office": "416-327-6064"
   },
   {
     "municipality": "Welland",
     "court_name": "Welland Courthours",
-    "address": "102 East Main St",
+    "address": "102 East Main St, Welland ON L3B 3W6",
+    "court_name_fr": "Palais de justice de Welland",
+    "address_fr": "102, rue Main, Welland ON L3B 3W6",
     "phone": "905 735-0010 ext. 210",
-    "duty_counsel_phone": "905 734- 8986"
+    "duty_counsel_phone": "905 734- 8986",
+    "crowns_office": "905-732-1327"
   },
   {
     "municipality": "Windsor",
     "court_name": "Windsor Courthouse",
-    "address": "200 Chatham St E\r\n",
+    "address": "200 Chatham St E, Windsor ON N9A 2W3",
+    "court_name_fr": "Palais de justice de Windsor",
+    "address_fr": "200, rue Chatham Est, Windsor ON N9A 2W3",
     "phone": "519 973-6620",
-    "duty_counsel_phone": "519 256-4609"
+    "duty_counsel_phone": "519 256-4609",
+    "crowns_office": "519-253-1104"
   },
   {
     "municipality": "Windsor",
     "court_name": "Windsor Courthouse",
-    "address": "245 Windsor St",
+    "address": "245 Windsor St, Windsor ON N9A 1J2",
+    "court_name_fr": "Palais de justice de Windsor",
+    "address_fr": "245, rue Windsor, Windsor ON N9A 1J2",
     "phone": "519 973-6620",
-    "duty_counsel_phone": "519 256-4609"
+    "duty_counsel_phone": "519 256-4609",
+    "crowns_office": "519-253-1104"
   },
   {
     "municipality": "Kingston",
