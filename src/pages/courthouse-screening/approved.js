@@ -30,15 +30,24 @@ const HeadingCheckmark = styled(LargeCheckmark)`
 const Approved = () => {
   const { courthouse } = useContext(GlobalStateContext)
   const date = new Date()
-  const [address, cityAndPostalCode] = courthouse.address.split(",")
-  const [city, postalCode] = cityAndPostalCode.split(" ON ")
+  const { address, city, postalCode } = getAddressPieces(courthouse)
+
+  function getAddressPieces(courthouse) {
+    // This is required because we want this to run on the UI side.
+    // We add a check for Gatsby to skip this during build.
+    if (!courthouse) return {}
+
+    const [address, cityAndPostalCode] = courthouse.address.split(",")
+    const [city, postalCode] = cityAndPostalCode.split(" ON ")
+    return { address, city, postalCode }
+  }
 
   return (
     <OutcomeTemplate lang={lang}>
       <Header
         title={
           <>
-            {courthouse.court_name}
+            {courthouse && courthouse.court_name}
             <br />
             COVID-19 screening result
           </>
@@ -52,11 +61,11 @@ const Approved = () => {
         valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
       </ContentBlock>
       <ContentBlock lang={lang} icon={<MapPin />} heading={"You can enter"}>
-        {courthouse.court_name}
+        {courthouse && courthouse.court_name}
         <br />
         {address}
         <br />
-        {city.trim()} Ontario
+        {city && city.trim()} Ontario
         <br />
         {postalCode}
       </ContentBlock>
