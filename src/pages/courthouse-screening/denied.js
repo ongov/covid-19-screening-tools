@@ -39,13 +39,13 @@ const Denied = () => {
             COVID-19 screening result
           </>
         }
-        heading={"Denied"}
+        heading={"You cannot enter"}
         icon={<HeadingDeniedIcon />}
         color={Red}
         titleColor={"#FFE0E2"}
       />
       <ContentBlock lang={lang} icon={<Warning />} heading={`You cannot enter ${courthouse && courthouse.court_name}`}>
-        on {format(new Date(), "MMMM dd, yyyy", { locale: en })}
+        on {format(new Date(), "MMMM d, yyyy", { locale: en })}
       </ContentBlock>
       <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
         <ContactCard

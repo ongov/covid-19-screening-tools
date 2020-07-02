@@ -52,12 +52,12 @@ const Approved = () => {
             COVID-19 screening result
           </>
         }
-        heading={"Approved"}
+        heading={"You can enter"}
         icon={<HeadingCheckmark />}
         color={Green}
         titleColor={"#d1efd4"}
       />
-      <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM dd, yyyy", { locale: en })}>
+      <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
         valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
       </ContentBlock>
       <ContentBlock lang={lang} icon={<MapPin />} heading={"You can enter"}>
