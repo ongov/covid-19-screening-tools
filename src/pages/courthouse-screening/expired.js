@@ -22,6 +22,12 @@ const HeadingExpired = styled(Expired)`
   background-color: ${Grey};
 `
 
+const RetakeButtonWrapper = styled.div`
+  margin: 3rem 0 0.25rem 0;
+  display: block;
+  text-align: center;
+`
+
 const RetakeButton = styled(Button)`
   @media screen and (max-width: 40em) {
     margin: 0 1.5rem;
@@ -48,7 +54,7 @@ const Approved = () => (
     <ContentBlock lang={lang} icon={<Information />} heading={"Next steps"}>
       Retake this screening at the start of every day before you enter a courthouse.
     </ContentBlock>
-    <RetakeButton text="Start courthouse assessment" clickHandler={() => console.log("clicked!")} />
+    <RetakeButtonWrapper><RetakeButton text="Start courthouse assessment" clickHandler={() => console.log("clicked!")} /></RetakeButtonWrapper>
     <Footer icon={<ExpiredSmall />} color={Grey} />
   </OutcomeTemplate>
 )

@@ -9,6 +9,13 @@ const Container = styled.div`
   width: 100%;
 `
 
+const InnerContainer = styled.div`
+  position: relative;
+  margin: 0 auto;
+  max-width: 72rem;
+  width: 100%;
+`
+
 const Icon = styled.div`
   display: inline-block;
   position: absolute;
@@ -26,8 +33,10 @@ const OntarioLogo = styled.img`
 export default function({ icon, color }) {
   return (
     <Container color={color}>
-      <Icon>{icon}</Icon>
-      <OntarioLogo src={OntarioLogoImg} alt="Ontario Logo" />
+      <InnerContainer>
+        <Icon>{icon}</Icon>
+        <OntarioLogo src={OntarioLogoImg} alt="Ontario Logo" />
+      </InnerContainer>
     </Container>
   )
 }
