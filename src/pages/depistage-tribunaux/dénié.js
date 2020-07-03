@@ -1,50 +1,38 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useContext } from "react"
+import { format } from "date-fns"
+import en from "date-fns/locale/fr-CA"
 
-import OutcomeTemplate from "../../templates/outcome-template"
+import { GlobalStateContext } from "../../context/global-context-provider"
+
+import DeniedTemplate from "../../templates/denied-template"
 import Header from "../../components/outcome-header"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 import ContactCard from "../../components/outcome-contact-card"
 import Footer from "../../components/outcome-footer"
 
-import CancelLarge from "../../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
 import SpeechBubble from "../../images/inline-svgs/ontario-icon-speech-bubble.inline.svg"
 import CancelSmall from "../../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
 
-const lang = "en"
+const lang = "fr"
 
-const Red = "#D81A21"
+const Denied = () => {
+  const { courthouse } = useContext(GlobalStateContext)
 
-const HeadingDeniedIcon = styled(CancelLarge)`
-  display: inline-block;
-  margin: 2rem calc(50% - (120px / 2));
-  background-color: ${Red};
-`
-
-const Denied = () => (
-  <OutcomeTemplate lang={lang}>
-    <Header
-      title={
-        <>
-          Windsor Courthouse
-          <br />
-          COVID-19 screening result
-        </>
-      }
-      heading={"Denied"}
-      icon={<HeadingDeniedIcon />}
-      color={Red}
-      titleColor={"#FFE0E2"}
-    />
-    <ContentBlock lang={lang} icon={<Warning />} heading={"You cannot enter Windsor Courthouse"}>
-      on July 6, 2020
-    </ContentBlock>
-    <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
-      <ContactCard lang={lang} dutyCounselNumber={"(416) 555 5555"} courthouseNumber={"(416) 777 7777"} />
-    </ContentBlock>
-    <Footer icon={<CancelSmall />} color={Red} />
-  </OutcomeTemplate>
-)
+  return (
+    <DeniedTemplate lang={lang}>
+      <ContentBlock lang={lang} icon={<Warning />} heading={`You cannot enter ${courthouse && courthouse.court_name}`}>
+        on {format(new Date(), "MMMM d, yyyy", { locale: en })}
+      </ContentBlock>
+      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
+        <ContactCard
+          lang={lang}
+          dutyCounselNumber={courthouse && courthouse.duty_counsel_phone}
+          courthouseNumber={courthouse && courthouse.phone}
+        />
+      </ContentBlock>
+    </DeniedTemplate>
+  )
+}
 
 export default Denied

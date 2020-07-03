@@ -1,5 +1,6 @@
 import footer from "./footer"
 import outcomeContactCard from "./outcome-contact-card"
+import expired from "./expired"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 
 const general = {
@@ -20,6 +21,8 @@ const general = {
       { url: "https://www.ontario.ca/page/health-care-ontario", text: "Health and wellness" },
       { url: "https://covid-19.ontario.ca/", text: "COVID-19" },
     ],
+    outcome: "COVID-19 screening result",
+    expired: "Expired",
   },
   fr: {
     lang: "français",
@@ -37,7 +40,9 @@ const general = {
       { url: "https://www.ontario.ca/fr/page/les-soins-de-sante-en-ontario", text: "Les soins de santé en Ontario" },
       { url: "https://covid-19.ontario.ca/fr", text: "COVID-19" },
     ],
+    outcome: "COVID-19 screening result",
+    expired: "Expired",
   },
 }
 
-export { general, footer, outcomeContactCard, symptomsTitle, symptoms, noSymptomsId }
+export { general, footer, outcomeContactCard, symptomsTitle, symptoms, noSymptomsId, expired }

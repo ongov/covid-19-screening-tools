@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { navigate } from "@reach/router"
+import { SkipNavContent } from "@reach/skip-nav"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,33 +23,35 @@ const SymptomsTemplate = ({ lang }) => {
   return (
     <Layout lang={lang}>
       <SEO lang={lang} />
-      <Question
-        lang={lang}
-        title={general[lang].title}
-        buttons={<ContinueButton lang={lang} clickHandler={handleContinueClick} />}
-      >
-        <div className="ontario-form-group">
-          <fieldset className="ontario-fieldset">
-            <legend>{symptomsTitle[lang]}</legend>
-            <div className="ontario-question__options">
-              <div className="ontario-checkboxes">
-                {Object.keys(symptoms).map(id => (
-                  <Checkbox
-                    key={id}
-                    id={id}
-                    value={id}
-                    text={symptoms[id][lang].text}
-                    labelStyle="--large"
-                    supplementaryText={symptoms[id][lang].sup_text || ""}
-                    checkboxState={state.q5 && state.q5.hasOwnProperty(id)}
-                    checkboxOnChange={() => dispatch({ type: "TOGGLE_SYMPTOM", id })}
-                  />
-                ))}
+      <SkipNavContent>
+        <Question
+          lang={lang}
+          title={general[lang].title}
+          buttons={<ContinueButton lang={lang} clickHandler={handleContinueClick} />}
+        >
+          <div className="ontario-form-group">
+            <fieldset className="ontario-fieldset">
+              <legend>{symptomsTitle[lang]}</legend>
+              <div className="ontario-question__options">
+                <div className="ontario-checkboxes">
+                  {Object.keys(symptoms).map(id => (
+                    <Checkbox
+                      key={id}
+                      id={id}
+                      value={id}
+                      text={symptoms[id][lang].text}
+                      labelStyle="--large"
+                      supplementaryText={symptoms[id][lang].sup_text || ""}
+                      checkboxState={state.q5 && state.q5.hasOwnProperty(id)}
+                      checkboxOnChange={() => dispatch({ type: "TOGGLE_SYMPTOM", id })}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          </fieldset>
-        </div>
-      </Question>
+            </fieldset>
+          </div>
+        </Question>
+      </SkipNavContent>
     </Layout>
   )
 }
