@@ -65,16 +65,14 @@ const LandingPageTemplate = ({ lang }) => {
       <SkipNavContent>
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">
-              <h1>{general[lang].title}</h1>
-              <CalloutNoBg
-                message={
-                  <p>
-                    <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
-                      locale: lang === "fr" ? fr : en,
-                    })}`}</strong>
-                  </p>
-                }
-              />
+
+            <p className="ontario-margin-bottom-12-!">
+              <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
+                locale: lang === "fr" ? fr : en,
+              })}`}</strong>
+            </p>
+            <h1>{general[lang].title}</h1>
+
               <p className="ontario-lead-statement">Answer the following questions before you enter an Ontario courthouse.</p>
               <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
               <p>If you are told you cannot enter, you will get information about what to do next.</p>
