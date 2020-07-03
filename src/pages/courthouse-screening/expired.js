@@ -40,9 +40,7 @@ const Approved = () => (
     <Header
       title={
         <>
-          Windsor Courthouse
-          <br />
-          COVID-19 screening result
+          Windsor Courthouse COVID-19 screening result
         </>
       }
       heading={"Expired"}

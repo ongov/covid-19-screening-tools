@@ -21,7 +21,7 @@ const Title = styled.p`
   letter-spacing: 0.48px;
   color: white;
   @media screen and (max-width: 39.9375em) {
-    padding-bottom: 1rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
   }
 `
 
@@ -44,6 +44,7 @@ const Icon = styled.div`
   padding: 0.5rem 0 0.5rem 0;
   width: 100%;
   @media screen and (max-width: 39.9375em) {
+  padding: 0.5rem 0 3rem 0;
     svg {
       display: block;
       margin: 1rem auto 0 auto;
