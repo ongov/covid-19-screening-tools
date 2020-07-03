@@ -49,7 +49,7 @@ const Approved = forwardRef(({ children, lang }, ref) => {
         <SkipNavContent>
           <Header
             title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
-            heading={"You can enter"}
+            heading={`${results[lang].approveHeading}`}
             icon={<HeadingCheckmark />}
             color={Green}
             titleColor={"#d1efd4"}
