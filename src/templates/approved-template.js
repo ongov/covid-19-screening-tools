@@ -36,7 +36,7 @@ const Approved = ({ children, lang }) => {
     if (!courthouse) return
 
     pushOutcomeDataToGTM({
-      outcome: "approved",
+      pass: true,
       courthouse,
       lang,
     })

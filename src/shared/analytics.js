@@ -1,8 +1,8 @@
-export default ({ courthouse, lang, outcome }) => {
+export default ({ courthouse, lang, pass }) => {
   if (window && window.dataLayer) {
     window.dataLayer.push({
       event: "covid-19-cs-outcome",
-      outcome,
+      pass,
       lang,
       courthouse: courthouse.court_name_display,
     })

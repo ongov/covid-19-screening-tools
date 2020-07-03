@@ -27,7 +27,7 @@ const Denied = ({ lang, children }) => {
     if (!courthouse) return
 
     pushOutcomeDataToGTM({
-      outcome: "approved",
+      pass: false,
       courthouse,
       lang,
     })
