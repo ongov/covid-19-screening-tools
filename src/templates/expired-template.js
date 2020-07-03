@@ -20,8 +20,9 @@ const lang = "en"
 const Grey = "#666666"
 
 const HeadingExpired = styled(Expired)`
-  display: inline-block;
-  margin: 2rem calc(50% - (143px / 2));
+  display: block;
+  width: 143px;
+  margin: 1.2rem auto 2rem auto;
   background-color: ${Grey};
 `
 
