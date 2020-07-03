@@ -8,6 +8,8 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 
+import results from "../localized_content"
+
 import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
 
