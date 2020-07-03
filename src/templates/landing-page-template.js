@@ -10,13 +10,11 @@ import fr from "date-fns/locale/fr-CA"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import CalloutNoBg from "../components/callout-no-bg"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
 import { questions } from "../shared"
-import { general } from "../localized_content"
-import { landing } from "../localized_content"
+import { general, landing } from "../localized_content"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -67,14 +65,12 @@ const LandingPageTemplate = ({ lang }) => {
       <SkipNavContent>
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">
-
             <p className="ontario-margin-bottom-12-!">
               <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
                 locale: lang === "fr" ? fr : en,
               })}`}</strong>
             </p>
             <h1>{general[lang].title}</h1>
-
             <p className="ontario-lead-statement">{landing[lang].lead}</p>
             <p className="ontario-margin-top-32-!">{landing[lang].infoText}</p>
             <p className="ontario-margin-top-32-!">{landing[lang].screeningInfo}{" "}
@@ -114,7 +110,7 @@ const LandingPageTemplate = ({ lang }) => {
               <CenteredDiv>
                 <Button text={landing[lang].button} clickHandler={handleClick} isDisabled={!courthouse} />
               </CenteredDiv>
-          </div>
+            </div>
         </div>
       </SkipNavContent>
     </Layout>

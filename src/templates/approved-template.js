@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react"
+import React, { useContext, useRef, useEffect } from "react"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
 
@@ -12,6 +12,8 @@ import results from "../localized_content"
 
 import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
+
+import { pushOutcomeDataToGTM } from "../shared"
 
 const Green = "#118847"
 
@@ -31,29 +33,23 @@ const Hyperlink = styled.a`
 const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
-  const date = new Date()
-  const { address, city, postalCode } = getAddressPieces(courthouse)
 
-  function getAddressPieces(courthouse) {
-    // This is required because we want this to run on the UI side.
-    // We add a check for Gatsby to skip this during build.
-    if (!courthouse) return {}
+  useEffect(() => {
+    if (!courthouse) return
 
-    const [address, cityAndPostalCode] = courthouse.address.split(",")
-    const [city, postalCode] = cityAndPostalCode.split(" ON ")
-    return { address, city, postalCode }
-  }
+    pushOutcomeDataToGTM({
+      pass: true,
+      courthouse,
+      lang,
+    })
+  }, [])
 
   return (
     <span ref={elToPrintRef}>
-      <Layout lang={lang} hideFooter isResultsPage>
+      <Layout lang={lang} hideFooter>
         <SkipNavContent>
           <Header
-            title={
-              <>
-                {courthouse && courthouse.court_name} COVID-19 screening result
-              </>
-            }
+            title={<>{courthouse && courthouse.court_name} {results[lang].title}</>}
             heading={"You can enter"}
             icon={<HeadingCheckmark />}
             color={Green}
