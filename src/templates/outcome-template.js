@@ -3,7 +3,7 @@ import { SkipNavContent } from "@reach/skip-nav"
 
 import Layout from "../components/layout"
 
-const OutcomeTemplate = ({ children, lang }) => (
+const OutcomeTemplate = ({ children, lang, elToPrintRef }) => (
   <Layout lang={lang} hideFooter isResultsPage>
     <SkipNavContent>{children}</SkipNavContent>
   </Layout>
