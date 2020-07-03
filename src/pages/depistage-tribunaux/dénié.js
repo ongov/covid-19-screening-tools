@@ -23,7 +23,7 @@ const Denied = () => {
       <ContentBlock lang={lang} icon={<Warning />} heading={`${results[lang].deniedHeading} ${courthouse && courthouse.court_name}`}>
         on {format(new Date(), "MMMM d, yyyy", { locale: en })}
       </ContentBlock>
-      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
+      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}>
         <DeniedContactCard
           lang={lang}
           dutyCounselNumber={courthouse && courthouse.duty_counsel_phone}

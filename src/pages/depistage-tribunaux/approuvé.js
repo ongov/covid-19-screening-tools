@@ -14,6 +14,7 @@ import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
 import MapPin from "../../images/inline-svgs/ontario-icon-map-pin.inline.svg"
 import Information from "../../images/inline-svgs/ontario-icon-information.inline.svg"
 import StaySafe from "../../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
+import {results} from "../../localized_content";
 
 const lang = "fr"
 
@@ -47,7 +48,7 @@ const Approved = () => {
       <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
         valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
       </ContentBlock>
-      <ContentBlock lang={lang} icon={<MapPin />} heading={"You can enter"}>
+      <ContentBlock lang={lang} icon={<MapPin />} heading={`${results[lang].approveHeading}`}>
         {courthouse && courthouse.court_name}
         <br />
         {address}
@@ -56,10 +57,10 @@ const Approved = () => {
         <br />
         {postalCode}
       </ContentBlock>
-      <ContentBlock lang={lang} icon={<Information />} heading={"Next steps"}>
+      <ContentBlock lang={lang} icon={<Information />} heading={`${results[lang].nextSteps}`}>
         <>
           <p>
-            Show this result to courthouse security either on your phone or{" "}
+            {results[lang].nextStepShowResults}{" "}
             <Hyperlink
               onClick={() =>
                 savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
@@ -70,16 +71,14 @@ const Approved = () => {
                 })
               }
             >
-              download a PDF
+              {results[lang].downloadPDF}
             </Hyperlink>{" "}
-            to print out.
           </p>
-          <p>Retake this screening every day before you enter a courthouse.</p>
+          <p>{results[lang].nextStepsInstruction}</p>
         </>
       </ContentBlock>
-      <ContentBlock lang={lang} icon={<StaySafe />} heading={"Stay safe"}>
-        Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for
-        COVID-19.
+      <ContentBlock lang={lang} icon={<StaySafe />} heading={`${results[lang].staySafe}`}>
+        {results[lang].downloadApp}
       </ContentBlock>
     </ApprovedTemplate>
   )
