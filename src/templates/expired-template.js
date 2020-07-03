@@ -13,7 +13,7 @@ import ExpiredSmall from "../images/inline-svgs/ontario-icon-expired-small.inlin
 import Calendar from "../images/inline-svgs/ontario-icon-calendar-grey.inline.svg"
 import Information from "../images/inline-svgs/ontario-icon-information-grey.inline.svg"
 
-import { expired, general, results } from "../localized_content"
+import { general, results } from "../localized_content"
 
 const lang = "en"
 
