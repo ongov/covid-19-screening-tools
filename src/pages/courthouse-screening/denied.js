@@ -21,18 +21,18 @@ const Denied = () => {
 
   return (
     <DeniedTemplate lang={lang}>
-      <ContentBlock lang={lang} icon={<Warning />} heading={`You cannot enter ${courthouse && courthouse.court_name}`}>
-        on {format(new Date(), "MMMM d, yyyy", { locale: en })}
-      </ContentBlock>
-      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
-        <ContactCard
-          lang={lang}
-          dutyCounselNumber={courthouse && courthouse.duty_counsel_phone}
-          courthouseNumber={courthouse && courthouse.phone}
-        />
-      </ContentBlock>
-    </DeniedTemplate>
-  )
+    <ContentBlock lang={lang} icon={<Warning />} heading={`You cannot enter ${courthouse && courthouse.court_name}`}>
+  on {format(new Date(), "MMMM d, yyyy", { locale: en })}
+</ContentBlock>
+  <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
+    <ContactCard
+  lang={lang}
+  dutyCounselNumber={courthouse && courthouse.duty_counsel_phone}
+  courthouseNumber={courthouse && courthouse.phone}
+  />
+  </ContentBlock>
+  </DeniedTemplate>
+)
 }
 
 export default Denied

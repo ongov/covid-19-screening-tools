@@ -4,44 +4,63 @@ import styled from "styled-components"
 const Container = styled.div`
   display: block;
   width: 100%;
-  margin-top: -2rem;
+  margin: -2rem 0 2rem 0;
   background-color: ${props => props.color};
-
   @media screen and (max-width: 39.9375em) {
     margin-top: -1rem;
   }
 `
 
 const Title = styled.p`
-  margin: 0;
-  padding: 1.5rem;
+  padding: 1rem;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 26px;
+  font-size: 1.125rem;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.48px;
-  color: ${props => props.color};
+  color: white;
+  @media screen and (max-width: 39.9375em) {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+  }
 `
 
 const Heading = styled.h1`
-  margin: 0;
-  padding: 1.5rem 0;
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
-  line-height: 40px;
+  font-size: 2.875rem;
   text-align: center;
-  letter-spacing: 0.14px;
+  letter-spacing: 0.15rem;
+  margin-bottom: 0;
+  padding: 0 1rem;
   color: #fff;
+  @media screen and (max-width: 39.9375em) {
+    font-size: 40px;
+  }
 `
+
+const Icon = styled.div`
+  margin: auto;
+  padding: 0.5rem 0 1rem 0;
+  width: 100%;
+  @media screen and (max-width: 39.9375em) {
+    padding: 0.5rem 0 3rem 0;
+      svg {
+        display: block;
+        margin: 1rem auto 0 auto;
+        width: 80px;
+      }
+  }
+`
+
+
 
 export default function({ title, heading, icon, color, titleColor }) {
   return (
     <Container color={color}>
       <Title color={titleColor}>{title}</Title>
       <Heading>{heading}</Heading>
-      {icon}
+      <Icon>{icon}</Icon>
     </Container>
   )
 }

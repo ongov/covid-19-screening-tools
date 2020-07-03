@@ -44,45 +44,45 @@ const Approved = () => {
 
   return (
     <ApprovedTemplate lang={lang}>
-      <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
-        valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
-      </ContentBlock>
-      <ContentBlock lang={lang} icon={<MapPin />} heading={"You can enter"}>
-        {courthouse && courthouse.court_name}
-        <br />
-        {address}
-        <br />
-        {city && city.trim()} Ontario
-        <br />
-        {postalCode}
-      </ContentBlock>
-      <ContentBlock lang={lang} icon={<Information />} heading={"Next steps"}>
-        <>
-          <p>
-            Show this result to courthouse security either on your phone or{" "}
-            <Hyperlink
-              onClick={() =>
-                savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
-                  paperSize: "auto",
-                  avoidLinks: true,
-                  margin: 40,
-                  fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}`,
-                })
-              }
-            >
-              download a PDF
-            </Hyperlink>{" "}
-            to print out.
-          </p>
-          <p>Retake this screening every day before you enter a courthouse.</p>
-        </>
-      </ContentBlock>
-      <ContentBlock lang={lang} icon={<StaySafe />} heading={"Stay safe"}>
-        Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for
-        COVID-19.
-      </ContentBlock>
+    <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
+  valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
+  </ContentBlock>
+  <ContentBlock lang={lang} icon={<MapPin />} heading={"You can enter"}>
+    {courthouse && courthouse.court_name}
+<br />
+  {address}
+  <br />
+  {city && city.trim()} Ontario
+  <br />
+  {postalCode}
+  </ContentBlock>
+  <ContentBlock lang={lang} icon={<Information />} heading={"Next steps"}>
+    <>
+    <p>
+    Show this result to courthouse security either on your phone or{" "}
+<Hyperlink
+  onClick={() =>
+  savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
+    paperSize: "auto",
+    avoidLinks: true,
+    margin: 40,
+    fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}`,
+  })
+}
+>
+  download a PDF
+  </Hyperlink>{" "}
+  to print out.
+  </p>
+  <p>Retake this screening every day before you enter a courthouse.</p>
+  </>
+  </ContentBlock>
+  <ContentBlock lang={lang} icon={<StaySafe />} heading={"Stay safe"}>
+    Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for
+    COVID-19.
+    </ContentBlock>
     </ApprovedTemplate>
   )
-}
+    }
 
 export default Approved

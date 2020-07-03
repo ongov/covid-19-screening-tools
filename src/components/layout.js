@@ -5,6 +5,7 @@ import { SkipNavLink } from "@reach/skip-nav"
 
 import Header from "./header"
 import Footer from "./footer"
+import SEO from "./seo";
 import { general } from "../localized_content"
 import "../stylesheets/theme.css"
 import "../stylesheets/sat-style.css"
@@ -23,6 +24,7 @@ const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) =>
 
   return (
     <>
+      <SEO lang={lang} />
       <div className="ontario-text-center ontario-hide-for-print">
         <SkipNavLink>{general[lang].skipNavText}</SkipNavLink>
       </div>
@@ -31,9 +33,9 @@ const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) =>
         {isResultsPage ? (
           children
         ) : (
-          <div className="ontario-row">
-            <div className="ontario-small-12 ontario-columns">{children}</div>
-          </div>
+          <>
+            {children}
+          </>
         )}
       </main>
       {!hideFooter && <Footer lang={lang} />}
