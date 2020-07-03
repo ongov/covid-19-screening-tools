@@ -77,10 +77,10 @@ const Approved = () => {
           <p>Retake this screening every day before you enter a courthouse.</p>
         </>
       </ContentBlock>
-      <ContentBlock lang={lang} icon={<StaySafe />} heading={"Stay safe"}>
+      {/* <ContentBlock lang={lang} icon={<StaySafe />} heading={"Stay safe"}>
         Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for
         COVID-19.
-      </ContentBlock>
+      </ContentBlock> */}
     </ApprovedTemplate>
   )
 }
