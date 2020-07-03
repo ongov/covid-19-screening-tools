@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useEffect } from "react"
+import React, { useContext, useEffect, forwardRef } from "react"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
 
@@ -30,8 +30,7 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
-const Approved = ({ children, lang }) => {
-  const elToPrintRef = useRef(null)
+const Approved = forwardRef(({ children, lang }, ref) => {
   const { courthouse } = useContext(GlobalStateContext)
 
   useEffect(() => {
@@ -45,7 +44,7 @@ const Approved = ({ children, lang }) => {
   }, [])
 
   return (
-    <span ref={elToPrintRef}>
+    <span ref={ref}>
       <Layout lang={lang} hideFooter>
         <SkipNavContent>
           <Header
@@ -61,6 +60,6 @@ const Approved = ({ children, lang }) => {
       </Layout>
     </span>
   )
-}
+})
 
 export default Approved

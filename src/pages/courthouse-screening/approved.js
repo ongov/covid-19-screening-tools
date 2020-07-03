@@ -43,7 +43,7 @@ const Approved = () => {
   }
 
   return (
-    <ApprovedTemplate lang={lang}>
+    <ApprovedTemplate lang={lang} ref={elToPrintRef}>
       <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
         valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
       </ContentBlock>
