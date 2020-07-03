@@ -1,9 +1,7 @@
 import React, { useContext, useRef } from "react"
-import { savePDF } from "@progress/kendo-react-pdf"
-import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { format } from "date-fns"
-import en from "date-fns/locale/fr-CA"
+import fr from "date-fns/locale/fr-CA"
 
 import { GlobalStateContext } from "../../context/global-context-provider"
 
@@ -12,22 +10,11 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
 import MapPin from "../../images/inline-svgs/ontario-icon-map-pin.inline.svg"
-import Information from "../../images/inline-svgs/ontario-icon-information.inline.svg"
 import { results } from "../../localized_content"
 
 const lang = "fr"
 
-const Green = "#118847"
-
-const Hyperlink = styled.a`
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: bold;
-`
-
 const Approved = () => {
-  const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
   const date = new Date()
   const { address, city, postalCode } = getAddressPieces(courthouse)
@@ -44,8 +31,8 @@ const Approved = () => {
 
   return (
     <ApprovedTemplate lang={lang}>
-      <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
-        valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
+      <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: fr })}>
+        valid from {format(date, "h:m aa", { locale: fr })} to 11:59 p.m
       </ContentBlock>
       <ContentBlock lang={lang} icon={<MapPin />} heading={`${results[lang].approveHeading}`}>
         {courthouse && courthouse.court_name}
@@ -55,26 +42,6 @@ const Approved = () => {
         {city && city.trim()} Ontario
         <br />
         {postalCode}
-      </ContentBlock>
-      <ContentBlock lang={lang} icon={<Information />} heading={`${results[lang].nextSteps}`}>
-        <>
-          <p>
-            {results[lang].nextStepShowResults}{" "}
-            <Hyperlink
-              onClick={() =>
-                savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
-                  paperSize: "auto",
-                  avoidLinks: true,
-                  margin: 40,
-                  fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}`,
-                })
-              }
-            >
-              {results[lang].downloadPDF}
-            </Hyperlink>{" "}
-          </p>
-          <p>{results[lang].nextStepsInstruction}</p>
-        </>
       </ContentBlock>
     </ApprovedTemplate>
   )

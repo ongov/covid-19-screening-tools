@@ -1,6 +1,4 @@
-import React, { useContext, useRef } from "react"
-import { savePDF } from "@progress/kendo-react-pdf"
-import ReactDOM from "react-dom"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { format } from "date-fns"
 import en from "date-fns/locale/en-CA"
@@ -12,21 +10,10 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
 import MapPin from "../../images/inline-svgs/ontario-icon-map-pin.inline.svg"
-import Information from "../../images/inline-svgs/ontario-icon-information.inline.svg"
 
 const lang = "en"
 
-const Green = "#118847"
-
-const Hyperlink = styled.a`
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: bold;
-`
-
 const Approved = () => {
-  const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
   const date = new Date()
   const { address, city, postalCode } = getAddressPieces(courthouse)
@@ -42,7 +29,7 @@ const Approved = () => {
   }
 
   return (
-    <ApprovedTemplate lang={lang} ref={elToPrintRef}>
+    <ApprovedTemplate lang={lang}>
       <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
         valid from {format(date, "h:m aa", { locale: en })} to 11:59 p.m
       </ContentBlock>
@@ -54,27 +41,6 @@ const Approved = () => {
         {city && city.trim()} Ontario
         <br />
         {postalCode}
-      </ContentBlock>
-      <ContentBlock lang={lang} icon={<Information />} heading={"Next steps"}>
-        <>
-          <p>
-            Show this result to courthouse screening staff either on your phone or{" "}
-            <Hyperlink
-              onClick={() =>
-                savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
-                  paperSize: "auto",
-                  avoidLinks: true,
-                  margin: 40,
-                  fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}`,
-                })
-              }
-            >
-              download a PDF
-            </Hyperlink>{" "}
-            to print out.
-          </p>
-          <p>Retake this screening every day before you enter a courthouse.</p>
-        </>
       </ContentBlock>
     </ApprovedTemplate>
   )
