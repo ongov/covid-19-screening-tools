@@ -93,11 +93,11 @@ const LandingPageTemplate = ({ lang }) => {
               className="ontario-input ontario-dropdown"
               id="courthouseSelect"
               onChange={e => {
-                console.log(e.target.value)
+                let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
                 setCourthouse(e.target.value)
                 dispatch({
                   type: "COURTHOUSE_SELECTED",
-                  courthouse: { ...courthouses.find(ch => ch.court_name === e.target.value) },
+                  courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
                 })
               }}
               value={courthouse}
