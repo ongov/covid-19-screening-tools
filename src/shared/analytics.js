@@ -1,8 +1,10 @@
-export default searchData => {
+export default ({ courthouse, lang, outcome }) => {
   if (window && window.dataLayer) {
     window.dataLayer.push({
-      event: "covid-19-ac-location-search",
-      searchData,
+      event: "covid-19-cs-outcome",
+      outcome,
+      lang,
+      courthouse: courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`],
     })
   }
 }
