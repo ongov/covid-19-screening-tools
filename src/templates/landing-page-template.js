@@ -45,12 +45,6 @@ const LandingPageTemplate = ({ lang }) => {
     navigate("/courthouse-screening/travel")
   }
 
-  function getCourthouseName(courthouse) {
-    return courthouse.court_name.toLowerCase().includes(courthouse.municipality.toLowerCase())
-      ? courthouse.court_name
-      : `${courthouse.municipality} - ${courthouse.court_name}`
-  }
-
   return (
     <Layout lang={lang}>
       <SEO lang={lang} />
@@ -111,8 +105,11 @@ const LandingPageTemplate = ({ lang }) => {
               <option disabled selected value></option>
               {courthouses &&
                 courthouses.map((ch, i) => (
-                  <option key={`${ch.court_name}-${i}`} value={ch.court_name}>
-                    {getCourthouseName(ch)}
+                  <option
+                    key={`${ch.court_name}-${i}`}
+                    value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                  >
+                    {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
                   </option>
                 ))}
             </select>
