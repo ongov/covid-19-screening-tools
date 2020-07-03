@@ -14,6 +14,8 @@ import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
 import SpeechBubble from "../../images/inline-svgs/ontario-icon-speech-bubble.inline.svg"
 import CancelSmall from "../../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
 
+import {results} from "../../localized_content";
+
 const lang = "fr"
 
 const Denied = () => {
@@ -21,10 +23,10 @@ const Denied = () => {
 
   return (
     <DeniedTemplate lang={lang}>
-      <ContentBlock lang={lang} icon={<Warning />} heading={`You cannot enter ${courthouse && courthouse.court_name}`}>
+      <ContentBlock lang={lang} icon={<Warning />} heading={`${results[lang].deniedHeading} ${courthouse && courthouse.court_name}`}>
         on {format(new Date(), "MMMM d, yyyy", { locale: en })}
       </ContentBlock>
-      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={"Who to contact"}>
+      <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}>
         <ContactCard
           lang={lang}
           dutyCounselNumber={courthouse && courthouse.duty_counsel_phone}
