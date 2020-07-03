@@ -63,61 +63,65 @@ const LandingPageTemplate = ({ lang }) => {
         </div>
       </nav>
       <SkipNavContent>
-        <h1>{general[lang].title}</h1>
-        <CalloutNoBg
-          message={
-            <p>
-              <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
-                locale: lang === "fr" ? fr : en,
-              })}`}</strong>
-            </p>
-          }
-        />
-        <p className="ontario-lead-statement">Answer the following questions before you enter an Ontario courthouse.</p>
-        <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
-        <p>If you are told you cannot enter, you will get information about what to do next.</p>
-        <p className="ontario-margin-top-32-!">
-          This screening is only meant for entering Ontario courthouses and cannot diagnose you. If you have medical
-          questions, consult a health care provider or your{" "}
-          <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx">
-            local public health unit
-          </a>
-          .
-        </p>
-        <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
-          <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
-            <label className="ontario-label" htmlFor="courthouseSelect">
-              Select the courthouse you wish to enter.
-            </label>
-            <select
-              className="ontario-input ontario-dropdown"
-              id="courthouseSelect"
-              onChange={e => {
-                let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
-                setCourthouse(e.target.value)
-                dispatch({
-                  type: "COURTHOUSE_SELECTED",
-                  courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
-                })
-              }}
-              value={courthouse}
-            >
-              <option disabled selected value></option>
-              {courthouses &&
-                courthouses.map((ch, i) => (
-                  <option
-                    key={`${ch.court_name}-${i}`}
-                    value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+        <div className="ontario-row">
+          <div className="ontario-small-12 ontario-columns">
+              <h1>{general[lang].title}</h1>
+              <CalloutNoBg
+                message={
+                  <p>
+                    <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
+                      locale: lang === "fr" ? fr : en,
+                    })}`}</strong>
+                  </p>
+                }
+              />
+              <p className="ontario-lead-statement">Answer the following questions before you enter an Ontario courthouse.</p>
+              <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
+              <p>If you are told you cannot enter, you will get information about what to do next.</p>
+              <p className="ontario-margin-top-32-!">
+                This screening is only meant for entering Ontario courthouses and cannot diagnose you. If you have medical
+                questions, consult a health care provider or your{" "}
+                <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx">
+                  local public health unit
+                </a>
+                .
+              </p>
+              <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
+                <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
+                  <label className="ontario-label" htmlFor="courthouseSelect">
+                    Select the courthouse you wish to enter.
+                  </label>
+                  <select
+                    className="ontario-input ontario-dropdown"
+                    id="courthouseSelect"
+                    onChange={e => {
+                      let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
+                      setCourthouse(e.target.value)
+                      dispatch({
+                        type: "COURTHOUSE_SELECTED",
+                        courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
+                      })
+                    }}
+                    value={courthouse}
                   >
-                    {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                  </option>
-                ))}
-            </select>
+                    <option disabled selected value></option>
+                    {courthouses &&
+                      courthouses.map((ch, i) => (
+                        <option
+                          key={`${ch.court_name}-${i}`}
+                          value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                        >
+                          {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+              </div>
+              <CenteredDiv>
+                <Button text="Start courthouse assessment" clickHandler={handleClick} isDisabled={!courthouse} />
+              </CenteredDiv>
           </div>
         </div>
-        <CenteredDiv>
-          <Button text="Start courthouse assessment" clickHandler={handleClick} isDisabled={!courthouse} />
-        </CenteredDiv>
       </SkipNavContent>
     </Layout>
   )
