@@ -11,7 +11,7 @@ import Footer from "../components/outcome-footer"
 import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
 
-import { pushOutcomeDataToGTM } from "../shared/analytics"
+import { pushOutcomeDataToGTM } from "../shared"
 
 const Green = "#118847"
 
