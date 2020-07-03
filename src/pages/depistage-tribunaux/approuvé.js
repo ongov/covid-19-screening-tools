@@ -13,7 +13,6 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
 import MapPin from "../../images/inline-svgs/ontario-icon-map-pin.inline.svg"
 import Information from "../../images/inline-svgs/ontario-icon-information.inline.svg"
-import StaySafe from "../../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
 import { results } from "../../localized_content"
 
 const lang = "fr"
@@ -77,9 +76,6 @@ const Approved = () => {
           <p>{results[lang].nextStepsInstruction}</p>
         </>
       </ContentBlock>
-      {/* <ContentBlock lang={lang} icon={<StaySafe />} heading={`${results[lang].staySafe}`}>
-        {results[lang].downloadApp}
-      </ContentBlock> */}
     </ApprovedTemplate>
   )
 }

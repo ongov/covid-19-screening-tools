@@ -13,7 +13,6 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
 import MapPin from "../../images/inline-svgs/ontario-icon-map-pin.inline.svg"
 import Information from "../../images/inline-svgs/ontario-icon-information.inline.svg"
-import StaySafe from "../../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
 
 const lang = "en"
 
@@ -77,10 +76,6 @@ const Approved = () => {
           <p>Retake this screening every day before you enter a courthouse.</p>
         </>
       </ContentBlock>
-      {/* <ContentBlock lang={lang} icon={<StaySafe />} heading={"Stay safe"}>
-        Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for
-        COVID-19.
-      </ContentBlock> */}
     </ApprovedTemplate>
   )
 }
