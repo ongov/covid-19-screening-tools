@@ -11,6 +11,7 @@ import { pushOutcomeDataToGTM } from "../shared"
 
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
+import {results} from "../localized_content";
 
 const Red = "#D81A21"
 
@@ -38,9 +39,9 @@ const Denied = ({ lang, children }) => {
       <SkipNavContent>
         <Header
           title={
-            <>{courthouse && courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`]} COVID-19 screening result</>
+            <>{`${courthouse && courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`]} ${results[lang].title}`}</>
           }
-          heading={"You cannot enter"}
+          heading={`${results[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
           color={Red}
           titleColor={"#FFE0E2"}

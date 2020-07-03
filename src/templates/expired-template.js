@@ -13,7 +13,7 @@ import ExpiredSmall from "../images/inline-svgs/ontario-icon-expired-small.inlin
 import Calendar from "../images/inline-svgs/ontario-icon-calendar-grey.inline.svg"
 import Information from "../images/inline-svgs/ontario-icon-information-grey.inline.svg"
 
-import { expired, general } from "../localized_content"
+import { expired, general, results } from "../localized_content"
 
 const lang = "en"
 
@@ -48,12 +48,12 @@ const ExpiredTemplate = () => (
         color={Grey}
         titleColor={"#F2F2F2"}
       />
-      <ContentBlock lang={lang} icon={<Calendar />} heading={expired[lang].heading} />
-      <ContentBlock lang={lang} icon={<Information />} heading={expired[lang].nextSteps}>
-        {expired[lang].nextStepsInstruction}
+      <ContentBlock lang={lang} icon={<Calendar />} heading={results[lang].noEnter} />
+      <ContentBlock lang={lang} icon={<Information />} heading={results[lang].nextSteps}>
+        {results[lang].nextStepsInstruction}
       </ContentBlock>
       <RetakeButtonWrapper>
-        <RetakeButton text={expired[lang].retakeButtonText} clickHandler={() => console.log("clicked!")} />
+        <RetakeButton text={results[lang].retakeButtonText} clickHandler={() => console.log("clicked!")} />
       </RetakeButtonWrapper>
       <Footer icon={<ExpiredSmall />} color={Grey} />
     </SkipNavContent>
