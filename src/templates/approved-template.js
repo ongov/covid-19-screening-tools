@@ -8,6 +8,8 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 
+import { results } from "../localized_content"
+
 import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
 
@@ -47,7 +49,7 @@ const Approved = ({ children, lang }) => {
       <Layout lang={lang} hideFooter>
         <SkipNavContent>
           <Header
-            title={<>{courthouse && courthouse.court_name} COVID-19 screening result</>}
+            title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
             heading={"You can enter"}
             icon={<HeadingCheckmark />}
             color={Green}

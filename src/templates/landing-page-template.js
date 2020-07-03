@@ -13,8 +13,8 @@ import Button from "../components/button"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
-import { general } from "../localized_content"
 import { questions } from "../shared"
+import { general, landing } from "../localized_content"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -71,24 +71,15 @@ const LandingPageTemplate = ({ lang }) => {
               })}`}</strong>
             </p>
             <h1>{general[lang].title}</h1>
-
-            <p className="ontario-lead-statement">
-              Answer the following questions before you enter an Ontario courthouse.
-            </p>
-            <p className="ontario-margin-top-32-!">Your result will tell you if you can or cannot enter.</p>
-            <p>If you are told you cannot enter, you will get information about what to do next.</p>
+            <p className="ontario-lead-statement">{landing[lang].lead}</p>
+            <p className="ontario-margin-top-32-!">{landing[lang].infoText}</p>
             <p className="ontario-margin-top-32-!">
-              This screening is only meant for entering Ontario courthouses and cannot diagnose you. If you have medical
-              questions, consult a health care provider or your{" "}
-              <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx">
-                local public health unit
-              </a>
-              .
+              {landing[lang].screeningInfo} <a href={landing[lang].link}>{landing[lang].linkText}</a>.
             </p>
             <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
               <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
                 <label className="ontario-label" htmlFor="courthouseSelect">
-                  Select the courthouse you wish to enter.
+                  {landing[lang].courthouseSelect}
                 </label>
                 <select
                   className="ontario-input ontario-dropdown"
@@ -117,7 +108,7 @@ const LandingPageTemplate = ({ lang }) => {
               </div>
             </div>
             <CenteredDiv>
-              <Button text="Start courthouse assessment" clickHandler={handleClick} isDisabled={!courthouseName} />
+              <Button text={landing[lang].button} clickHandler={handleClick} isDisabled={!courthouseName} />
             </CenteredDiv>
           </div>
         </div>

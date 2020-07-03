@@ -30,7 +30,7 @@ const ContentBlock = styled.div`
   }
 `
 
-const ContactCard = ({ lang, dutyCounselNumber, courthouseNumber }) => (
+const DeniedContactCard = ({ lang, dutyCounselNumber, courthouseNumber }) => (
   <Container>
     <ContentBlock>
       <p>
@@ -68,4 +68,4 @@ const ContactCard = ({ lang, dutyCounselNumber, courthouseNumber }) => (
   </Container>
 )
 
-export default ContactCard
+export default DeniedContactCard
