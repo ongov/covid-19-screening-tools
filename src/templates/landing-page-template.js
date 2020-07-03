@@ -10,13 +10,11 @@ import fr from "date-fns/locale/fr-CA"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import CalloutNoBg from "../components/callout-no-bg"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
 import { questions } from "../shared"
-import { general } from "../localized_content"
-import { landing } from "../localized_content"
+import { general, landing } from "../localized_content"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -67,7 +65,6 @@ const LandingPageTemplate = ({ lang }) => {
       <SkipNavContent>
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">
-
             <p className="ontario-margin-bottom-12-!">
               <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
                 locale: lang === "fr" ? fr : en,
@@ -77,43 +74,43 @@ const LandingPageTemplate = ({ lang }) => {
 
             <p className="ontario-lead-statement">{landing[lang].lead}</p>
             <p className="ontario-margin-top-32-!">{landing[lang].infoText}</p>
-            <p className="ontario-margin-top-32-!">{landing[lang].screeningInfo}{" "}
-              <a href={landing[lang].link}>{landing[lang].linkText}</a>.
+            <p className="ontario-margin-top-32-!">
+              {landing[lang].screeningInfo} <a href={landing[lang].link}>{landing[lang].linkText}</a>.
             </p>
-              <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
-                <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
-                  <label className="ontario-label" htmlFor="courthouseSelect">
-                    {landing[lang].courthouseSelect}
-                  </label>
-                  <select
-                    className="ontario-input ontario-dropdown"
-                    id="courthouseSelect"
-                    onChange={e => {
-                      let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
-                      setCourthouse(e.target.value)
-                      dispatch({
-                        type: "COURTHOUSE_SELECTED",
-                        courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
-                      })
-                    }}
-                    value={courthouse}
-                  >
-                    <option disabled selected value></option>
-                    {courthouses &&
-                      courthouses.map((ch, i) => (
-                        <option
-                          key={`${ch.court_name}-${i}`}
-                          value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                        >
-                          {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                        </option>
-                      ))}
-                  </select>
-                </div>
+            <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
+              <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
+                <label className="ontario-label" htmlFor="courthouseSelect">
+                  {landing[lang].courthouseSelect}
+                </label>
+                <select
+                  className="ontario-input ontario-dropdown"
+                  id="courthouseSelect"
+                  onChange={e => {
+                    let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
+                    setCourthouse(e.target.value)
+                    dispatch({
+                      type: "COURTHOUSE_SELECTED",
+                      courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
+                    })
+                  }}
+                  value={courthouse}
+                >
+                  <option disabled selected value></option>
+                  {courthouses &&
+                    courthouses.map((ch, i) => (
+                      <option
+                        key={`${ch.court_name}-${i}`}
+                        value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                      >
+                        {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                      </option>
+                    ))}
+                </select>
               </div>
-              <CenteredDiv>
-                <Button text={landing[lang].button} clickHandler={handleClick} isDisabled={!courthouse} />
-              </CenteredDiv>
+            </div>
+            <CenteredDiv>
+              <Button text={landing[lang].button} clickHandler={handleClick} isDisabled={!courthouse} />
+            </CenteredDiv>
           </div>
         </div>
       </SkipNavContent>
