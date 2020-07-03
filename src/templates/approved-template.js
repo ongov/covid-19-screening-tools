@@ -1,6 +1,8 @@
-import React, { useContext, useEffect, forwardRef } from "react"
+import React, { useContext, useEffect, useRef, forwardRef } from "react"
+import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
+import { savePDF } from "@progress/kendo-react-pdf"
 
 import { GlobalStateContext } from "../context/global-context-provider"
 
@@ -13,9 +15,10 @@ import { results } from "../localized_content"
 
 import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
+import Information from "../images/inline-svgs/ontario-icon-information.inline.svg"
 import StaySafe from "../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
 
-import { pushOutcomeDataToGTM } from "../shared"
+import { pushOutcomeDataToGTM, navigateHome } from "../shared"
 
 const Green = "#118847"
 
@@ -25,8 +28,15 @@ const HeadingCheckmark = styled(LargeCheckmark)`
   margin: 1.2rem auto 2rem auto;
   background-color: ${Green};
 `
+const Hyperlink = styled.a`
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: bold;
+`
 
-const Approved = forwardRef(({ children, lang }, ref) => {
+const Approved = ({ children, lang }) => {
+  const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
 
   useEffect(() => {
@@ -38,7 +48,7 @@ const Approved = forwardRef(({ children, lang }, ref) => {
   }, [courthouse, lang])
 
   return (
-    <span ref={ref}>
+    <span ref={elToPrintRef}>
       <Layout lang={lang} hideFooter>
         <SkipNavContent>
           <Header
@@ -49,6 +59,29 @@ const Approved = forwardRef(({ children, lang }, ref) => {
             titleColor={"#d1efd4"}
           />
           {children}
+          <ContentBlock lang={lang} icon={<Information />} heading={`${results[lang].nextSteps}`}>
+            <>
+              <p>
+                {results[lang].nextStepShowResults}{" "}
+                <Hyperlink
+                  onClick={() =>
+                    savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
+                      paperSize: "auto",
+                      avoidLinks: true,
+                      margin: 40,
+                      fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}`,
+                    })
+                  }
+                >
+                  {results[lang].downloadPDF}
+                </Hyperlink>{" "}
+              </p>
+              <p>
+                <Hyperlink onClick={() => navigateHome(lang)}>{results[lang].nextStepsLinkText}</Hyperlink>&nbsp;
+                {results[lang].nextStepsInstruction}
+              </p>
+            </>
+          </ContentBlock>
           {/* NOTE: To enable contact tracing app link, uncomment the below code section. */}
           {/* <ContentBlock lang={lang} icon={<StaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
@@ -58,6 +91,6 @@ const Approved = forwardRef(({ children, lang }, ref) => {
       </Layout>
     </span>
   )
-})
+}
 
 export default Approved
