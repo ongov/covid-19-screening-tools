@@ -39,14 +39,10 @@ const RetakeButton = styled(Button)`
 `
 
 const ExpiredTemplate = () => (
-  <Layout lang={lang}>
+  <Layout lang={lang} hideFooter>
     <SkipNavContent>
       <Header
-        title={
-          <>
-            Windsor Courthouse {general[lang].outcome}
-          </>
-        }
+        title={<>Windsor Courthouse {general[lang].outcome}</>}
         heading={general[lang].expired}
         icon={<HeadingExpired />}
         color={Grey}
@@ -56,7 +52,9 @@ const ExpiredTemplate = () => (
       <ContentBlock lang={lang} icon={<Information />} heading={expired[lang].nextSteps}>
         {expired[lang].nextStepsInstruction}
       </ContentBlock>
-      <RetakeButtonWrapper><RetakeButton text={expired[lang].retakeButtonText} clickHandler={() => console.log("clicked!")} /></RetakeButtonWrapper>
+      <RetakeButtonWrapper>
+        <RetakeButton text={expired[lang].retakeButtonText} clickHandler={() => console.log("clicked!")} />
+      </RetakeButtonWrapper>
       <Footer icon={<ExpiredSmall />} color={Grey} />
     </SkipNavContent>
   </Layout>
