@@ -37,7 +37,7 @@ const LandingPageTemplate = ({ lang }) => {
     }
   `)
 
-  const [courthouse, setCourthouse] = useState(null)
+  const [courthouseName, setCourthouseName] = useState("")
   const dispatch = useContext(GlobalDispatchContext)
 
   const handleClick = () => {
@@ -95,15 +95,15 @@ const LandingPageTemplate = ({ lang }) => {
                   id="courthouseSelect"
                   onChange={e => {
                     let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
-                    setCourthouse(e.target.value)
+                    setCourthouseName(e.target.value)
                     dispatch({
                       type: "COURTHOUSE_SELECTED",
                       courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
                     })
                   }}
-                  value={courthouse}
+                  value={courthouseName}
                 >
-                  <option disabled selected value></option>
+                  <option disabled></option>
                   {courthouses &&
                     courthouses.map((ch, i) => (
                       <option
@@ -117,7 +117,7 @@ const LandingPageTemplate = ({ lang }) => {
               </div>
             </div>
             <CenteredDiv>
-              <Button text="Start courthouse assessment" clickHandler={handleClick} isDisabled={!courthouse} />
+              <Button text="Start courthouse assessment" clickHandler={handleClick} isDisabled={!courthouseName} />
             </CenteredDiv>
           </div>
         </div>
