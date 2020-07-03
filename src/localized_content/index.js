@@ -1,5 +1,5 @@
 import footer from "./footer"
-import outcomeContactCard from "./outcome-contact-card"
+import deniedContactCard from "./denied-contact-card"
 import expired from "./expired"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 import landing from "./landing"
@@ -47,4 +47,14 @@ const general = {
   },
 }
 
-export { landing, general, footer, outcomeContactCard, symptomsTitle, symptoms, noSymptomsId, expired, results }
+export {
+  landing,
+  general,
+  footer,
+  deniedContactCard as outcomeContactCard,
+  symptomsTitle,
+  symptoms,
+  noSymptomsId,
+  expired,
+  results,
+}
