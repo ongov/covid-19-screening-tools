@@ -16,8 +16,9 @@ import {results} from "../localized_content";
 const Red = "#D81A21"
 
 const HeadingDeniedIcon = styled(CancelLarge)`
-  display: inline-block;
-  margin: 2rem calc(50% - (120px / 2));
+  display: block;
+  width: 120px;
+  margin: 1.2rem auto 2rem auto;
   background-color: ${Red};
 `
 
