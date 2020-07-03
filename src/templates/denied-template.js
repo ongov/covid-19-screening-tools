@@ -23,14 +23,10 @@ const Denied = ({ lang, children }) => {
   const { courthouse } = useContext(GlobalStateContext)
 
   return (
-    <Layout lang={lang}>
+    <Layout lang={lang} hideFooter>
       <SkipNavContent>
         <Header
-          title={
-            <>
-              {courthouse && courthouse.court_name} COVID-19 screening result
-            </>
-          }
+          title={<>{courthouse && courthouse.court_name} COVID-19 screening result</>}
           heading={"You cannot enter"}
           icon={<HeadingDeniedIcon />}
           color={Red}
