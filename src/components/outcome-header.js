@@ -12,23 +12,23 @@ const Container = styled.div`
 `
 
 const Title = styled.p`
-  padding-top: 2rem;
+  padding: 1rem 1rem 2rem 1rem;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.125rem;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.48px;
-  color: ${props => props.color};
+  color: white;
   @media screen and (max-width: 39.9375em) {
-    font-size: 18px;
+    padding-bottom: 1rem;
   }
 `
 
 const Heading = styled.h1`
   font-style: normal;
   font-weight: bold;
-  font-size: 80px;
+  font-size: 2.875rem;
   text-align: center;
   letter-spacing: 0.15rem;
   margin-bottom: 0;
@@ -41,7 +41,7 @@ const Heading = styled.h1`
 
 const Icon = styled.div`
   margin: auto;
-  padding: 0.5rem 0 2rem 0;
+  padding: 0.5rem 0 0.5rem 0;
   width: 100%;
   @media screen and (max-width: 39.9375em) {
     svg {
