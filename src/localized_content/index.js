@@ -1,6 +1,5 @@
 import footer from "./footer"
 import deniedContactCard from "./denied-contact-card"
-import expired from "./expired"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 import landing from "./landing"
 import results from "./results"
@@ -55,6 +54,5 @@ export {
   symptomsTitle,
   symptoms,
   noSymptomsId,
-  expired,
   results,
 }
