@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 const Title = styled.p`
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 1rem;
   font-style: normal;
   font-weight: bold;
   font-size: 1.125rem;
@@ -41,15 +41,15 @@ const Heading = styled.h1`
 
 const Icon = styled.div`
   margin: auto;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem 0 1rem 0;
   width: 100%;
   @media screen and (max-width: 39.9375em) {
-  padding: 0.5rem 0 3rem 0;
-    svg {
-      display: block;
-      margin: 1rem auto 0 auto;
-      width: 80px;
-    }
+    padding: 0.5rem 0 3rem 0;
+      svg {
+        display: block;
+        margin: 1rem auto 0 auto;
+        width: 80px;
+      }
   }
 `
 

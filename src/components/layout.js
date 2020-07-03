@@ -33,9 +33,9 @@ const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) =>
         {isResultsPage ? (
           children
         ) : (
-          <div className="ontario-row">
-            <div className="ontario-small-12 ontario-columns">{children}</div>
-          </div>
+          <>
+            {children}
+          </>
         )}
       </main>
       {!hideFooter && <Footer lang={lang} />}

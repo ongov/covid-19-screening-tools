@@ -49,9 +49,7 @@ const Approved = ({ children, lang }) => {
           <Header
             title={
               <>
-                {courthouse && courthouse.court_name}
-                <br />
-                COVID-19 screening result
+                {courthouse && courthouse.court_name} COVID-19 screening result
               </>
             }
             heading={"You can enter"}
