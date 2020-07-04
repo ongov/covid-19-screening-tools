@@ -2,21 +2,21 @@ module.exports = {
   siteMetadata: {
     en: {
       title: `Coronavirus (COVID-19) courthouse screener`,
-      description: `Take this self-assessment if you think you have coronavirus (COVID-19) or have been in close contact with someone who has it.`,
+      description: `Coronavirus (COVID-19) courthouse screener. Your result will tell you if you can or cannot enter. If you are told you cannot enter, you will get information about what to do next.`,
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
-      og_url: `https://covid-19.ontario.ca/self-assessment`,
+      og_url: `https://covid-19.ontario.ca/courthouse-screener`,
       og_title: `COVID-19 Courthouse Screening Tool for Ontarians`,
       og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_en.png`,
       og_locale: `en_CA`,
     },
     fr: {
-      title: `Autoévaluation - nouveau coronavirus (COVID-19)`,
-      description: `Si vous croyez que vous présentez des symptômes du coronavirus 2019 (COVID-19) ou si vous avez été en contact étroit avec une personne l’ayant contracté, servez-vous de cet outil d’autoévaluation pour vous aider à déterminer si vous avez besoin de recevoir d’autres soins...`,
+      title: `COVID-19 depistage tribunaux`,
+      description: `COVID-19 depistage tribunaux. Vos résultats détermineront si vous pouvez ou non entrer dans le palais de justice et quelles sont les prochaines étapes.`,
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
-      og_url: `https://covid-19.ontario.ca/autoevaluation`,
-      og_title: `Autoévaluation COVID-19 pour les Ontariens`,
+      og_url: `https://covid-19.ontario.ca/depistage-tribunaux`,
+      og_title: `COVID-19 depistage tribunaux pour les Ontariens`,
       og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_fr.png`,
       og_locale: `fr_CA`,
     },
@@ -76,8 +76,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `covid-19-self-assessment-tool-v3`,
-        short_name: `covid-19-sat-v3`,
+        name: `covid-19-courthouse-screener`,
+        short_name: `covid-19-cs`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
