@@ -20,13 +20,10 @@ const ContentBlock = styled.div`
   width: 22%;
   position: relative;
   padding-right: 1.875rem;
-  @media screen and (max-width: 39.9375em) {
+  @media screen and (max-width: 72.9375em) {
     float: none;
     margin-right: none;
     width: 100%;
-  }
-  @media screen and (min-width: 40em) and (max-width: 72.9375em) {
-    width: 45%;
   }
 `
 
@@ -50,12 +47,30 @@ const DeniedContactCard = ({ lang, dutyCounselNumber, courthouseNumber }) => (
           <a href={`tel:${dutyCounselNumber}`}>{dutyCounselNumber}</a>
         </li>
       </ul>
+
+      <p>
+      <strong>{content[lang].accusedPersons}</strong>
+      </p>
+      <p>{content[lang].accusedPersonsContactHeading}</p>
+      <ul>
+      <li>{content[lang].accusedPersonsContactList.lawyer}</li>
+      <li>
+      {content[lang].accusedPersonsContactList.dutyCounsel}&nbsp;
+      </li>
+      </ul>
+
     </ContentBlock>
     <ContentBlock>
       <p>
         <strong>{content[lang].witnesses}</strong>
       </p>
-      <p>{content[lang].witnessesContact}</p>
+      <p>{content[lang].witnessesContactHeading}</p>
+      <ul>
+        <li>{content[lang].witnessesContactList.officer}</li>
+        <li>
+          {content[lang].witnessesContactList.crownsOffice}&nbsp;
+        </li>
+      </ul>
     </ContentBlock>
     <ContentBlock>
       <p>
