@@ -94,7 +94,7 @@ const LandingPageTemplate = ({ lang }) => {
                   }}
                   value={courthouseName}
                 >
-                  <option disabled selected value=""></option>
+                  <option disabled value=""></option>
                   {courthouses &&
                     courthouses.map((ch, i) => (
                       <option

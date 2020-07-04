@@ -6,7 +6,7 @@ export default {
     plaintiffsOrDefendantsContactHeading: "Contact either",
     plaintiffsOrDefendantsContactList: {
       lawyer: "your lawyer",
-      dutyCounsel: "Duty Counsel at",
+      courthouse: "the courthouse",
     },
     witnesses: "Witnesses",
     witnessesContactHeading: "Contact either",
@@ -14,7 +14,7 @@ export default {
       officer: "Officer-in-Charge",
       crownsOffice: "Crown’s office at",
     },
-    accusedPersons : "Accused persons",
+    accusedPersons: "Accused persons",
     accusedPersonsContactHeading: "Contact either",
     accusedPersonsContactList: {
       lawyer: "your lawyer",
@@ -30,7 +30,7 @@ export default {
     plaintiffsOrDefendantsContactHeading: "Contactez ",
     plaintiffsOrDefendantsContactList: {
       lawyer: "soit votre avocat,",
-      dutyCounsel: "soit le palais de justice, au",
+      courthouse: "soit le palais de justice, au",
     },
     witnesses: "Témoins :",
     witnessesContactHeading: "Contactez ",
@@ -38,7 +38,7 @@ export default {
       officer: "soit votre avocat,",
       crownsOffice: "soit le palais de justice, au",
     },
-    accusedPersons : "Accusés ",
+    accusedPersons: "Accusés ",
     accusedPersonsContactHeading: "Contactez ",
     accusedPersonsContactList: {
       lawyer: "soit votre avocat,",

@@ -16,9 +16,10 @@ import { results } from "../localized_content"
 import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
 import Information from "../images/inline-svgs/ontario-icon-information.inline.svg"
+import MapPin from "../images/inline-svgs/ontario-icon-map-pin.inline.svg"
 import StaySafe from "../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
 
-import { pushOutcomeDataToGTM, navigateHome } from "../shared"
+import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../shared"
 
 const Green = "#118847"
 
@@ -38,6 +39,7 @@ const Hyperlink = styled.a`
 const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
+  const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
   useEffect(() => {
     pushOutcomeDataToGTM({
@@ -59,6 +61,15 @@ const Approved = ({ children, lang }) => {
             titleColor={"#d1efd4"}
           />
           {children}
+          <ContentBlock lang={lang} icon={<MapPin />} heading={`${results[lang].approveHeading}`}>
+            {courthouse && courthouse.court_name}
+            <br />
+            {address}
+            <br />
+            {city} Ontario
+            <br />
+            {postalCode}
+          </ContentBlock>
           <ContentBlock lang={lang} icon={<Information />} heading={`${results[lang].nextSteps}`}>
             <>
               <p>

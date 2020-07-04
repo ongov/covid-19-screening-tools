@@ -9,7 +9,7 @@
     "address_fr": "75, rue Mulcaster, Barrie ON L4M 3P2",
     "phone": "705-739-6111",
     "duty_counsel_phone": "705-726-4960",
-    "Crowns Office": "705-739-6188"
+    "crowns_office_phone": "705-739-6188"
   },
   {
     "court_name_display": "Belleville - Quinte Courthouse",
@@ -21,7 +21,7 @@
     "address_fr": "15, rue Bridge Ouest, Belleville ON K8P 0C7",
     "phone": "613-962-9106 x2024",
     "duty_counsel_phone": "613-962-9106 x2750",
-    "Crowns Office": "613-962-0772"
+    "crowns_office_phone": "613-962-0772"
   },
   {
     "court_name_display": "Brampton - A. Grenville and William Davis ",
@@ -33,7 +33,7 @@
     "address_fr": "7755, rue Hurontario, Brampton ON L6W 4T1",
     "phone": "905-456-4802",
     "duty_counsel_phone": "905-456-4700 x5672",
-    "Crowns Office": "905-456-4778"
+    "crowns_office_phone": "905-456-4778"
   },
   {
     "court_name_display": "Brantford - Brantford Superior Courthouse - 70 Wellington St",
@@ -45,7 +45,7 @@
     "address_fr": "70, rue Wellington, Brantford ON N3T 2L9",
     "phone": "519-752-7828",
     "duty_counsel_phone": "519-756-1242",
-    "Crowns Office": "519-758-3480"
+    "crowns_office_phone": "519-758-3480"
   },
   {
     "court_name_display": "Brantford - Brantford Ontario Courthouse - 44 Queen Street",
@@ -57,7 +57,7 @@
     "address_fr": "44, rue Queen, Brantford ON NeT 2L9",
     "phone": "519-758-3460",
     "duty_counsel_phone": "519-756-1242",
-    "Crowns Office": "519-758-3480"
+    "crowns_office_phone": "519-758-3480"
   },
   {
     "court_name_display": "Chatham - Chatham Courthouse ",
@@ -69,7 +69,7 @@
     "address_fr": "425, avenue Grand, Chatham ON N7M 6M8",
     "phone": "519-355-2200 x2211",
     "duty_counsel_phone": "519-354-6231",
-    "Crowns Office": "519-355-2240"
+    "crowns_office_phone": "519-355-2240"
   },
   {
     "court_name_display": "Cornwall - Cornwall Courthouse",
@@ -81,7 +81,7 @@
     "address_fr": "29, rue Second Ouest, Cornwall ON K6J 1G3",
     "phone": "613-933-7500",
     "duty_counsel_phone": "613-932-6252, 613-933-9300",
-    "Crowns Office": "613-932-5903"
+    "crowns_office_phone": "613-932-5903"
   },
   {
     "court_name_display": "Guelph - Guelph Courthouse - 36 Wyndham St S",
@@ -93,7 +93,7 @@
     "address_fr": "36, rue Wyndham, Guelph ON N1H 7J5",
     "phone": "519-826-4456",
     "duty_counsel_phone": "519-826-4431 x214",
-    "Crowns Office": "519-822-1031"
+    "crowns_office_phone": "519-822-1031"
   },
   {
     "court_name_display": "Guelph - Guelph Courthouse - 74 Woolwich St",
@@ -105,7 +105,7 @@
     "address_fr": "74, rue Woolwich, Guelph ON N1H 3T9",
     "phone": "519-826-4456",
     "duty_counsel_phone": "519-824-4100 ",
-    "Crowns Office": "519-822-1031"
+    "crowns_office_phone": "519-822-1031"
   },
   {
     "court_name_display": "Hamilton - John Sopinka - 45 Main St E",
@@ -117,7 +117,7 @@
     "address_fr": "45, rue Main Est, Hamilton ON L8N 2B7",
     "phone": "905-645-5252 x3799",
     "duty_counsel_phone": "905-522-5963",
-    "Crowns Office": "905-645-5262"
+    "crowns_office_phone": "905-645-5262"
   },
   {
     "court_name_display": "Hamilton - Hamilton Courthouse - 55 Main Street W",
@@ -129,7 +129,7 @@
     "address_fr": "55, rue Main Ouest, Hamilton ON L8P 1H4",
     "phone": "905-645-6250",
     "duty_counsel_phone": "905-522-5963",
-    "Crowns Office": "905-645-5262"
+    "crowns_office_phone": "905-645-5262"
   },
   {
     "court_name_display": "Kingston - Kingston (Frontenac County) Court - 5 Court St",
@@ -141,7 +141,7 @@
     "address_fr": "5, rue Court, Kingston ON K7L 2N4",
     "phone": "613-548-6811",
     "duty_counsel_phone": "no duty counsel",
-    "Crowns Office": "613-548-6220"
+    "crowns_office_phone": "613-548-6220"
   },
   {
     "court_name_display": "Kingston - Kingston Courthouse - 279 Wellington St",
@@ -153,7 +153,7 @@
     "address_fr": "279, rue Wellington, Kingston ON K7K 6E1",
     "phone": "613-548-6200",
     "duty_counsel_phone": "613-531-0504",
-    "Crowns Office": "613-548-6220"
+    "crowns_office_phone": "613-548-6220"
   },
   {
     "court_name_display": "Kitchener - Waterloo Region Courthouse",
@@ -165,7 +165,7 @@
     "address_fr": "85, rue Frederick, Kitchener ON N2H 0A7",
     "phone": "519-741-3293",
     "duty_counsel_phone": "519-578-4561",
-    "Crowns Office": "519-741-3222"
+    "crowns_office_phone": "519-741-3222"
   },
   {
     "court_name_display": "Lindsay - Lindsay Courthouse",
@@ -177,7 +177,7 @@
     "address_fr": "44, rue Kent Ouest, Lindsay ON K9V 6K2",
     "phone": "705-324-1400",
     "duty_counsel_phone": "416-436-4680",
-    "Crowns Office": "705-324-1420"
+    "crowns_office_phone": "705-324-1420"
   },
   {
     "court_name_display": "London - London Courthouse",
@@ -189,7 +189,7 @@
     "address_fr": "80, rue Dundas, London ON N6A 6A3",
     "phone": "519-660-3050",
     "duty_counsel_phone": "519-660-5095",
-    "Crowns Office": "519-660-3003"
+    "crowns_office_phone": "519-660-3003"
   },
   {
     "court_name_display": "Milton - Milton Courthouse",
@@ -201,7 +201,7 @@
     "address_fr": "491, avenue Steeles Ouest, Milton ON L9T 1Y7",
     "phone": "905-878-7285 x3466",
     "duty_counsel_phone": "905-864-8616",
-    "Crowns Office": "905-878-7291"
+    "crowns_office_phone": "905-878-7291"
   },
   {
     "court_name_display": "Newmarket - Newmarket Courthouse ",
@@ -213,7 +213,7 @@
     "address_fr": "50, rue Eagle Ouest, Newmarket ON L3Y 6B1",
     "phone": "905-853-4870",
     "duty_counsel_phone": "905-836-8580",
-    "Crowns Office": "905-853-4800"
+    "crowns_office_phone": "905-853-4800"
   },
   {
     "court_name_display": "North Bay - North Bay Courthouse",
@@ -225,7 +225,7 @@
     "address_fr": "360, rue Plouffe, North Bay ON P1B 9L5",
     "phone": "705-498-1810",
     "duty_counsel_phone": "705-938-8671",
-    "Crowns Office": "705-495-8313"
+    "crowns_office_phone": "705-495-8313"
   },
   {
     "court_name_display": "Orangeville - County of Dufferin Courthouse",
@@ -237,7 +237,7 @@
     "address_fr": "10, rue Louisa, Orangeville ON L9W 3P9",
     "phone": "519-941-5802 x320",
     "duty_counsel_phone": "519-938-8671",
-    "Crowns Office": "519-941-4471"
+    "crowns_office_phone": "519-941-4471"
   },
   {
     "court_name_display": "Oshawa (Durham) - Lieutenant-Colonel Sharpe, DSO, MP. Courthouse  ",
@@ -249,7 +249,7 @@
     "address_fr": "150, rue Bond, Oshawa ON L1G 0A2",
     "phone": "905-743-2640",
     "duty_counsel_phone": "905-732-3801",
-    "Crowns Office": "705-743-2700"
+    "crowns_office_phone": "705-743-2700"
   },
   {
     "court_name_display": "Ottawa - Ottawa Courthouse",
@@ -261,7 +261,7 @@
     "address_fr": "161, rue Elgin, Ottawa ON K2P 2K1",
     "phone": "613-239-1260",
     "duty_counsel_phone": "613-238-7931",
-    "Crowns Office": "613-239-1200"
+    "crowns_office_phone": "613-239-1200"
   },
   {
     "court_name_display": "Owen Sound - Owen Sound Courthouse",
@@ -273,7 +273,7 @@
     "address_fr": "611, avenue 9th Est, Owen Sound ON N4K 6Z4",
     "phone": "519-370-2444",
     "duty_counsel_phone": "519-372-1124",
-    "Crowns Office": "519-370-2470"
+    "crowns_office_phone": "519-370-2470"
   },
   {
     "court_name_display": "Pembroke - Pembroke Renfrew County Courthouse",
@@ -285,7 +285,7 @@
     "address_fr": "297, rue Pembroke Est, Pembroke ON K8A 3K2",
     "phone": "613-639-9824",
     "duty_counsel_phone": "613-735-3400",
-    "Crowns Office": "613-732-2261"
+    "crowns_office_phone": "613-732-2261"
   },
   {
     "court_name_display": "Sarnia - Sarnia Lampton County Courthouse",
@@ -297,7 +297,7 @@
     "address_fr": "700, rue Christina Nord, Sarnia ON N7V 3C2",
     "phone": "519-333-2950 x2302",
     "duty_counsel_phone": "519-337-1210",
-    "Crowns Office": "519-333-2980"
+    "crowns_office_phone": "519-333-2980"
   },
   {
     "court_name_display": "Sault Ste. Marie - Sault Ste. Marie Courthouse",
@@ -309,7 +309,7 @@
     "address_fr": "426, rue Queen Est, Sault Ste. Marie ON P6A 6W2",
     "phone": "705-945-8000 x406",
     "duty_counsel_phone": "705-942-8448",
-    "Crowns Office": "705-945-8001"
+    "crowns_office_phone": "705-945-8001"
   },
   {
     "court_name_display": "St. Catharines - Robert S. K. Welch  Courthouse",
@@ -321,7 +321,7 @@
     "address_fr": "59, rue Church, St. Catharines ON L2R 7N8",
     "phone": "905-988-6200 x434",
     "duty_counsel_phone": "905-685-8695",
-    "Crowns Office": "905-685-4293"
+    "crowns_office_phone": "905-685-4293"
   },
   {
     "court_name_display": "St. Thomas - Elgin County Courthouse",
@@ -333,7 +333,7 @@
     "address_fr": "4, rue Wellington, St. Thomas ON N5R 2P2",
     "phone": "519-631-4810",
     "duty_counsel_phone": "519-631-4810",
-    "Crowns Office": "519-631-1506"
+    "crowns_office_phone": "519-631-1506"
   },
   {
     "court_name_display": "Sudbury - Sudbury Courthouse",
@@ -345,7 +345,7 @@
     "address_fr": "155, rue Elm, Sudbury ON P3C 1T9",
     "phone": "705-564-7769",
     "duty_counsel_phone": "705-674-2220",
-    "Crowns Office": "705-564-7698"
+    "crowns_office_phone": "705-564-7698"
   },
   {
     "court_name_display": "Thunder Bay  - Thunder Bay Courthouse",
@@ -357,7 +357,7 @@
     "address_fr": "125, rue Brodie Nord, Thunder Bay ON P7C 0A3",
     "phone": "807-626-7000",
     "duty_counsel_phone": "807-577-1005",
-    "Crowns Office": "807-626-7155"
+    "crowns_office_phone": "807-626-7155"
   },
   {
     "court_name_display": "Toronto - 1000 Finch Ave. Courthouse",
@@ -369,7 +369,7 @@
     "address_fr": "1000, avenue Finch, Toronto ON M3J 2V5",
     "phone": "416-314-7276",
     "duty_counsel_phone": "416-663-5560",
-    "Crowns Office": "416-314-4222"
+    "crowns_office_phone": "416-314-4222"
   },
   {
     "court_name_display": "Toronto - Osgood Hall",
@@ -381,7 +381,7 @@
     "address_fr": "130, rue Queen, Toronto ON M5H 2N5",
     "phone": "416-327-6247",
     "duty_counsel_phone": "no duty counsel ",
-    "Crowns Office": "N/A"
+    "crowns_office_phone": "N/A"
   },
   {
     "court_name_display": "Toronto - 1911 Eglinton Ave. Courthouse",
@@ -393,7 +393,7 @@
     "address_fr": "1911 , rue Eglinton, Toronto ON M1L 4P4",
     "phone": "416-325-0382",
     "duty_counsel_phone": "416-757-8257",
-    "Crowns Office": "416-325-0342"
+    "crowns_office_phone": "416-325-0342"
   },
   {
     "court_name_display": "Toronto - 2201 Finch Courthouse",
@@ -405,7 +405,7 @@
     "address_fr": "2201, avenue Finch, Toronto ON M9M 2Y9",
     "phone": "416-314-5758",
     "duty_counsel_phone": "416-597-5890",
-    "Crowns Office": "416-314-3936"
+    "crowns_office_phone": "416-314-3936"
   },
   {
     "court_name_display": "Toronto - 311 Jarvis Courthouse",
@@ -417,7 +417,7 @@
     "address_fr": "311, rue Jarvis, Toronto ON M5B 2C4",
     "phone": "416-327-6991",
     "duty_counsel_phone": "416-598-0200 x4361",
-    "Crowns Office": "416-327-6845"
+    "crowns_office_phone": "416-327-6845"
   },
   {
     "court_name_display": "Toronto - 330 University Ave. Courthouse",
@@ -429,7 +429,7 @@
     "address_fr": "330, avenue University, Toronto ON M5G 1R7",
     "phone": "416-326-4405",
     "duty_counsel_phone": "no duty counsel",
-    "Crowns Office": "N/A"
+    "crowns_office_phone": "N/A"
   },
   {
     "court_name_display": "Toronto - 361 University Ave. Courthouse",
@@ -440,7 +440,7 @@
     "court_name_fr": "361 University - Toronto",
     "address_fr": "361, avenue University, Toronto ON M5G 1T3",
     "phone": "416-327-5558",
-    "Crowns Office": "416-327-5990"
+    "crowns_office_phone": "416-327-5990"
   },
   {
     "court_name_display": "Toronto - 393 Universtiy Ave. Courthouse",
@@ -452,7 +452,7 @@
     "address_fr": "393, avenue University -10e étage, Toronto ON M5G 1E6",
     "phone": "416-326-4405",
     "duty_counsel_phone": "no duty  counsel ",
-    "Crowns Office": "416-327-5990"
+    "crowns_office_phone": "416-327-5990"
   },
   {
     "court_name_display": "Toronto - College Park Courts",
@@ -464,7 +464,7 @@
     "address_fr": "2e étage - 444, rue Yonge, Toronto ON M5B 2H4",
     "phone": "416-325-8964",
     "duty_counsel_phone": "416-598-1260",
-    "Crowns Office": "416-325-8994"
+    "crowns_office_phone": "416-325-8994"
   },
   {
     "court_name_display": "Toronto - 45/47 Sheppard Ave. Courts",
@@ -475,7 +475,7 @@
     "court_name_fr": "47 Sheppard - Toronto",
     "address_fr": "47, avenue Sheppard, Toronto ON M2N 5N1",
     "phone": "416-326-3550",
-    "Crowns Office": "N/A"
+    "crowns_office_phone": "N/A"
   },
   {
     "court_name_display": "Toronto - Old City Hall ",
@@ -487,7 +487,7 @@
     "address_fr": "60, rue Queen, Toronto ON M5H 2M4",
     "phone": "416-327-5617",
     "duty_counsel_phone": "416-594-9300",
-    "Crowns Office": "416-327-6064"
+    "crowns_office_phone": "416-327-6064"
   },
   {
     "court_name_display": "Welland - Welland Courthouse",
@@ -499,7 +499,7 @@
     "address_fr": "102, rue Main, Welland ON L3B 3W6",
     "phone": "905-735-0010 x210",
     "duty_counsel_phone": "905-734- 8986",
-    "Crowns Office": "905-732-1327"
+    "crowns_office_phone": "905-732-1327"
   },
   {
     "court_name_display": "Windsor - Windsor Courthouse - 200 Chatham St E",
@@ -511,7 +511,7 @@
     "address_fr": "200, rue Chatham Est, Windsor ON N9A 2W3",
     "phone": "519-973-6620",
     "duty_counsel_phone": "519-256-4609",
-    "Crowns Office": "519-253-1104"
+    "crowns_office_phone": "519-253-1104"
   },
   {
     "court_name_display": "Windsor - Windsor Courthouse - 245 Windsor St",
@@ -523,6 +523,6 @@
     "address_fr": "245, rue Windsor, Windsor ON N9A 1J2",
     "phone": "519-973-6620",
     "duty_counsel_phone": "519-256-4609",
-    "Crowns Office": "519-253-1104"
+    "crowns_office_phone": "519-253-1104"
   }
 ]

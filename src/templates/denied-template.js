@@ -7,11 +7,14 @@ import { GlobalStateContext } from "../context/global-context-provider"
 import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
+import DeniedContactCard from "../components/denied-contact-card"
+import ContentBlock from "../components/outcome-content-block-with-icon"
 import { pushOutcomeDataToGTM } from "../shared"
 
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
-import {results} from "../localized_content";
+import SpeechBubble from "../images/inline-svgs/ontario-icon-speech-bubble.inline.svg"
+import { results } from "../localized_content"
 
 const Red = "#D81A21"
 
@@ -40,7 +43,9 @@ const Denied = ({ lang, children }) => {
       <SkipNavContent>
         <Header
           title={
-            <>{`${courthouse && courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`]} ${results[lang].title}`}</>
+            <>{`${courthouse && courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`]} ${
+              results[lang].title
+            }`}</>
           }
           heading={`${results[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
@@ -48,6 +53,9 @@ const Denied = ({ lang, children }) => {
           titleColor={"#FFE0E2"}
         />
         {children}
+        <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}>
+          <DeniedContactCard lang={lang} courthouse={courthouse} />
+        </ContentBlock>
         <Footer icon={<CancelSmall />} color={Red} />
       </SkipNavContent>
     </Layout>
