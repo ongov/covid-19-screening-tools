@@ -9,7 +9,7 @@ const results = {
     nextStepShowResults: "Show this result to courthouse security either on your phone or",
     nextStepsLinkText: "Retake this screening",
     nextStepsInstruction: "at the start of every day before you enter a courthouse.",
-    downloadPDF: "Download a PDF to print out.",
+    downloadPDF: "download a PDF to print out.",
     staySafe: "Stay safe",
     downloadApp:
       "Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for COVID-19.",

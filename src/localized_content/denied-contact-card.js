@@ -6,7 +6,7 @@ export default {
     plaintiffsOrDefendantsContactHeading: "Contact either",
     plaintiffsOrDefendantsContactList: {
       lawyer: "your lawyer",
-      courthouse: "the courthouse",
+      courthouse: "the courthouse at",
     },
     witnesses: "Witnesses",
     witnessesContactHeading: "Contact either",
