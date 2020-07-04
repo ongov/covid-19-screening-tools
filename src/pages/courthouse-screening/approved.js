@@ -6,6 +6,7 @@ import ApprovedTemplate from "../../templates/approved-template"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
+import "../../stylesheets/pdf-styles.css"
 
 const lang = "en"
 
