@@ -30,9 +30,9 @@ const ContentBlock = styled.div`
 `
 
 const DeniedContactCard = ({ lang, courthouse }) => {
-  const dutyCounselNum = getPhoneNumbers(courthouse.duty_counsel_phone)
-  const courthouseNum = getPhoneNumbers(courthouse.phone)
-  const crownNum = getPhoneNumbers(courthouse.crowns_office_phone)
+  const dutyCounselNum = getPhoneNumbers(courthouse && courthouse.duty_counsel_phone)
+  const courthouseNum = getPhoneNumbers(courthouse && courthouse.phone)
+  const crownNum = getPhoneNumbers(courthouse && courthouse.crowns_office_phone)
 
   return (
     <Container>

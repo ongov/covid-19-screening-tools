@@ -1,6 +1,8 @@
 const phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})[ ]?(x\d{4})?$/
 
 function getPhoneNumbers(input) {
+  if (!input) return null
+
   if (input.indexOf(",") > -1) {
     return input
       .split(",")
