@@ -26,6 +26,15 @@ const CenteredDiv = styled.div`
   }
 `
 
+const ErrorDiv = styled.div`
+  background-color: #ffecee;
+  border-left: 4px solid #cd0000;
+  color: #cd0000;
+  padding: 1rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+`
+
 const LandingPageTemplate = ({ lang }) => {
   const {
     currentBuildDate: { currentDate },
@@ -37,10 +46,16 @@ const LandingPageTemplate = ({ lang }) => {
     }
   `)
 
+  const [courthouseSelectError, setCourthouseSelectError] = useState(false)
   const [courthouseName, setCourthouseName] = useState("")
   const dispatch = useContext(GlobalDispatchContext)
 
   const handleClick = () => {
+    if (!courthouseName) {
+      setCourthouseSelectError(true)
+      return
+    }
+
     dispatch({ type: "CS_START" })
     navigate(`${general[lang].basePath}${questions.q1[lang]}`)
   }
@@ -78,6 +93,7 @@ const LandingPageTemplate = ({ lang }) => {
             </p>
             <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
               <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
+                {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
                 <label className="ontario-label" htmlFor="courthouseSelect">
                   {landing[lang].courthouseSelect}
                 </label>
@@ -87,6 +103,7 @@ const LandingPageTemplate = ({ lang }) => {
                   onChange={e => {
                     let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
                     setCourthouseName(e.target.value)
+                    setCourthouseSelectError(false)
                     dispatch({
                       type: "COURTHOUSE_SELECTED",
                       courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
@@ -108,7 +125,7 @@ const LandingPageTemplate = ({ lang }) => {
               </div>
             </div>
             <CenteredDiv>
-              <Button text={landing[lang].button} clickHandler={handleClick} isDisabled={!courthouseName} />
+              <Button text={landing[lang].button} clickHandler={handleClick} />
             </CenteredDiv>
           </div>
         </div>
