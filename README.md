@@ -11,3 +11,7 @@ The tool takes the public through a series of questions to determine whether the
 To run during development, simply use `yarn develop` command.
 
 To build production version, use `yarn build`. Production build can be served locally using `yarn serve`.
+
+## CONTACT TRACING
+
+We have the call to stay safe and download the contact tracing app but as of today (July 3, 2020) the app is not released as yet so we are hiding this section. To enable it, simply uncomment the commented out section in `src/templates/approved-template.js`.

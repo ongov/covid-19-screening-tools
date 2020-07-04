@@ -19,22 +19,28 @@ const Question = ({ lang, title, buttons, children }) => {
   const state = useContext(GlobalStateContext)
 
   return (
-    <div className="ontario-question-content__wrapper--outer">
-      {state && state.courthouse && <Courthouse>{state.courthouse.court_name}</Courthouse>}
-      <h1>{title}</h1>
-      <button
-        className="ontario-button--tertiary ontario-form--link backBtn"
-        tabIndex="0"
-        type="button"
-        onClick={() => navigate(-1)}
-      >
-        <i className="ontario-icon ontario-icon__back-blue" aria-hidden="true"></i>
-        {` ${general[lang].backButtonText}`}
-      </button>
-      <SkipNavContent>
-        <div className="ontario-question-content__wrapper--inner">{children}</div>
-      </SkipNavContent>
-      {buttons}
+    <div className="ontario-row">
+      <div className="ontario-small-12 ontario-columns">
+        <div className="ontario-question-content__wrapper--outer">
+          {state && state.courthouse && (
+            <Courthouse>{lang === "fr" ? state.courthouse.court_name_fr : state.courthouse.court_name}</Courthouse>
+          )}
+          <h1>{title}</h1>
+          <button
+            className="ontario-button--tertiary ontario-form--link backBtn"
+            tabIndex="0"
+            type="button"
+            onClick={() => navigate(-1)}
+          >
+            <i className="ontario-icon ontario-icon__back-blue" aria-hidden="true"></i>
+            {` ${general[lang].backButtonText}`}
+          </button>
+          <SkipNavContent>
+            <div className="ontario-question-content__wrapper--inner">{children}</div>
+          </SkipNavContent>
+          {buttons}
+        </div>
+      </div>
     </div>
   )
 }

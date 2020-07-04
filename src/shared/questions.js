@@ -1,3 +1,7 @@
+/**
+ * This is a list of questions and outcomes, localized to EN and FR.
+ * The keys are IDs we use for logic and routing throughout the application.
+ */
 export default {
   q1: {
     en: "travel",
@@ -17,14 +21,14 @@ export default {
   },
   q5: {
     en: "symptoms",
-    fr: "symptômes",
+    fr: "symptomes",
   },
   r1: {
     en: "approved",
-    fr: "approuvé",
+    fr: "approuve",
   },
   r2: {
     en: "denied",
-    fr: "dénié",
+    fr: "denie",
   },
 }

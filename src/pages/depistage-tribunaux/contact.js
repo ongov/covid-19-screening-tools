@@ -4,16 +4,16 @@ import { logic } from "../../shared"
 
 const Contact = () => (
   <QuestionTemplate lang="fr" yesLink={logic.q4.yes} noLink={logic.q4.no}>
-    <h2>In the past 14 days, have you been in close physical contact with a person who:</h2>
+    <h2>Ces 14 derniers jours, avez-vous été en contact physique étroit avec une personne qui&nbsp;:</h2>
     <ul>
-      <li>is currently sick with a new cough, fever, or difficulty breathing? or</li>
-      <li>tested positive for COVID-19? or</li>
-      <li>returned from outside Canada in the last 2 weeks?</li>
+      <li>est actuellement malade et a de la toux, de la fièvre ou des difficultés respiratoires?  ou</li>
+      <li>a subi un test de la COVID-19 et a été déclarée positive?  ou</li>
+      <li>est retournée au Canada d’un pays étranger ces deux dernières semaines?</li>
     </ul>
-    <p>Close physical contact means:</p>
+    <p>« contact physique étroit » signifie&nbsp;: </p>
     <ul>
-      <li>being less than 2 metres away in the same room, workspace, or area</li>
-      <li>living in the same home</li>
+      <li>se trouver à moins de deux mètres de la personne, dans la même pièce, dans le même lieu de travail ou au même endroit;</li>
+      <li>vivre dans le même logement.</li>
     </ul>
   </QuestionTemplate>
 )

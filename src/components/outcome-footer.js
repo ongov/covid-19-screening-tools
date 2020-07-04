@@ -9,25 +9,41 @@ const Container = styled.div`
   width: 100%;
 `
 
+const InnerContainer = styled.div`
+  clear: both;
+  position: relative;
+  margin: 2.5rem auto 2rem auto;
+  max-width: 72rem;
+  width: 100%;
+`
+
 const Icon = styled.div`
   display: inline-block;
-  position: absolute;
-  left: 1.5rem;
-  bottom: 2rem;
+  position: relative;
+  left: 1.2rem;
   background-color: #fff;
 `
 
 const OntarioLogoWidth = "7rem"
 const OntarioLogo = styled.img`
   width: ${OntarioLogoWidth};
-  margin: 2rem calc(50% - (${OntarioLogoWidth} / 2));
+  position: relative;
+  display: inline-block;
+  float: right;
+  padding-right: 1.2rem;
+  @media screen and (max-width: 39.9375em) {
+    float: none;
+    left: 35%;
+  }
 `
 
 export default function({ icon, color }) {
   return (
     <Container color={color}>
-      <Icon>{icon}</Icon>
-      <OntarioLogo src={OntarioLogoImg} alt="Ontario Logo" />
+      <InnerContainer>
+        <Icon>{icon}</Icon>
+        <OntarioLogo src={OntarioLogoImg} alt="Ontario Logo" />
+      </InnerContainer>
     </Container>
   )
 }

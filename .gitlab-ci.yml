@@ -1,95 +1,90 @@
 stages:
-    - build
-    - deploy
+  - build
+  - deploy
 
 cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-        - node_modules/
-        - public/
-
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - public/
 
 .app_build_template: &app_build_definition
-    stage: build
-    image: node:12
-    tags:
-        - covid
-    before_script:
-        - sed -i "s/GA_CODE/${GA_CODE}/g" gatsby-config.js
-    script:
-        - yarn
-        - yarn clean
-        - yarn build
-
-
+  stage: build
+  image: node:12
+  tags:
+    - covid
+  before_script:
+    - sed -i "s/GA_CODE/${GA_CODE}/g" gatsby-config.js
+  script:
+    - yarn
+    - yarn clean
+    - yarn build
 
 build_stage:
-    <<: *app_build_definition
-    environment: stage
-    variables:
-        GA_CODE: "${STAGE_GA_CODE}"
-    only:
-        - develop
-
+  <<: *app_build_definition
+  environment: stage
+  variables:
+    GA_CODE: "${STAGE_GA_CODE}"
+  only:
+    - develop
 
 build_prod:
-    <<: *app_build_definition
-    environment: Prod
-    variables:
-        GA_CODE: "${PROD_GA_CODE}"
-        GATSBY_IS_PROD_ENV: "true"
-    only:
-        refs:
-            - tags
-            - master
-
+  <<: *app_build_definition
+  environment: Prod
+  variables:
+    GA_CODE: "${PROD_GA_CODE}"
+    GATSBY_IS_PROD_ENV: "true"
+  only:
+    refs:
+      - tags
+      - master
 
 .app_deploy_template: &app_deploy_definition
-    image: 608395931184.dkr.ecr.us-east-1.amazonaws.com/ci/python-aws-cli:latest
-    stage: deploy
-    tags:
-        - covid
-    script:
-        ## Sync only the static build folder to the S3 bucket
-        - aws s3 sync public/ s3://${S3_DEPLOY_BUCKET}/ --exclude "assessment-centre-locations/*" --exclude "emplacements-centres-devaluation/*" --exclude "covid-19-ac-assets/*"
+  image: 608395931184.dkr.ecr.us-east-1.amazonaws.com/ci/python-aws-cli:latest
+  stage: deploy
+  tags:
+    - covid
+  script:
+    ## Sync only the static build folder to the S3 bucket
+    - aws s3 sync public/ s3://${S3_DEPLOY_BUCKET}/ --exclude "assessment-centre-locations/*" --exclude "emplacements-centres-devaluation/*" --exclude "covid-19-ac-assets/*"
 
 deploy:stage:
-    <<: *app_deploy_definition
-    when: manual
-    environment:
-        name: Stage
-        url: https://stage-c19.ontariogovernment.ca/depistage-tribunaux/
-    only:
-        - develop
-    variables:
-        S3_DEPLOY_BUCKET: "${STAGE_S3_DEPLOY_BUCKET}"
-        AWS_ACCESS_KEY_ID: "${STAGE_ACCESS_KEY}"
-        AWS_SECRET_ACCESS_KEY: "${STAGE_ACCESS_SECRET}"
-        GA_CODE: "${STAGE_GA_CODE}"
-    dependencies:
-        - build_stage
+  <<: *app_deploy_definition
+  when: manual
+  environment:
+    name: Stage
+    url: https://stage-c19.ontariogovernment.ca/depistage-tribunaux/
+  only:
+    - develop
+  variables:
+    S3_DEPLOY_BUCKET: "${STAGE_S3_DEPLOY_BUCKET}"
+    AWS_ACCESS_KEY_ID: "${STAGE_ACCESS_KEY}"
+    AWS_SECRET_ACCESS_KEY: "${STAGE_ACCESS_SECRET}"
+    GA_CODE: "${STAGE_GA_CODE}"
+  dependencies:
+    - build_stage
 
 deploy:prod:
-    <<: *app_deploy_definition
-    environment:
-        name: Prod
-        url: https://covid-19.ontario.ca/courthouse-screening/
-    when: manual
-    only:
-        refs:
-        - tags
-        - master
-        variables:
-        - $CI_COMMIT_TAG =~ /^v?\d+\.\d+\.\d+(?:-(?:alpha|beta))?$/
-    except:
-        refs:
-        - branches
-        - develop
+  <<: *app_deploy_definition
+  environment:
+    name: Prod
+    url: https://covid-19.ontario.ca/courthouse-screening/
+  when: manual
+  only:
+    refs:
+      - tags
+      - master
     variables:
-        S3_DEPLOY_BUCKET: "${PROD_S3_DEPLOY_BUCKET}"
-        AWS_ACCESS_KEY_ID: "${PROD_ACCESS_KEY}"
-        AWS_SECRET_ACCESS_KEY: "${PROD_ACCESS_SECRET}"
-        GA_CODE: "${PROD_GA_CODE}"
-        GATSBY_IS_PROD_ENV: "true"
-    dependencies:
-        - build_prod
+      - $CI_COMMIT_TAG =~ /^v?\d+\.\d+\.\d+(?:-(?:alpha|beta))?$/
+  except:
+    refs:
+      - branches
+      - develop
+  variables:
+    S3_DEPLOY_BUCKET: "${PROD_S3_DEPLOY_BUCKET}"
+    AWS_ACCESS_KEY_ID: "${PROD_ACCESS_KEY}"
+    AWS_SECRET_ACCESS_KEY: "${PROD_ACCESS_SECRET}"
+    GA_CODE: "${PROD_GA_CODE}"
+    GATSBY_IS_PROD_ENV: "true"
+  dependencies:
+    - build_prod
