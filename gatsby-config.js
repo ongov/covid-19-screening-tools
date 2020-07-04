@@ -7,7 +7,7 @@ module.exports = {
       twitter_site: `@ONThealth`,
       og_url: `https://covid-19.ontario.ca/self-assessment`,
       og_title: `COVID-19 Courthouse Screening Tool for Ontarians`,
-      og_image: `https://covid-19.ontario.ca/covid-19-sat-assets/social_image_en.png`,
+      og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_en.png`,
       og_locale: `en_CA`,
     },
     fr: {
@@ -17,7 +17,7 @@ module.exports = {
       twitter_site: `@ONThealth`,
       og_url: `https://covid-19.ontario.ca/autoevaluation`,
       og_title: `Autoévaluation COVID-19 pour les Ontariens`,
-      og_image: `https://covid-19.ontario.ca/covid-19-sat-assets/social_image_fr.png`,
+      og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_fr.png`,
       og_locale: `fr_CA`,
     },
   },
