@@ -37,7 +37,6 @@ build_prod:
     environment: Prod
     variables:
         GA_CODE: "${PROD_GA_CODE}"
-        GATSBY_OAG_API_URL: "${PROD_GATSBY_OAG_API_URL}"
         GATSBY_IS_PROD_ENV: "true"
     only:
         refs:
@@ -59,7 +58,7 @@ deploy:stage:
     when: manual
     environment:
         name: Stage
-        url: https://stage-c19.ontariogovernment.ca/self-assessment/
+        url: https://stage-c19.ontariogovernment.ca/depistage-tribunaux/
     only:
         - develop
     variables:
@@ -74,7 +73,7 @@ deploy:prod:
     <<: *app_deploy_definition
     environment:
         name: Prod
-        url: https://covid-19.ontario.ca/self-assessment/
+        url: https://covid-19.ontario.ca/courthouse-screening/
     when: manual
     only:
         refs:
@@ -91,7 +90,6 @@ deploy:prod:
         AWS_ACCESS_KEY_ID: "${PROD_ACCESS_KEY}"
         AWS_SECRET_ACCESS_KEY: "${PROD_ACCESS_SECRET}"
         GA_CODE: "${PROD_GA_CODE}"
-        GATSBY_OAG_API_URL: "${PROD_GATSBY_OAG_API_URL}"
         GATSBY_IS_PROD_ENV: "true"
     dependencies:
         - build_prod
