@@ -21,14 +21,14 @@ export default {
   },
   q5: {
     en: "symptoms",
-    fr: "symptômes",
+    fr: "symptomes",
   },
   r1: {
     en: "approved",
-    fr: "approuvé",
+    fr: "approuve",
   },
   r2: {
     en: "denied",
-    fr: "dénié",
+    fr: "denie",
   },
 }
