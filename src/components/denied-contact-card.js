@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import PhoneNumber from "./phone-number"
+import { getPhoneNumbers } from "../shared"
 import { outcomeContactCard as content } from "../localized_content"
 
 const Container = styled.div`
@@ -29,9 +30,9 @@ const ContentBlock = styled.div`
 `
 
 const DeniedContactCard = ({ lang, courthouse }) => {
-  const dutyCounselNum = <PhoneNumber courthouse={courthouse} fieldName={"duty_counsel_phone"} lang={lang} />
-  const courthouseNum = <PhoneNumber courthouse={courthouse} fieldName={"phone"} lang={lang} />
-  const crownNum = <PhoneNumber courthouse={courthouse} fieldName={"crowns_office_phone"} lang={lang} />
+  const dutyCounselNum = getPhoneNumbers(courthouse.duty_counsel_phone)
+  const courthouseNum = getPhoneNumbers(courthouse.phone)
+  const crownNum = getPhoneNumbers(courthouse.crowns_office_phone)
 
   return (
     <Container>
@@ -51,7 +52,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           {courthouseNum && (
             <li>
               {content[lang].plaintiffsOrDefendantsContactList.courthouse}&nbsp;
-              {courthouseNum}
+              <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
             </li>
           )}
         </ul>
@@ -65,7 +66,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           {dutyCounselNum && (
             <li>
               {content[lang].accusedPersonsContactList.dutyCounsel}&nbsp;
-              {dutyCounselNum}
+              <PhoneNumber phoneNumbers={dutyCounselNum} lang={lang} />
             </li>
           )}
         </ul>
@@ -80,7 +81,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           {crownNum && (
             <li>
               {content[lang].witnessesContactList.crownsOffice}&nbsp;
-              {crownNum}
+              <PhoneNumber phoneNumbers={crownNum} lang={lang} />
             </li>
           )}
         </ul>
@@ -91,7 +92,8 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         </p>
         {courthouseNum && (
           <p>
-            {content[lang].othersContact}&nbsp;{courthouseNum}
+            {content[lang].othersContact}&nbsp;
+            <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
           </p>
         )}
       </ContentBlock>
