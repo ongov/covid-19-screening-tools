@@ -6,6 +6,8 @@ import styled from "styled-components"
 import "../stylesheets/forms.css"
 import "../stylesheets/question.css"
 
+import BackBlueIcon from "../images/inline-svgs/ontario-icon-back-blue.inline.svg"
+
 import { GlobalStateContext } from "../context/global-context-provider"
 import { general } from "../localized_content"
 
@@ -13,6 +15,12 @@ const Courthouse = styled.p`
   font-weight: bold;
   color: #666666;
   margin-bottom: 0;
+`
+
+const BackBlueChevron = styled(BackBlueIcon)`
+  display: inline-block;
+  width: 0.9rem;
+  height: 0.9rem;
 `
 
 const Question = ({ lang, title, buttons, children }) => {
@@ -32,7 +40,7 @@ const Question = ({ lang, title, buttons, children }) => {
             type="button"
             onClick={() => navigate(-1)}
           >
-            <i className="ontario-icon ontario-icon__back-blue" aria-hidden="true"></i>
+            <BackBlueChevron aria-hidden="true" />
             {` ${general[lang].backButtonText}`}
           </button>
           <SkipNavContent>
