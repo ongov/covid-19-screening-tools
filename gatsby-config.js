@@ -11,7 +11,7 @@ module.exports = {
       og_locale: `en_CA`,
     },
     fr: {
-      title: `COVID-19 depistage tribunaux`,
+      title: `COVID-19 dépistage tribunaux`,
       description: `COVID-19 depistage tribunaux. Vos résultats détermineront si vous pouvez ou non entrer dans le palais de justice et quelles sont les prochaines étapes.`,
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
