@@ -12,6 +12,7 @@ const Container = styled.div`
 `
 
 const Title = styled.p`
+  margin: 0;
   padding: 1rem 20rem 1rem 20rem;
   font-style: normal;
   font-weight: bold;
@@ -48,15 +49,13 @@ const Icon = styled.div`
   width: 100%;
   @media screen and (max-width: 39.9375em) {
     padding: 0.5rem 0 3rem 0;
-      svg {
-        display: block;
-        margin: 1rem auto 0 auto;
-        width: 80px;
-      }
+    svg {
+      display: block;
+      margin: 1rem auto 0 auto;
+      width: 80px;
+    }
   }
 `
-
-
 
 export default function({ title, heading, icon, color, titleColor }) {
   return (
