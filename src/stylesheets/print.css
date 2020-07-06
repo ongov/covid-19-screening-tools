@@ -8,13 +8,13 @@
 @media print {
   /* Global */
   @page {
-    size:  auto;   /* auto is the initial value */
-    margin: 0mm;  /* this affects the margin in the printer settings */
+    size: auto; /* auto is the initial value */
+    margin: 0mm; /* this affects the margin in the printer settings */
   }
 
   html {
-    background-color: #FFFFFF;
-    margin: 0px;  /* this affects the margin on the html before sending to printer */
+    background-color: #ffffff;
+    margin: 0px; /* this affects the margin on the html before sending to printer */
   }
 
   body {
@@ -33,12 +33,13 @@
     display: inline-block;
   }
 
-  div, span {
+  div,
+  span {
     background-color: #fff !important;
     color: #000 !important;
   }
 
-  a::after{
+  a::after {
     content: " (" attr(href) ") ";
   }
 
@@ -57,7 +58,8 @@
     padding-bottom: 0 !important;
   }
 
-  [class^='ontario-callout'], [class*='ontario-callout'] {
+  [class^="ontario-callout"],
+  [class*="ontario-callout"] {
     padding: 0 !important;
     border: none !important;
   }
@@ -107,12 +109,7 @@
   }
 
   /* Components */
-  .ontario-results__callout .ontario-results__timestamp {
-    margin-bottom: 0.5rem;
-  }
-
   .ontario-question-content__wrapper--outer {
     margin-top: 1rem;
   }
-
 }
