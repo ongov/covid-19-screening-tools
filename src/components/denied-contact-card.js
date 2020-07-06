@@ -57,7 +57,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           )}
         </ul>
 
-        <p>
+        <p className="ontario-margin-top-32-!">
           <strong>{content[lang].accusedPersons}</strong>
         </p>
         <p>{content[lang].accusedPersonsContactHeading}</p>

@@ -13,7 +13,7 @@ import ContentBlock from "../components/outcome-content-block-with-icon"
 
 import { results } from "../localized_content"
 
-import LargeCheckmark from "../ontario-icon-checkmark-large.svg"
+import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
 import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
 import Information from "../images/inline-svgs/ontario-icon-information.inline.svg"
 import MapPin from "../images/inline-svgs/ontario-icon-map-pin.inline.svg"
@@ -53,7 +53,6 @@ const Approved = ({ children, lang }) => {
     <span ref={elToPrintRef}>
       <Layout lang={lang} hideFooter>
         <SkipNavContent>
-  <img src={HeadingCheckmark} />
           <Header
             title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
             heading={`${results[lang].approveHeading}`}
