@@ -22,7 +22,7 @@ const CenteredDiv = styled.div`
 
   button {
     display: block;
-    margin: 0 auto 1.75rem;
+    margin: 1rem auto 1.75rem;
   }
 `
 
@@ -33,6 +33,23 @@ const ErrorDiv = styled.div`
   padding: 1rem;
   position: relative;
   margin-bottom: 1.5rem;
+`
+
+const CourtHouseSelect = styled.span`
+  font-family: "Raleway", "Open Sans", Arial, sans-serif;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: 0.025rem;
+  line-height: 1.56;
+`
+
+const CourtHouseDropDown = styled.div`
+  .ontario-input {
+    margin-bottom: 1rem;
+  }
+  .dropdownError {
+    border: 3px solid #cd0000;
+  }
 `
 
 const LandingPageTemplate = ({ lang }) => {
@@ -52,7 +69,7 @@ const LandingPageTemplate = ({ lang }) => {
 
   const handleClick = () => {
     if (!courthouseName) {
-      setCourthouseSelectError(true)
+      setCourthouseSelectError(true);
       return
     }
 
@@ -93,12 +110,11 @@ const LandingPageTemplate = ({ lang }) => {
             </p>
             <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
               <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
-                {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
                 <label className="ontario-label" htmlFor="courthouseSelect">
-                  {landing[lang].courthouseSelect}
+                  <CourtHouseSelect>{landing[lang].courthouseSelect}</CourtHouseSelect>
                 </label>
-                <select
-                  className="ontario-input ontario-dropdown"
+                <CourtHouseDropDown>
+                <select className={`ontario-input ontario-dropdown ${courthouseSelectError ? "dropdownError" : ""}`}
                   id="courthouseSelect"
                   onChange={e => {
                     let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
@@ -122,6 +138,8 @@ const LandingPageTemplate = ({ lang }) => {
                       </option>
                     ))}
                 </select>
+                </CourtHouseDropDown>
+                {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>
             </div>
             <CenteredDiv>

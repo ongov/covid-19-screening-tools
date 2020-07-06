@@ -7,17 +7,25 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
 import "../../stylesheets/pdf-styles.css"
+import styled from "styled-components";
 
 const lang = "en"
+
+const HeaderDate = styled.div`
+  font-family: "Raleway", "Open Sans", Arial, sans-serif;
+  font-size: 1.4375rem;
+  font-weight: bold;
+  line-height: 1.4;
+`
 
 const Approved = () => {
   const date = new Date()
 
   return (
     <ApprovedTemplate lang={lang}>
-      <ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
+      <HeaderDate><ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
         valid from {format(date, "h:mm aa", { locale: en })} to 11:59 p.m
-      </ContentBlock>
+      </ContentBlock></HeaderDate>
     </ApprovedTemplate>
   )
 }
