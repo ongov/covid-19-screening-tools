@@ -248,7 +248,7 @@
     "court_name_fr": "Palais de justice Samuel S. Sharpe, lieutenant-colonel, D.S.O., député",
     "address_fr": "150, rue Bond, Oshawa ON L1G 0A2",
     "phone": "905-743-2640",
-    "duty_counsel_phone": "905-732-3801",
+    "duty_counsel_phone": "905-728-3801",
     "crowns_office_phone": "705-743-2700"
   },
   {
@@ -288,10 +288,10 @@
     "crowns_office_phone": "613-732-2261"
   },
   {
-    "court_name_display": "Sarnia - Sarnia Lampton County Courthouse",
+    "court_name_display": "Sarnia - Sarnia Lambton County Courthouse",
     "court_name_display_fr": "Sarnia - Palais de justice de Sarnia",
     "municipality": "Sarnia",
-    "court_name": "Sarnia Lampton County Courthouse",
+    "court_name": "Sarnia Lambton County Courthouse",
     "address": "700 Christina St N, Sarnia ON N7V 3C2",
     "court_name_fr": "Palais de justice de Sarnia",
     "address_fr": "700, rue Christina Nord, Sarnia ON N7V 3C2",
@@ -372,10 +372,10 @@
     "crowns_office_phone": "416-314-4222"
   },
   {
-    "court_name_display": "Toronto - Osgood Hall",
+    "court_name_display": "Toronto - Osgoode Hall",
     "court_name_display_fr": "Toronto - Osgoode Hall",
     "municipality": "Toronto",
-    "court_name": "Osgood Hall",
+    "court_name": "Osgoode Hall",
     "address": "130 Queen St W, Toronto ON M5H 2N5",
     "court_name_fr": "Osgoode Hall",
     "address_fr": "130, rue Queen, Toronto ON M5H 2N5",
@@ -452,7 +452,7 @@
     "address_fr": "393, avenue University -10e étage, Toronto ON M5G 1E6",
     "phone": "416-326-4405",
     "duty_counsel_phone": "no duty  counsel ",
-    "crowns_office_phone": "416-327-5990"
+    "crowns_office_phone": "ll"
   },
   {
     "court_name_display": "Toronto - College Park Courts",
