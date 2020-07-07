@@ -46,16 +46,24 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         <p>
           <strong>{content[lang].plaintiffsOrDefendants}</strong>
         </p>
-        <p>{content[lang].plaintiffsOrDefendantsContactHeading}:</p>
-        <ul>
-          <li>{content[lang].plaintiffsOrDefendantsContactList.lawyer}</li>
-          {courthouseNum && (
-            <li>
-              {content[lang].plaintiffsOrDefendantsContactList.courthouse}&nbsp;
-              <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
-            </li>
+          {courthouseNum ? (
+            <>
+              <p>{content[lang].plaintiffsOrDefendantsContactHeadingEither}</p>
+              <ul>
+                <li>{content[lang].plaintiffsOrDefendantsContactList.lawyer}</li>
+                {courthouseNum && (
+                  <li>
+                  {content[lang].plaintiffsOrDefendantsContactList.courthouse}&nbsp;
+                  <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
+                  </li>
+                )}
+              </ul>
+            </>
+          ):(
+            <>
+              <p>{content[lang].plaintiffsOrDefendantsContactHeading} {content[lang].plaintiffsOrDefendantsContactList.lawyer}</p>
+            </>
           )}
-        </ul>
 
         <p className="ontario-margin-top-32-!">
           <strong>{content[lang].accusedPersons}</strong>
@@ -86,17 +94,17 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           )}
         </ul>
       </ContentBlock>
-      <ContentBlock>
-        <p>
-          <strong>{content[lang].others}</strong>
-        </p>
-        {courthouseNum && (
-          <p>
-            {content[lang].othersContact}&nbsp;
-            <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
-          </p>
-        )}
-      </ContentBlock>
+      {courthouseNum && (
+          <ContentBlock>
+            <p>
+              <strong>{content[lang].others}</strong>
+            </p>
+              <p>
+                {content[lang].othersContact}&nbsp;
+                <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
+              </p>
+          </ContentBlock>
+      )}
     </Container>
   )
 }
