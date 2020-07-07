@@ -3,19 +3,19 @@ export default {
     employees: "Employees of this courthouse",
     employeesContact: "Contact your manager",
     plaintiffsOrDefendants: "Plaintiffs or defendants (applicants or respondents)",
-    plaintiffsOrDefendantsContactHeading: "Contact either",
+    plaintiffsOrDefendantsContactHeading: "Contact",
     plaintiffsOrDefendantsContactList: {
       lawyer: "your lawyer",
       courthouse: "the courthouse at",
     },
     witnesses: "Witnesses",
-    witnessesContactHeading: "Contact either",
+    witnessesContactHeading: "Contact either:",
     witnessesContactList: {
       officer: "Officer-in-Charge",
       crownsOffice: "Crown’s office at",
     },
     accusedPersons: "Accused persons",
-    accusedPersonsContactHeading: "Contact either",
+    accusedPersonsContactHeading: "Contact either:",
     accusedPersonsContactList: {
       lawyer: "your lawyer",
       dutyCounsel: "Duty Counsel at",
