@@ -46,24 +46,24 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         <p>
           <strong>{content[lang].plaintiffsOrDefendants}</strong>
         </p>
-
-       {!courthouseNum &&
-          <p>{content[lang].plaintiffsOrDefendantsContactHeading} {content[lang].plaintiffsOrDefendantsContactList.lawyer}</p>
-        }
-        {courthouseNum &&
-          <>
-            <p>{content[lang].plaintiffsOrDefendantsContactHeadingEither}</p>
+          {courthouseNum ? (
+            <>
+              <p>{content[lang].plaintiffsOrDefendantsContactHeadingEither}</p>
               <ul>
                 <li>{content[lang].plaintiffsOrDefendantsContactList.lawyer}</li>
-                  {courthouseNum && (
-                    <li>
-                    {content[lang].plaintiffsOrDefendantsContactList.courthouse}&nbsp;
-                    <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
-                    </li>
-                    )}
+                {courthouseNum && (
+                  <li>
+                  {content[lang].plaintiffsOrDefendantsContactList.courthouse}&nbsp;
+                  <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
+                  </li>
+                )}
               </ul>
-          </>
-        }
+            </>
+          ):(
+            <>
+              <p>{content[lang].plaintiffsOrDefendantsContactHeading} {content[lang].plaintiffsOrDefendantsContactList.lawyer}</p>
+            </>
+          )}
 
         <p className="ontario-margin-top-32-!">
           <strong>{content[lang].accusedPersons}</strong>
