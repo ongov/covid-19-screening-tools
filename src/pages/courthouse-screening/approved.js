@@ -8,7 +8,6 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 import Calendar from "../../images/ontario-icon-calendar.svg"
 import "../../stylesheets/pdf-styles.css"
 import styled from "styled-components";
-import SmallCheckmark from "../../images/ontario-icon-checkmark-small.svg";
 
 const lang = "en"
 
