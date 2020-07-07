@@ -92,7 +92,7 @@
     "court_name_fr": "Palais de justice de Guelph",
     "address_fr": "36, rue Wyndham, Guelph ON N1H 7J5",
     "phone": "519-826-4456",
-    "duty_counsel_phone": "519-826-4431 x214",
+    "duty_counsel_phone": "519-826-4431",
     "crowns_office_phone": "519-822-1031"
   },
   {
@@ -103,7 +103,7 @@
     "address": "74 Woolwich St, Guelph ON N1H 3T9",
     "court_name_fr": "Palais de justice de Guelph",
     "address_fr": "74, rue Woolwich, Guelph ON N1H 3T9",
-    "phone": "519-826-4456",
+    "phone": "519-824-4100 x201",
     "duty_counsel_phone": "519-824-4100 ",
     "crowns_office_phone": "519-822-1031"
   },
@@ -164,7 +164,7 @@
     "court_name_fr": "Palais de justice de la région de Waterloo",
     "address_fr": "85, rue Frederick, Kitchener ON N2H 0A7",
     "phone": "519-741-3293",
-    "duty_counsel_phone": "519-578-4561",
+    "duty_counsel_phone": "519-578-0869",
     "crowns_office_phone": "519-741-3222"
   },
   {
@@ -249,7 +249,7 @@
     "address_fr": "150, rue Bond, Oshawa ON L1G 0A2",
     "phone": "905-743-2640",
     "duty_counsel_phone": "905-728-3801",
-    "crowns_office_phone": "705-743-2700"
+    "crowns_office_phone": "905-743-2700"
   },
   {
     "court_name_display": "Ottawa - Ottawa Courthouse",
