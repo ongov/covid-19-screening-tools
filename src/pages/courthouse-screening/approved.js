@@ -5,9 +5,10 @@ import en from "date-fns/locale/en-CA"
 import ApprovedTemplate from "../../templates/approved-template"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 
-import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"
+import Calendar from "../../images/ontario-icon-calendar.svg"
 import "../../stylesheets/pdf-styles.css"
 import styled from "styled-components";
+import SmallCheckmark from "../../images/ontario-icon-checkmark-small.svg";
 
 const lang = "en"
 
@@ -18,12 +19,20 @@ const HeaderDate = styled.div`
   line-height: 1.4;
 `
 
+const IconCalendar = styled.span`
+  background-image: url(${Calendar});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.3rem;
+`
+
 const Approved = () => {
   const date = new Date()
 
   return (
     <ApprovedTemplate lang={lang}>
-      <HeaderDate><ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
+      <HeaderDate><ContentBlock lang={lang} icon={<IconCalendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
         valid from {format(date, "' 'h':'mm' 'aaaa' ", { locale: en })} to 11:59 p.m.
       </ContentBlock></HeaderDate>
     </ApprovedTemplate>
