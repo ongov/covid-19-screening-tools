@@ -23,7 +23,7 @@ const IconCalendar = styled.span`
   background-size: 100%;
   display: inline-block;
   width: 2.35rem;
-  height: 2.3rem;
+  height: 2.28rem;
 `
 
 const Approved = () => {
