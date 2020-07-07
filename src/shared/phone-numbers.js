@@ -1,4 +1,4 @@
-const phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})[ ]?(x\d{4})?$/
+const phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})[ ]?(x\d+)?$/
 
 function getPhoneNumbers(input) {
   if (!input) return null
