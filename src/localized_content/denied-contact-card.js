@@ -1,7 +1,7 @@
 export default {
   en: {
     employees: "Employees of this courthouse",
-    employeesContact: "Contact your manager",
+    employeesContact: "Contact your manager.",
     plaintiffsOrDefendants: "Plaintiffs or defendants (applicants or respondents)",
     plaintiffsOrDefendantsContactHeading: "Contact",
     plaintiffsOrDefendantsContactHeadingEither: "Contact either:",
@@ -10,13 +10,15 @@ export default {
       courthouse: "the courthouse at",
     },
     witnesses: "Witnesses",
-    witnessesContactHeading: "Contact either:",
+    witnessesContactHeading: "Contact",
+    witnessesContactHeadingEither: "Contact either:",
     witnessesContactList: {
-      officer: "Officer-in-Charge",
+      officer: "the Officer-in-Charge",
       crownsOffice: "Crown’s office at",
     },
     accusedPersons: "Accused persons",
-    accusedPersonsContactHeading: "Contact either:",
+    accusedPersonsContactHeading: "Contact",
+    accusedPersonsContactHeadingEither: "Contact either:",
     accusedPersonsContactList: {
       lawyer: "your lawyer",
       dutyCounsel: "Duty Counsel at",
@@ -35,13 +37,15 @@ export default {
       courthouse: "soit le palais de justice, au",
     },
     witnesses: "Témoins",
-    witnessesContactHeading: "Contactez\xa0:",
+    witnessesContactHeading: "Contactez",
+    witnessesContactHeadingEither: "Contactez\xa0:",
     witnessesContactList: {
       officer: "soit votre avocat",
       crownsOffice: "soit le palais de justice, au",
     },
     accusedPersons: "Accusés",
-    accusedPersonsContactHeading: "Contactez\xa0:",
+    accusedPersonsContactHeading: "Contactez",
+    accusedPersonsContactHeadingEither: "Contactez\xa0:",
     accusedPersonsContactList: {
       lawyer: "soit votre avocat",
       dutyCounsel: "soit l’avocat de service au\xa0",
