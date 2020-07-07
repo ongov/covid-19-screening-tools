@@ -9,6 +9,8 @@ import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import DeniedContactCard from "../components/denied-contact-card"
 import ContentBlock from "../components/outcome-content-block-with-icon"
+import SEO from "../components/seo";
+
 import { pushOutcomeDataToGTM } from "../shared"
 
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
@@ -40,6 +42,8 @@ const Denied = ({ lang, children }) => {
 
   return (
     <Layout lang={lang} hideFooter>
+      <SEO lang={lang} />
+
       <SkipNavContent>
         <Header
           title={

@@ -10,6 +10,7 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
+import SEO from "../components/seo";
 
 import { results } from "../localized_content"
 
@@ -52,6 +53,7 @@ const Approved = ({ children, lang }) => {
   return (
     <span ref={elToPrintRef}>
       <Layout lang={lang} hideFooter>
+        <SEO lang={lang} />
         <SkipNavContent>
           <Header
             title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
