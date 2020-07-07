@@ -118,7 +118,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
             </p>
               <p>
                 {content[lang].othersContact}&nbsp;
-                <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
+                <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />.
               </p>
           </ContentBlock>
       )}
