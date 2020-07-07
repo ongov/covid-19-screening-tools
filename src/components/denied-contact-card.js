@@ -61,39 +61,56 @@ const DeniedContactCard = ({ lang, courthouse }) => {
             </>
           ):(
             <>
-              <p>{content[lang].plaintiffsOrDefendantsContactHeading} {content[lang].plaintiffsOrDefendantsContactList.lawyer}</p>
+              <p>{content[lang].plaintiffsOrDefendantsContactHeading} {content[lang].plaintiffsOrDefendantsContactList.lawyer}.</p>
             </>
           )}
 
         <p className="ontario-margin-top-32-!">
           <strong>{content[lang].accusedPersons}</strong>
         </p>
-        <p>{content[lang].accusedPersonsContactHeading}</p>
-        <ul>
-          <li>{content[lang].accusedPersonsContactList.lawyer}</li>
-          {dutyCounselNum && (
+        {dutyCounselNum ? (
+          <>
+          <p>{content[lang].accusedPersonsContactHeadingEither} </p>
+          <ul>
+            <li>{content[lang].accusedPersonsContactList.lawyer}</li>
+            {dutyCounselNum && (
             <li>
               {content[lang].accusedPersonsContactList.dutyCounsel}&nbsp;
               <PhoneNumber phoneNumbers={dutyCounselNum} lang={lang} />
             </li>
           )}
         </ul>
+        </>
+        ):(
+        <>
+          <p>{content[lang].accusedPersonsContactHeading} {content[lang].accusedPersonsContactList.lawyer}.</p>
+        </>
+        )}
       </ContentBlock>
       <ContentBlock>
         <p>
           <strong>{content[lang].witnesses}</strong>
         </p>
-        <p>{content[lang].witnessesContactHeading}</p>
-        <ul>
-          <li>{content[lang].witnessesContactList.officer}</li>
-          {crownNum && (
+        {crownNum ? (
+          <>
+            <p>{content[lang].witnessesContactHeadingEither}</p>
+            <ul>
+            <li>{content[lang].witnessesContactList.officer}</li>
+            {crownNum && (
             <li>
-              {content[lang].witnessesContactList.crownsOffice}&nbsp;
-              <PhoneNumber phoneNumbers={crownNum} lang={lang} />
-            </li>
+            {content[lang].witnessesContactList.crownsOffice}&nbsp;
+          <PhoneNumber phoneNumbers={crownNum} lang={lang} />
+          </li>
           )}
-        </ul>
+          </ul>
+        </>
+        ):(
+          <>
+            <p>{content[lang].witnessesContactHeading} {content[lang].witnessesContactList.officer}.</p>
+          </>
+        )}
       </ContentBlock>
+
       {courthouseNum && (
           <ContentBlock>
             <p>

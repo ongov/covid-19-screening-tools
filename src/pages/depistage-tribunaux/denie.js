@@ -10,21 +10,29 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
 
 import { results } from "../../localized_content"
+import styled from "styled-components";
 
 const lang = "fr"
+
+const HeaderDate = styled.span`
+  font-family: "Raleway", "Open Sans", Arial, sans-serif;
+  font-size: 1.4375rem;
+  font-weight: bold;
+  line-height: 1.4;
+`
 
 const Denied = () => {
   const { courthouse } = useContext(GlobalStateContext)
 
   return (
     <DeniedTemplate lang={lang}>
-      <ContentBlock
+      <HeaderDate><ContentBlock
         lang={lang}
         icon={<Warning />}
         heading={`${results[lang].deniedHeading} ${courthouse && courthouse.court_name}`}
       >
         on {format(new Date(), "MMMM d, yyyy", { locale: en })}
-      </ContentBlock>
+      </ContentBlock></HeaderDate>
     </DeniedTemplate>
   )
 }
