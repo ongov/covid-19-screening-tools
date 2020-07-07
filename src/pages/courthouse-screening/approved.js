@@ -24,7 +24,7 @@ const Approved = () => {
   return (
     <ApprovedTemplate lang={lang}>
       <HeaderDate><ContentBlock lang={lang} icon={<Calendar />} heading={format(date, "MMMM d, yyyy", { locale: en })}>
-        valid from {format(date, "h:mm aa", { locale: en })} to 11:59 p.m
+        valid from {format(date, "' 'h':'mm' 'aaaa' ", { locale: en })} to 11:59 p.m.
       </ContentBlock></HeaderDate>
     </ApprovedTemplate>
   )

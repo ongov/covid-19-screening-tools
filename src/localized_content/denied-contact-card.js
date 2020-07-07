@@ -30,7 +30,7 @@ export default {
     employees: "Employés de ce palais de justice",
     employeesContact: "Contactez votre chef de service.",
     plaintiffsOrDefendants: "Demandeurs ou défendeurs (requérants ou intimés)",
-    plaintiffsOrDefendantsContactHeading: "Contactez\xa0",
+    plaintiffsOrDefendantsContactHeading: "Contactez",
     plaintiffsOrDefendantsContactHeadingEither: "Contactez\xa0:",
     plaintiffsOrDefendantsContactList: {
       lawyer: "soit votre avocat",

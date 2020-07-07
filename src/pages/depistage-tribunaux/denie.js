@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { format } from "date-fns"
-import en from "date-fns/locale/fr-CA"
+import fr from "date-fns/locale/fr-CA"
 
 import { GlobalStateContext } from "../../context/global-context-provider"
 
@@ -31,7 +31,7 @@ const Denied = () => {
         icon={<Warning />}
         heading={`${results[lang].deniedHeading} ${courthouse && courthouse.court_name}`}
       >
-        on {format(new Date(), "MMMM d, yyyy", { locale: en })}
+        on {format(new Date(), "PPP", { locale: fr })}
       </ContentBlock></HeaderDate>
     </DeniedTemplate>
   )
