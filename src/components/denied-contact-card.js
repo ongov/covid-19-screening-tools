@@ -52,7 +52,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         }
         {courthouseNum &&
           <>
-            <p>{content[lang].plaintiffsOrDefendantsContactHeading}:</p>
+            <p>{content[lang].plaintiffsOrDefendantsContactHeadingEither}</p>
               <ul>
                 <li>{content[lang].plaintiffsOrDefendantsContactList.lawyer}</li>
                   {courthouseNum && (
