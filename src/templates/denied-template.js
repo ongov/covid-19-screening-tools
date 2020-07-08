@@ -9,6 +9,7 @@ import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import DeniedContactCard from "../components/denied-contact-card"
 import ContentBlock from "../components/outcome-content-block-with-icon"
+import CalloutInfo from "../components/callout-info"
 import SEO from "../components/seo";
 
 import { pushOutcomeDataToGTM } from "../shared"
@@ -57,8 +58,9 @@ const Denied = ({ lang, children }) => {
           titleColor={"#FFE0E2"}
         />
         {children}
-        <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}>
-          <p>{results[lang].whoToContactSubText}</p>
+        <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}></ContentBlock>
+        <CalloutInfo message={`${results[lang].whoToContactSubText}`} />
+        <ContentBlock lang={lang}>
           <DeniedContactCard lang={lang} courthouse={courthouse} />
         </ContentBlock>
         <Footer icon={<CancelSmall />} color={Red} />

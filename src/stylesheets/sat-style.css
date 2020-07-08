@@ -121,6 +121,24 @@ abbr[title] {
   height: 1rem;
 }
 
+.ontario-icon__info {
+  display: block;
+  background: url("../images/ontario-icon-information_blue.svg");
+  background-size: 100%;
+  float: left;
+  width: 2rem;
+  height: 2em;
+  margin-left: 0.2rem;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .ontario-icon__info {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: -0.2rem;
+  }
+}
+
 /* List style */
 .ontario-list--inline {
   margin: 0;
