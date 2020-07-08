@@ -10,25 +10,54 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
+import SEO from "../components/seo";
 
 import { results } from "../localized_content"
 
-import LargeCheckmark from "../images/inline-svgs/ontario-icon-checkmark-large.inline.svg"
-import SmallCheckmark from "../images/inline-svgs/ontario-icon-checkmark-small.inline.svg"
-import Information from "../images/inline-svgs/ontario-icon-information.inline.svg"
-import MapPin from "../images/inline-svgs/ontario-icon-map-pin.inline.svg"
+import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
+import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
+import Information from "../images/ontario-icon-information.svg"
+import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
 
 import { pushOutcomeDataToGTM, navigateHome, navigateToExpired, getAddressPieces, useCourthouse } from "../shared"
 
 const Green = "#118847"
 
-const HeadingCheckmark = styled(LargeCheckmark)`
+const HeadingCheckmark = styled.div`
+  background-image: url(${LargeCheckmark});
+  background-size: 100%;
   display: block;
-  width: 143px;
+  width: 120px;
+  height: 94px;
   margin: 1.2rem auto 2rem auto;
   background-color: ${Green};
 `
+
+const IconMapPin = styled.span`
+  background-image: url(${MapPin});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 3rem;
+`
+
+const IconInfo = styled.span`
+  background-image: url(${Information});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.35rem;
+`
+
+const FooterCheckmark = styled.span`
+  background-image: url(${SmallCheckmark});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 1.8rem;
+`
+
 const Hyperlink = styled.a`
   color: blue;
   text-decoration: underline;
@@ -64,6 +93,7 @@ const Approved = ({ children, lang }) => {
   return (
     <span ref={elToPrintRef}>
       <Layout lang={lang} hideFooter>
+        <SEO lang={lang} />
         <SkipNavContent>
           <Header
             title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
@@ -73,7 +103,7 @@ const Approved = ({ children, lang }) => {
             titleColor={"#d1efd4"}
           />
           {children}
-          <ContentBlock lang={lang} icon={<MapPin />} heading={`${results[lang].approveHeading}`}>
+          <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveHeading}`}>
             {courthouse && courthouse.court_name}
             <br />
             {address}
@@ -82,7 +112,7 @@ const Approved = ({ children, lang }) => {
             <br />
             {postalCode}
           </ContentBlock>
-          <ContentBlock lang={lang} icon={<Information />} heading={`${results[lang].nextSteps}`}>
+          <ContentBlock lang={lang} icon={<IconInfo />} heading={`${results[lang].nextSteps}`}>
             <>
               <p>
                 {results[lang].nextStepShowResults}{" "}
@@ -109,7 +139,7 @@ const Approved = ({ children, lang }) => {
           {/* <ContentBlock lang={lang} icon={<StaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
           </ContentBlock> */}
-          <Footer icon={<SmallCheckmark />} color={Green} />
+          <Footer icon={<FooterCheckmark />} color={Green} />
         </SkipNavContent>
       </Layout>
     </span>
