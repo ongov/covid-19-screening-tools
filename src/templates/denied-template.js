@@ -58,6 +58,7 @@ const Denied = ({ lang, children }) => {
         />
         {children}
         <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}>
+          <p>{results[lang].whoToContactSubText}</p>
           <DeniedContactCard lang={lang} courthouse={courthouse} />
         </ContentBlock>
         <Footer icon={<CancelSmall />} color={Red} />

@@ -4,6 +4,7 @@ const results = {
     approveHeading: "You can enter",
     deniedHeading: "You cannot enter",
     whoToContact: "Who to contact",
+    whoToContactSubText: "Please instruct the person you call to inform the court of your status.",
     noEnter: "You can no longer enter",
     nextSteps: "Next steps",
     nextStepShowResults: "Show this result to courthouse security either on your phone or",
@@ -20,6 +21,7 @@ const results = {
     approveHeading: "Vous pouvez entrer",
     deniedHeading: "Vous ne pouvez pas entrer",
     whoToContact: "Qui contacter",
+    whoToContactSubText: "Veuillez demander à la personne que vous appelez d'informer le tribunal de votre situation.",
     noEnter: "You can no longer enter FR",
     nextSteps: "Prochaines étapes",
     nextStepShowResults:
