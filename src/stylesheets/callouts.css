@@ -171,8 +171,20 @@
 
 .ontario-callout__icon-info {
   display: inline-block;
-  margin: 0 1rem 0 0;
+  margin: 0.2rem 1rem 0 -2rem;
   float: left;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .ontario-callout__icon-info {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 72.9375em) {
+  .ontario-callout__icon-info {
+    margin-left: -1rem;
+  }
 }
 
 .ontario-callout--info .ontario-button--secondary {

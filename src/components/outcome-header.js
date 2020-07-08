@@ -9,6 +9,9 @@ const Container = styled.div`
   @media screen and (max-width: 39.9375em) {
     margin-top: -1rem;
   }
+  @media print {
+    background-color: white;
+  }
 `
 
 const Title = styled.p`
@@ -31,6 +34,9 @@ const Title = styled.p`
     padding: 1rem 5rem 1rem 5rem;
     width: 70%;
   }
+  @media print {
+    color: black;
+  }
 `
 
 const Heading = styled.h1`
@@ -45,6 +51,9 @@ const Heading = styled.h1`
   @media screen and (max-width: 39.9375em) {
     font-size: 40px;
   }
+  @media print {
+    color: black;
+  }
 `
 
 const Icon = styled.div`
@@ -58,6 +67,9 @@ const Icon = styled.div`
       margin: 1rem auto 0 auto;
       width: 80px;
     }
+  }
+  @media print {
+    display: none;
   }
 `
 
