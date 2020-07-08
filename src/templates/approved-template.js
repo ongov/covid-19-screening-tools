@@ -113,7 +113,7 @@ const Approved = ({ children, lang }) => {
             titleColor={"#d1efd4"}
           />
           {children}
-          <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveHeading}`}>
+          <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveSubHeading}`}>
             {courthouse && courthouse.court_name}
             <br />
             {address}

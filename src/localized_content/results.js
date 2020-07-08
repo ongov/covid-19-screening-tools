@@ -2,6 +2,7 @@ const results = {
   en: {
     title: "COVID-19 screening result",
     approveHeading: "Enter",
+    approveSubHeading: "You can enter",
     deniedHeading: "Do not enter",
     deniedSubHeading: "You cannot enter",
     whoToContact: "Who to contact",
@@ -21,6 +22,7 @@ const results = {
   fr: {
     title: "Résultats du dépistage des symptômes de la COVID-19",
     approveHeading: "Entrer",
+    approveSubHeading: "Vous pouvez entrer",
     deniedHeading: "Ne pas entrer",
     deniedSubHeading: "Vous ne pouvez pas entrer",
     whoToContact: "Qui contacter",
