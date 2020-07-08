@@ -42,16 +42,6 @@
     display: none;
   }
 
-  /* Callouts */
-  .ontario-results__callout__arrow-down {
-    display: none;
-  }
-
-  .ontario-results__callout {
-    top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-
   [class^="ontario-callout"],
   [class*="ontario-callout"] {
     padding: 0 !important;
@@ -87,8 +77,8 @@
     display: none;
   }
 
-  /* Components */
-  .ontario-question-content__wrapper--outer {
-    margin-top: 1rem;
+  /* Info callout */
+  .ontario-callout--info {
+    background: none !important;
   }
 }
