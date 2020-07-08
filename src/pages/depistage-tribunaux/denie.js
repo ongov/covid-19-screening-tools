@@ -29,9 +29,9 @@ const Denied = () => {
       <HeaderDate><ContentBlock
         lang={lang}
         icon={<Warning />}
-        heading={`${results[lang].deniedHeading} ${courthouse && courthouse.court_name}`}
+        heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}
       >
-        on {format(new Date(), "PPP", { locale: fr })}
+  le {format(new Date(), "PPP", { locale: fr })}
       </ContentBlock></HeaderDate>
     </DeniedTemplate>
   )

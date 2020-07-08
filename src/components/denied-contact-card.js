@@ -91,24 +91,14 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         <p>
           <strong>{content[lang].witnesses}</strong>
         </p>
-        {crownNum ? (
-          <>
-            <p>{content[lang].witnessesContactHeadingEither}</p>
-            <ul>
-            <li>{content[lang].witnessesContactList.officer}</li>
-            {crownNum && (
-            <li>
-            {content[lang].witnessesContactList.crownsOffice}&nbsp;
-          <PhoneNumber phoneNumbers={crownNum} lang={lang} />
-          </li>
-          )}
-          </ul>
-        </>
-        ):(
-          <>
-            <p>{content[lang].witnessesContactHeading} {content[lang].witnessesContactList.officer}.</p>
-          </>
+        <p>{content[lang].witnessesContactHeading}</p>
+        <ul>
+        <li>{content[lang].witnessesContactList.contactPersonSubpoena}</li>
+        <li>{content[lang].witnessesContactList.contactPerson}</li>
+        {crownNum && (
+          <li>{content[lang].witnessesContactList.crownsOffice}&nbsp;<PhoneNumber phoneNumbers={crownNum} lang={lang} /></li>
         )}
+      </ul>
       </ContentBlock>
 
       {courthouseNum && (
