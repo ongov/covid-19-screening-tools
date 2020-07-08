@@ -27,6 +27,10 @@ const ContentBlock = styled.div`
     margin-right: none;
     width: 100%;
   }
+  @media print {
+    float: none;
+    width: 100%;
+  }
 `
 
 const DeniedContactCard = ({ lang, courthouse }) => {
