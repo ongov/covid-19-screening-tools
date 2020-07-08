@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useRef, forwardRef } from "react"
+import React, { useEffect, useRef } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
-import { savePDF } from "@progress/kendo-react-pdf"
+import { addDays, differenceInMilliseconds } from "date-fns"
 
-import { GlobalStateContext } from "../context/global-context-provider"
+import { savePDF } from "@progress/kendo-react-pdf"
 
 import Layout from "../components/layout"
 import Header from "../components/outcome-header"
@@ -19,7 +19,7 @@ import Information from "../images/inline-svgs/ontario-icon-information.inline.s
 import MapPin from "../images/inline-svgs/ontario-icon-map-pin.inline.svg"
 import StaySafe from "../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
 
-import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../shared"
+import { pushOutcomeDataToGTM, navigateHome, navigateToExpired, getAddressPieces, useCourthouse } from "../shared"
 
 const Green = "#118847"
 
@@ -36,17 +36,29 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
+function redirectToExpiredAtMidnight(lang) {
+  const current = new Date()
+  const oneMore = addDays(new Date(current.toLocaleDateString()), 1)
+
+  setTimeout(() => {
+    navigateToExpired(lang)
+  }, differenceInMilliseconds(oneMore, current))
+}
+
 const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
-  const { courthouse } = useContext(GlobalStateContext)
+  const courthouse = useCourthouse(lang)
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
   useEffect(() => {
-    pushOutcomeDataToGTM({
-      pass: true,
-      courthouse,
-      lang,
-    })
+    redirectToExpiredAtMidnight(lang)
+
+    if (courthouse && !courthouse.reload)
+      pushOutcomeDataToGTM({
+        pass: true,
+        courthouse,
+        lang,
+      })
   }, [courthouse, lang])
 
   return (

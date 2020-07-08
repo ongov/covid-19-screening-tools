@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState, useContext, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
@@ -6,6 +6,7 @@ import styled from "styled-components"
 import { format } from "date-fns"
 import en from "date-fns/locale/en-CA"
 import fr from "date-fns/locale/fr-CA"
+import { useCookies } from "react-cookie"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +14,7 @@ import Button from "../components/button"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
-import { questions } from "../shared"
+import { questions, cookieName } from "../shared"
 import { general, landing } from "../localized_content"
 
 const CenteredDiv = styled.div`
@@ -66,10 +67,18 @@ const LandingPageTemplate = ({ lang }) => {
   const [courthouseSelectError, setCourthouseSelectError] = useState(false)
   const [courthouseName, setCourthouseName] = useState("")
   const dispatch = useContext(GlobalDispatchContext)
+  const [, , removeCookie] = useCookies()
+
+  useEffect(() => {
+    removeCookie(cookieName, {
+      path: "/",
+      domain: window && window.location && window.location.hostname,
+    })
+  }, [])
 
   const handleClick = () => {
     if (!courthouseName) {
-      setCourthouseSelectError(true);
+      setCourthouseSelectError(true)
       return
     }
 
@@ -114,30 +123,31 @@ const LandingPageTemplate = ({ lang }) => {
                   <CourtHouseSelect>{landing[lang].courthouseSelect}</CourtHouseSelect>
                 </label>
                 <CourtHouseDropDown>
-                <select className={`ontario-input ontario-dropdown ${courthouseSelectError ? "dropdownError" : ""}`}
-                  id="courthouseSelect"
-                  onChange={e => {
-                    let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
-                    setCourthouseName(e.target.value)
-                    setCourthouseSelectError(false)
-                    dispatch({
-                      type: "COURTHOUSE_SELECTED",
-                      courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
-                    })
-                  }}
-                  value={courthouseName}
-                >
-                  <option disabled value=""></option>
-                  {courthouses &&
-                    courthouses.map((ch, i) => (
-                      <option
-                        key={`${ch.court_name}-${i}`}
-                        value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                      >
-                        {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                      </option>
-                    ))}
-                </select>
+                  <select
+                    className={`ontario-input ontario-dropdown ${courthouseSelectError ? "dropdownError" : ""}`}
+                    id="courthouseSelect"
+                    onChange={e => {
+                      let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
+                      setCourthouseName(e.target.value)
+                      setCourthouseSelectError(false)
+                      dispatch({
+                        type: "COURTHOUSE_SELECTED",
+                        courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
+                      })
+                    }}
+                    value={courthouseName}
+                  >
+                    <option disabled value=""></option>
+                    {courthouses &&
+                      courthouses.map((ch, i) => (
+                        <option
+                          key={`${ch.court_name}-${i}`}
+                          value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                        >
+                          {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
+                        </option>
+                      ))}
+                  </select>
                 </CourtHouseDropDown>
                 {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>

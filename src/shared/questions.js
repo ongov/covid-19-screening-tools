@@ -31,4 +31,8 @@ export default {
     en: "denied",
     fr: "denie",
   },
+  r3: {
+    en: "expired",
+    fr: "expire",
+  },
 }
