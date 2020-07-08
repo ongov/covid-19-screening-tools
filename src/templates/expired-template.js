@@ -32,12 +32,10 @@ const RetakeButtonWrapper = styled.div`
   margin: 3rem 0 0.25rem 0;
   display: block;
   text-align: center;
-`
 
-const RetakeButton = styled(Button)`
   @media screen and (max-width: 40em) {
-    margin: 0 1.5rem;
-    max-width: calc(100% - 3rem);
+    margin: 3rem 1.5rem 0.25rem 1.5rem;
+    width: calc(100% - 3rem);
   }
 `
 
@@ -66,7 +64,7 @@ const ExpiredTemplate = () => {
           {results[lang].nextStepsInstruction}
         </ContentBlock>
         <RetakeButtonWrapper>
-          <RetakeButton text={results[lang].retakeButtonText} clickHandler={() => navigateHome(lang)} />
+          <Button text={results[lang].retakeButtonText} clickHandler={() => navigateHome(lang)} />
         </RetakeButtonWrapper>
         <Footer icon={<ExpiredSmall />} color={Grey} />
       </SkipNavContent>
