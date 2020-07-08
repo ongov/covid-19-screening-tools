@@ -34,7 +34,16 @@ const symptoms = {
     en: { text: "Shortness of breath", sup_text: "(out of breath, unable to breathe deeply)" },
     fr: { text: "Difficulté respiratoire", sup_text: "(essoufflement, incapacité de respirer profondément)" },
   },
-  sore_throat: { en: { text: "Sore throat" }, fr: { text: "Mal de gorge" } },
+  sore_throat: {
+    en: {
+      text: "Sore throat",
+      sup_text: "(not related to seasonal allergies or other known causes or conditions)",
+    },
+    fr: {
+      text: "Mal de gorge",
+      sup_text: "(sans lien avec des allergies saisonnières ou d’autres causes ou états connus)",
+    },
+  },
   difficulty_swallowing: {
     en: { text: "Difficulty swallowing" },
     fr: { text: "Difficulté à avaler" },

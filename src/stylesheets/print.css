@@ -18,7 +18,7 @@
   }
 
   body {
-    margin: 10mm; /* margin you want for the content */
+    margin: 5mm; /* margin you want for the content */
   }
 
   .ontario-hide-for-print {
@@ -33,12 +33,6 @@
     display: inline-block;
   }
 
-  div,
-  span {
-    background-color: #fff !important;
-    color: #000 !important;
-  }
-
   a::after {
     content: " (" attr(href) ") ";
   }
@@ -46,16 +40,6 @@
   /* Breadcrumbs */
   .ontario-breadcrumbs {
     display: none;
-  }
-
-  /* Callouts */
-  .ontario-results__callout__arrow-down {
-    display: none;
-  }
-
-  .ontario-results__callout {
-    top: 0 !important;
-    padding-bottom: 0 !important;
   }
 
   [class^="ontario-callout"],
@@ -75,15 +59,14 @@
   }
 
   /* Header */
-  .ontario-main-header {
-    background: none;
-    margin-bottom: 0;
-  }
-
   .ontario-site-logo-print {
     display: block;
-    height: 30px;
+    width: 150px;
     margin: 1rem 0 0.5rem 0;
+  }
+
+  .ontario-main-header {
+    background-color: white;
   }
 
   .ontario-main-header__logo-link {
@@ -94,22 +77,8 @@
     display: none;
   }
 
-  /* Icons */
-  .ontario-icon__clipboard,
-  .ontario-icon__self-isolate-home,
-  .ontario-icon__self-isolate,
-  .ontario-icon__warning {
-    display: none;
-  }
-
-  /* Type and alignment */
-  .ontario-infographic-number {
-    font-size: 1.4375rem;
-    font-weight: 700;
-  }
-
-  /* Components */
-  .ontario-question-content__wrapper--outer {
-    margin-top: 1rem;
+  /* Info callout */
+  .ontario-callout--info {
+    background: none !important;
   }
 }

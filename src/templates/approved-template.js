@@ -18,7 +18,7 @@ import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
 import Information from "../images/ontario-icon-information.svg"
 import MapPin from "../images/ontario-icon-map-pin.svg"
-import StaySafe from "../images/inline-svgs/ontario-icon-stay-safe.inline.svg"
+import StaySafe from "../images/ontario-icon-stay-safe.svg"
 
 import { pushOutcomeDataToGTM, navigateHome, navigateToExpired, getAddressPieces, useCourthouse } from "../shared"
 
@@ -48,6 +48,14 @@ const IconInfo = styled.span`
   display: inline-block;
   width: 2.35rem;
   height: 2.35rem;
+`
+
+const IconStaySafe = styled.span`
+  background-image: url(${StaySafe});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.75rem;
 `
 
 const FooterCheckmark = styled.span`
@@ -105,7 +113,7 @@ const Approved = ({ children, lang }) => {
             titleColor={"#d1efd4"}
           />
           {children}
-          <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveHeading}`}>
+          <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveSubHeading}`}>
             {courthouse && courthouse.court_name}
             <br />
             {address}
@@ -131,6 +139,7 @@ const Approved = ({ children, lang }) => {
                   {results[lang].downloadPDF}
                 </Hyperlink>{" "}
               </p>
+              <p>{results[lang].nextStepShowResultsSecondary}</p>
               <p>
                 <Hyperlink onClick={() => navigateHome(lang)}>{results[lang].nextStepsLinkText}</Hyperlink>&nbsp;
                 {results[lang].nextStepsInstruction}
@@ -138,7 +147,7 @@ const Approved = ({ children, lang }) => {
             </>
           </ContentBlock>
           {/* NOTE: To enable contact tracing app link, uncomment the below code section. */}
-          {/* <ContentBlock lang={lang} icon={<StaySafe />} heading={`${results[lang].staySafe}`}>
+          {/* <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
           </ContentBlock> */}
           <Footer icon={<FooterCheckmark />} color={Green} />

@@ -9,11 +9,15 @@ const Container = styled.div`
   @media screen and (max-width: 39.9375em) {
     margin-top: -1rem;
   }
+  @media print {
+    background-color: white;
+  }
 `
 
 const Title = styled.p`
-  margin: 0;
-  padding: 1rem 20rem 1rem 20rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 3rem;
   font-style: normal;
   font-weight: bold;
   font-size: 1.125rem;
@@ -21,11 +25,17 @@ const Title = styled.p`
   text-align: center;
   letter-spacing: 0.48px;
   color: white;
+  width: 50%;
   @media screen and (max-width: 39.9375em) {
     padding: 1.5rem 3rem 1rem 3rem;
+    width: 80%;
   }
   @media screen and (min-width: 40em) and (max-width: 72.9375em) {
     padding: 1rem 5rem 1rem 5rem;
+    width: 70%;
+  }
+  @media print {
+    color: black;
   }
 `
 
@@ -41,6 +51,9 @@ const Heading = styled.h1`
   @media screen and (max-width: 39.9375em) {
     font-size: 40px;
   }
+  @media print {
+    color: black;
+  }
 `
 
 const Icon = styled.div`
@@ -54,6 +67,9 @@ const Icon = styled.div`
       margin: 1rem auto 0 auto;
       width: 80px;
     }
+  }
+  @media print {
+    display: none;
   }
 `
 

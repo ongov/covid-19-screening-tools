@@ -37,6 +37,7 @@ const ErrorDiv = styled.div`
 `
 
 const CourtHouseSelect = styled.span`
+  color: #1A1A1A;
   font-family: "Raleway", "Open Sans", Arial, sans-serif;
   font-size: 1.1875rem;
   font-weight: 700;
