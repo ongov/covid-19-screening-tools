@@ -79,9 +79,11 @@ const Approved = ({ children, lang }) => {
   const courthouse = useCourthouse(lang)
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
-  useEffect(() => {
-    // redirectToExpiredAtMidnight(lang)
+  // useEffect(() => {
+  //   redirectToExpiredAtMidnight(lang)
+  // }, [])
 
+  useEffect(() => {
     if (courthouse && !courthouse.reload)
       pushOutcomeDataToGTM({
         pass: true,
