@@ -18,15 +18,15 @@ const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) =>
   const [cookies] = useCookies()
 
   useEffect(() => {
-    if (
-      window &&
-      window.location &&
-      window.location.pathname === `${general[lang].basePath}${questions.r1[lang]}` &&
-      cookies[cookieName] &&
-      isToday(new Date(cookies[cookieName].time))
-    ) {
-      return
-    }
+    // if (
+    //   window &&
+    //   window.location &&
+    //   window.location.pathname === `${general[lang].basePath}${questions.r1[lang]}` &&
+    //   cookies[cookieName] &&
+    //   isToday(new Date(cookies[cookieName].time))
+    // ) {
+    //   return
+    // }
 
     if (process.env.GATSBY_IS_PROD_ENV && !state.in_progress) {
       navigateHome(lang)

@@ -31,17 +31,6 @@ function useCourthouse(lang) {
     }
   }, [state])
 
-  //   useEffect(() => {
-  //     if (
-  //       cookies[cookieName] &&
-  //       cookies[cookieName].lang === lang &&
-  //       cookies[cookieName].courthouse &&
-  //       !isToday(new Date(cookies[cookieName].time))
-  //     ) {
-  //       navigate(`${general[lang].basePath}${questions.r3[lang]}`)
-  //     }
-  //   }, [cookies[cookieName]])
-
   return courthouse
 }
 
