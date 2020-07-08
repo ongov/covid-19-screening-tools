@@ -92,7 +92,7 @@ const Approved = ({ children, lang }) => {
                       paperSize: "auto",
                       avoidLinks: true,
                       margin: 40,
-                      fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}`,
+                      fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}.pdf`,
                     })
                   }
                 >
