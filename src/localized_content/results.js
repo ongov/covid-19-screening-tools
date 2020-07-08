@@ -3,6 +3,7 @@ const results = {
     title: "COVID-19 screening result",
     approveHeading: "Enter",
     deniedHeading: "Do not enter",
+    deniedSubHeading: "You cannot enter",
     whoToContact: "Who to contact",
     whoToContactSubText: "Please instruct the person you call to inform the court of your status.",
     noEnter: "You can no longer enter",
@@ -24,7 +25,7 @@ const results = {
     deniedSubHeading: "Vous ne pouvez pas entrer",
     whoToContact: "Qui contacter",
     whoToContactSubText: "Veuillez demander à la personne que vous appelez d'informer le tribunal de votre situation.",
-    noEnter: "You can no longer enter FR",
+    noEnter: "Vous ne pouvez plus entrer",
     nextSteps: "Prochaines étapes",
     nextStepShowResults:
       "Montrez ces résultats au personnel du palais de justice chargé du dépistage, soit sous une forme électronique sur votre téléphone soit sur un papier imprimé",
