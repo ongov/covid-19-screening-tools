@@ -4,7 +4,7 @@ import { logic } from "../../shared"
 
 const Contact = () => (
   <QuestionTemplate lang="en" yesLink={logic.q4.yes} noLink={logic.q4.no}>
-    <h2>In the past 14 days, have you been in close physical contact with a person who:</h2>
+    <h2>In the last 14 days, have you been in close physical contact with a person who:</h2>
     <ul>
       <li>is currently sick with a new cough, fever, or difficulty breathing? or</li>
       <li>tested positive for COVID-19? or</li>

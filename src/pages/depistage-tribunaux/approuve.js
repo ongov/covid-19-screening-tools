@@ -27,7 +27,7 @@ const Approved = () => {
         icon={<Calendar />}
         heading={`Valide le ${format(date, "PPP", { locale: fr })},`}
       >
-        {`de ${format(date, "HH 'h' mm", { locale: fr })} à 11 h 59`}
+        {`de ${format(date, "HH 'h' mm", { locale: fr })} à 23 h 59`}
       </ContentBlock></HeaderDate>
     </ApprovedTemplate>
   )
