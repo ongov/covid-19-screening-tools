@@ -10,7 +10,7 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
-import SEO from "../components/seo";
+import SEO from "../components/seo"
 
 import { results } from "../localized_content"
 
@@ -65,14 +65,14 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
-function redirectToExpiredAtMidnight(lang) {
-  const current = new Date()
-  const oneMore = addDays(new Date(current.toLocaleDateString()), 1)
+// function redirectToExpiredAtMidnight(lang) {
+//   const current = new Date()
+//   const oneMore = addDays(new Date(current.toLocaleDateString()), 1)
 
-  setTimeout(() => {
-    navigateToExpired(lang)
-  }, differenceInMilliseconds(oneMore, current))
-}
+//   setTimeout(() => {
+//     navigateToExpired(lang)
+//   }, differenceInMilliseconds(oneMore, current))
+// }
 
 const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
@@ -80,7 +80,7 @@ const Approved = ({ children, lang }) => {
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
   useEffect(() => {
-    redirectToExpiredAtMidnight(lang)
+    // redirectToExpiredAtMidnight(lang)
 
     if (courthouse && !courthouse.reload)
       pushOutcomeDataToGTM({
