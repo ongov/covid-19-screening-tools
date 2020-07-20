@@ -3,7 +3,7 @@ import QuestionTemplate from "../../templates/yes-no-question-template"
 import { logic } from "../../shared"
 
 const Contact = () => (
-  <QuestionTemplate lang="fr" yesLink={logic.q4.yes} noLink={logic.q4.no}>
+  <QuestionTemplate lang="fr" yesLink={logic.q5.yes} noLink={logic.q5.no}>
     <h2>Ces 14 derniers jours, avez-vous été en contact physique étroit avec une personne qui&nbsp;:</h2>
     <ul>
       <li>est actuellement malade et a de la toux, de la fièvre ou des difficultés respiratoires?  ou</li>

@@ -4,24 +4,28 @@
  */
 export default {
   q1: {
+    en: "symptoms",
+    fr: "symptomes",
+  },
+  q2: {
     en: "travel",
     fr: "voyage",
   },
-  q2: {
+  q3: {
     en: "self-isolation",
     fr: "l-auto-isolement",
   },
-  q3: {
+  q4: {
     en: "positive-test",
     fr: "test-positif",
   },
-  q4: {
+  q5: {
     en: "contact",
     fr: "contact",
   },
-  q5: {
-    en: "symptoms",
-    fr: "symptomes",
+  q6: {
+    en: "cleared",
+    fr: "efface",
   },
   r1: {
     en: "approved",

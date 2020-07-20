@@ -14,27 +14,27 @@ function reducer(state, action) {
       const updatedState = { ...state }
 
       // Case where we are clicking an already checked checkbox
-      if (updatedState.q5 && updatedState.q5.hasOwnProperty(id)) {
-        delete updatedState.q5[id]
+      if (updatedState.q1 && updatedState.q1.hasOwnProperty(id)) {
+        delete updatedState.q1[id]
       } else {
-        if (!updatedState.q5) updatedState.q5 = {}
+        if (!updatedState.q1) updatedState.q1 = {}
         // "none of the above" was clicked or it was checked previous to this click.
         // We clear all other symptoms from the state as "none of the above" should
         // alway be used by itself.
-        if (id === noSymptomsId || updatedState.q5.hasOwnProperty(noSymptomsId)) {
-          updatedState.q5 = {}
+        if (id === noSymptomsId || updatedState.q1.hasOwnProperty(noSymptomsId)) {
+          updatedState.q1 = {}
         }
 
-        updatedState.q5[id] = true
+        updatedState.q1[id] = true
       }
 
       return updatedState
     }
     case "SYMPTOMS_CONTINUE_CLICKED": {
       let updatedState = { ...state }
-      if (!state.q5 || !Object.keys(state.q5).length) {
-        updatedState = { ...state, q5: {} }
-        updatedState.q5[noSymptomsId] = true
+      if (!state.q1 || !Object.keys(state.q1).length) {
+        updatedState = { ...state, q1: {} }
+        updatedState.q1[noSymptomsId] = true
       }
       return updatedState
     }

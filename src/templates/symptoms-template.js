@@ -17,7 +17,7 @@ const SymptomsTemplate = ({ lang }) => {
 
   function handleContinueClick() {
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
-    navigate(`${general[lang].basePath}${questions[logic.q5.cont(state)][lang]}`)
+    navigate(`${general[lang].basePath}${questions[logic.q1.cont(state)][lang]}`)
   }
 
   return (
@@ -42,7 +42,7 @@ const SymptomsTemplate = ({ lang }) => {
                       text={symptoms[id][lang].text}
                       labelStyle="--large"
                       supplementaryText={symptoms[id][lang].sup_text || ""}
-                      checkboxState={state.q5 && state.q5.hasOwnProperty(id)}
+                      checkboxState={state.q1 && state.q1.hasOwnProperty(id)}
                       checkboxOnChange={() => dispatch({ type: "TOGGLE_SYMPTOM", id })}
                     />
                   ))}

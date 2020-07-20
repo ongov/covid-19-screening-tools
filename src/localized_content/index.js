@@ -11,7 +11,7 @@ const general = {
     basePath: "/courthouse-screening/",
     title: "COVID-19 courthouse screening",
     backButtonText: "Back to previous page",
-    continueButtonText: "Get your result",
+    continueButtonText: "Continue",
     skipButtonText: "Skip",
     yes: "Yes",
     no: "No",
