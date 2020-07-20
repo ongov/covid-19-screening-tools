@@ -12,12 +12,13 @@
  *    r2: "denied"
  */
 export default {
-  q1: { yes: () => "r2", no: () => "q2" },
+  q1: {
+    cont: state =>
+      !state.q1 || !Object.keys(state.q1).length || state.q1.hasOwnProperty("none_of_the_above") ? "q2" : "r2",
+  },
   q2: { yes: () => "r2", no: () => "q3" },
   q3: { yes: () => "r2", no: () => "q4" },
   q4: { yes: () => "r2", no: () => "q5" },
-  q5: {
-    cont: state =>
-      !state.q5 || !Object.keys(state.q5).length || state.q5.hasOwnProperty("none_of_the_above") ? "r1" : "r2",
-  },
+  q5: { yes: () => "q6", no: () => "r1" },
+  q6: { yes: () => "r2", no: () => "r1"},
 }
