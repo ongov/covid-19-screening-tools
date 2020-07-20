@@ -2,7 +2,7 @@ import React from "react"
 import QuestionTemplate from "../../templates/yes-no-question-template"
 import { logic } from "../../shared"
 
-const Contact = () => (
+const Cleared = () => (
   <QuestionTemplate lang="en" yesLink={logic.q6.yes} noLink={logic.q6.no}>
     <h2>
       After being in close physical contact with that person, have you been told by a doctor, health care provider, or
@@ -11,4 +11,4 @@ const Contact = () => (
   </QuestionTemplate>
 )
 
-export default Contact
+export default Cleared
