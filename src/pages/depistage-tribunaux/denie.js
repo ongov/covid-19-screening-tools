@@ -10,7 +10,7 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
 
 import { results } from "../../localized_content"
-import styled from "styled-components";
+import styled from "styled-components"
 
 const lang = "fr"
 
@@ -21,20 +21,22 @@ const HeaderDate = styled.span`
   line-height: 1.4;
 `
 
-const Denied = () => {
+const Denie = () => {
   const { courthouse } = useContext(GlobalStateContext)
 
   return (
     <DeniedTemplate lang={lang}>
-      <HeaderDate><ContentBlock
-        lang={lang}
-        icon={<Warning />}
-        heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}
-      >
-  le {format(new Date(), "PPP", { locale: fr })}
-      </ContentBlock></HeaderDate>
+      <HeaderDate>
+        <ContentBlock
+          lang={lang}
+          icon={<Warning />}
+          heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}
+        >
+          le {format(new Date(), "PPP", { locale: fr })}
+        </ContentBlock>
+      </HeaderDate>
     </DeniedTemplate>
   )
 }
 
-export default Denied
+export default Denie

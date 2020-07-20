@@ -2,6 +2,6 @@ import React from "react"
 
 import ExpiredTemplate from "../../templates/expired-template"
 
-const Expired = () => <ExpiredTemplate lang="fr" />
+const Expire = () => <ExpiredTemplate lang="fr" />
 
-export default Expired
+export default Expire
