@@ -1,7 +1,8 @@
 const symptomsTitle = {
   en:
     "Are you currently experiencing any of these symptoms? Choose any/all that are new and not related to seasonal allergies or pre-existing medical conditions.",
-  fr: "Présentez-vous actuellement l’un ou l’autre des symptômes suivants? Cochez toutes les réponses applicables.",
+  fr:
+    "Présentez-vous actuellement l’un ou l’autre des symptômes suivants? Cochez tous les nouveaux choix applicables et qui ne sont pas liés à des allergies saisonnières ou à des troubles médicaux préexistants.",
 }
 
 const symptoms = {
