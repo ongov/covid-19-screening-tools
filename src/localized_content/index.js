@@ -31,7 +31,7 @@ const general = {
     basePath: "/depistage-tribunaux/",
     title: "COVID-19 dépistage tribunaux",
     backButtonText: "Retour à la page précédente",
-    continueButtonText: "Obtenez vos résultats",
+    continueButtonText: "Continuer",
     yes: "Oui",
     no: "Non",
     skipNavText: "Passer directement au contenu principal",
