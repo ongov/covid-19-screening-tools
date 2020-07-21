@@ -19,9 +19,9 @@ const Contact = () => (
     <ul>
       <li>
         se trouver à moins de deux mètres de la personne, dans la même pièce, dans le même lieu de travail ou au même
-        endroit;
+        endroit
       </li>
-      <li>vivre dans le même logement.</li>
+      <li>vivre dans le même logement</li>
     </ul>
   </QuestionTemplate>
 )
