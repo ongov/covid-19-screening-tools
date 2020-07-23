@@ -3,9 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 import styled from "styled-components"
-import { format } from "date-fns"
-import en from "date-fns/locale/en-CA"
-import fr from "date-fns/locale/fr-CA"
 import { useCookies } from "react-cookie"
 
 import Layout from "../components/layout"
@@ -15,7 +12,7 @@ import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
 import { questions, cookieName } from "../shared"
-import { general, landing } from "../localized_content"
+import { general, landing, formatDate } from "../localized_content"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -37,7 +34,7 @@ const ErrorDiv = styled.div`
 `
 
 const CourtHouseSelect = styled.span`
-  color: #1A1A1A;
+  color: #1a1a1a;
   font-family: "Raleway", "Open Sans", Arial, sans-serif;
   font-size: 1.1875rem;
   font-weight: 700;
@@ -108,9 +105,7 @@ const LandingPageTemplate = ({ lang }) => {
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">
             <p className="ontario-margin-bottom-12-!">
-              <strong>{`${general[lang].lastUpdated} ${format(new Date(Date.parse(currentDate)), "MMMM dd, yyyy", {
-                locale: lang === "fr" ? fr : en,
-              })}`}</strong>
+              <strong>{`${general[lang].lastUpdated} ${formatDate(new Date(Date.parse(currentDate)), lang)}`}</strong>
             </p>
             <h1>{general[lang].title}</h1>
             <p className="ontario-lead-statement">{landing[lang].lead}</p>

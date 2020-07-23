@@ -3,6 +3,7 @@ import deniedContactCard from "./denied-contact-card"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 import landing from "./landing"
 import results from "./results"
+import formatDate from "./date-format"
 
 const general = {
   en: {
@@ -55,4 +56,5 @@ export {
   symptoms,
   noSymptomsId,
   results,
+  formatDate,
 }
