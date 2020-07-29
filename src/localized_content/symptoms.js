@@ -13,11 +13,11 @@ const symptoms = {
   fever: {
     en: {
       text: "Fever",
-      sup_text: "(feeling hot to the touch, a temperature of 37.8 degrees Celsius or higher)",
+      sup_text: "(feeling hot to the touch, a temperature of 37.8 degrees Celsius/100.4 degrees Fahrenheit or higher)",
     },
     fr: {
       text: "Fièvre",
-      sup_text: "(avoir la peau chaude, une température de 37,8 degrés Celsius ou plus)",
+      sup_text: "(avoir la peau chaude, une température de 37,8 degrés Celsius/100,4 degrés Fahrenheit ou plus)",
     },
   },
   chills: { en: { text: "Chills" }, fr: { text: "Frissons" } },
