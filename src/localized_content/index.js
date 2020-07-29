@@ -1,4 +1,4 @@
-import footer from "./footer"
+import { footer, queensPrinter } from "./footer"
 import deniedContactCard from "./denied-contact-card"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 import landing from "./landing"
@@ -51,6 +51,7 @@ export {
   landing,
   general,
   footer,
+  queensPrinter,
   deniedContactCard as outcomeContactCard,
   symptomsTitle,
   symptoms,
