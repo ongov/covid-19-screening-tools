@@ -14,9 +14,11 @@ const results = {
     nextStepsLinkText: "Retake this screening",
     nextStepsInstruction: "at the start of every day before you enter a courthouse.",
     downloadPDF: "download a PDF to print out.",
-    staySafe: "Stay safe",
+    staySafe: "Download the COVID Alert mobile app",
     downloadApp:
-      "Download the Covid Alert app to get anonymous notifications if someone you were around tests positive for COVID-19.",
+      "Download the COVID Alert mobile appGet a phone alert if you have been exposed to COVID-19 and let others know if you testpositive, without sharing your identity.",
+    downloadAppLinkText: "Learn how it works",
+    downloadAppLink: "",
     retakeButtonText: "Start courthouse assessment",
   },
   fr: {
@@ -31,13 +33,16 @@ const results = {
     nextSteps: "Prochaines étapes",
     nextStepShowResults:
       "Montrez ces résultats au personnel du palais de justice chargé du dépistage, soit sous une forme électronique sur votre téléphone soit sur un papier imprimé",
-    nextStepShowResultsSecondary: "Vous devrez montrer vos résultats chaque fois que vous entrez dans le palais de justice aujourd’hui.",
+    nextStepShowResultsSecondary:
+      "Vous devrez montrer vos résultats chaque fois que vous entrez dans le palais de justice aujourd’hui.",
     nextStepsLinkText: "Vous devez subir le dépistage",
     nextStepsInstruction: "chaque jour avant d’entrer dans un palais de justice.",
     downloadPDF: "(après avoir téléchargé les résultats d’un document en format PDF).",
-    staySafe: "Prenez soin de vous",
+    staySafe: "Download the COVID Alert mobile app",
     downloadApp:
-      "Téléchargez l’appli d’alerte à la COVID pour obtenir une notification anonyme chaque fois qu’une personne qui était près de vous est déclarée positive à la COVID-19. ",
+      "Download the COVID Alert mobile appGet a phone alert if you have been exposed to COVID-19 and let others know if you testpositive, without sharing your identity.",
+    downloadAppLinkText: "Learn how it works",
+    downloadAppLink: "",
     retakeButtonText: "Subir à nouveau le dépistage des palais de justice",
   },
 }

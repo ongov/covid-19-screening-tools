@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
-import { addDays, differenceInMilliseconds } from "date-fns"
+// import { addDays, differenceInMilliseconds } from "date-fns"
 
 import { savePDF } from "@progress/kendo-react-pdf"
 
@@ -12,7 +12,7 @@ import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import SEO from "../components/seo"
 
-import { results } from "../localized_content"
+import { general, results } from "../localized_content"
 
 import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
@@ -21,6 +21,7 @@ import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
 
 import { pushOutcomeDataToGTM, navigateHome, navigateToExpired, getAddressPieces, useCourthouse } from "../shared"
+import { navigate } from "gatsby"
 
 const Green = "#118847"
 
@@ -146,10 +147,20 @@ const Approved = ({ children, lang }) => {
               </p>
             </>
           </ContentBlock>
-          {/* NOTE: To enable contact tracing app link, uncomment the below code section. */}
-          {/* <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
+          <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
-          </ContentBlock> */}
+            <p>
+              <Hyperlink
+                onClick={() =>
+                  navigate(`${general[lang].basePath}${results[lang].downloadAppLink}`, {
+                    replace: true,
+                  })
+                }
+              >
+                {results[lang].downloadAppLinkText}
+              </Hyperlink>
+            </p>
+          </ContentBlock>
           <Footer icon={<FooterCheckmark />} color={Green} />
         </SkipNavContent>
       </Layout>

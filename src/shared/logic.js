@@ -7,6 +7,8 @@
  *    q3: "positive test"
  *    q4: "contact"
  *    q5: "symptoms"
+ *    q6: "cleared"
+ *    q7: "doctor self-isolate"
  *
  *    r1: "approved"
  *    r2: "denied"
@@ -20,5 +22,6 @@ export default {
   q3: { yes: () => "r2", no: () => "q4" },
   q4: { yes: () => "r2", no: () => "q5" },
   q5: { yes: () => "q6", no: () => "r1" },
-  q6: { yes: () => "r2", no: () => "r1"},
+  q6: { yes: () => "r2", no: () => "q7" },
+  q7: { yes: () => "r2", no: () => "r1" },
 }

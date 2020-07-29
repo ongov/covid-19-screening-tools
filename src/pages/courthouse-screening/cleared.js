@@ -5,8 +5,8 @@ import { logic } from "../../shared"
 const Cleared = () => (
   <QuestionTemplate lang="en" yesLink={logic.q6.yes} noLink={logic.q6.no}>
     <h2>
-      After being in close physical contact with that person, have you been told by a doctor, health care provider, or
-      public health unit to self-isolate (stay at home)?
+      After being in close physical contact with that person, have you talked to a doctor, health care provider, or
+      public health unit?
     </h2>
   </QuestionTemplate>
 )

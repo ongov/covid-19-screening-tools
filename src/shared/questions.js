@@ -27,6 +27,10 @@ export default {
     en: "cleared",
     fr: "efface",
   },
+  q7: {
+    en: "doctor-self-isolate",
+    fr: "medecin-auto-isolement",
+  },
   r1: {
     en: "approved",
     fr: "approuve",
