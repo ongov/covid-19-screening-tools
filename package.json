@@ -2,7 +2,7 @@
   "name": "covid-19-courthouse-screening",
   "private": true,
   "description": "covid-19 courthouse screener",
-  "version": "0.0.1",
+  "version": "1.6.0",
   "author": "Bane Debeljevic <bane.debeljevic@ontario.ca>",
   "dependencies": {
     "@progress/kendo-drawing": "^1.7.0",
