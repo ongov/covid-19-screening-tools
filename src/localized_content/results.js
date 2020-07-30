@@ -18,7 +18,7 @@ const results = {
     downloadApp:
       "Download the COVID Alert mobile appGet a phone alert if you have been exposed to COVID-19 and let others know if you testpositive, without sharing your identity.",
     downloadAppLinkText: "Learn how it works",
-    downloadAppLink: "",
+    downloadAppLink: "http://ontario.ca/covidalert",
     retakeButtonText: "Start courthouse assessment",
   },
   fr: {
@@ -42,7 +42,7 @@ const results = {
     downloadApp:
       "Recevez une alerte sur votre téléphone si vous avez été exposé à la COVID-19 et informez les autres si vous avez reçu un diagnostic positif, sans révéler votre identité.",
     downloadAppLinkText: "Apprenez-en plus",
-    downloadAppLink: "",
+    downloadAppLink: "http://ontario.ca/alertecovid",
     retakeButtonText: "Subir à nouveau le dépistage des palais de justice",
   },
 }

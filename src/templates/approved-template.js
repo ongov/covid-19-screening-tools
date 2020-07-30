@@ -150,15 +150,7 @@ const Approved = ({ children, lang }) => {
           <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
             <p>
-              <Hyperlink
-                onClick={() =>
-                  navigate(`${general[lang].basePath}${results[lang].downloadAppLink}`, {
-                    replace: true,
-                  })
-                }
-              >
-                {results[lang].downloadAppLinkText}
-              </Hyperlink>
+              <Hyperlink href={results[lang].downloadAppLink}>{results[lang].downloadAppLinkText}</Hyperlink>
             </p>
           </ContentBlock>
           <Footer icon={<FooterCheckmark />} color={Green} />
