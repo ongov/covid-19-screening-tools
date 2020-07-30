@@ -24,10 +24,10 @@
     "crowns_office_phone": "613-962-0772"
   },
   {
-    "court_name_display": "Brampton - A. Grenville and William Davis ",
+    "court_name_display": "Brampton - A. Grenville and William Davis",
     "court_name_display_fr": "Brampton - Palais de justice de Brampton (A. Grenville & William Davis)",
     "municipality": "Brampton",
-    "court_name": "A. Grenville and William Davis ",
+    "court_name": "A. Grenville and William Davis",
     "address": "7755 Hurontario St, Brampton ON L6W 4T1",
     "court_name_fr": "Palais de justice de Brampton (A. Grenville & William Davis)",
     "address_fr": "7755, rue Hurontario, Brampton ON L6W 4T1",
@@ -60,10 +60,10 @@
     "crowns_office_phone": "519-758-3480"
   },
   {
-    "court_name_display": "Chatham - Chatham Courthouse ",
+    "court_name_display": "Chatham - Chatham Courthouse",
     "court_name_display_fr": "Chatham - Palais de justice de Chatham",
     "municipality": "Chatham",
-    "court_name": "Chatham Courthouse ",
+    "court_name": "Chatham Courthouse",
     "address": "425 Grand Ave, Chatham ON N7M 6M8",
     "court_name_fr": "Palais de justice de Chatham",
     "address_fr": "425, avenue Grand, Chatham ON N7M 6M8",
@@ -104,7 +104,7 @@
     "court_name_fr": "Palais de justice de Guelph",
     "address_fr": "74, rue Woolwich, Guelph ON N1H 3T9",
     "phone": "519-824-4100 x201",
-    "duty_counsel_phone": "519-824-4100 ",
+    "duty_counsel_phone": "519-824-4100",
     "crowns_office_phone": "519-822-1031"
   },
   {
@@ -130,6 +130,18 @@
     "phone": "905-645-6250",
     "duty_counsel_phone": "905-522-5963",
     "crowns_office_phone": "905-645-5262"
+  },
+  {
+    "municipality": "Kenora",
+    "court_name": "Kenora Courthouse",
+    "address": "216 Water Street, Kenora ON P9N 1S4",
+    "court_name_fr": "Palais De Justice De Kenora",
+    "address_fr": "216, rue Water, Kenora ON P9N 1S4",
+    "phone": "807-468-2842",
+    "duty_counsel_phone": "807-468-7072",
+    "crowns_office_phone": "807 468-2835",
+    "court_name_display": "Kenora - Kenora Courthouse",
+    "court_name_display_fr": "Kenora - Palais De Justice De Kenora"
   },
   {
     "court_name_display": "Kingston - Kingston (Frontenac County) Court - 5 Court St",
@@ -204,10 +216,10 @@
     "crowns_office_phone": "905-878-7291"
   },
   {
-    "court_name_display": "Newmarket - Newmarket Courthouse ",
+    "court_name_display": "Newmarket - Newmarket Courthouse",
     "court_name_display_fr": "Newmarket - Palais de justice de Newmarket",
     "municipality": "Newmarket",
-    "court_name": "Newmarket Courthouse ",
+    "court_name": "Newmarket Courthouse",
     "address": "50 Eagle St W, Newmarket ON L3Y 6B1",
     "court_name_fr": "Palais de justice de Newmarket",
     "address_fr": "50, rue Eagle Ouest, Newmarket ON L3Y 6B1",
@@ -240,10 +252,10 @@
     "crowns_office_phone": "519-941-4471"
   },
   {
-    "court_name_display": "Oshawa (Durham) - Lieutenant-Colonel Sharpe, DSO, MP. Courthouse  ",
+    "court_name_display": "Oshawa (Durham) - Lieutenant-Colonel Sharpe, DSO, MP. Courthouse ",
     "court_name_display_fr": "Oshawa (Durham) - Palais de justice Samuel S. Sharpe, lieutenant-colonel, D.S.O., député",
     "municipality": "Oshawa (Durham)",
-    "court_name": "Lieutenant-Colonel Sharpe, DSO, MP. Courthouse  ",
+    "court_name": "Lieutenant-Colonel Sharpe, DSO, MP. Courthouse ",
     "address": "150 Bond St, Oshawa ON L1G 0A2",
     "court_name_fr": "Palais de justice Samuel S. Sharpe, lieutenant-colonel, D.S.O., député",
     "address_fr": "150, rue Bond, Oshawa ON L1G 0A2",
@@ -286,6 +298,30 @@
     "phone": "613-639-9824",
     "duty_counsel_phone": "613-735-3400",
     "crowns_office_phone": "613-732-2261"
+  },
+  {
+    "municipality": "Peterborough",
+    "court_name": "Peterborough Courthouse",
+    "address": "70 - 110 Simcoe Street, Peterborough ON K9H 7G9",
+    "court_name_fr": "Palais De Justice De Peterborough",
+    "address_fr": "70, rue Simcoe, Peterborough ON K9H 7G9",
+    "phone": "705-876-3846",
+    "duty_counsel_phone": "‎705-743-5430",
+    "crowns_office_phone": "705 755-5360",
+    "court_name_display": "Peterborough - Peterborough Courthouse - 70 - 110 Simcoe Street",
+    "court_name_display_fr": "Peterborough - Palais De Justice De Peterborough - 70, rue Simcoe"
+  },
+  {
+    "municipality": "Peterborough",
+    "court_name": "Peterborough Courthouse",
+    "address": "470 Water Street, Peterborough ON K9H 3M3",
+    "court_name_fr": "Palais De Justice De Peterborough",
+    "address_fr": "470, rue Water, Peterborough ON K9H 3M3",
+    "phone": " 705-876-3815",
+    "duty_counsel_phone": "705-755-5360",
+    "crowns_office_phone": " 705-743-5430",
+    "court_name_display": "Peterborough - Peterborough Courthouse - 470 Water Street",
+    "court_name_display_fr": "Peterborough - Palais De Justice De Peterborough - 470, rue Water"
   },
   {
     "court_name_display": "Sarnia - Sarnia Lambton County Courthouse",
@@ -350,7 +386,7 @@
   {
     "court_name_display": "Thunder Bay  - Thunder Bay Courthouse",
     "court_name_display_fr": "Thunder Bay  - Palais de justice de Thunder Bay",
-    "municipality": "Thunder Bay ",
+    "municipality": "Thunder Bay",
     "court_name": "Thunder Bay Courthouse",
     "address": "125 Brodie St N, Thunder Bay ON P7C 0A3",
     "court_name_fr": "Palais de justice de Thunder Bay",
@@ -358,6 +394,30 @@
     "phone": "807-626-7000",
     "duty_counsel_phone": "807-577-1005",
     "crowns_office_phone": "807-626-7155"
+  },
+  {
+    "municipality": "Timmins",
+    "court_name": "Timmins Courthouse",
+    "address": "38 Pine Street North, Timmins ON P4N 6K6",
+    "court_name_fr": "Palais De Justice De Timmins",
+    "address_fr": "38, rue Pine, Timmins ON P4N 6K6",
+    "phone": "705-267-7799",
+    "duty_counsel_phone": "1-800-319-7314",
+    "crowns_office_phone": "705-264-5234",
+    "court_name_display": "Timmins - Timmins Courthouse - 38 Pine Street North",
+    "court_name_display_fr": "Timmins - Palais De Justice De Timmins - 38, rue Pine"
+  },
+  {
+    "municipality": "Timmins",
+    "court_name": "Timmins Courthouse",
+    "address": "48 Spruce Street North, Timmins ON P4N 6M7",
+    "court_name_fr": "Palais De Justice De Timmins",
+    "address_fr": "48, rue Spruce, Timmins ON P4N 6M7",
+    "phone": "705-267-7799",
+    "duty_counsel_phone": "1-800-319-7314",
+    "crowns_office_phone": "705-264-5234",
+    "court_name_display": "Timmins - Timmins Courthouse - 48 Spruce Street North",
+    "court_name_display_fr": "Timmins - Palais De Justice De Timmins - 48, rue Spruce"
   },
   {
     "court_name_display": "Toronto - 1000 Finch Ave. Courthouse",
@@ -380,7 +440,7 @@
     "court_name_fr": "Osgoode Hall",
     "address_fr": "130, rue Queen, Toronto ON M5H 2N5",
     "phone": "416-327-6247",
-    "duty_counsel_phone": "no duty counsel ",
+    "duty_counsel_phone": "no duty counsel",
     "crowns_office_phone": "N/A"
   },
   {
@@ -451,7 +511,7 @@
     "court_name_fr": "393 University - Toronto",
     "address_fr": "393, avenue University -10e étage, Toronto ON M5G 1E6",
     "phone": "416-326-4405",
-    "duty_counsel_phone": "no duty  counsel ",
+    "duty_counsel_phone": "no duty  counsel",
     "crowns_office_phone": "ll"
   },
   {
@@ -478,10 +538,10 @@
     "crowns_office_phone": "N/A"
   },
   {
-    "court_name_display": "Toronto - Old City Hall ",
+    "court_name_display": "Toronto - Old City Hall",
     "court_name_display_fr": "Toronto - 60 Queen",
     "municipality": "Toronto",
-    "court_name": "Old City Hall ",
+    "court_name": "Old City Hall",
     "address": "60 Queen St W, Toronto ON M5H 2M4",
     "court_name_fr": "60 Queen - Toronto",
     "address_fr": "60, rue Queen, Toronto ON M5H 2M4",
