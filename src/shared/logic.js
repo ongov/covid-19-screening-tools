@@ -2,11 +2,11 @@
  * This file contains the logic that drives the flow of the application.
  * Each of the questions receives the state object as a parameter so if
  * state needs to be used to determine outcomes it is available.
- *    q1: "travel"
- *    q2: "self-isolation"
- *    q3: "positive test"
- *    q4: "contact"
- *    q5: "symptoms"
+ *    q1: "symptoms"
+ *    q2: "travel"
+ *    q3: "self-isolation"
+ *    q4: "positive test"
+ *    q5: "contact"
  *    q6: "cleared"
  *    q7: "doctor self-isolate"
  *
