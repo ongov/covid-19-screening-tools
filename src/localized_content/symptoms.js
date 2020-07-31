@@ -7,7 +7,7 @@ const symptomsTitle = {
   fr: {
     text: "Présentez-vous actuellement l’un ou l’autre des symptômes suivants?",
     sup_text:
-      "Cochez tous les nouveaux choix applicables et qui ne sont pas liés à des allergies saisonnières ou à des troubles médicaux préexistants diagnostiqués par un professionnel de santé qualifié.",
+      "Cochez tous les nouveaux choix applicables et qui ne sont pas liés à des allergies saisonnières ou à des troubles médicaux préexistants diagnostiqués par un fournisseur de soins de santé.",
   },
 }
 
