@@ -16,7 +16,7 @@ const results = {
     downloadPDF: "download a PDF to print out.",
     staySafe: "Download the COVID Alert mobile app",
     downloadApp:
-      "Download the COVID Alert mobile appGet a phone alert if you have been exposed to COVID-19 and let others know if you testpositive, without sharing your identity.",
+      "Protect yourself and your community. Get a phone alert if you have been exposed to COVID-19 and let others know if you test positive, without sharing any personal information.",
     downloadAppLinkText: "Learn how it works",
     downloadAppLink: "http://ontario.ca/covidalert",
     retakeButtonText: "Start courthouse assessment",
@@ -40,8 +40,8 @@ const results = {
     downloadPDF: "(après avoir téléchargé les résultats d’un document en format PDF).",
     staySafe: "Téléchargez l’application mobile Alerte COVID",
     downloadApp:
-      "Recevez une alerte sur votre téléphone si vous avez été exposé à la COVID-19 et informez les autres si vous avez reçu un diagnostic positif, sans révéler votre identité.",
-    downloadAppLinkText: "Apprenez-en plus",
+      "Protégez-vous et votre communauté. Recevez une alerte sur votre téléphone si vous avez possiblement été exposé à la COVID-19, et informez les autres si vous recevez un résultat de test positif, sans que vos renseignements personnels soient divulgués.",
+    downloadAppLinkText: "Apprenez comment ça fonctionne",
     downloadAppLink: "http://ontario.ca/alertecovid",
     retakeButtonText: "Subir à nouveau le dépistage des palais de justice",
   },
