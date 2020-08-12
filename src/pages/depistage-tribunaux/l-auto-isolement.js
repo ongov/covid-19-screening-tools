@@ -5,8 +5,8 @@ import { logic } from "../../shared"
 const LautoIsolement = () => (
   <QuestionTemplate lang="fr" yesLink={logic.q3.yes} noLink={logic.q3.no}>
     <h2>
-      Un médecin, un bureau de santé local ou un fournisseur de soins de santé vous a-t-il recommandé de vous
-      auto-isoler (rester chez vous) au cours des 14 derniers jours?
+      Un médecin, un professionnel de la santé ou le responsable d'un service de santé publique vous a-t-il demandé de
+      vous isoler (rester à la maison) aujourd'hui?
     </h2>
   </QuestionTemplate>
 )

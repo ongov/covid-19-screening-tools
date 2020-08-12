@@ -60,6 +60,18 @@
     "crowns_office_phone": "519-758-3480"
   },
   {
+    "court_name_display": "Burlington - Burlington Courthouse",
+    "court_name_display_fr": "Burlington - Palais De Justice De Burlington",
+    "municipality": "Burlington",
+    "court_name": "Burlington Courthouse",
+    "address": "2021 Plains Road East, Burlington ON L7R 4M3",
+    "court_name_fr": "Palais De Justice De Burlington",
+    "address_fr": "2021, chemin Plains, Burlington ON L7R 4M3",
+    "phone": "905-637-4125",
+    "duty_counsel_phone": "905-878-7285",
+    "crowns_office_phone": "905-878-7291"
+  },
+  {
     "court_name_display": "Chatham - Chatham Courthouse",
     "court_name_display_fr": "Chatham - Palais de justice de Chatham",
     "municipality": "Chatham",

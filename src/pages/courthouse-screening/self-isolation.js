@@ -5,8 +5,8 @@ import { logic } from "../../shared"
 const SelfIsolation = () => (
   <QuestionTemplate lang="en" yesLink={logic.q3.yes} noLink={logic.q3.no}>
     <h2>
-      Have you been asked to self-isolate (stay at home) by a doctor, health care provider, or public health unit in the
-      last 14 days?
+      Has a doctor, health care provider, or public health unit told you that you should be self-isolating (staying at
+      home) today?
     </h2>
   </QuestionTemplate>
 )
