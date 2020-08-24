@@ -116,7 +116,7 @@ const LandingPageTemplate = ({ lang }) => {
               {landing[lang].screeningInfo} <a href={landing[lang].link}>{landing[lang].linkText}</a>.
             </p>
             <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
-              <div className="ontario-small-12 ontario-medium-6 ontario-large-6 ontario-columns ontario-small-centered">
+              <div className="ontario-small-12 ontario-medium-8 ontario-large-6 ontario-columns ontario-small-centered">
                 <label className="ontario-label" htmlFor="courthouseSelect">
                   <CourtHouseSelect>{landing[lang].courthouseSelect}</CourtHouseSelect>
                 </label>
