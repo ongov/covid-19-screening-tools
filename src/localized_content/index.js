@@ -1,3 +1,4 @@
+import React from "react"
 import { footer, queensPrinter } from "./footer"
 import deniedContactCard from "./denied-contact-card"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
@@ -25,6 +26,20 @@ const general = {
     ],
     outcome: "COVID-19 screening result",
     expired: "Expired",
+    contact_tracing: {
+      heading: (
+        <>
+          Contact tracing <br className="ontario-show-for-small-only"/>(optional)
+        </>
+      ),
+      content: (
+        <>
+        <p>Ask the screening staff for a card to fill in your information.</p>
+        <p>Write down your name and phone number on a "contact tracing card" in case there is an outbreak at the courthouse.</p>
+        <p>If there is an outbreak, Public Health will call and help you understand your risk and how you can stop the spread of the virus.</p>
+      </>
+      ),
+    }
   },
   fr: {
     lang: "français",
@@ -44,6 +59,20 @@ const general = {
     ],
     outcome: "COVID-19 screening result",
     expired: "Expired",
+    contact_tracing: {
+      heading: (
+        <>
+        Contact tracing <br className="ontario-show-for-small-only"/>(optional)
+        </>
+      ),
+      content: (
+        <>
+        <p>Ask the screening staff for a card to fill in your information.</p>
+        <p>Write down your name and phone number on a "contact tracing card" in case there is an outbreak at the courthouse.</p>
+        <p>If there is an outbreak, Public Health will call and help you understand your risk and how you can stop the spread of the virus.</p>
+        </>
+      ),
+    }
   },
 }
 

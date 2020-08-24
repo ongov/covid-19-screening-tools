@@ -156,17 +156,31 @@
 }
 
 .ontario-callout__title--info {
-  font-size: 1.25rem;
-  margin-left: 0.5rem;
+  font: 1.25rem "Raleway", "Open Sans", Arial, sans-serif;
   font-weight: bold;
 }
 
-@media screen and (max-width: 72.9375em) {
+@media screen and (max-width: 39.9375em) {
   .ontario-callout__title--info {
-    display: block;
-    float: left;
-    width: 80%;
+    margin: 0.2rem 0 0 2rem;
   }
+}
+
+@media screen and (min-width: 40em) and (max-width: 72.9375em) {
+  .ontario-callout__title--info {
+    margin: 1rem 0 0 1rem;
+  }
+}
+
+@media screen and (min-width: 73rem) {
+  .ontario-callout__title--info {
+    margin: 1rem 0 0 -1rem;
+  }
+}
+
+.ontario-callout__info {
+  display: block;
+  margin: 1.5rem 0 1rem 0;
 }
 
 .ontario-callout__icon-info {
