@@ -15,7 +15,7 @@ import courthouses from "../data/courthouses.json"
 import { questions, cookieName } from "../shared"
 import { general, landing, formatDate } from "../localized_content"
 
-const CenteredDiv = styled.div`IconContactTracing
+const CenteredDiv = styled.div`
   display: block;
   margin: 0 auto;
 
