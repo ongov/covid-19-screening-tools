@@ -4,6 +4,7 @@ import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 import styled from "styled-components"
 import { useCookies } from "react-cookie"
+import Select from "react-select"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -118,33 +119,29 @@ const LandingPageTemplate = ({ lang }) => {
                 <label className="ontario-label" htmlFor="courthouseSelect">
                   <CourtHouseSelect>{landing[lang].courthouseSelect}</CourtHouseSelect>
                 </label>
-                <CourtHouseDropDown>
-                  <select
-                    className={`ontario-input ontario-dropdown ${courthouseSelectError ? "dropdownError" : ""}`}
-                    id="courthouseSelect"
-                    onChange={e => {
-                      let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
-                      setCourthouseName(e.target.value)
-                      setCourthouseSelectError(false)
-                      dispatch({
-                        type: "COURTHOUSE_SELECTED",
-                        courthouse: { ...courthouses.find(ch => ch[nameDisplayField] === e.target.value) },
-                      })
-                    }}
-                    value={courthouseName}
-                  >
-                    <option disabled value=""></option>
-                    {courthouses &&
-                      courthouses.map((ch, i) => (
-                        <option
-                          key={`${ch.court_name}-${i}`}
-                          value={lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                        >
-                          {lang === "fr" ? ch.court_name_display_fr : ch.court_name_display}
-                        </option>
-                      ))}
-                  </select>
-                </CourtHouseDropDown>
+
+                <Select
+                  id="courthouseSelect"
+                  options={courthouses}
+                  getOptionLabel={option =>
+                    `${lang === "fr" ? option.court_name_display_fr : option.court_name_display}`
+                  }
+                  onChange={e => {
+                    let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
+                    setCourthouseName(lang === "fr" ? e.court_name_display_fr : e.court_name_display)
+                    setCourthouseSelectError(false)
+                    dispatch({
+                      type: "COURTHOUSE_SELECTED",
+                      courthouse: {
+                        ...courthouses.find(ch =>
+                          lang === "fr"
+                            ? ch[nameDisplayField] === e.court_name_display_fr
+                            : ch[nameDisplayField] === e.court_name_display
+                        ),
+                      },
+                    })
+                  }}
+                />
                 {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>
             </div>
