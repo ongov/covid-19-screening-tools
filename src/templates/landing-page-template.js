@@ -44,6 +44,7 @@ const CourtHouseSelect = styled.span`
 `
 
 const CourtHouseDropDown = styled.div`
+  margin-bottom: 1.5625rem;
   .ontario-input {
     margin-bottom: 1rem;
   }
