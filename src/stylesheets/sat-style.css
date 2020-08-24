@@ -139,6 +139,16 @@ abbr[title] {
   }
 }
 
+.ontario-icon__contacttracing {
+  display: block;
+  background: url("../images/ontario-contact-tracing.svg");
+  background-size: 100%;
+  float: left;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-left: 0.2rem;
+}
+
 /* List style */
 .ontario-list--inline {
   margin: 0;

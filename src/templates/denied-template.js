@@ -59,7 +59,7 @@ const Denied = ({ lang, children }) => {
         />
         {children}
         <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}></ContentBlock>
-        <CalloutInfo message={`${results[lang].whoToContactSubText}`} />
+        <CalloutInfo icon="ontario-icon__info" classnameTitle="ontario-callout__icon-info" title={`${results[lang].whoToContactSubText}`} />
         <ContentBlock lang={lang}>
           <DeniedContactCard lang={lang} courthouse={courthouse} />
         </ContentBlock>

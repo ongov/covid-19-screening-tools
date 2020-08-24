@@ -8,13 +8,14 @@ import { useCookies } from "react-cookie"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import CalloutInfo from "../components/callout-info"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
 import { questions, cookieName } from "../shared"
 import { general, landing, formatDate } from "../localized_content"
 
-const CenteredDiv = styled.div`
+const CenteredDiv = styled.div`IconContactTracing
   display: block;
   margin: 0 auto;
 
@@ -148,6 +149,14 @@ const LandingPageTemplate = ({ lang }) => {
                 {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>
             </div>
+            <CalloutInfo
+                  icon="ontario-icon__contacttracing"
+                  classnameTitle="ontario-callout__title--info"
+                  title={general[lang].contact_tracing.heading}
+                  classnameMessage="ontario-callout__info"
+                  message={general[lang].contact_tracing.content}
+            />
+
             <CenteredDiv>
               <Button text={landing[lang].button} clickHandler={handleClick} />
             </CenteredDiv>
