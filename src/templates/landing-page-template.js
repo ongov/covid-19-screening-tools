@@ -119,7 +119,7 @@ const LandingPageTemplate = ({ lang }) => {
                 <label className="ontario-label" htmlFor="courthouseSelect">
                   <CourtHouseSelect>{landing[lang].courthouseSelect}</CourtHouseSelect>
                 </label>
-
+                <CourtHouseDropDown>
                 <Select
                   id="courthouseSelect"
                   options={courthouses}
@@ -142,6 +142,7 @@ const LandingPageTemplate = ({ lang }) => {
                     })
                   }}
                 />
+                </CourtHouseDropDown>
                 {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>
             </div>
