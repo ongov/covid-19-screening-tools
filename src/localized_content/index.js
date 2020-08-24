@@ -27,7 +27,11 @@ const general = {
     outcome: "COVID-19 screening result",
     expired: "Expired",
     contact_tracing: {
-      heading: "Contact tracing (optional)",
+      heading: (
+        <>
+          Contact tracing <br className="ontario-show-for-small-only"/>(optional)
+        </>
+      ),
       content: (
         <>
         <p>Ask the screening staff for a card to fill in your information.</p>
@@ -56,7 +60,11 @@ const general = {
     outcome: "COVID-19 screening result",
     expired: "Expired",
     contact_tracing: {
-      heading: "Contact tracing (optional)",
+      heading: (
+        <>
+        Contact tracing <br className="ontario-show-for-small-only"/>(optional)
+        </>
+      ),
       content: (
         <>
         <p>Ask the screening staff for a card to fill in your information.</p>
