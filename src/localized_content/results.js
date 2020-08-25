@@ -1,3 +1,4 @@
+import React from "react"
 const results = {
   en: {
     title: "COVID-19 screening result",
@@ -13,6 +14,11 @@ const results = {
     nextStepShowResultsSecondary: "Show it every time you re-enter the courthouse today.",
     nextStepsLinkText: "Retake this screening",
     nextStepsInstruction: "at the start of every day before you enter a courthouse.",
+    nextStepsOptional: [
+      <>
+      <strong>Optional:</strong> ask the staff for a contact tracing card to write down your name and phone number. Public Health will call you if there is an outbreak at this courthouse.
+      </>
+    ],
     downloadPDF: "download a PDF to print out.",
     staySafe: "Download the COVID Alert mobile app",
     downloadApp:
@@ -37,6 +43,11 @@ const results = {
       "Vous devrez montrer vos résultats chaque fois que vous entrez dans le palais de justice aujourd’hui.",
     nextStepsLinkText: "Vous devez subir le dépistage",
     nextStepsInstruction: "chaque jour avant d’entrer dans un palais de justice.",
+    nextStepsOptional: [
+    <>
+      <strong>Facultatif :</strong> demandez au personnel une fiche de recherche des contacts pour inscriver votre nom et votre numéro de téléphone. Le service de santé publique  vous communiquera au cas où il y aurait une éclosion au ce palais de justice.
+    </>
+    ],
     downloadPDF: "(après avoir téléchargé les résultats d’un document en format PDF).",
     staySafe: "Téléchargez l’application mobile Alerte COVID",
     downloadApp:
