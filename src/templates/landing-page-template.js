@@ -150,14 +150,6 @@ const LandingPageTemplate = ({ lang }) => {
                 {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>
             </div>
-            <CalloutInfo
-                  icon="ontario-icon__contacttracing"
-                  classnameTitle="ontario-callout__title--info"
-                  title={general[lang].contact_tracing.heading}
-                  classnameMessage="ontario-callout__info"
-                  message={general[lang].contact_tracing.content}
-            />
-
             <CenteredDiv>
               <Button text={landing[lang].button} clickHandler={handleClick} />
             </CenteredDiv>

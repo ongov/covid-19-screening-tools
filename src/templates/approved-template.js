@@ -145,6 +145,8 @@ const Approved = ({ children, lang }) => {
                 <Hyperlink onClick={() => navigateHome(lang)}>{results[lang].nextStepsLinkText}</Hyperlink>&nbsp;
                 {results[lang].nextStepsInstruction}
               </p>
+
+              <p>{results[lang].nextStepsOptional}</p>
             </>
           </ContentBlock>
           <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
