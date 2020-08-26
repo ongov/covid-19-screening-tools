@@ -26,6 +26,8 @@ const results = {
     downloadAppLinkText: "Learn how it works",
     downloadAppLink: "http://ontario.ca/covidalert",
     retakeButtonText: "Start courthouse assessment",
+    contactTracingTitle: "Contact tracing (optional)",
+    contactTracingContent: "Ask the staff for a contact tracing card to write down your name and phone number. Public Health will call you if there is an outbreak at this courthouse.",
   },
   fr: {
     title: "Résultats du dépistage des symptômes de la COVID-19",
@@ -55,6 +57,8 @@ const results = {
     downloadAppLinkText: "Apprenez comment ça fonctionne",
     downloadAppLink: "http://ontario.ca/alertecovid",
     retakeButtonText: "Subir à nouveau le dépistage des palais de justice",
+    contactTracingTitle: "Recherche des contacts (facultatif)",
+    contactTracingContent: "Demandez au personnel sune fiche de recherche des contacts pour inscriver votre nom et votre numéro de téléphone. Le service de santé publique vous  communiquera au cas où il y aurait une éclosion au ce palais de justice.",
   },
 }
 
