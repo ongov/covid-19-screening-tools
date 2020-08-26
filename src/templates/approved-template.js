@@ -10,6 +10,7 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
+import Callout from "../components/callout-contact-tracing"
 import SEO from "../components/seo"
 
 import { general, results } from "../localized_content"
@@ -19,6 +20,7 @@ import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
 import Information from "../images/ontario-icon-information.svg"
 import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
+import ContactTracing  from "../images/ontario-contact-tracing.svg"
 
 import { pushOutcomeDataToGTM, navigateHome, navigateToExpired, getAddressPieces, useCourthouse } from "../shared"
 import { navigate } from "gatsby"
@@ -48,6 +50,14 @@ const IconInfo = styled.span`
   background-size: 100%;
   display: inline-block;
   width: 2.35rem;
+  height: 2.35rem;
+`
+
+const IconContactTracing = styled.span`
+  background-image: url(${ContactTracing});
+  background-size: 100%;
+  display: inline-block;
+  width:  2.35rem;
   height: 2.35rem;
 `
 
@@ -141,13 +151,17 @@ const Approved = ({ children, lang }) => {
                 </Hyperlink>{" "}
               </p>
               <p>{results[lang].nextStepShowResultsSecondary}</p>
-              <p>
-                <Hyperlink onClick={() => navigateHome(lang)}>{results[lang].nextStepsLinkText}</Hyperlink>&nbsp;
-                {results[lang].nextStepsInstruction}
-              </p>
-
-              <p>{results[lang].nextStepsOptional}</p>
             </>
+          </ContentBlock>
+          <Callout lang={lang} icon={<IconContactTracing />} heading={`${results[lang].contactTracingTitle}`}>
+          <p>{results[lang].contactTracingContent}</p>
+          </Callout>
+          <ContentBlock lang={lang}>
+            <p>
+              <Hyperlink onClick={() => navigateHome(lang)}>{results[lang].nextStepsLinkText}</Hyperlink>&nbsp;
+              {results[lang].nextStepsInstruction}
+            </p>
+            <p>{results[lang].nextStepsOptional}</p>
           </ContentBlock>
           <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
