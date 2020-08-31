@@ -22,3 +22,12 @@
   font-weight: 700;
   src: url("../fonts/raleway-modified-700/raleway-modified-700.ttf") format("truetype");
 }
+
+.k-pdf-export [class^='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Heading'],
+.k-pdf-export[class*='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Heading'],
+.k-pdf-export [class^='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Content'],
+.k-pdf-export[class*='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Content'] {
+  font-family: "Raleway", Arial, Sans-Serif;
+  font-weight: 700;
+  text-shadow: 0 0 0;
+}
