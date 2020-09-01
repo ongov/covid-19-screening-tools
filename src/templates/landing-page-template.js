@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 import styled from "styled-components"
-import { useCookies } from "react-cookie"
 import Select from "react-select"
 
 import Layout from "../components/layout"
@@ -13,7 +12,7 @@ import CalloutInfo from "../components/callout-info"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
-import { questions, cookieName } from "../shared"
+import { questions } from "../shared"
 import { general, landing, formatDate } from "../localized_content"
 
 const CenteredDiv = styled.div`
@@ -68,14 +67,6 @@ const LandingPageTemplate = ({ lang }) => {
   const [courthouseSelectError, setCourthouseSelectError] = useState(false)
   const [courthouseName, setCourthouseName] = useState("")
   const dispatch = useContext(GlobalDispatchContext)
-  const [, , removeCookie] = useCookies()
-
-  useEffect(() => {
-    removeCookie(cookieName, {
-      path: "/",
-      domain: window && window.location && window.location.hostname,
-    })
-  }, [])
 
   const handleClick = () => {
     if (!courthouseName) {
@@ -122,28 +113,28 @@ const LandingPageTemplate = ({ lang }) => {
                   <CourtHouseSelect>{landing[lang].courthouseSelect}</CourtHouseSelect>
                 </label>
                 <CourtHouseDropDown>
-                <Select
-                  id="courthouseSelect"
-                  options={courthouses}
-                  getOptionLabel={option =>
-                    `${lang === "fr" ? option.court_name_display_fr : option.court_name_display}`
-                  }
-                  onChange={e => {
-                    let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
-                    setCourthouseName(lang === "fr" ? e.court_name_display_fr : e.court_name_display)
-                    setCourthouseSelectError(false)
-                    dispatch({
-                      type: "COURTHOUSE_SELECTED",
-                      courthouse: {
-                        ...courthouses.find(ch =>
-                          lang === "fr"
-                            ? ch[nameDisplayField] === e.court_name_display_fr
-                            : ch[nameDisplayField] === e.court_name_display
-                        ),
-                      },
-                    })
-                  }}
-                />
+                  <Select
+                    id="courthouseSelect"
+                    options={courthouses}
+                    getOptionLabel={option =>
+                      `${lang === "fr" ? option.court_name_display_fr : option.court_name_display}`
+                    }
+                    onChange={e => {
+                      let nameDisplayField = `court_name_display${lang === "fr" ? "_fr" : ""}`
+                      setCourthouseName(lang === "fr" ? e.court_name_display_fr : e.court_name_display)
+                      setCourthouseSelectError(false)
+                      dispatch({
+                        type: "COURTHOUSE_SELECTED",
+                        courthouse: {
+                          ...courthouses.find(ch =>
+                            lang === "fr"
+                              ? ch[nameDisplayField] === e.court_name_display_fr
+                              : ch[nameDisplayField] === e.court_name_display
+                          ),
+                        },
+                      })
+                    }}
+                  />
                 </CourtHouseDropDown>
                 {courthouseSelectError && <ErrorDiv>{landing[lang].courthouseSelectError}</ErrorDiv>}
               </div>
