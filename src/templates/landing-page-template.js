@@ -18,6 +18,14 @@ import { general, landing, formatDate } from "../localized_content"
 
 import dropDownArrow from "../images/ontario-dropdown-arrow.svg"
 
+const DownChevron = styled.div `
+  background: url(${dropDownArrow});
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  border: thin solid red;
+`
+
 const CenteredDiv = styled.div`
   display: block;
   margin: 0 auto;
@@ -62,6 +70,9 @@ const customStyles = {
   control: () => ({
 
   }),
+  input: () => ({
+    padding: '0',
+  }),
   menu: () => ({
     backgroundColor: 'white',
     marginTop: '1.8rem',
@@ -80,12 +91,12 @@ const customStyles = {
     border: '2px solid #1a1a1a',
     borderRadius: '4px',
     boxSizing: 'border-box',
-    color: '#1a1a1a',
-    fontSize: '1rem',
-    fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
     padding: '.625rem 1rem',
     maxWidth: '46em',
     lineHeight: '1.5',
+    color: '#1a1a1a',
+    fontSize: '1rem',
+    fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
   }),
   indicatorsContainer: () => ({
     marginTop: '-2rem',
@@ -176,6 +187,7 @@ const LandingPageTemplate = ({ lang }) => {
                 </label>
                 <CourtHouseDropDown>
                 <Select
+                  components={DownChevron}
                   styles={customStyles}
                   id="courthouseSelect"
                   options={courthouses}
