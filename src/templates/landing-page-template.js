@@ -94,7 +94,11 @@ const customStyles = {
     border: 'none',
   }),
   dropdownIndicator: () => ({
-    display: 'none',
+    float: 'right',
+    width: '26px',
+    position: 'relative',
+    right: '0.5rem',
+    top: '-0.2rem',
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1;
