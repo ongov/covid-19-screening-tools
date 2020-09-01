@@ -98,7 +98,7 @@ const customStyles = {
     width: '26px',
     position: 'relative',
     right: '0.5rem',
-    top: '-0.2rem',
+    top: '-0.3rem',
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1;
