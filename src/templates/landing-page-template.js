@@ -59,21 +59,8 @@ const CourtHouseDropDown = styled.div`
 `
 
 const customStyles = {
-  option: (provided, state) => ({
-    ...provided,
-    borderBottom: 'none',
-    padding: '.625rem 1rem .625rem 1.1rem',
-    backgroundColor: 'white',
-    color: '#1a1a1a'
-  }),
   control: () => ({
 
-  }),
-  input: () => ({
-    background: 'url("../images/ontario-dropdown-arrow.svg")',
-    backgroundPosition: 'right .5rem center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '2rem',
   }),
   menu: () => ({
     backgroundColor: 'white',
@@ -112,7 +99,6 @@ const customStyles = {
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1;
     const transition = 'opacity 300ms';
-
     return { ...provided, opacity, transition };
   }
 }
