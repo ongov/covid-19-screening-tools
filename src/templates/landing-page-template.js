@@ -62,18 +62,27 @@ const customStyles = {
   option: (provided, state) => ({
     ...provided,
     borderBottom: 'none',
-    padding: 20,
+    padding: '.625rem 1rem .625rem 1.1rem',
+    backgroundColor: 'white',
+    color: '#1a1a1a'
   }),
   control: () => ({
 
   }),
+  input: () => ({
+    background: 'url("../images/ontario-dropdown-arrow.svg")',
+    backgroundPosition: 'right .5rem center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '2rem',
+  }),
   menu: () => ({
     backgroundColor: 'white',
-    marginTop: '1.2rem',
+    marginTop: '1.8rem',
     border: '2px solid #1a1a1a',
-    borderTop: 'none',
+    borderTop: '1px solid grey',
     position: 'absolute',
-    zIndex: '100'
+    zIndex: '100',
+    padding: '1rem 0'
   }),
   menuList: () => ({
     height: '250px',
@@ -81,10 +90,6 @@ const customStyles = {
     overflowY: 'scroll'
   }),
   valueContainer: () => ({
-    background: 'url("../images/ontario-dropdown-arrow.svg")',
-    backgroundPosition: 'right .5rem center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: '2rem',
     border: '2px solid #1a1a1a',
     borderRadius: '4px',
     boxSizing: 'border-box',
