@@ -85,7 +85,7 @@ const customStyles = {
     padding: '1rem 0'
   }),
   menuList: () => ({
-    height: '250px',
+    height: '150px',
     backgroundColor:'white',
     overflowY: 'scroll'
   }),
