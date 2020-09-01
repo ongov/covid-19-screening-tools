@@ -16,10 +16,11 @@ import courthouses from "../data/courthouses.json"
 import { questions, cookieName } from "../shared"
 import { general, landing, formatDate } from "../localized_content"
 
+import dropDownArrow from "../images/ontario-dropdown-arrow.svg"
+
 const CenteredDiv = styled.div`
   display: block;
   margin: 0 auto;
-
   button {
     display: block;
     margin: 1rem auto 1.75rem;
@@ -45,14 +46,71 @@ const CourtHouseSelect = styled.span`
 `
 
 const CourtHouseDropDown = styled.div`
-  margin-bottom: 1.5625rem;
+  margin-bottom: 3rem;
   .ontario-input {
     margin-bottom: 1rem;
   }
   .dropdownError {
     border: 3px solid #cd0000;
   }
+  &:focus {
+    border: thin solid blue;
+  }
 `
+
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    borderBottom: 'none',
+    padding: 20,
+  }),
+  control: () => ({
+
+  }),
+  menu: () => ({
+    backgroundColor: 'white',
+    marginTop: '1.2rem',
+    border: '2px solid #1a1a1a',
+    borderTop: 'none',
+    position: 'absolute',
+    zIndex: '100'
+  }),
+  menuList: () => ({
+    height: '250px',
+    backgroundColor:'white',
+    overflowY: 'scroll'
+  }),
+  valueContainer: () => ({
+    background: 'url("../images/ontario-dropdown-arrow.svg")',
+    backgroundPosition: 'right .5rem center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: '2rem',
+    border: '2px solid #1a1a1a',
+    borderRadius: '4px',
+    boxSizing: 'border-box',
+    color: '#1a1a1a',
+    fontSize: '1rem',
+    fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
+    padding: '.625rem 1rem',
+    maxWidth: '46em',
+    lineHeight: '1.5',
+  }),
+  indicatorsContainer: () => ({
+    marginTop: '-2rem',
+  }),
+  indicatorSeparator: () => ({
+    border: 'none',
+  }),
+  dropdownIndicator: () => ({
+    display: 'none',
+  }),
+  singleValue: (provided, state) => {
+    const opacity = state.isDisabled ? 1 : 1;
+    const transition = 'opacity 300ms';
+
+    return { ...provided, opacity, transition };
+  }
+}
 
 const LandingPageTemplate = ({ lang }) => {
   const {
@@ -123,6 +181,7 @@ const LandingPageTemplate = ({ lang }) => {
                 </label>
                 <CourtHouseDropDown>
                 <Select
+                  styles={customStyles}
                   id="courthouseSelect"
                   options={courthouses}
                   getOptionLabel={option =>
