@@ -45,6 +45,13 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           <strong>{content[lang].employees}</strong>
         </p>
         <p>{content[lang].employeesContact}</p>
+        <p className="ontario-margin-top-32-!">
+          <strong>{content[lang].jurors}</strong>
+        </p>
+        <p>
+          {content[lang].jurorsContact}&nbsp;
+          <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />.
+        </p>
       </ContentBlock>
       <ContentBlock>
         <p>
