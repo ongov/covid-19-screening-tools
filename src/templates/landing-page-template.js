@@ -53,7 +53,7 @@ const CourtHouseDropDown = styled.div`
   }
 `
 
-const LandingPageTemplate = ({ lang }) => {
+const LandingPageTemplate = ({ lang, screenerType }) => {
   const {
     currentBuildDate: { currentDate },
   } = useStaticQuery(graphql`
@@ -75,12 +75,11 @@ const LandingPageTemplate = ({ lang }) => {
     }
 
     dispatch({ type: "CS_START" })
-    navigate(`${general[lang].basePath}${questions.q1[lang]}`)
+    navigate(`${general[lang][screenerType].basePath}${questions.q1[lang]}`)
   }
 
   return (
-    <Layout lang={lang}>
-      <SEO lang={lang} />
+    <Layout lang={lang} screenerType={screenerType}>
       <nav role="navigation">
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">
@@ -101,7 +100,7 @@ const LandingPageTemplate = ({ lang }) => {
             <p className="ontario-margin-bottom-12-!">
               <strong>{`${general[lang].lastUpdated} ${formatDate(new Date(Date.parse(currentDate)), lang)}`}</strong>
             </p>
-            <h1>{general[lang].title}</h1>
+            <h1>{general[lang][screenerType].title}</h1>
             <p className="ontario-lead-statement">{landing[lang].lead}</p>
             <p className="ontario-margin-top-32-!">{landing[lang].infoText}</p>
             <p className="ontario-margin-top-32-!">

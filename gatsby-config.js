@@ -1,22 +1,20 @@
 module.exports = {
   siteMetadata: {
     en: {
-      title: `Coronavirus (COVID-19) courthouse screener`,
-      description: `Coronavirus (COVID-19) courthouse screener. Your result will tell you if you can or cannot enter. If you are told you cannot enter, you will get information about what to do next.`,
+      title: `Coronavirus (COVID-19) ||SCREENER_TYPE|| screener`,
+      description: `Coronavirus (COVID-19) ||SCREENER_TYPE|| screener. Your result will tell you if you can or cannot enter. If you are told you cannot enter, you will get information about what to do next.`,
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
-      og_url: `https://covid-19.ontario.ca/courthouse-screener`,
-      og_title: `COVID-19 Courthouse Screening Tool for Ontarians`,
+      og_url: `https://covid-19.ontario.ca/||SCREENER_TYPE||-screener`,
       og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_en.png`,
       og_locale: `en_CA`,
     },
     fr: {
-      title: `COVID-19 dépistage tribunaux`,
-      description: `COVID-19 depistage tribunaux. Vos résultats détermineront si vous pouvez ou non entrer dans le palais de justice et quelles sont les prochaines étapes.`,
+      title: `COVID-19 dépistage ||SCREENER_TYPE||`,
+      description: `COVID-19 depistage ||SCREENER_TYPE||. Vos résultats détermineront si vous pouvez ou non entrer dans le palais de justice et quelles sont les prochaines étapes.`,
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
-      og_url: `https://covid-19.ontario.ca/depistage-tribunaux`,
-      og_title: `COVID-19 depistage tribunaux pour les Ontariens`,
+      og_url: `https://covid-19.ontario.ca/depistage-||SCREENER_TYPE||`,
       og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_fr.png`,
       og_locale: `fr_CA`,
     },

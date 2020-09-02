@@ -11,22 +11,22 @@ import Checkbox from "../components/checkbox"
 import { general, symptomsTitle, symptoms } from "../localized_content"
 import { logic, questions } from "../shared"
 
-const SymptomsTemplate = ({ lang }) => {
+const SymptomsTemplate = ({ lang, screenerType }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
 
   function handleContinueClick() {
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
-    navigate(`${general[lang].basePath}${questions[logic.q1.cont(state)][lang]}`)
+    navigate(`${general[lang][screenerType].basePath}${questions[logic.q1.cont(state)][lang]}`)
   }
 
   return (
-    <Layout lang={lang}>
+    <Layout lang={lang} screenerType={screenerType}>
       <SEO lang={lang} />
       <SkipNavContent>
         <Question
           lang={lang}
-          title={general[lang].title}
+          title={general[lang][screenerType].title}
           buttons={<ContinueButton lang={lang} clickHandler={handleContinueClick} />}
         >
           <div className="ontario-form-group">

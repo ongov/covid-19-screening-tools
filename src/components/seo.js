@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ lang, meta = {} }) {
+function SEO({ lang, screenerType, meta = {} }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -14,7 +14,6 @@ function SEO({ lang, meta = {} }) {
               author
               twitter_site
               og_url
-              og_title
               og_image
               og_locale
             }
@@ -24,7 +23,6 @@ function SEO({ lang, meta = {} }) {
               author
               twitter_site
               og_url
-              og_title
               og_image
               og_locale
             }
@@ -39,7 +37,7 @@ function SEO({ lang, meta = {} }) {
       htmlAttributes={{
         lang,
       }}
-      title={site.siteMetadata[lang].title}
+      title={site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screenerType)}
       meta={[
         {
           name: `description`,

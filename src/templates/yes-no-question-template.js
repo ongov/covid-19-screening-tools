@@ -10,21 +10,21 @@ import Question from "../components/question"
 import YesNoButtons from "../components/yes-no-buttons"
 import { questions } from "../shared"
 
-const QuestionTemplate = ({ lang, yesLink, noLink, children }) => {
+const QuestionTemplate = ({ lang, screenerType, yesLink, noLink, children }) => {
   const state = useContext(GlobalStateContext)
 
   return (
-    <Layout lang={lang}>
+    <Layout lang={lang} screenerType={screenerType}>
       <SEO lang={lang} />
       <SkipNavContent>
         <Question
           lang={lang}
-          title={general[lang].title}
+          title={general[lang][screenerType].title}
           buttons={
             <YesNoButtons
               lang={lang}
-              yesLink={`${general[lang].basePath}${questions[yesLink(state)][lang]}`}
-              noLink={`${general[lang].basePath}${questions[noLink(state)][lang]}`}
+              yesLink={`${general[lang][screenerType].basePath}${questions[yesLink(state)][lang]}`}
+              noLink={`${general[lang][screenerType].basePath}${questions[noLink(state)][lang]}`}
             />
           }
         >

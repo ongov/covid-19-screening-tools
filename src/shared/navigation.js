@@ -2,14 +2,9 @@ import { navigate } from "@reach/router"
 import { general } from "../localized_content"
 import { questions } from "../shared"
 
-const navigateHome = lang =>
-  navigate(general[lang].basePath, {
+const navigateHome = (lang, screenerType) =>
+  navigate(general[lang][screenerType].basePath, {
     replace: true,
   })
 
-const navigateToExpired = lang =>
-  navigate(`${general[lang].basePath}${questions.r3[lang]}`, {
-    replace: true,
-  })
-
-export { navigateHome, navigateToExpired }
+export { navigateHome }

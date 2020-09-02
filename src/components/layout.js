@@ -11,7 +11,7 @@ import "../stylesheets/theme.css"
 import "../stylesheets/sat-style.css"
 import "../stylesheets/print.css"
 
-const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) => {
+const Layout = ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, children }) => {
   const state = useContext(GlobalStateContext)
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const Layout = ({ lang, hideFooter, isResultsPage, altHeaderLink, children }) =>
 
   return (
     <>
-      <SEO lang={lang} />
+      <SEO lang={lang} screenerType={screenerType} />
       <div className="ontario-text-center ontario-hide-for-print">
         <SkipNavLink>{general[lang].skipNavText}</SkipNavLink>
       </div>

@@ -10,8 +10,16 @@ const general = {
   en: {
     lang: "english",
     lang_abbr: "EN",
-    basePath: "/courthouse-screening/",
-    title: "COVID-19 courthouse screening",
+    courthouse: {
+      screeningType: "courthouse",
+      basePath: "/courthouse-screening/",
+      title: "COVID-19 courthouse screening",
+    },
+    school: {
+      screeningType: "school",
+      basePath: "/school-screening/",
+      title: "COVID-19 school screening",
+    },
     backButtonText: "Back to previous page",
     continueButtonText: "Continue",
     skipButtonText: "Skip",
@@ -30,8 +38,16 @@ const general = {
   fr: {
     lang: "français",
     lang_abbr: "FR",
-    basePath: "/depistage-tribunaux/",
-    title: "COVID-19 dépistage tribunaux",
+    courthouse: {
+      screeningType: "tribunaux",
+      basePath: "/depistage-tribunaux/",
+      title: "COVID-19 dépistage tribunaux",
+    },
+    school: {
+      screeningType: "scolaire",
+      basePath: "/depistage-scolaire/",
+      title: "COVID-19 dépistage scolaire",
+    },
     backButtonText: "Retour à la page précédente",
     continueButtonText: "Continuer",
     yes: "Oui",
@@ -48,17 +64,24 @@ const general = {
     contact_tracing: {
       heading: (
         <>
-        Contact tracing <br className="ontario-show-for-small-only"/>(optional)
+          Contact tracing <br className="ontario-show-for-small-only" />
+          (optional)
         </>
       ),
       content: (
         <>
-        <p>Ask the screening staff for a card to fill in your information.</p>
-        <p>Write down your name and phone number on a "contact tracing card" in case there is an outbreak at the courthouse.</p>
-        <p>If there is an outbreak, Public Health will call and help you understand your risk and how you can stop the spread of the virus.</p>
+          <p>Ask the screening staff for a card to fill in your information.</p>
+          <p>
+            Write down your name and phone number on a "contact tracing card" in case there is an outbreak at the
+            courthouse.
+          </p>
+          <p>
+            If there is an outbreak, Public Health will call and help you understand your risk and how you can stop the
+            spread of the virus.
+          </p>
         </>
       ),
-    }
+    },
   },
 }
 
