@@ -8,8 +8,8 @@ import DeniedTemplate from "../../templates/denied-template"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
-import styled from "styled-components";
-import {results} from "../../localized_content";
+import styled from "styled-components"
+import { results } from "../../localized_content"
 
 const lang = "en"
 
@@ -25,9 +25,15 @@ const Denied = () => {
 
   return (
     <DeniedTemplate lang={lang}>
-      <HeaderDate><ContentBlock lang={lang} icon={<Warning />} heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}>
-        on {format(new Date(), "MMMM d, yyyy", { locale: en })}
-      </ContentBlock></HeaderDate>
+      <HeaderDate>
+        <ContentBlock
+          lang={lang}
+          icon={<Warning />}
+          heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}
+        >
+          on {format(new Date(), "MMMM d, yyyy", { locale: en })}
+        </ContentBlock>
+      </HeaderDate>
     </DeniedTemplate>
   )
 }

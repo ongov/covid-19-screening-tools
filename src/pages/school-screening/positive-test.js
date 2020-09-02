@@ -2,8 +2,15 @@ import React from "react"
 import QuestionTemplate from "../../templates/yes-no-question-template"
 import { logic } from "../../shared"
 
+const screenerType = "school"
+
 const PositiveTest = () => (
-  <QuestionTemplate lang="en" type="courthouse" yesLink={logic.q4.yes} noLink={logic.q4.no}>
+  <QuestionTemplate
+    lang="en"
+    screenerType={screenerType}
+    yesLink={logic[screenerType].q4.yes}
+    noLink={logic[screenerType].q4.no}
+  >
     <h2>In the last 14 days, have you either:</h2>
     <ul>
       <li>tested positive for COVID-19? or</li>

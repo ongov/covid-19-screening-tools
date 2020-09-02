@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useContext } from "react"
+import React, { useEffect, useRef } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
+// import { addDays, differenceInMilliseconds } from "date-fns"
 
 import { savePDF } from "@progress/kendo-react-pdf"
 
@@ -11,7 +12,6 @@ import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import Callout from "../components/callout-contact-tracing"
 import SEO from "../components/seo"
-import { GlobalStateContext } from "../context/global-context-provider"
 
 import { general, results } from "../localized_content"
 
@@ -20,9 +20,9 @@ import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
 import Information from "../images/ontario-icon-information.svg"
 import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
-import ContactTracing from "../images/ontario-contact-tracing.svg"
+import ContactTracing  from "../images/ontario-contact-tracing.svg"
 
-import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../shared"
+import { pushOutcomeDataToGTM, navigateHome, navigateToExpired, getAddressPieces, useCourthouse } from "../shared"
 import { navigate } from "gatsby"
 
 const Green = "#118847"
@@ -57,7 +57,7 @@ const IconContactTracing = styled.span`
   background-image: url(${ContactTracing});
   background-size: 100%;
   display: inline-block;
-  width: 2.35rem;
+  width:  2.35rem;
   height: 2.35rem;
 `
 
@@ -84,10 +84,23 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
-const Approved = ({ children, lang, screenerType }) => {
+// function redirectToExpiredAtMidnight(lang) {
+//   const current = new Date()
+//   const oneMore = addDays(new Date(current.toLocaleDateString()), 1)
+
+//   setTimeout(() => {
+//     navigateToExpired(lang)
+//   }, differenceInMilliseconds(oneMore, current))
+// }
+
+const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
-  const { courthouse } = useContext(GlobalStateContext)
+  const courthouse = useCourthouse(lang)
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
+
+  // useEffect(() => {
+  //   redirectToExpiredAtMidnight(lang)
+  // }, [])
 
   useEffect(() => {
     if (courthouse && !courthouse.reload)
@@ -100,8 +113,8 @@ const Approved = ({ children, lang, screenerType }) => {
 
   return (
     <span ref={elToPrintRef}>
-      <Layout lang={lang} screenerType={screenerType} hideFooter>
-        <SEO lang={lang} screenerType={screenerType} />
+      <Layout lang={lang} hideFooter>
+        <SEO lang={lang} />
         <SkipNavContent>
           <Header
             title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
@@ -141,7 +154,7 @@ const Approved = ({ children, lang, screenerType }) => {
             </>
           </ContentBlock>
           <Callout lang={lang} icon={<IconContactTracing />} heading={`${results[lang].contactTracingTitle}`}>
-            <p>{results[lang].contactTracingContent}</p>
+          <p>{results[lang].contactTracingContent}</p>
           </Callout>
           <ContentBlock lang={lang}>
             <p>
@@ -152,9 +165,7 @@ const Approved = ({ children, lang, screenerType }) => {
           <ContentBlock lang={lang} icon={<IconStaySafe />} heading={`${results[lang].staySafe}`}>
             {results[lang].downloadApp}
             <p>
-              <Hyperlink href={results[lang].downloadAppLink} target="_blank" rel="noopener">
-                {results[lang].downloadAppLinkText}
-              </Hyperlink>
+              <Hyperlink href={results[lang].downloadAppLink} target="_blank" rel="noopener">{results[lang].downloadAppLinkText}</Hyperlink>
             </p>
           </ContentBlock>
           <Footer icon={<FooterCheckmark />} color={Green} />

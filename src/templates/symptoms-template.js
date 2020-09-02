@@ -17,7 +17,7 @@ const SymptomsTemplate = ({ lang, screenerType }) => {
 
   function handleContinueClick() {
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
-    navigate(`${general[lang][screenerType].basePath}${questions[logic.q1.cont(state)][lang]}`)
+    navigate(`${general[lang][screenerType].basePath}${questions[logic[screenerType].q1.cont(state)][lang]}`)
   }
 
   return (

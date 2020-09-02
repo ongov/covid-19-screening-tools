@@ -2,8 +2,15 @@ import React from "react"
 import QuestionTemplate from "../../templates/yes-no-question-template"
 import { logic } from "../../shared"
 
+const screenerType = "school"
+
 const Contact = () => (
-  <QuestionTemplate lang="en" type="courthouse" yesLink={logic.q5.yes} noLink={logic.q5.no}>
+  <QuestionTemplate
+    lang="en"
+    screenerType={screenerType}
+    yesLink={logic[screenerType].q5.yes}
+    noLink={logic[screenerType].q5.no}
+  >
     <h2>In the last 14 days, have you been in close physical contact with a person who either:</h2>
     <ul>
       <li>is currently sick with new COVID-19 symptoms (like a cough, fever, or difficulty breathing)? or</li>

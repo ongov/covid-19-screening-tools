@@ -7,6 +7,7 @@ import schoolLanding from "./school-landing"
 import results from "./results"
 import formatDate from "./date-format"
 import schoolDataFields from "./school-data-fields"
+import schoolContextChoices from "./context-choices-school"
 
 const general = {
   en: {
@@ -100,4 +101,5 @@ export {
   results,
   formatDate,
   schoolDataFields,
+  schoolContextChoices,
 }

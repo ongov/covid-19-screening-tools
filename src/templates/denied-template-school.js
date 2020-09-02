@@ -10,7 +10,7 @@ import Footer from "../components/outcome-footer"
 import DeniedContactCard from "../components/denied-contact-card"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import CalloutInfo from "../components/callout-info"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
 
 import { pushOutcomeDataToGTM } from "../shared"
 
@@ -28,7 +28,7 @@ const HeadingDeniedIcon = styled(CancelLarge)`
   background-color: ${Red};
 `
 
-const Denied = ({ lang, children, screenerType }) => {
+const Denied = ({ lang, children }) => {
   const { courthouse } = useContext(GlobalStateContext)
 
   useEffect(() => {
@@ -42,8 +42,9 @@ const Denied = ({ lang, children, screenerType }) => {
   }, [])
 
   return (
-    <Layout lang={lang} screenerType={screenerType} hideFooter>
-      <SEO lang={lang} screenerType={screenerType} />
+    <Layout lang={lang} hideFooter>
+      <SEO lang={lang} />
+
       <SkipNavContent>
         <Header
           title={
@@ -58,11 +59,7 @@ const Denied = ({ lang, children, screenerType }) => {
         />
         {children}
         <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}></ContentBlock>
-        <CalloutInfo
-          icon="ontario-icon__info"
-          classnameTitle="ontario-callout__icon-info"
-          title={`${results[lang].whoToContactSubText}`}
-        />
+        <CalloutInfo icon="ontario-icon__info" classnameTitle="ontario-callout__icon-info" title={`${results[lang].whoToContactSubText}`} />
         <ContentBlock lang={lang}>
           <DeniedContactCard lang={lang} courthouse={courthouse} />
         </ContentBlock>

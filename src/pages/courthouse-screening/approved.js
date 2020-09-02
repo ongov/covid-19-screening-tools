@@ -7,7 +7,7 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Calendar from "../../images/ontario-icon-calendar.svg"
 import "../../stylesheets/pdf-styles.css"
-import styled from "styled-components";
+import styled from "styled-components"
 
 const lang = "en"
 
@@ -30,10 +30,16 @@ const Approved = () => {
   const date = new Date()
 
   return (
-    <ApprovedTemplate lang={lang}>
-      <HeaderDate><ContentBlock lang={lang} icon={<IconCalendar />} heading={`Valid ${format(date, "MMMM d, yyyy", { locale: en })}`}>
-  from {format(date, "' 'h':'mm' 'aaaa' ", { locale: en })} to 11:59 p.m.
-      </ContentBlock></HeaderDate>
+    <ApprovedTemplate lang={lang} screenerType="courthouse">
+      <HeaderDate>
+        <ContentBlock
+          lang={lang}
+          icon={<IconCalendar />}
+          heading={`Valid ${format(date, "MMMM d, yyyy", { locale: en })}`}
+        >
+          from {format(date, "' 'h':'mm' 'aaaa' ", { locale: en })} to 11:59 p.m.
+        </ContentBlock>
+      </HeaderDate>
     </ApprovedTemplate>
   )
 }

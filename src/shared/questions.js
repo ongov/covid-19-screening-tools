@@ -31,6 +31,14 @@ export default {
     en: "doctor-self-isolate",
     fr: "medecin-auto-isolement",
   },
+  q8: {
+    en: "context",
+    fr: "le-contexte",
+  },
+  q9: {
+    en: "symptoms-confirm",
+    fr: "symptomes-confirmer",
+  },
   r1: {
     en: "approved",
     fr: "approuve",
@@ -38,9 +46,5 @@ export default {
   r2: {
     en: "denied",
     fr: "denie",
-  },
-  r3: {
-    en: "expired",
-    fr: "expire",
   },
 }
