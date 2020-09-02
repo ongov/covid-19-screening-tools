@@ -4,7 +4,8 @@ import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 import styled from "styled-components"
 import { useCookies } from "react-cookie"
-import Select from "react-select"
+import Select, { components } from "react-select";
+
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -21,9 +22,11 @@ import dropDownArrow from "../images/ontario-dropdown-arrow.svg"
 const DownChevron = styled.div `
   background: url(${dropDownArrow});
   background-size: 100%;
-  width: 50px;
-  height: 50px;
-  border: thin solid red;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  right: 0.2rem;
+  top: -0.2rem;
 `
 
 const CenteredDiv = styled.div`
@@ -118,6 +121,18 @@ const customStyles = {
   }
 }
 
+const DropDownIcon = () => {
+  return <DownChevron />;
+};
+
+const DropdownIndicator = props => {
+  return (
+    <components.DropdownIndicator {...props}>
+      <DropDownIcon />
+    </components.DropdownIndicator>
+  );
+};
+
 const LandingPageTemplate = ({ lang }) => {
   const {
     currentBuildDate: { currentDate },
@@ -187,8 +202,8 @@ const LandingPageTemplate = ({ lang }) => {
                 </label>
                 <CourtHouseDropDown>
                 <Select
-                  components={DownChevron}
                   styles={customStyles}
+                  components={{ DropdownIndicator }}
                   id="courthouseSelect"
                   options={courthouses}
                   getOptionLabel={option =>
