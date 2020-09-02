@@ -6,7 +6,6 @@ import styled from "styled-components"
 import Select from "react-select"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Button from "../components/button"
 import CalloutInfo from "../components/callout-info"
 import { GlobalDispatchContext } from "../context/global-context-provider"
@@ -15,10 +14,19 @@ import courthouses from "../data/courthouses.json"
 import { questions } from "../shared"
 import { general, landing, formatDate } from "../localized_content"
 
+import dropDownArrow from "../images/ontario-dropdown-arrow.svg"
+
+const DownChevron = styled.div`
+  background: url(${dropDownArrow});
+  background-size: 100%;
+  width: 50px;
+  height: 50px;
+  border: thin solid red;
+`
+
 const CenteredDiv = styled.div`
   display: block;
   margin: 0 auto;
-
   button {
     display: block;
     margin: 1rem auto 1.75rem;
@@ -44,14 +52,67 @@ const CourtHouseSelect = styled.span`
 `
 
 const CourtHouseDropDown = styled.div`
-  margin-bottom: 1.5625rem;
+  margin-bottom: 3rem;
   .ontario-input {
     margin-bottom: 1rem;
   }
   .dropdownError {
     border: 3px solid #cd0000;
   }
+  &:focus {
+    border: thin solid blue;
+  }
 `
+
+const customStyles = {
+  control: () => ({}),
+  input: () => ({
+    padding: "0",
+  }),
+  menu: () => ({
+    backgroundColor: "white",
+    marginTop: "1.8rem",
+    border: "2px solid #1a1a1a",
+    borderTop: "1px solid grey",
+    position: "absolute",
+    zIndex: "100",
+    padding: "1rem 0",
+  }),
+  menuList: () => ({
+    height: "150px",
+    backgroundColor: "white",
+    overflowY: "scroll",
+  }),
+  valueContainer: () => ({
+    border: "2px solid #1a1a1a",
+    borderRadius: "4px",
+    boxSizing: "border-box",
+    padding: ".625rem 1rem",
+    maxWidth: "46em",
+    lineHeight: "1.5",
+    color: "#1a1a1a",
+    fontSize: "1rem",
+    fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
+  }),
+  indicatorsContainer: () => ({
+    marginTop: "-2rem",
+  }),
+  indicatorSeparator: () => ({
+    border: "none",
+  }),
+  dropdownIndicator: () => ({
+    float: "right",
+    width: "26px",
+    position: "relative",
+    right: "0.5rem",
+    top: "-0.3rem",
+  }),
+  singleValue: (provided, state) => {
+    const opacity = state.isDisabled ? 1 : 1
+    const transition = "opacity 300ms"
+    return { ...provided, opacity, transition }
+  },
+}
 
 const LandingPageTemplate = ({ lang, screenerType }) => {
   const {
@@ -113,6 +174,8 @@ const LandingPageTemplate = ({ lang, screenerType }) => {
                 </label>
                 <CourtHouseDropDown>
                   <Select
+                    components={DownChevron}
+                    styles={customStyles}
                     id="courthouseSelect"
                     options={courthouses}
                     getOptionLabel={option =>

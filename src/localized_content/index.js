@@ -3,8 +3,10 @@ import { footer, queensPrinter } from "./footer"
 import deniedContactCard from "./denied-contact-card"
 import { symptomsTitle, symptoms, noSymptomsId } from "./symptoms"
 import landing from "./landing"
+import schoolLanding from "./school-landing"
 import results from "./results"
 import formatDate from "./date-format"
+import schoolDataFields from "./school-data-fields"
 
 const general = {
   en: {
@@ -87,6 +89,7 @@ const general = {
 
 export {
   landing,
+  schoolLanding,
   general,
   footer,
   queensPrinter,
@@ -96,4 +99,5 @@ export {
   noSymptomsId,
   results,
   formatDate,
+  schoolDataFields,
 }
