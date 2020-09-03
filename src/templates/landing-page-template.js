@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react"
+import React, { useState, useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
@@ -7,7 +7,6 @@ import Select, { components } from "react-select"
 
 import Layout from "../components/layout"
 import Button from "../components/button"
-import CalloutBlueBorder from "../components/callout-blue-border"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 
