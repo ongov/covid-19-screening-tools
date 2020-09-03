@@ -20,11 +20,10 @@ const ContextTemplate = ({ lang, question, questionId, title }) => {
   const handleOptionSelect = e => {
     setContinueDisabled(false)
 
-    // dispatch({
-    //   type: "CONTEXT_RADIO_SELECTED",
-    //   question: questionId,
-    //   response: responseText,
-    // })
+    dispatch({
+      type: "SCREENIE_SELECTED",
+      screenie: e.target.value,
+    })
   }
 
   const handleContinueClick = () => {

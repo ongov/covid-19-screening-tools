@@ -10,18 +10,17 @@ import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import SEO from "../components/seo"
 
-import {navigateHome, pushOutcomeDataToGTM} from "../shared"
+import { navigateHome, pushOutcomeDataToGTM } from "../shared"
 
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
-import {feedback, resultsSchool} from "../localized_content"
-import Callout from "../components/callout-blue";
-import FeedbackIcon from "../images/ontario-icon-feedback.svg";
+import { feedback, resultsSchool } from "../localized_content"
+import Callout from "../components/callout-blue"
+import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import Information from "../images/ontario-icon-information.svg"
-import StaySafe from "../images/ontario-icon-stay-safe.svg";
+import StaySafe from "../images/ontario-icon-stay-safe.svg"
 
 const Red = "#D81A21"
-
 
 const Hyperlink = styled.a`
   color: blue;
@@ -53,12 +52,12 @@ const IconInfo = styled.span`
   height: 2.35rem;
 `
 
-const IconFeedback = styled.span `
+const IconFeedback = styled.span`
   background-image: url(${FeedbackIcon});
   background-size: 100%;
   display: inline-block;
   width: 2.35rem;
-  height: 2.10rem;
+  height: 2.1rem;
 `
 
 const Denied = ({ lang, children }) => {
@@ -80,7 +79,7 @@ const Denied = ({ lang, children }) => {
 
       <SkipNavContent>
         <Header
-          title={<>{`${school} ${resultsSchool[lang].title}`}</>}
+          title={<>{`${school.value["School Name"]} ${resultsSchool[lang].title}`}</>}
           heading={`${resultsSchool[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
           color={Red}
@@ -89,13 +88,13 @@ const Denied = ({ lang, children }) => {
         {children}
         <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
           <>
-            <p>
-              {resultsSchool[lang].nextStepsDeniedContent}{" "}
-            </p>
+            <p>{resultsSchool[lang].nextStepsDeniedContent} </p>
           </>
-         </ContentBlock>
+        </ContentBlock>
         <Callout lang={lang} icon={<IconFeedback />} heading={`${feedback[lang].title}`}>
-          <a href={feedback[lang].link} rel="noopener" target="_blank">{feedback[lang].content}</a>
+          <a href={feedback[lang].link} rel="noopener" target="_blank">
+            {feedback[lang].content}
+          </a>
         </Callout>
         <Footer icon={<CancelSmall />} color={Red} />
       </SkipNavContent>

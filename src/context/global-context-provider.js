@@ -45,6 +45,10 @@ function reducer(state, action) {
       const { school, school_label } = action
       return { ...state, school, school_label }
     }
+    case "SCREENIE_SELECTED": {
+      const { screenie } = action
+      return { ...state, screenie }
+    }
     case "CS_START":
     case "CS_BACK_BUTTON_PRESSED": {
       return { ...state, in_progress: true }
