@@ -18,6 +18,7 @@ import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
 import SpeechBubble from "../images/inline-svgs/ontario-icon-speech-bubble.inline.svg"
 import { results } from "../localized_content"
+import InfoIcon from "../images/ontario-icon-information_blue.svg";
 
 const Red = "#D81A21"
 
@@ -26,6 +27,15 @@ const HeadingDeniedIcon = styled(CancelLarge)`
   width: 120px;
   margin: 1.2rem auto 2rem auto;
   background-color: ${Red};
+`
+
+const IconInfo = styled.span `
+  background-image: url(${InfoIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-top: -0.25rem;
 `
 
 const Denied = ({ lang, children, screenerType }) => {
@@ -58,11 +68,9 @@ const Denied = ({ lang, children, screenerType }) => {
         />
         {children}
         <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}></ContentBlock>
-        <CalloutBlueBorder
-          icon="ontario-icon__info"
-          classnameTitle="ontario-callout__icon-info"
-          title={`${results[lang].whoToContactSubText}`}
-        />
+        <CalloutBlueBorder lang={lang} icon={<IconInfo />}>
+          {results[lang].whoToContactSubText}
+        </CalloutBlueBorder>
         <ContentBlock lang={lang}>
           <DeniedContactCard lang={lang} courthouse={courthouse} />
         </ContentBlock>
