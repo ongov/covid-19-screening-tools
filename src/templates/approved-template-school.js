@@ -120,13 +120,14 @@ const IconDownload = styled.span `
   height: 2.80rem;
 `
 
-const Approved = ({ children, lang }) => {
+const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
 
   return (
     <span ref={elToPrintRef}>
-      <Layout lang={lang} screenerType="school" hideFooter>
+      <Layout lang={lang} screenerType={screenerType} hideFooter>
+        <SEO lang={lang} screenerType={screenerType} />
         <SkipNavContent>
           <Header
             title={`${school} ${resultsSchool[lang].title}`}

@@ -61,7 +61,7 @@ const IconFeedback = styled.span `
   height: 2.10rem;
 `
 
-const Denied = ({ lang, children }) => {
+const Denied = ({ lang, children, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
 
   // useEffect(() => {
@@ -75,9 +75,8 @@ const Denied = ({ lang, children }) => {
   // }, [])
 
   return (
-    <Layout lang={lang} screenerType="school" hideFooter>
-      <SEO lang={lang} />
-
+    <Layout lang={lang} screenerType={screenerType} hideFooter>
+      <SEO lang={lang} screenerType={screenerType} />
       <SkipNavContent>
         <Header
           title={<>{`${school} ${resultsSchool[lang].title}`}</>}
