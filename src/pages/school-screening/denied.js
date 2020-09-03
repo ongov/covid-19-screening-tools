@@ -24,7 +24,7 @@ const Denied = () => {
   const { school } = useContext(GlobalStateContext)
 
   return (
-    <DeniedTemplate lang={lang}>
+    <DeniedTemplate lang={lang} screenerType="school">
       <HeaderDate>
         <ContentBlock
           lang={lang}

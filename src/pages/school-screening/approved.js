@@ -30,7 +30,7 @@ const Approved = () => {
   const date = new Date()
 
   return (
-    <ApprovedTemplate lang={lang}>
+    <ApprovedTemplate lang={lang} screenerType="school">
       <HeaderDate>
         <ContentBlock
           lang={lang}
