@@ -1,13 +1,15 @@
-import React, { useRef, useContext } from "react"
+import React, { useEffect, useRef, useContext } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
+import { savePDF } from "@progress/kendo-react-pdf"
 
 import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import Callout from "../components/callout-blue"
+import Button from "../components/button"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
@@ -74,6 +76,34 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
+const HyperlinkButton = styled.a `
+  background-color: #fff;
+  border: 2px solid #06c;
+  color: #06c;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: none;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.55556;
+  margin: 0 1.75rem 0 0;
+  min-width: 10rem;
+  padding: .625rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #e0f0ff;
+    border-color: #00478f;
+    color: #00478f;
+    text-decoration: underline;
+  }
+`
+
 const IconFeedback = styled.span `
   background-image: url(${FeedbackIcon});
   background-size: 100%;
@@ -97,6 +127,22 @@ const Approved = ({ children, lang }) => {
             color={Green}
             titleColor={"#d1efd4"}
           />
+          <ContentBlock lang={lang} icon={<IconInfo />}>
+            <>
+            <HyperlinkButton
+              onClick={() =>
+              savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
+                paperSize: "auto",
+                avoidLinks: true,
+                margin: 40,
+                fileName: `COVID-19 School Screening Results - ${school}.pdf`,
+              })
+            }
+            >
+              {resultsSchool[lang].downloadPDF}
+            </HyperlinkButton>{" "}
+            </>
+          </ContentBlock>
           {children}
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
             {school}
