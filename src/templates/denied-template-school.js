@@ -17,7 +17,7 @@ import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.
 import {feedback, resultsSchool} from "../localized_content"
 import Callout from "../components/callout-blue";
 import FeedbackIcon from "../images/ontario-icon-feedback.svg";
-import Information from "../images/ontario-icon-information.svg"
+import Information from "../images/ontario-icon-information-red.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg";
 
 const Red = "#D81A21"

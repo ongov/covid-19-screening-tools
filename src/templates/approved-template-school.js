@@ -21,6 +21,7 @@ import Information from "../images/ontario-icon-information.svg"
 import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
+import DownloadIcon from "../images/ontario-icon-download.svg"
 
 import { navigateHome } from "../shared"
 import { navigate } from "gatsby"
@@ -112,6 +113,14 @@ const IconFeedback = styled.span `
   height: 2.10rem;
 `
 
+const IconDownload = styled.span `
+  background-image: url(${DownloadIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.80rem;
+`
+
 const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
@@ -127,7 +136,7 @@ const Approved = ({ children, lang }) => {
             color={Green}
             titleColor={"#d1efd4"}
           />
-          <ContentBlock lang={lang} icon={<IconInfo />}>
+          <ContentBlock lang={lang} icon={<IconDownload />}>
             <>
             <HyperlinkButton
               onClick={() =>
