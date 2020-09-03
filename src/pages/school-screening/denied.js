@@ -29,7 +29,7 @@ const Denied = () => {
         <ContentBlock
           lang={lang}
           icon={<Warning />}
-          heading={`${results[lang].deniedSubHeading} ${school.value["School Name"]}`}
+          heading={`${results[lang].deniedSubHeading} ${school && school.value && school.value["School Name"]}`}
         >
           on {format(new Date(), "MMMM d, yyyy", { locale: en })}
         </ContentBlock>
