@@ -43,7 +43,7 @@ const ContextTemplate = ({ lang, question, questionId, title }) => {
         <h2>{question}</h2>
         <div className="ontario-form-group">
           <fieldset className="ontario-fieldset">
-            <legend className="ontario-show-for-sr">{title}</legend>
+            <legend className="legend-title">{title}</legend>
             <div className="ontario-question__options">
               <div className="ontario-radios">
                 {schoolContextChoices[lang] &&

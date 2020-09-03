@@ -16,21 +16,16 @@ const Contact = () => {
       noLink={logic[screenerType].q5.no}
     >
       {state.screenie && state.screenie === "guardian" ? (
-        <h2>In the last 14 days, have they been in close physical contact with a person who either:</h2>
+        <h2>In the last 14 days, have they been in close physical contact with someone who currently has COVID-19? </h2>
       ) : (
-        <h2>In the last 14 days, have you been in close physical contact with a person who either:</h2>
+        <h2>In the last 14 days, have you been in close physical contact with someone who currently has COVID-19? </h2>
       )}
-      <ul>
-        <li>is currently sick with new COVID-19 symptoms (like a cough, fever, or difficulty breathing)? or</li>
-        <li>
-          returned from outside Canada in the last 2 weeks with new COVID-19 symptoms (like a cough, fever, or
-          difficulty breathing)?
-        </li>
-      </ul>
+      <p>This includes getting a COVID Alert exposure notification.</p>
       <p>Close physical contact means:</p>
       <ul>
         <li>being less than 2 metres away in the same room, workspace, or area</li>
         <li>living in the same home</li>
+        <li>being in the same classroom </li>
       </ul>
     </QuestionTemplate>
   )
