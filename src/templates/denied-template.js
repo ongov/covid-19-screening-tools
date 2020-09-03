@@ -9,7 +9,7 @@ import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import DeniedContactCard from "../components/denied-contact-card"
 import ContentBlock from "../components/outcome-content-block-with-icon"
-import CalloutInfo from "../components/callout-info"
+import CalloutBlueBorder from "../components/callout-blue-border"
 import SEO from "../components/seo"
 
 import { pushOutcomeDataToGTM } from "../shared"
@@ -58,7 +58,7 @@ const Denied = ({ lang, children, screenerType }) => {
         />
         {children}
         <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}></ContentBlock>
-        <CalloutInfo
+        <CalloutBlueBorder
           icon="ontario-icon__info"
           classnameTitle="ontario-callout__icon-info"
           title={`${results[lang].whoToContactSubText}`}

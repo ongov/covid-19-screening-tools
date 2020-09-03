@@ -30,7 +30,7 @@ const Content = styled.div`
   margin: 0.25rem 2rem 1rem 6rem;
 `
 
-export default function({ lang, icon, heading, children }) {
+export default function({ lang, icon, heading, children, altContentProperty }) {
   return (
     <Container>
     <Icon>{icon}</Icon>
