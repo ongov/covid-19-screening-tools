@@ -79,7 +79,7 @@ const Denied = ({ lang, children }) => {
 
       <SkipNavContent>
         <Header
-          title={<>{`${school.value["School Name"]} ${resultsSchool[lang].title}`}</>}
+          title={<>{`${school && school.value && school.value["School Name"]} ${resultsSchool[lang].title}`}</>}
           heading={`${resultsSchool[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
           color={Red}

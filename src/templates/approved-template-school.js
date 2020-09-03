@@ -91,7 +91,7 @@ const Approved = ({ children, lang }) => {
       <Layout lang={lang} screenerType="school" hideFooter>
         <SkipNavContent>
           <Header
-            title={`${school.value["School Name"]} ${resultsSchool[lang].title}`}
+            title={`${school && school.value && school.value["School Name"]} ${resultsSchool[lang].title}`}
             heading={`${resultsSchool[lang].approveHeading}`}
             icon={<HeadingCheckmark />}
             color={Green}
@@ -99,7 +99,7 @@ const Approved = ({ children, lang }) => {
           />
           {children}
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
-            {school.value["School Name"]}
+            {school && school.value && school.value["School Name"]}
           </ContentBlock>
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
             <>
