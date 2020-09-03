@@ -9,7 +9,7 @@ import "../stylesheets/question.css"
 import BackBlueIcon from "../images/inline-svgs/ontario-icon-back-blue.inline.svg"
 
 import { GlobalStateContext } from "../context/global-context-provider"
-import { general } from "../localized_content"
+import { general, schoolDataFields } from "../localized_content"
 
 const LocationHeading = styled.p`
   font-weight: bold;
@@ -25,6 +25,7 @@ const BackBlueChevron = styled(BackBlueIcon)`
 
 const Question = ({ lang, title, buttons, children }) => {
   const state = useContext(GlobalStateContext)
+  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
 
   return (
     <div className="ontario-row">
@@ -35,7 +36,7 @@ const Question = ({ lang, title, buttons, children }) => {
               {lang === "fr" ? state.courthouse.court_name_fr : state.courthouse.court_name}
             </LocationHeading>
           )}
-          {state && state.school && <LocationHeading>{state.school}</LocationHeading>}
+          {state && state.school && <LocationHeading>{state.school[localizedSchoolNameField]}</LocationHeading>}
           <h1>{title}</h1>
           <button
             className="ontario-button--tertiary ontario-form--link backBtn"
