@@ -9,7 +9,6 @@ import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import Callout from "../components/callout-blue"
-import Button from "../components/button"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
