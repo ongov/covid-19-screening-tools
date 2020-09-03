@@ -17,14 +17,13 @@ const SymptomsConfirm = () => {
     >
       {state.screenie && state.screenie === "guardian" ? (
         <h2>
-          Are their symptoms normal for them (related to seasonal allergies or a chronic medical condition/illness)?
+          Are their symptoms normal for them (related to a known cause or condition)?
         </h2>
       ) : (
         <h2>
-          Are your symptoms normal for you (related to seasonal allergies or a chronic medical condition/illness)?
+          Are your symptoms normal for you (related to a known cause or condition)?
         </h2>
       )}
-      <p>A chronic condition/illness is one that goes on for a long time and often does not go away completely. </p>
     </QuestionTemplate>
   )
 }
