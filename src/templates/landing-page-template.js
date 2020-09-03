@@ -148,7 +148,7 @@ const LandingPageTemplate = ({ lang, screenerType }) => {
       return
     }
 
-    dispatch({ type: "CS_START" })
+    dispatch({ type: "CS_START", screener_type: "courthouse", language: lang })
     navigate(`${general[lang][screenerType].basePath}${questions.q1[lang]}`)
   }
 

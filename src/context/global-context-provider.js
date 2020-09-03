@@ -49,7 +49,10 @@ function reducer(state, action) {
       const { screenie } = action
       return { ...state, screenie }
     }
-    case "CS_START":
+    case "CS_START": {
+      const { screener_type, language } = action
+      return { ...state, in_progress: true, language, screener_type }
+    }
     case "CS_BACK_BUTTON_PRESSED": {
       return { ...state, in_progress: true }
     }

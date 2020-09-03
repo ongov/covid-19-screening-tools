@@ -12,7 +12,7 @@ import { GlobalDispatchContext, GlobalStateContext } from "../context/global-con
 import schools from "../data/schools.json"
 import schools_fr from "../data/schools_fr.json"
 
-import { questions } from "../shared"
+import { questions, replaceSchoolBoardAcronyms } from "../shared"
 import { general, schoolLanding, formatDate, schoolDataFields } from "../localized_content"
 
 const CenteredDiv = styled.div`
@@ -52,9 +52,9 @@ const SchoolLandingPageTemplate = ({ lang }) => {
   const localizedNameFieldName = lang === "en" ? "School Name" : schoolDataFields["School Name"]
   const localizedSchoolBoards = Array.from(
     new Set(localizedSchools.map(school => school[localizedSchoolBoardFieldName]))
-  ).map(item => ({ label: item, value: item }))
+  ).map(item => ({ label: replaceSchoolBoardAcronyms(item), value: item }))
 
-  const [schoolBoard, setSchoolBoard] = useState("")
+  const [schoolBoard, setSchoolBoard] = useState()
 
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
@@ -64,7 +64,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
   )
 
   const handleClick = () => {
-    dispatch({ type: "CS_START" })
+    dispatch({ type: "CS_START", screener_type: "school", language: lang })
     navigate(`${general[lang][screenerType].basePath}${questions.q8[lang]}`)
   }
 
