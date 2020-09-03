@@ -42,8 +42,8 @@ function reducer(state, action) {
       return { ...state, courthouse }
     }
     case "SCHOOL_SELECTED": {
-      const { school } = action
-      return { ...state, school }
+      const { school, school_label } = action
+      return { ...state, school, school_label }
     }
     case "CS_START":
     case "CS_BACK_BUTTON_PRESSED": {

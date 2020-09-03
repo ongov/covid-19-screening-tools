@@ -114,34 +114,42 @@ const AutocompleteDropdown = ({
   selectId,
   selectTitle,
   selectOptions,
+  selectOptionComponent,
   selectValue,
   getSelectOptionLabel,
+  getSelectOptionValue,
   onSelectChange,
   selectError,
   selectErrorMessage,
-}) => (
-  <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
-    <div className="ontario-small-12 ontario-medium-8 ontario-large-6 ontario-columns ontario-small-centered">
-      <label className="ontario-label" htmlFor={selectId}>
-        <StyledSelectLabel>{selectTitle}</StyledSelectLabel>
-      </label>
-      <StyledDropDown>
-        <Select
-          placeholder=""
-          value={selectValue}
-          components={{ DropdownIndicator }}
-          styles={customSelectStyles}
-          id={selectId}
-          name={selectId}
-          options={selectOptions}
-          getOptionLabel={getSelectOptionLabel}
-          getOptionValue={getSelectOptionLabel}
-          onChange={onSelectChange}
-        />
-      </StyledDropDown>
-      {selectError && <ErrorDiv>{selectErrorMessage}</ErrorDiv>}
+}) => {
+  // This allows us to pass in a customized option component for the dropdown menu
+  const CustomOption = selectOptionComponent
+  const customSelectComponents = CustomOption ? { DropdownIndicator, Option: CustomOption } : { DropdownIndicator }
+
+  return (
+    <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
+      <div className="ontario-small-12 ontario-medium-8 ontario-large-6 ontario-columns ontario-small-centered">
+        <label className="ontario-label" htmlFor={selectId}>
+          <StyledSelectLabel>{selectTitle}</StyledSelectLabel>
+        </label>
+        <StyledDropDown>
+          <Select
+            placeholder="Start typing or select..."
+            value={[selectValue]}
+            components={customSelectComponents}
+            styles={customSelectStyles}
+            id={selectId}
+            name={selectId}
+            options={selectOptions}
+            getOptionLabel={getSelectOptionLabel}
+            getOptionValue={getSelectOptionValue}
+            onChange={onSelectChange}
+          />
+        </StyledDropDown>
+        {selectError && <ErrorDiv>{selectErrorMessage}</ErrorDiv>}
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default AutocompleteDropdown
