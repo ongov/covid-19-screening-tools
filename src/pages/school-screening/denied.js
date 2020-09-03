@@ -21,16 +21,12 @@ const HeaderDate = styled.span`
 `
 
 const Denied = () => {
-  const { courthouse } = useContext(GlobalStateContext)
+  const { school } = useContext(GlobalStateContext)
 
   return (
     <DeniedTemplate lang={lang}>
       <HeaderDate>
-        <ContentBlock
-          lang={lang}
-          icon={<Warning />}
-          heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}
-        >
+        <ContentBlock lang={lang} icon={<Warning />} heading={`${results[lang].deniedSubHeading} ${school}`}>
           on {format(new Date(), "MMMM d, yyyy", { locale: en })}
         </ContentBlock>
       </HeaderDate>

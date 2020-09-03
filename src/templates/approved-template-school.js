@@ -84,24 +84,23 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
-const Approved = ({ children, lang, screenerType }) => {
+const Approved = ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
-  const { address, city, postalCode } = getAddressPieces(courthouse, lang)
+  // const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
-  useEffect(() => {
-    if (courthouse && !courthouse.reload)
-      pushOutcomeDataToGTM({
-        pass: true,
-        courthouse,
-        lang,
-      })
-  }, [courthouse, lang])
+  // useEffect(() => {
+  //   if (courthouse && !courthouse.reload)
+  //     pushOutcomeDataToGTM({
+  //       pass: true,
+  //       courthouse,
+  //       lang,
+  //     })
+  // }, [courthouse, lang])
 
   return (
     <span ref={elToPrintRef}>
-      <Layout lang={lang} screenerType={screenerType} hideFooter>
-        <SEO lang={lang} screenerType={screenerType} />
+      <Layout lang={lang} screenerType="school" hideFooter>
         <SkipNavContent>
           <Header
             title={`${school} ${results[lang].title}`}
@@ -113,12 +112,12 @@ const Approved = ({ children, lang, screenerType }) => {
           {children}
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveSubHeading}`}>
             {school}
-            <br />
+            {/* <br />
             {address}
             <br />
             {city} Ontario
             <br />
-            {postalCode}
+            {postalCode} */}
           </ContentBlock>
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${results[lang].nextSteps}`}>
             <>
@@ -130,7 +129,7 @@ const Approved = ({ children, lang, screenerType }) => {
                       paperSize: "auto",
                       avoidLinks: true,
                       margin: 40,
-                      fileName: `COVID-19 Courthouse Screening Results - ${courthouse.court_name}.pdf`,
+                      fileName: `COVID-19 School Screening Results - ${school}.pdf`,
                     })
                   }
                 >

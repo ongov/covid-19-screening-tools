@@ -25,7 +25,7 @@ const Denie = () => {
   const { courthouse } = useContext(GlobalStateContext)
 
   return (
-    <DeniedTemplate lang={lang}>
+    <DeniedTemplate lang={lang} screenerType="courthouse">
       <HeaderDate>
         <ContentBlock
           lang={lang}

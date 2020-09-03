@@ -10,7 +10,7 @@ import Footer from "../components/outcome-footer"
 import DeniedContactCard from "../components/denied-contact-card"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import CalloutInfo from "../components/callout-info"
-import SEO from "../components/seo";
+import SEO from "../components/seo"
 
 import { pushOutcomeDataToGTM } from "../shared"
 
@@ -29,29 +29,25 @@ const HeadingDeniedIcon = styled(CancelLarge)`
 `
 
 const Denied = ({ lang, children }) => {
-  const { courthouse } = useContext(GlobalStateContext)
+  const { school } = useContext(GlobalStateContext)
 
-  useEffect(() => {
-    if (!courthouse) return
+  // useEffect(() => {
+  //   if (!courthouse) return
 
-    pushOutcomeDataToGTM({
-      pass: false,
-      courthouse,
-      lang,
-    })
-  }, [])
+  //   pushOutcomeDataToGTM({
+  //     pass: false,
+  //     courthouse,
+  //     lang,
+  //   })
+  // }, [])
 
   return (
-    <Layout lang={lang} hideFooter>
+    <Layout lang={lang} screenerType="school" hideFooter>
       <SEO lang={lang} />
 
       <SkipNavContent>
         <Header
-          title={
-            <>{`${courthouse && courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`]} ${
-              results[lang].title
-            }`}</>
-          }
+          title={<>{`${school} ${results[lang].title}`}</>}
           heading={`${results[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
           color={Red}
@@ -59,10 +55,14 @@ const Denied = ({ lang, children }) => {
         />
         {children}
         <ContentBlock lang={lang} icon={<SpeechBubble />} heading={`${results[lang].whoToContact}`}></ContentBlock>
-        <CalloutInfo icon="ontario-icon__info" classnameTitle="ontario-callout__icon-info" title={`${results[lang].whoToContactSubText}`} />
-        <ContentBlock lang={lang}>
+        <CalloutInfo
+          icon="ontario-icon__info"
+          classnameTitle="ontario-callout__icon-info"
+          title={`${results[lang].whoToContactSubText}`}
+        />
+        {/* <ContentBlock lang={lang}>
           <DeniedContactCard lang={lang} courthouse={courthouse} />
-        </ContentBlock>
+        </ContentBlock> */}
         <Footer icon={<CancelSmall />} color={Red} />
       </SkipNavContent>
     </Layout>
