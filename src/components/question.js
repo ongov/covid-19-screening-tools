@@ -36,7 +36,9 @@ const Question = ({ lang, title, buttons, children }) => {
               {lang === "fr" ? state.courthouse.court_name_fr : state.courthouse.court_name}
             </LocationHeading>
           )}
-          {state && state.school && <LocationHeading>{state.school[localizedSchoolNameField]}</LocationHeading>}
+          {state && state.school && state.school.value && state.school.value[localizedSchoolNameField] && (
+            <LocationHeading>{state.school.value[localizedSchoolNameField]}</LocationHeading>
+          )}
           <h1>{title}</h1>
           <button
             className="ontario-button--tertiary ontario-form--link backBtn"

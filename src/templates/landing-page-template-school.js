@@ -111,15 +111,14 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                 selectOptions={localizedSchools
                   .filter(school => school[localizedSchoolBoardFieldName] === schoolBoard.value)
                   .map(school => ({ label: `${school[localizedNameFieldName]} - ${school["City"]}`, value: school }))}
-                selectValue={{ label: state.school_label, value: state.school }}
+                selectValue={state.school}
                 selectId="schools"
                 selectTitle="Select a school"
                 selectOptionComponent={SchoolOptions}
                 onSelectChange={option =>
                   dispatch({
                     type: "SCHOOL_SELECTED",
-                    school: option.value,
-                    school_label: option.label,
+                    school: option,
                   })
                 }
               />
