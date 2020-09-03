@@ -1,7 +1,8 @@
-import React, { useRef, useContext } from "react"
+import React, { useEffect, useRef, useContext } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
+import { savePDF } from "@progress/kendo-react-pdf"
 
 import Layout from "../components/layout"
 import Header from "../components/outcome-header"
@@ -19,6 +20,7 @@ import Information from "../images/ontario-icon-information.svg"
 import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
+import DownloadIcon from "../images/ontario-icon-download.svg"
 
 import { navigateHome } from "../shared"
 import { navigate } from "gatsby"
@@ -73,6 +75,33 @@ const Hyperlink = styled.a`
   cursor: pointer;
   font-weight: bold;
 `
+const HyperlinkButton = styled.a `
+  background-color: #fff;
+  border: 2px solid #06c;
+  color: #06c;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: none;
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.55556;
+  margin: 0 1.75rem 0 0;
+  min-width: 10rem;
+  padding: .625rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #e0f0ff;
+    border-color: #00478f;
+    color: #00478f;
+    text-decoration: underline;
+  }
+`
 
 const IconFeedback = styled.span`
   background-image: url(${FeedbackIcon});
@@ -82,13 +111,22 @@ const IconFeedback = styled.span`
   height: 2.1rem;
 `
 
-const Approved = ({ children, lang }) => {
+const IconDownload = styled.span `
+  background-image: url(${DownloadIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.80rem;
+`
+
+const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
 
   return (
     <span ref={elToPrintRef}>
-      <Layout lang={lang} screenerType="school" hideFooter>
+      <Layout lang={lang} screenerType={screenerType} hideFooter>
+        <SEO lang={lang} screenerType={screenerType} />
         <SkipNavContent>
           <Header
             title={`${school && school.value && school.value["School Name"]} ${resultsSchool[lang].title}`}
@@ -97,6 +135,22 @@ const Approved = ({ children, lang }) => {
             color={Green}
             titleColor={"#d1efd4"}
           />
+          <ContentBlock lang={lang} icon={<IconDownload />}>
+            <>
+            <HyperlinkButton
+              onClick={() =>
+              savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
+                paperSize: "auto",
+                avoidLinks: true,
+                margin: 40,
+                fileName: `COVID-19 School Screening Results - ${school}.pdf`,
+              })
+            }
+            >
+              {resultsSchool[lang].downloadPDF}
+            </HyperlinkButton>{" "}
+            </>
+          </ContentBlock>
           {children}
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
             {school && school.value && school.value["School Name"]}

@@ -14,11 +14,13 @@ import { navigateHome, pushOutcomeDataToGTM } from "../shared"
 
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
+
 import { feedback, resultsSchool } from "../localized_content"
 import Callout from "../components/callout-blue"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
-import Information from "../images/ontario-icon-information.svg"
+import Information from "../images/ontario-icon-information-red.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
+
 
 const Red = "#D81A21"
 
@@ -60,7 +62,7 @@ const IconFeedback = styled.span`
   height: 2.1rem;
 `
 
-const Denied = ({ lang, children }) => {
+const Denied = ({ lang, children, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
 
   // useEffect(() => {
@@ -74,9 +76,8 @@ const Denied = ({ lang, children }) => {
   // }, [])
 
   return (
-    <Layout lang={lang} screenerType="school" hideFooter>
-      <SEO lang={lang} />
-
+    <Layout lang={lang} screenerType={screenerType} hideFooter>
+      <SEO lang={lang} screenerType={screenerType} />
       <SkipNavContent>
         <Header
           title={<>{`${school && school.value && school.value["School Name"]} ${resultsSchool[lang].title}`}</>}
