@@ -26,7 +26,7 @@ const Layout = ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, 
       <div className="ontario-text-center ontario-hide-for-print">
         <SkipNavLink>{general[lang].skipNavText}</SkipNavLink>
       </div>
-      <Header lang={lang} link={altHeaderLink} />
+      <Header lang={lang} link={altHeaderLink} screenerType={screenerType} />
       <main id="main-content">{isResultsPage ? children : <>{children}</>}</main>
       {!hideFooter && <Footer lang={lang} />}
     </>

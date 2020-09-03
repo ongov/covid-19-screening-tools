@@ -5,8 +5,9 @@ import "../stylesheets/header.css"
 import logo from "../images/ontario-logo.png"
 import printLogo from "../images/ontario@2x-print.png"
 
-const Header = ({ lang, link }) => {
+const Header = ({ lang, link, screenerType }) => {
   const altLang = lang === "fr" ? "en" : "fr"
+
   return (
     <header className="ontario-main-header">
       <div className="ontario-row">
@@ -25,10 +26,10 @@ const Header = ({ lang, link }) => {
           />
         </div>
         <div className="ontario-small-7 ontario-columns ontario-text-right ontario-main-header__link">
-          <a href={link || general[altLang].basePath} className="ontario-hide-for-small-only">
+          <a href={link || general[altLang][screenerType].basePath} className="ontario-hide-for-small-only">
             {general[altLang].lang}
           </a>
-          <a href={link || general[altLang].basePath} className="ontario-show-for-small-only">
+          <a href={link || general[altLang][screenerType].basePath} className="ontario-show-for-small-only">
             {general[altLang].lang_abbr}
           </a>
         </div>
