@@ -12,7 +12,7 @@ import Callout from "../components/callout-blue"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
-import {feedback, resultsSchool} from "../localized_content"
+import { feedback, resultsSchool } from "../localized_content"
 
 import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
@@ -75,7 +75,6 @@ const Hyperlink = styled.a`
   cursor: pointer;
   font-weight: bold;
 `
-
 const HyperlinkButton = styled.a `
   background-color: #fff;
   border: 2px solid #06c;
@@ -104,12 +103,12 @@ const HyperlinkButton = styled.a `
   }
 `
 
-const IconFeedback = styled.span `
+const IconFeedback = styled.span`
   background-image: url(${FeedbackIcon});
   background-size: 100%;
   display: inline-block;
   width: 2.35rem;
-  height: 2.10rem;
+  height: 2.1rem;
 `
 
 const IconDownload = styled.span `
@@ -130,7 +129,7 @@ const Approved = ({ children, lang, screenerType }) => {
         <SEO lang={lang} screenerType={screenerType} />
         <SkipNavContent>
           <Header
-            title={`${school} ${resultsSchool[lang].title}`}
+            title={`${school.value["School Name"]} ${resultsSchool[lang].title}`}
             heading={`${resultsSchool[lang].approveHeading}`}
             icon={<HeadingCheckmark />}
             color={Green}
@@ -154,20 +153,12 @@ const Approved = ({ children, lang, screenerType }) => {
           </ContentBlock>
           {children}
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
-            {school}
-            {/* <br />
-            {address}
-            <br />
-            {city} Ontario
-            <br />
-            {postalCode} */}
+            {school.value["School Name"]}
           </ContentBlock>
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
             <>
-              <p>
-                {resultsSchool[lang].nextStepsContent}{" "}
-              </p>
-              </>
+              <p>{resultsSchool[lang].nextStepsContent} </p>
+            </>
           </ContentBlock>
           <ContentBlock lang={lang}>
             <p>
@@ -192,7 +183,9 @@ const Approved = ({ children, lang, screenerType }) => {
             </p>
           </ContentBlock>
           <Callout lang={lang} icon={<IconFeedback />} heading={`${feedback[lang].title}`}>
-            <a href={feedback[lang].link} rel="noopener" target="_blank">{feedback[lang].content}</a>
+            <a href={feedback[lang].link} rel="noopener" target="_blank">
+              {feedback[lang].content}
+            </a>
           </Callout>
           <Footer icon={<FooterCheckmark />} color={Green} />
         </SkipNavContent>

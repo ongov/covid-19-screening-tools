@@ -1,11 +1,13 @@
 const symptomsTitle = {
   en: {
     text: "Are you currently experiencing any of these symptoms?",
+    alt_text: "Are they currently experiencing any of these symptoms?",
     sup_text:
       "Choose any/all that are new and not related to seasonal allergies or pre-existing medical conditions diagnosed by a qualified healthcare provider.",
   },
   fr: {
     text: "Présentez-vous actuellement l’un ou l’autre des symptômes suivants?",
+    alt_text: "Are they currently experiencing any of these symptoms?",
     sup_text:
       "Cochez tous les nouveaux choix applicables et qui ne sont pas liés à des allergies saisonnières ou à des troubles médicaux préexistants diagnostiqués par un fournisseur de soins de santé.",
   },

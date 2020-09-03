@@ -31,7 +31,11 @@ const SymptomsTemplate = ({ lang, screenerType }) => {
         >
           <div className="ontario-form-group">
             <fieldset className="ontario-fieldset">
-              <legend>{symptomsTitle[lang].text}</legend>
+              <legend>
+                {state.screenie && state.screenie === "guardian"
+                  ? symptomsTitle[lang].alt_text
+                  : symptomsTitle[lang].text}
+              </legend>
               <p>{symptomsTitle[lang].sup_text}</p>
               <div className="ontario-question__options">
                 <div className="ontario-checkboxes">
