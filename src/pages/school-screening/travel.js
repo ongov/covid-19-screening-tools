@@ -20,7 +20,6 @@ const Travel = () => {
       ) : (
         <h2>Have you travelled outside of Canada in the last 14 days?</h2>
       )}
-      <p>This does not include essential workers who cross the Canada-US border regularly. </p>
     </QuestionTemplate>
   )
 }

@@ -16,19 +16,10 @@ const PositiveTest = () => {
       noLink={logic[screenerType].q4.no}
     >
       {state.screenie && state.screenie === "guardian" ? (
-        <h2>In the last 14 days, have they either:</h2>
+        <h2>In the last 14 days, have they tested positive for COVID-19?</h2>
       ) : (
-        <h2>In the last 14 days, have you either:</h2>
+        <h2>In the last 14 days, have you tested positive for COVID-19?</h2>
       )}
-      <ul>
-        <li>tested positive for COVID-19? or</li>
-        <li>been in close physical contact with someone who recently tested positive for COVID-19?</li>
-      </ul>
-      <p>Close physical contact means:</p>
-      <ul>
-        <li>being less than 2 metres away in the same room, workspace, or area</li>
-        <li>living in the same home</li>
-      </ul>
     </QuestionTemplate>
   )
 }

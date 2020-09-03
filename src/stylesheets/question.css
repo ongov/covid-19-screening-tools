@@ -22,7 +22,7 @@
   font-weight: 600;
 }
 
-.ontario-question-content__wrapper--inner legend {
+.ontario-question-content__wrapper--inner legend:not(.legend-title) {
   font: 2.0625rem "Raleway", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0.02rem;
