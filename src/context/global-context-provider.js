@@ -41,6 +41,10 @@ function reducer(state, action) {
       const { courthouse } = action
       return { ...state, courthouse }
     }
+    case "SCHOOL_SELECTED": {
+      const { school } = action
+      return { ...state, school }
+    }
     case "CS_START":
     case "CS_BACK_BUTTON_PRESSED": {
       return { ...state, in_progress: true }

@@ -86,7 +86,7 @@ const Hyperlink = styled.a`
 
 const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
-  const { courthouse } = useContext(GlobalStateContext)
+  const { school } = useContext(GlobalStateContext)
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
   useEffect(() => {
@@ -104,7 +104,7 @@ const Approved = ({ children, lang, screenerType }) => {
         <SEO lang={lang} screenerType={screenerType} />
         <SkipNavContent>
           <Header
-            title={`${courthouse && courthouse.court_name} ${results[lang].title}`}
+            title={`${school} ${results[lang].title}`}
             heading={`${results[lang].approveHeading}`}
             icon={<HeadingCheckmark />}
             color={Green}
@@ -112,7 +112,7 @@ const Approved = ({ children, lang, screenerType }) => {
           />
           {children}
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${results[lang].approveSubHeading}`}>
-            {courthouse && courthouse.court_name}
+            {school}
             <br />
             {address}
             <br />

@@ -11,7 +11,7 @@ import BackBlueIcon from "../images/inline-svgs/ontario-icon-back-blue.inline.sv
 import { GlobalStateContext } from "../context/global-context-provider"
 import { general } from "../localized_content"
 
-const Courthouse = styled.p`
+const LocationHeading = styled.p`
   font-weight: bold;
   color: #666666;
   margin-bottom: 0;
@@ -31,8 +31,11 @@ const Question = ({ lang, title, buttons, children }) => {
       <div className="ontario-small-12 ontario-columns">
         <div className="ontario-question-content__wrapper--outer">
           {state && state.courthouse && (
-            <Courthouse>{lang === "fr" ? state.courthouse.court_name_fr : state.courthouse.court_name}</Courthouse>
+            <LocationHeading>
+              {lang === "fr" ? state.courthouse.court_name_fr : state.courthouse.court_name}
+            </LocationHeading>
           )}
+          {state && state.school && <LocationHeading>{state.school}</LocationHeading>}
           <h1>{title}</h1>
           <button
             className="ontario-button--tertiary ontario-form--link backBtn"

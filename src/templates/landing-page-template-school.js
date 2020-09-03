@@ -55,12 +55,17 @@ const SchoolLandingPageTemplate = ({ lang }) => {
   )
 
   const handleClick = () => {
-    if (!schoolName) {
+    if (!boardName) {
       setBoardSelectError(true)
       return
     }
 
-    dispatch({ type: "SCHOOL_SCREENER_START" })
+    if (!schoolName) {
+      setSchoolSelectError(true)
+      return
+    }
+
+    dispatch({ type: "CS_START" })
     navigate(`${general[lang][screenerType].basePath}${questions.q8[lang]}`)
   }
 
@@ -114,7 +119,13 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                 selectTitle="Select a school"
                 selectErrorMessage="Select a school"
                 getSelectOptionLabel={option => option}
-                onSelectChange={value => setSchoolName(value)}
+                onSelectChange={value => {
+                  setSchoolName(value)
+                  dispatch({
+                    type: "SCHOOL_SELECTED",
+                    school: value,
+                  })
+                }}
               />
             )}
             {/* <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
