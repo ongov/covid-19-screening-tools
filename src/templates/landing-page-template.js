@@ -7,7 +7,7 @@ import Select, { components } from "react-select"
 
 import Layout from "../components/layout"
 import Button from "../components/button"
-import CalloutInfo from "../components/callout-info"
+import CalloutBlueBorder from "../components/callout-blue-border"
 import { GlobalDispatchContext } from "../context/global-context-provider"
 import courthouses from "../data/courthouses.json"
 

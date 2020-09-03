@@ -9,11 +9,11 @@ import Layout from "../components/layout"
 import Header from "../components/outcome-header"
 import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
-import Callout from "../components/callout-contact-tracing"
+import Callout from "../components/callout-blue"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
-import { general, results } from "../localized_content"
+import {feedback, general, results} from "../localized_content"
 
 import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
@@ -21,6 +21,7 @@ import Information from "../images/ontario-icon-information.svg"
 import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
 import ContactTracing from "../images/ontario-contact-tracing.svg"
+import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 
 import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../shared"
 import { navigate } from "gatsby"
@@ -82,6 +83,14 @@ const Hyperlink = styled.a`
   text-decoration: underline;
   cursor: pointer;
   font-weight: bold;
+`
+
+const IconFeedback = styled.span `
+  background-image: url(${FeedbackIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.10rem;
 `
 
 const Approved = ({ children, lang }) => {
@@ -156,6 +165,9 @@ const Approved = ({ children, lang }) => {
               </Hyperlink>
             </p>
           </ContentBlock>
+          <Callout lang={lang} icon={<IconFeedback />} heading={`${feedback[lang].title}`}>
+            <a href={feedback[lang].link} rel="noopener" target="_blank">{feedback[lang].content}</a>
+          </Callout>
           <Footer icon={<FooterCheckmark />} color={Green} />
         </SkipNavContent>
       </Layout>

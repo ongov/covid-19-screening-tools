@@ -8,6 +8,7 @@ import results from "./results"
 import formatDate from "./date-format"
 import schoolDataFields from "./school-data-fields"
 import schoolContextChoices from "./context-choices-school"
+import feedback from "./feedback";
 
 const general = {
   en: {
@@ -102,4 +103,5 @@ export {
   formatDate,
   schoolDataFields,
   schoolContextChoices,
+  feedback
 }
