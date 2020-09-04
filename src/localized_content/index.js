@@ -7,8 +7,8 @@ import schoolLanding from "./school-landing"
 import results from "./results"
 import formatDate from "./date-format"
 import schoolDataFields from "./school-data-fields"
-import schoolContextChoices from "./context-choices-school"
-import feedback from "./feedback";
+import { schoolContextChoices, schoolContextContent } from "./context-choices-school"
+import feedback from "./feedback"
 import resultsSchool from "./results-school"
 
 const general = {
@@ -104,6 +104,7 @@ export {
   formatDate,
   schoolDataFields,
   schoolContextChoices,
+  schoolContextContent,
   feedback,
-  resultsSchool
+  resultsSchool,
 }

@@ -1,4 +1,4 @@
-export default {
+const schoolContextChoices = {
   en: [
     {
       labelText: "Student",
@@ -44,3 +44,16 @@ export default {
     },
   ],
 }
+
+const schoolContextContent = {
+  en: {
+    heading: "Who are you?",
+    title: "I am doing this screening as a:",
+  },
+  fr: {
+    heading: "Who are you?",
+    title: "I am doing this screening as a:",
+  },
+}
+
+export { schoolContextChoices, schoolContextContent }
