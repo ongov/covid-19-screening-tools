@@ -122,6 +122,7 @@ const IconDownload = styled.span `
 const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext)
 
   return (
     <span ref={elToPrintRef}>
@@ -152,12 +153,17 @@ const Approved = ({ children, lang, screenerType }) => {
             </>
           </ContentBlock>
           {children}
+
           <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
             {school && school.value && school.value["School Name"]}
           </ContentBlock>
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
             <>
-              <p>{resultsSchool[lang].nextStepsContent} </p>
+              {state.screenie && state.screenie === "guardian" ? (
+                <>{resultsSchool[lang].nextStepsContentThem}</>
+              ) : (
+                <>{resultsSchool[lang].nextStepsContentYou}</>
+              )}
             </>
           </ContentBlock>
           <ContentBlock lang={lang}>
@@ -167,7 +173,11 @@ const Approved = ({ children, lang, screenerType }) => {
             </p>
           </ContentBlock>
           <ContentBlock lang={lang}>
-            {resultsSchool[lang].HealthAndSafetyTips}{" "}
+            {state.screenie && state.screenie === "guardian" ? (
+              <>{resultsSchool[lang].HealthAndSafetyTipsThem}{" "}</>
+              ) : (
+              <>{resultsSchool[lang].HealthAndSafetyTipsYou}{" "}</>
+            )}
             <p>
               <Hyperlink href={resultsSchool[lang].HealthAndSafetyLink} target="_blank" rel="noopener">
                 {resultsSchool[lang].HealthAndSafetyLinkText}

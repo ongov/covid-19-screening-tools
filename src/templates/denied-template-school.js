@@ -47,6 +47,7 @@ const IconFeedback = styled.span`
 
 const Denied = ({ lang, children, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
+  const state = useContext(GlobalStateContext)
 
   // useEffect(() => {
   //   if (!courthouse) return
@@ -72,7 +73,11 @@ const Denied = ({ lang, children, screenerType }) => {
         {children}
         <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
           <>
-            <p>{resultsSchool[lang].nextStepsDeniedContent} </p>
+            {state.screenie && state.screenie === "guardian" ? (
+              <><p>{resultsSchool[lang].nextStepsDeniedContentThem}</p></>
+            ) : (
+            <><p>{resultsSchool[lang].nextStepsDeniedContentYou}</p></>
+            )}
           </>
         </ContentBlock>
         <Callout lang={lang} icon={<IconFeedback />} heading={`${feedback[lang].title}`}>
