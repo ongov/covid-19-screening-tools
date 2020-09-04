@@ -9,12 +9,11 @@ import ContinueButton from "../components/continue-button"
 import { GlobalStateContext, GlobalDispatchContext } from "../context/global-context-provider"
 import Checkbox from "../components/checkbox"
 import { general, symptomsTitle, symptoms } from "../localized_content"
-import { logic, questions, useGlobalState } from "../shared"
+import { logic, questions } from "../shared"
 
 const SymptomsTemplate = ({ lang, screenerType }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
-  const { isGuardian, isFrench, screener } = useGlobalState()
 
   function handleContinueClick() {
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
@@ -56,9 +55,6 @@ const SymptomsTemplate = ({ lang, screenerType }) => {
               </div>
             </fieldset>
           </div>
-          <p>{`Is guardian: ${isGuardian}`}</p>
-          <p>{`Is French: ${isFrench}`}</p>
-          <p>{`Screener type: ${screenerType}`}</p>
         </Question>
       </SkipNavContent>
     </Layout>
