@@ -7,7 +7,9 @@ function useGlobalState() {
   return {
     isGuardian: state.screenie && state.screenie === "guardian",
     isFrench: state.language && state.language === "fr",
-    state,
+    screener: state.screenerType,
+    school: state.school,
+    courthouse: state.courthouse,
   }
 }
 
