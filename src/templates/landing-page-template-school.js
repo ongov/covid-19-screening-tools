@@ -123,7 +123,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                 setSchoolBoard(option)
                 dispatch({
                   type: "SCHOOL_SELECTED",
-                  school: {},
+                  school: null,
                 })
               }}
               selectError={boardSelectError}
@@ -165,7 +165,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                   setSchoolBoard("")
                   dispatch({
                     type: "SCHOOL_SELECTED",
-                    school: {},
+                    school: null,
                   })
                 }}
               />
