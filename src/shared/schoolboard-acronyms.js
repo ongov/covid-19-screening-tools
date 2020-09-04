@@ -1,6 +1,5 @@
 const acronyms = {
   CDSB: "Catholic District School Board",
-  CEP: "Conseil des écoles publiques",
   CS: "Conseil scolaire",
   DSB: "District School Board",
   EA: "Education Authority",
@@ -9,6 +8,8 @@ const acronyms = {
   CSDC: "Conseil scolaire de district catholique",
   SSB: "Secondary school board",
   CSD: "Conseil scolaire de district",
+  CÉP: "Conseil des écoles publiques",
+  DSAB: "District School Area Board",
 }
 
 const joinedKeys = Object.keys(acronyms).join("|")
