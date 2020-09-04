@@ -5,13 +5,11 @@ import Layout from "../components/layout"
 import Question from "../components/question"
 import ContinueButton from "../components/continue-button"
 import { GlobalStateContext, GlobalDispatchContext } from "../context/global-context-provider"
-import { general, schoolContextChoices } from "../localized_content"
+import { general, schoolContextChoices, schoolContextContent } from "../localized_content"
 import Radio from "../components/radio"
 import { logic, questions } from "../shared"
 
-const ContextTemplate = ({ lang, question, questionId, title }) => {
-  const radioButtonGroup = `${questionId}-context`
-
+const ContextTemplate = ({ lang }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
 
@@ -29,7 +27,7 @@ const ContextTemplate = ({ lang, question, questionId, title }) => {
   }
 
   const handleContinueClick = () => {
-    navigate(`${general[lang]["school"].basePath}${questions[logic["school"][questionId].cont(state)][lang]}`)
+    navigate(`${general[lang]["school"].basePath}${questions[logic["school"]["q8"].cont(state)][lang]}`)
   }
 
   return (
@@ -40,10 +38,10 @@ const ContextTemplate = ({ lang, question, questionId, title }) => {
         title={general[lang]["school"].title}
         buttons={<ContinueButton lang={lang} clickHandler={handleContinueClick} isDisabled={continueDisabled} />}
       >
-        <h2>{question}</h2>
+        <h2>{schoolContextContent[lang].heading}</h2>
         <div className="ontario-form-group">
           <fieldset className="ontario-fieldset">
-            <legend className="legend-title">{title}</legend>
+            <legend className="legend-title">{schoolContextContent[lang].title}</legend>
             <div className="ontario-question__options">
               <div className="ontario-radios">
                 {schoolContextChoices[lang] &&
@@ -52,7 +50,7 @@ const ContextTemplate = ({ lang, question, questionId, title }) => {
                       key={item.id}
                       labelText={item.labelText}
                       supplementaryText={item.supplementaryText}
-                      name={radioButtonGroup}
+                      name="q8-context"
                       id={item.id}
                       onChangeInner={handleOptionSelect}
                     />
