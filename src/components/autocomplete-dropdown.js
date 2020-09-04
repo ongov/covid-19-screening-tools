@@ -121,6 +121,7 @@ const AutocompleteDropdown = ({
   onSelectChange,
   selectError,
   selectErrorMessage,
+  placeholerText,
 }) => {
   // This allows us to pass in a customized option component for the dropdown menu
   const CustomOption = selectOptionComponent
@@ -134,7 +135,7 @@ const AutocompleteDropdown = ({
         </label>
         <StyledDropDown>
           <Select
-            placeholder="Start typing or select..."
+            placeholder={placeholerText}
             value={[selectValue]}
             components={customSelectComponents}
             styles={customSelectStyles}
