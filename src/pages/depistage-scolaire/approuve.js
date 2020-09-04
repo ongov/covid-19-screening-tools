@@ -2,7 +2,7 @@ import React from "react"
 import { format } from "date-fns"
 import fr from "date-fns/locale/fr-CA"
 
-import ApprovedTemplate from "../../templates/approved-template"
+import ApprovedTemplate from "../../templates/approved-template-school"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Calendar from "../../images/inline-svgs/ontario-icon-calendar.inline.svg"

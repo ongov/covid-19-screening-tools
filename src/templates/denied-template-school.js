@@ -19,25 +19,8 @@ import { feedback, resultsSchool } from "../localized_content"
 import Callout from "../components/callout-blue"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import Information from "../images/ontario-icon-information-red.svg"
-import StaySafe from "../images/ontario-icon-stay-safe.svg"
-
 
 const Red = "#D81A21"
-
-const Hyperlink = styled.a`
-  color: blue;
-  text-decoration: underline;
-  cursor: pointer;
-  font-weight: bold;
-`
-
-const IconStaySafe = styled.span`
-  background-image: url(${StaySafe});
-  background-size: 100%;
-  display: inline-block;
-  width: 2.35rem;
-  height: 2.75rem;
-`
 
 const HeadingDeniedIcon = styled(CancelLarge)`
   display: block;
