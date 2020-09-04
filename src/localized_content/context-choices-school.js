@@ -23,22 +23,22 @@ const schoolContextChoices = {
   ],
   fr: [
     {
-      labelText: "Student",
+      labelText: "Élève",
       supplementaryText: "",
       id: "student",
     },
     {
-      labelText: "Parent/guardian on behalf of a student",
+      labelText: "Parent/tuteur au nom d’un élève",
       supplementaryText: "",
       id: "guardian",
     },
     {
-      labelText: "School employee (for example, teacher, office staff, custodian, bus driver)",
+      labelText: "Employé de l’école (par exemple, enseignant, employé de bureau, gardien, chauffeur d’autobus)",
       supplementaryText: "",
       id: "employee",
     },
     {
-      labelText: "Visitor",
+      labelText: "Visiteur",
       supplementaryText: "",
       id: "visitor",
     },
@@ -50,7 +50,7 @@ const schoolContextContent = {
     heading: "I am doing this screening as a:",
   },
   fr: {
-    heading: "I am doing this screening as a:",
+    heading: "Je fais ce dépistage en tant que :",
   },
 }
 
