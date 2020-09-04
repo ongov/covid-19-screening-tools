@@ -1,21 +1,27 @@
-import React from "react"
+import React, { useContext } from "react"
 import QuestionTemplate from "../../templates/yes-no-question-template"
+import { GlobalStateContext } from "../../context/global-context-provider"
 import { logic } from "../../shared"
 
 const screenerType = "school"
 
-const LautoIsolement = () => (
+const LautoIsolement = () => {
+  const state = useContext(GlobalStateContext)
+
+  return (
   <QuestionTemplate
     lang="fr"
     screenerType={screenerType}
     yesLink={logic[screenerType].q3.yes}
     noLink={logic[screenerType].q3.no}
   >
-    <h2>
-      Un médecin, un professionnel de la santé ou le responsable d'un service de santé publique vous a-t-il demandé de
-      vous isoler (rester à la maison) aujourd'hui?
-    </h2>
-  </QuestionTemplate>
-)
+      {state.screenie && state.screenie === "guardian" ? (
+          <h2>Un médecin, fournisseur de soins de santé ou bureau de santé publique leur a-t-il dit qu’ils devraient actuellement s’auto-isoler (en restant à la maison)? </h2>
+    ) : (
+          <h2>Un médecin, fournisseur de soins de santé ou bureau de santé publique vous a-t-il dit que vous devriez actuellement vous auto-isoler (en restant à la maison)? </h2>
+         )}
+    </QuestionTemplate>
+  )
+}
 
 export default LautoIsolement

@@ -6,10 +6,10 @@ const symptomsTitle = {
       "Choose any/all that are new, worsening, and not related to other known causes or conditions.",
   },
   fr: {
-    text: "Présentez-vous actuellement l’un ou l’autre des symptômes suivants?",
-    alt_text: "Are they currently experiencing any of these symptoms?",
+    text: "Présentez-vous actuellement l’un des symptômes suivants?",
+    alt_text: "Présentent-ils l’un des symptômes suivants?",
     sup_text:
-      "Cochez tous les nouveaux choix applicables et qui ne sont pas liés à des allergies saisonnières ou à des troubles médicaux préexistants diagnostiqués par un fournisseur de soins de santé.",
+      "Cochez tous les nouveaux symptômes, ceux qui s’aggravent et ceux qui ne sont pas liés à d’autres causes ou problèmes de santé connus.",
   },
 }
 
@@ -21,13 +21,13 @@ const symptoms = {
     },
     fr: {
       text: "Fièvre",
-      sup_text: "(avoir la peau chaude, une température de 37,8 degrés Celsius/100,4 degrés Fahrenheit ou plus)",
+      sup_text: "Température de 37,8 degrés Celsius/100,0 degrés Fahrenheit ou plus",
     },
   },
   chills: { en: { text: "Chills" }, fr: { text: "Frissons" } },
   cough_new: {
     en: { text: "Cough that's new or worsening", sup_text: "Continuous, more than usual, not related to other known causes or conditions (for example, COPD)" },
-    fr: { text: "Toux récente ou qui empire", sup_text: "(toux continue, plus fréquente que d’habitude)" },
+    fr: { text: "Toux nouvelle ou qui s’aggrave ", sup_text: "Continue, plus que d’habitude, sans lien avec d’autres causes ou problèmes de santé connus (p. ex., MPOC)" },
   },
   barking_cough: {
     en: {
@@ -35,13 +35,13 @@ const symptoms = {
       sup_text: "Croup, not related to other known causes or conditions",
     },
     fr: {
-      text: "Toux rauque, sifflement à chaque respiration",
-      sup_text: "(croup)",
+      text: "Toux qui ressemble à un aboiement, grincement ou sifflement durant la respiration ",
+      sup_text: "Laryngotrachéite aiguë, sans lien avec d’autres causes ou problèmes de santé connus",
     },
   },
   shortness_of_breath: {
     en: { text: "Shortness of breath", sup_text: "Out of breath, unable to breathe deeply, not related to other known causes or conditions (for example, asthma)" },
-    fr: { text: "Difficulté respiratoire", sup_text: "(essoufflement, incapacité de respirer profondément)" },
+    fr: { text: "Essoufflement", sup_text: "Souffle court, incapacité à respirer profondément, sans lien avec d’autres causes ou problèmes de santé connus (p. ex., asthme)" },
   },
   sore_throat: {
     en: {
@@ -50,18 +50,18 @@ const symptoms = {
     },
     fr: {
       text: "Mal de gorge",
-      sup_text: "(sans lien avec des allergies saisonnières ou d’autres causes ou états connus)",
+      sup_text: "Sans lien avec les allergies saisonnières ou autres causes ou problèmes de santé connus (p. ex., reflux acide)",
     },
   },
   difficulty_swallowing: {
     en: { text: "Difficulty swallowing", sup_text: "Painful swallowing, not related to other known causes or conditions" },
-    fr: { text: "Difficulté à avaler" },
+    fr: { text: "Difficulté à avaler", sup_text: "Ou déglutition douloureuse, sans lien avec d’autres causes ou problèmes de santé connus" },
   },
   runny_nose: {
     en: { text: "Runny nose", sup_text: "Not related to other known causes or conditions (for example, seasonal allergies, being outside in cold weather)"},
     fr: {
-      text: "Rhume",
-      sup_text: "(sans lien avec des allergies saisonnières ou d’autres causes ou états connus)",
+      text: "Nez qui coule ",
+      sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., allergies saisonnières, retour à l’intérieur après avoir été exposé au froid)",
     },
   },
   stuffy_nose: {
@@ -70,21 +70,21 @@ const symptoms = {
       sup_text: "Not related to other known causes or conditions (for example, seasonal allergies)",
     },
     fr: {
-      text: "Nez bouché",
-      sup_text: "(sans lien avec des allergies saisonnières ou d’autres causes ou états connus)",
+      text: "Nez bouché ou congestionné ",
+      sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., allergies saisonnières)",
     },
   },
   lost_taste_smell: {
     en: { text: "Decrease or loss of  taste or smell", sup_text: "Not related to other known causes or conditions (for example, allergies, neurological disorders)" },
-    fr: { text: "Perte de l’odorat ou du goût " },
+    fr: { text: "Diminution ou perte du goût ou de l’odorat", sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., allergies, troubles neurologiques)" },
   },
   pinkeye: {
     en: { text: "Pink eye", sup_text: "Conjunctivitis, not related to other know causes or conditions (for example, reoccurring styes)" },
-    fr: { text: "Conjonctivite" },
+    fr: { text: "Conjonctivite", sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., orgelets récurrents)" },
   },
   headache: {
     en: { text: "Headache that’s unusual or long lasting", sup_text: "Not related to other known causes or conditions (for example, tension-type headaches, chronic migraines)" },
-    fr: { text: "Mal de tête inhabituel ou prolongé" },
+    fr: { text: "Mal de tête inhabituel ou prolongé", sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., céphalées de tension, migraines chroniques)" },
   },
   digestive_issues: {
     en: {
@@ -92,25 +92,25 @@ const symptoms = {
       sup_text: "Not related to other known causes or conditions (for example, irritable bowel syndrome, anxiety in children, menstrual cramps)",
     },
     fr: {
-      text: "Problèmes digestifs/vomissements, diarrhée, mal au ventre",
-      sup_text: "(sans lien avec des causes ou états connus)",
+      text: "Problèmes digestifs comme nausées ou vomissements, diarrhée, maux de ventre",
+      sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., syndrome du côlon irritable, anxiété chez l’enfant, crampes menstruelles)",
     },
   },
   muscle_aches: {
     en: { text: "Muscle aches that are unusual or long lasting", sup_text: "Not related to other known causes or conditions (for example, a sudden injury, fibromyalgia)" },
-    fr: { text: "Douleurs musculaires inhabituelles ou prolongées" },
+    fr: { text: "Douleurs musculaires inhabituelles ou prolongées", sup_text: "Sans lien avec d’autres causes ou problèmes de santé connus (p. ex., lésion aiguë, fibromyalgie)" },
   },
   fatigue: {
     en: { text: "Extreme tiredness that is unusual", sup_text: "Fatigue, lack of energy, not related to other known causes or conditions (for example, depression, insomnia, thyroid disfunction)" },
-    fr: { text: "Fatigue extrême, inhabituelle", sup_text: "(épuisement, manque d’énergie)" },
+    fr: { text: "Fatigue extrême inhabituelle", sup_text: "Fatigue, manque d'énergie, sans lien avec d’autres causes ou problèmes de santé connus (p. ex., dépression, insomnie, dysfonctionnement thyroïdien)" },
   },
   falling_down: {
     en: { text: "Falling down often", sup_text: "For older people" },
-    fr: { text: "Chutes fréquentes" },
+    fr: { text: "Chutes fréquentes", sup_text: "Chez les personnes plus âgées" },
   },
   kids_symptoms: {
     en: { text: "Sluggishness or lack of appetite", sup_text: "For young children and infants" },
-    fr: { text: "Pour les jeunes enfants et les nourrissons : léthargie ou manque d’appétit" },
+    fr: { text: "Léthargie ou manque d’appétit", sup_text:"Pour les jeunes enfants et les nourrissons" },
   },
   none_of_the_above: { en: { text: "None of the above" }, fr: { text: "Aucun des énoncés ci-dessus" } },
 }
