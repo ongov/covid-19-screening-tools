@@ -15,7 +15,7 @@ import { navigateHome, pushOutcomeDataToGTM } from "../shared"
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
 
-import { feedback, resultsSchool } from "../localized_content"
+import { feedback, resultsSchool, schoolDataFields } from "../localized_content"
 import Callout from "../components/callout-blue"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import Information from "../images/ontario-icon-information-red.svg"
@@ -48,6 +48,7 @@ const IconFeedback = styled.span`
 const Denied = ({ lang, children, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
+  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
 
   // useEffect(() => {
   //   if (!courthouse) return
@@ -64,7 +65,11 @@ const Denied = ({ lang, children, screenerType }) => {
       <SEO lang={lang} screenerType={screenerType} />
       <SkipNavContent>
         <Header
-          title={<>{`${school && school.value && school.value["School Name"]} ${resultsSchool[lang].title}`}</>}
+          title={
+            school && school.value && school.value[localizedSchoolNameField]
+              ? `${school.value[localizedSchoolNameField]} ${resultsSchool[lang].title}`
+              : resultsSchool[lang].title
+          }
           heading={`${resultsSchool[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
           color={Red}
@@ -74,9 +79,13 @@ const Denied = ({ lang, children, screenerType }) => {
         <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
           <>
             {state.screenie && state.screenie === "guardian" ? (
-              <><p>{resultsSchool[lang].nextStepsDeniedContentThem}</p></>
+              <>
+                <p>{resultsSchool[lang].nextStepsDeniedContentThem}</p>
+              </>
             ) : (
-            <><p>{resultsSchool[lang].nextStepsDeniedContentYou}</p></>
+              <>
+                <p>{resultsSchool[lang].nextStepsDeniedContentYou}</p>
+              </>
             )}
           </>
         </ContentBlock>

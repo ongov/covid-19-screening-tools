@@ -12,8 +12,8 @@ export default {
     fr: "voyage",
   },
   q3: {
-    en: "self-isolation",
-    fr: "l-auto-isolement",
+    en: "isolation",
+    fr: "isolement",
   },
   q4: {
     en: "positive-test",

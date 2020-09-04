@@ -33,10 +33,10 @@ export default {
       cont: state =>
         !state.q1 || !Object.keys(state.q1).length || state.q1.hasOwnProperty("none_of_the_above") ? "q2" : "q9",
     },
-    q2: { yes: () => "r2", no: () => "q3" },
-    q3: { yes: () => "r2", no: () => "q4" },
+    q2: { yes: () => "r2", no: () => "q4" },
     q4: { yes: () => "r2", no: () => "q5" },
-    q5: { yes: () => "r2", no: () => "r1" },
+    q5: { yes: () => "r2", no: () => "q3" },
+    q3: { yes: () => "r2", no: () => "r1" },
     q8: { cont: () => "q1" },
     q9: { yes: () => "q2", no: () => "r2" },
   },

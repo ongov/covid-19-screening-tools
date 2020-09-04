@@ -12,7 +12,7 @@ import Callout from "../components/callout-blue"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
-import { feedback, resultsSchool } from "../localized_content"
+import { feedback, resultsSchool, schoolDataFields } from "../localized_content"
 
 import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
@@ -75,12 +75,12 @@ const Hyperlink = styled.a`
   cursor: pointer;
   font-weight: bold;
 `
-const HyperlinkButton = styled.a `
+const HyperlinkButton = styled.a`
   background-color: #fff;
   border: 2px solid #06c;
   color: #06c;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   border-radius: 4px;
   box-sizing: border-box;
   box-shadow: none;
@@ -91,7 +91,7 @@ const HyperlinkButton = styled.a `
   line-height: 1.55556;
   margin: 0 1.75rem 0 0;
   min-width: 10rem;
-  padding: .625rem 1.5rem;
+  padding: 0.625rem 1.5rem;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -111,18 +111,19 @@ const IconFeedback = styled.span`
   height: 2.1rem;
 `
 
-const IconDownload = styled.span `
+const IconDownload = styled.span`
   background-image: url(${DownloadIcon});
   background-size: 100%;
   display: inline-block;
   width: 2.35rem;
-  height: 2.80rem;
+  height: 2.8rem;
 `
 
 const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
+  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
 
   return (
     <span ref={elToPrintRef}>
@@ -130,7 +131,11 @@ const Approved = ({ children, lang, screenerType }) => {
         <SEO lang={lang} screenerType={screenerType} />
         <SkipNavContent>
           <Header
-            title={`${school && school.value && school.value["School Name"]} ${resultsSchool[lang].title}`}
+            title={
+              school && school.value && school.value[localizedSchoolNameField]
+                ? `${school.value[localizedSchoolNameField]} ${resultsSchool[lang].title}`
+                : resultsSchool[lang].title
+            }
             heading={`${resultsSchool[lang].approveHeading}`}
             icon={<HeadingCheckmark />}
             color={Green}
@@ -138,25 +143,30 @@ const Approved = ({ children, lang, screenerType }) => {
           />
           <ContentBlock lang={lang} icon={<IconDownload />}>
             <>
-            <HyperlinkButton
-              onClick={() =>
-              savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
-                paperSize: "auto",
-                avoidLinks: true,
-                margin: 40,
-                fileName: `COVID-19 School Screening Results - ${school}.pdf`,
-              })
-            }
-            >
-              {resultsSchool[lang].downloadPDF}
-            </HyperlinkButton>{" "}
+              <HyperlinkButton
+                onClick={() =>
+                  savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
+                    paperSize: "auto",
+                    avoidLinks: true,
+                    margin: 40,
+                    fileName: `COVID-19 School Screening Results${
+                      school && school.value && school.value[localizedSchoolNameField]
+                        ? "-" + school.value[localizedSchoolNameField]
+                        : ""
+                    }.pdf`,
+                  })
+                }
+              >
+                {resultsSchool[lang].downloadPDF}
+              </HyperlinkButton>{" "}
             </>
           </ContentBlock>
           {children}
-
-          <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
-            {school && school.value && school.value["School Name"]}
-          </ContentBlock>
+          {school && school.value && school.value[localizedSchoolNameField] && (
+            <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
+              {school.value[localizedSchoolNameField]}
+            </ContentBlock>
+          )}
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
             <>
               {state.screenie && state.screenie === "guardian" ? (
@@ -174,9 +184,9 @@ const Approved = ({ children, lang, screenerType }) => {
           </ContentBlock>
           <ContentBlock lang={lang}>
             {state.screenie && state.screenie === "guardian" ? (
-              <>{resultsSchool[lang].HealthAndSafetyTipsThem}{" "}</>
-              ) : (
-              <>{resultsSchool[lang].HealthAndSafetyTipsYou}{" "}</>
+              <>{resultsSchool[lang].HealthAndSafetyTipsThem} </>
+            ) : (
+              <>{resultsSchool[lang].HealthAndSafetyTipsYou} </>
             )}
             <p>
               <Hyperlink href={resultsSchool[lang].HealthAndSafetyLink} target="_blank" rel="noopener">

@@ -2487,3 +2487,12 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+.ontario-checkboxes__not-found-container {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.ontario-checkboxes__not-found-container > .ontario-checkboxes__item {
+  display: inline-block;
+}

@@ -7,6 +7,7 @@ import { SkipNavContent } from "@reach/skip-nav"
 
 import Layout from "../components/layout"
 import Button from "../components/button"
+import Checkbox from "../components/checkbox"
 import AutocompleteDropdown from "../components/autocomplete-dropdown"
 import { GlobalDispatchContext, GlobalStateContext } from "../context/global-context-provider"
 import schools from "../data/schools.json"
@@ -55,6 +56,9 @@ const SchoolLandingPageTemplate = ({ lang }) => {
   ).map(item => ({ label: replaceSchoolBoardAcronyms(item), value: item }))
 
   const [schoolBoard, setSchoolBoard] = useState()
+  const [notFound, setNotFound] = useState(false)
+  const [boardSelectError, setBoardSelectError] = useState()
+  const [schoolSelectError, setSchoolSelectError] = useState()
 
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
@@ -64,6 +68,16 @@ const SchoolLandingPageTemplate = ({ lang }) => {
   )
 
   const handleClick = () => {
+    if (!schoolBoard && !notFound) {
+      setBoardSelectError(true)
+      return
+    }
+
+    if (!state.school && !notFound) {
+      setSchoolSelectError(true)
+      return
+    }
+
     dispatch({ type: "CS_START", screener_type: "school", language: lang })
     navigate(`${general[lang][screenerType].basePath}${questions.q8[lang]}`)
   }
@@ -103,8 +117,17 @@ const SchoolLandingPageTemplate = ({ lang }) => {
               selectOptions={localizedSchoolBoards}
               selectValue={schoolBoard}
               selectId="boards"
-              selectTitle="Select a school board"
-              onSelectChange={option => setSchoolBoard(option)}
+              selectTitle={schoolLanding[lang].boardSelect}
+              onSelectChange={option => {
+                setBoardSelectError(false)
+                setSchoolBoard(option)
+                dispatch({
+                  type: "SCHOOL_SELECTED",
+                  school: {},
+                })
+              }}
+              selectError={boardSelectError}
+              selectErrorMessage={schoolLanding[lang].boardSelectError}
             />
             {schoolBoard && (
               <AutocompleteDropdown
@@ -113,16 +136,40 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                   .map(school => ({ label: `${school[localizedNameFieldName]} - ${school["City"]}`, value: school }))}
                 selectValue={state.school}
                 selectId="schools"
-                selectTitle="Select a school"
+                selectTitle={schoolLanding[lang].schoolSelect}
                 selectOptionComponent={SchoolOptions}
-                onSelectChange={option =>
+                onSelectChange={option => {
+                  setSchoolSelectError(false)
                   dispatch({
                     type: "SCHOOL_SELECTED",
                     school: option,
                   })
-                }
+                }}
+                selectError={schoolSelectError}
+                selectErrorMessage={schoolLanding[lang].schoolSelectError}
               />
             )}
+            <div className="ontario-checkboxes__not-found-container">
+              <Checkbox
+                id="not-found"
+                value={false}
+                text={schoolLanding[lang].cantFindSchoolLabel}
+                labelStyle="--large"
+                checkboxOnChange={e => {
+                  if (!e.target.checked) {
+                    setNotFound(false)
+                    return
+                  }
+
+                  setNotFound(true)
+                  setSchoolBoard("")
+                  dispatch({
+                    type: "SCHOOL_SELECTED",
+                    school: {},
+                  })
+                }}
+              />
+            </div>
             <CenteredDiv>
               <Button text={schoolLanding[lang].button} clickHandler={handleClick} />
             </CenteredDiv>
