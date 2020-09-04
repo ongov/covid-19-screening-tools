@@ -40,7 +40,7 @@ const symptoms = {
     },
   },
   shortness_of_breath: {
-    en: { text: "Shortness of breath", sup_text: "(out of breath, unable to breathe deeply) Out of breath, unable to breathe deeply, not related to other known causes or conditions (for example, asthma)" },
+    en: { text: "Shortness of breath", sup_text: "Out of breath, unable to breathe deeply, not related to other known causes or conditions (for example, asthma)" },
     fr: { text: "Difficulté respiratoire", sup_text: "(essoufflement, incapacité de respirer profondément)" },
   },
   sore_throat: {

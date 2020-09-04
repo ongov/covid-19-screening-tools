@@ -92,8 +92,8 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             </p>
             <h1>{general[lang][screenerType].title}</h1>
             <p className="ontario-lead-statement">{schoolLanding[lang].lead}</p>
-            <p className="ontario-margin-top-32-!">{schoolLanding[lang].infoText}</p>
-            <p className="ontario-margin-top-32-!">{schoolLanding[lang].additionalInfoText}</p>
+            <p className="ontario-lead-statement">{schoolLanding[lang].infoText}</p>
+            <p className="ontario-lead-statement">{schoolLanding[lang].additionalInfoText}</p>
             <p className="ontario-margin-top-32-!">
               {screeningInfoStart}
               <a href={schoolLanding[lang].link}>{schoolLanding[lang].linkText}</a>

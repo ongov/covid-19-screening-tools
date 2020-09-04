@@ -4,13 +4,12 @@ import fr from "date-fns/locale/fr-CA"
 
 import { GlobalStateContext } from "../../context/global-context-provider"
 
-import DeniedTemplate from "../../templates/denied-template"
+import DeniedTemplate from "../../templates/denied-template-school"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
-
-import { results } from "../../localized_content"
 import styled from "styled-components"
+import { resultsSchool } from "../../localized_content"
 
 const lang = "fr"
 
@@ -22,7 +21,7 @@ const HeaderDate = styled.span`
 `
 
 const Denie = () => {
-  const { courthouse } = useContext(GlobalStateContext)
+  const { school } = useContext(GlobalStateContext)
 
   return (
     <DeniedTemplate lang={lang} screenerType="school">
@@ -30,7 +29,7 @@ const Denie = () => {
         <ContentBlock
           lang={lang}
           icon={<Warning />}
-          heading={`${results[lang].deniedSubHeading} ${courthouse && courthouse.court_name}`}
+          heading={`${resultsSchool[lang].deniedSubHeading} ${school && school.value && school.value["School Name"]}`}
         >
           le {format(new Date(), "PPP", { locale: fr })}
         </ContentBlock>

@@ -5,6 +5,7 @@ const resultsSchool = {
     approveHeading: "Go to school",
     approveSubHeading: "School",
     deniedHeading: "Do not go to school",
+    deniedSubHeading: "Do not go to",
     nextSteps: "Next steps",
     nextStepsContent: [
       <>
@@ -46,6 +47,7 @@ fr: {
   approveHeading: "Entrer",
   approveSubHeading: "Vous pouvez entrer",
   deniedHeading: "Ne pas entrer",
+  deniedSubHeading: "Do not go to",
   nextSteps: "Prochaines étapes",
   nextStepsContent: [
     <>

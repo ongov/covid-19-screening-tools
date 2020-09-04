@@ -47,12 +47,10 @@ const schoolContextChoices = {
 
 const schoolContextContent = {
   en: {
-    heading: "Who are you?",
-    title: "I am doing this screening as a:",
+    heading: "I am doing this screening as a:",
   },
   fr: {
-    heading: "Who are you?",
-    title: "I am doing this screening as a:",
+    heading: "I am doing this screening as a:",
   },
 }
 
