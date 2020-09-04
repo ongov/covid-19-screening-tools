@@ -6,33 +6,37 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Question from "../components/question"
 import ContinueButton from "../components/continue-button"
-import { GlobalDispatchContext } from "../context/global-context-provider"
+import { GlobalStateContext, GlobalDispatchContext } from "../context/global-context-provider"
 import Checkbox from "../components/checkbox"
 import { general, symptomsTitle, symptoms } from "../localized_content"
-import { logic, questions, useGlobalState } from "../shared"
+import { logic, questions } from "../shared"
 
-const SymptomsTemplate = () => {
+const SymptomsTemplate = ({ lang, screenerType }) => {
+  const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
-  const { isGuardian, state, state: { language, screener_type: screenerType, q1 } = {} } = useGlobalState()
 
   function handleContinueClick() {
     dispatch({ type: "SYMPTOMS_CONTINUE_CLICKED" })
-    navigate(`${general[language][screenerType].basePath}${questions[logic[screenerType].q1.cont(state)][language]}`)
+    navigate(`${general[lang][screenerType].basePath}${questions[logic[screenerType].q1.cont(state)][lang]}`)
   }
 
   return (
-    <Layout lang={language} screenerType={screenerType}>
-      <SEO lang={language} />
+    <Layout lang={lang} screenerType={screenerType}>
+      <SEO lang={lang} />
       <SkipNavContent>
         <Question
-          lang={language}
-          title={general[language][screenerType].title}
-          buttons={<ContinueButton lang={language} clickHandler={handleContinueClick} />}
+          lang={lang}
+          title={general[lang][screenerType].title}
+          buttons={<ContinueButton lang={lang} clickHandler={handleContinueClick} />}
         >
           <div className="ontario-form-group">
             <fieldset className="ontario-fieldset">
-              <legend>{isGuardian ? symptomsTitle[language].alt_text : symptomsTitle[language].text}</legend>
-              <p>{symptomsTitle[language].sup_text}</p>
+              <legend>
+                {state.screenie && state.screenie === "guardian"
+                  ? symptomsTitle[lang].alt_text
+                  : symptomsTitle[lang].text}
+              </legend>
+              <p>{symptomsTitle[lang].sup_text}</p>
               <div className="ontario-question__options">
                 <div className="ontario-checkboxes">
                   {Object.keys(symptoms).map(id => (
@@ -40,10 +44,10 @@ const SymptomsTemplate = () => {
                       key={id}
                       id={id}
                       value={id}
-                      text={symptoms[id][language].text}
+                      text={symptoms[id][lang].text}
                       labelStyle="--large"
-                      supplementaryText={symptoms[id][language].sup_text || ""}
-                      checkboxState={q1 && q1.hasOwnProperty(id)}
+                      supplementaryText={symptoms[id][lang].sup_text || ""}
+                      checkboxState={state.q1 && state.q1.hasOwnProperty(id)}
                       checkboxOnChange={() => dispatch({ type: "TOGGLE_SYMPTOM", id })}
                     />
                   ))}
