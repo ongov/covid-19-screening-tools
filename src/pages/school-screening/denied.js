@@ -9,7 +9,7 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
 import styled from "styled-components"
-import { results } from "../../localized_content"
+import { resultsSchool } from "../../localized_content"
 
 const lang = "en"
 
@@ -29,7 +29,7 @@ const Denied = () => {
         <ContentBlock
           lang={lang}
           icon={<Warning />}
-          heading={`${results[lang].deniedSubHeading} ${school && school.value && school.value["School Name"]}`}
+          heading={`${resultsSchool[lang].deniedSubHeading} ${school && school.value && school.value["School Name"]}`}
         >
           on {format(new Date(), "MMMM d, yyyy", { locale: en })}
         </ContentBlock>
