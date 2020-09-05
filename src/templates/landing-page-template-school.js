@@ -167,6 +167,8 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                     return
                   }
 
+                  setBoardSelectError(false)
+                  setSchoolSelectError(false)
                   setNotFound(true)
                   setSchoolBoard("")
                   dispatch({
