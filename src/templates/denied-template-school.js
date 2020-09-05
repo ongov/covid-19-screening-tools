@@ -89,6 +89,19 @@ const Denied = ({ lang, children, screenerType }) => {
             )}
           </>
         </ContentBlock>
+        <ContentBlock lang={lang} heading={`${resultsSchool[lang].GoingtoSchoolHeading}`}>
+            <>
+              {state.screenie && state.screenie === "guardian" ? (
+                <>
+                <p>{resultsSchool[lang].GoingtoSchoolThem}</p>
+                </>
+              ) : (
+              <>
+              <p>{resultsSchool[lang].GoingtoSchoolYou}</p>
+              </>
+              )}
+            </>
+        </ContentBlock>
         <Callout lang={lang} icon={<IconFeedback />} heading={`${feedback[lang].title}`}>
           <a href={feedback[lang].link} rel="noopener" target="_blank">
             {feedback[lang].content}

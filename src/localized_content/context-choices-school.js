@@ -11,7 +11,7 @@ const schoolContextChoices = {
       id: "guardian",
     },
     {
-      labelText: "School employee (for example, teacher, office staff, custodian, bus driver)",
+      labelText: "Employee (for example, teacher, office staff, custodian, bus driver)",
       supplementaryText: "",
       id: "employee",
     },
@@ -33,7 +33,7 @@ const schoolContextChoices = {
       id: "guardian",
     },
     {
-      labelText: "Employé de l’école (par exemple, enseignant, employé de bureau, gardien, chauffeur d’autobus)",
+      labelText: "Employé (par exemple, enseignant, employé de bureau, gardien, chauffeur d’autobus)",
       supplementaryText: "",
       id: "employee",
     },

@@ -110,7 +110,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             <p className="ontario-lead-statement">{schoolLanding[lang].additionalInfoText}</p>
             <p className="ontario-margin-top-32-!">
               {screeningInfoStart}
-              <a href={schoolLanding[lang].link}>{schoolLanding[lang].linkText}</a>
+              <a href={schoolLanding[lang].link} target="_blank" rel="noopener">{schoolLanding[lang].linkText}</a>
               {screeningInfoEnd}
             </p>
             <AutocompleteDropdown
