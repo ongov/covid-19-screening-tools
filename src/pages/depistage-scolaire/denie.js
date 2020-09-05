@@ -29,7 +29,8 @@ const Denie = () => {
         <ContentBlock
           lang={lang}
           icon={<Warning />}
-          heading={`${resultsSchool[lang].deniedSubHeading} ${school && school.value && school.value["School Name"]}`}
+          heading={`${resultsSchool[lang].deniedSubHeading} ${(school && school.value && school.value["School Name"]) ||
+            "l’école"}`}
         >
           le {format(new Date(), "PPP", { locale: fr })}
         </ContentBlock>
