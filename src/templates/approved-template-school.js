@@ -119,11 +119,16 @@ const IconDownload = styled.span`
   height: 2.8rem;
 `
 
+const isEn = lang => lang === "en"
+
 const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
-  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
+  const localizedSchoolNameField = isEn(lang) ? "School Name" : schoolDataFields["School Name"]
+  const localizedSchoolStreetField = isEn(lang) ? "Street" : schoolDataFields["Street"]
+  const localizedSchoolPostalCodeField = isEn(lang) ? "Postal Code" : schoolDataFields["Postal Code"]
+  const localizedSchoolCityField = isEn(lang) ? "City" : schoolDataFields["City"]
 
   return (
     <span ref={elToPrintRef}>
@@ -161,6 +166,12 @@ const Approved = ({ children, lang, screenerType }) => {
           {school && school.value && school.value[localizedSchoolNameField] && (
             <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
               {school.value[localizedSchoolNameField]}
+              <br />
+              {school.value[localizedSchoolStreetField]}
+              <br />
+              {school.value[localizedSchoolCityField]} Ontario
+              <br />
+              {school.value[localizedSchoolPostalCodeField]}
             </ContentBlock>
           )}
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
