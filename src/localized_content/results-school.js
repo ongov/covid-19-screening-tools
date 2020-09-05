@@ -39,7 +39,7 @@ const resultsSchool = {
             <a href="https://covid-19.ontario.ca/assessment-centre-locations/" target="_blank" rel="noopener">
               visit an assessment centre
             </a>{" "}
-            if you want to get a COVID-19 test
+            to get a COVID-19 test
           </li>
           <li>
             Check the school reopening guidance posted on your local public health unit’s website for any other actions
@@ -64,7 +64,7 @@ const resultsSchool = {
             <a href="https://covid-19.ontario.ca/assessment-centre-locations/" target="_blank" rel="noopener">
               visit an assessment centre
             </a>{" "}
-            if they want to get a COVID-19 test
+            to get a COVID-19 test
           </li>
           <li>
             Check the school reopening guidance posted on their local public health unit’s website for any other actions
