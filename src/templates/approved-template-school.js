@@ -12,7 +12,7 @@ import Callout from "../components/callout-blue"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
-import { feedback, resultsSchool, schoolDataFields } from "../localized_content"
+import { feedback, resultsSchool, schoolDataFields, formatDate } from "../localized_content"
 
 import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
@@ -149,11 +149,7 @@ const Approved = ({ children, lang, screenerType }) => {
                     paperSize: "auto",
                     avoidLinks: true,
                     margin: 40,
-                    fileName: `COVID-19 School Screening Results${
-                      school && school.value && school.value[localizedSchoolNameField]
-                        ? "-" + school.value[localizedSchoolNameField]
-                        : ""
-                    }.pdf`,
+                    fileName: `${resultsSchool[lang].pdfFileName} - ${formatDate(new Date(), lang)}.pdf`,
                   })
                 }
               >
