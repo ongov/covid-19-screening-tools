@@ -28,7 +28,8 @@ const resultsSchool = {
       <ol>
       <li>Contact the school to let them know about this result </li>
       <li>You should <a href="https://www.ontario.ca/page/covid-19-stop-spread#section-3" target="_blank" rel="noopener">isolate</a> (stay home) and not leave except to get tested or for a medical emergency</li>
-      <li>Speak with a doctor/health care provider or <a href="https://covid-19.ontario.ca/assessment-centre-locations/" target="_blank" rel="noopener">visit an assessment centre</a> if you want to get a COVID-19 test</li>
+      <li>Talk with a doctor/health care provider or <a href="https://covid-19.ontario.ca/assessment-centre-locations/" target="_blank" rel="noopener">visit an assessment centre</a> if you want to get a COVID-19 test</li>
+      <li>Check the school reopening guidance posted on your local public health unit’s website for any other actions you or the people you live with need to take</li>
       </ol>
       </>
     ],
@@ -37,15 +38,16 @@ const resultsSchool = {
       <ol>
       <li>Contact the school to let them know about this result </li>
       <li>They should <a href="https://www.ontario.ca/page/covid-19-stop-spread#section-3" target="_blank" rel="noopener">isolate</a> (stay home) and not leave except to get tested or for a medical emergency</li>
-      <li>Speak with a doctor/health care provider or <a href="https://covid-19.ontario.ca/assessment-centre-locations/" target="_blank" rel="noopener">visit an assessment centre</a> if they want to get a COVID-19 test</li>
+      <li>Talk with a doctor/health care provider or <a href="https://covid-19.ontario.ca/assessment-centre-locations/" target="_blank" rel="noopener">visit an assessment centre</a> if they want to get a COVID-19 test</li>
+      <li>Check the school reopening guidance posted on their local public health unit’s website for any other actions they or the people they live with need to take</li>
       </ol>
       </>
     ],
     nextStepsLinkText: "Retake this screening",
     nextStepsInstruction: "every day before going to school.",
+    HealthAndSafetyTipsHeading: "Health and safety tips",
     HealthAndSafetyTipsYou: [
       <>
-      <p><strong>Health and safety tips</strong></p>
       <p>Try to keep 2 metres away from people as much as possible.</p>
       <p>If you are wearing a face covering or mask, make sure you have it on whenever you are indoors and that it covers both your mouth and nose.</p>
       <p>Wash or sanitize your hands often.</p>
@@ -53,7 +55,6 @@ const resultsSchool = {
     ],
     HealthAndSafetyTipsThem: [
       <>
-      <p><strong>Health and safety tips</strong></p>
       <p>Try to keep 2 metres away from people as much as possible.</p>
       <p>If they are wearing a face covering or mask, make sure they have it on whenever they are indoors and that it covers both their mouth and nose.</p>
       <p>Wash or sanitize their hands often.</p>
@@ -66,11 +67,52 @@ const resultsSchool = {
     downloadApp: "Protect yourself and your community. Get a phone alert if you have been exposed to COVID-19 and let others know if you test positive, without sharing any personal information.",
     downloadAppLinkText: "Learn how it works",
     downloadAppLink: "http://ontario.ca/covidalert",
+    GoingtoSchoolHeading: "Going to school again",
+    GoingtoSchoolYou: [
+      <>
+        <p>Not sure about returning to school? Talk with a health care provider.</p>
+        <p><strong>If you do not get tested</strong></p>
+        <p>You can return to school if all the following apply:</p>
+        <ul>
+          <li>a doctor diagnosed you with another illness</li>
+          <li>you do not have a fever (without using medication)</li>
+          <li>it has been at least 24 hours since your symptoms started improving (if you had symptoms)</li>
+        </ul>
+        <p><strong>If you test negative (you do not have the virus)</strong></p>
+        <p>You can return to school if all the following apply:</p>
+        <ul>
+          <li>you do not have a fever (without using medication)</li>
+          <li>it has been at least 24 hours since your symptoms started improving (if you had symptoms)</li>
+        </ul>
+        <p><strong>If you test positive (you have the virus) or are a close contact of someone with COVID-19 as determined by public health</strong></p>
+        <p>You can return to school only when you are cleared by a doctor or public health unit.</p>
+      </>
+    ],
+    GoingtoSchoolThem: [
+      <>
+        <p>Are they not sure about returning to school? Talk with a health care provider. </p>
+        <p><strong>If they do not get tested</strong></p>
+        <p>They can return to school if all the following apply:</p>
+        <ul>
+          <li>a doctor diagnosed them with another illness </li>
+          <li>they do not have a fever (without using medication) </li>
+          <li>it has been at least 24 hours since their symptoms started improving (if they had symptoms) </li>
+        </ul>
+        <p><strong>If they test negative (they do not have the virus)</strong></p>
+        <p>They can return to school if all the following apply:</p>
+        <ul>
+          <li>they do not have a fever (without using medication)</li>
+          <li>it has been at least 24 hours since their symptoms started improving (if they had symptoms)</li>
+        </ul>
+        <p><strong>If they test positive (they have the virus) or are a close contact of someone with COVID-19 as determined by public health</strong></p>
+        <p>They can return to school only when they are cleared by a doctor or public health unit. </p>
+      </>
+    ],
 },
 fr: {
-  title: "Résultat du dépistage de la COVID-19 pour les écoles ",
+  title: "Résultat du dépistage scolaire de la COVID-19",
   approveHeading: "Se présenter à l’école",
-  approveSubHeading: "Vous pouvez entrer",
+  approveSubHeading: "École",
   deniedHeading: "Ne pas se présenter à l’école ",
   deniedSubHeading: "Ne pas se présenter à",
   nextSteps: "Prochaines étapes",
@@ -110,9 +152,9 @@ fr: {
   ],
   nextStepsLinkText: "Passer à nouveau ce dépistage",
   nextStepsInstruction: "chaque jour avant de vous rendre à l’école.",
+  HealthAndSafetyTipsHeading: "Conseils de santé et sécurité",
   HealthAndSafetyTipsYou: [
     <>
-    <p><strong>Conseils de santé et sécurité</strong></p>
     <p>Essayez autant que possible de rester à deux mètres des autres. </p>
     <p>Si vous portez un couvre-visage ou un masque, assurez-vous de le porter chaque fois que vous vous trouvez à l’intérieur et qu’il couvre votre bouche et votre nez.</p>
     <p>Lavez-vous ou désinfectez-vous les mains souvent.</p>
@@ -120,7 +162,6 @@ fr: {
   ],
   HealthAndSafetyTipsThem: [
     <>
-    <p><strong>Conseils de santé et sécurité</strong></p>
     <p>Ils doivent essayer autant que possible de rester à deux mètres des autres. </p>
     <p>S’ils portent un couvre-visage ou un masque, assurez-vous qu’ils le portent chaque fois qu’ils se trouvent à l’intérieur et qu’il couvre leur bouche et leur nez.</p>
     <p>Ils doivent se laver ou se désinfecter les mains souvent.</p>
@@ -133,6 +174,47 @@ fr: {
   downloadApp: "Protégez-vous et protégez votre collectivité. Recevez une alerte sur votre téléphone si vous avez possiblement été exposé à la COVID-19, et informez les autres si vous recevez un résultat de test positif, sans que vos renseignements personnels soient divulgués.",
   downloadAppLinkText: "Apprenez comment l’application fonctionne",
   downloadAppLink: "https://covid-19.ontario.ca/fr/covidalerte",
+  GoingtoSchoolHeading: "Retourner à l’école",
+  GoingtoSchoolYou: [
+    <>
+      <p>Vous hésitez concernant votre retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
+      <p><strong>Si vous ne passez pas de test</strong></p>
+      <p>Vous pouvez retourner à l’école si tous les critères qui suivent s’appliquent :</p>
+      <ul>
+        <li>un médecin vous a diagnostiqué une autre maladie</li>
+        <li>vous ne faites pas de fièvre (sans prendre de médicaments)</li>
+        <li>au moins 24 heures se sont écoulées depuis que vos symptômes ont commencé à s’atténuer (si vous présentiez des symptômes)</li>
+      </ul>
+      <p><strong>Si vous recevez un résultat de test négatif (vous n’avez pas le virus)</strong></p>
+      <p>Vous pouvez retourner à l’école si tous les critères qui suivent s’appliquent :</p>
+      <ul>
+        <li>vous ne faites pas de fièvre (sans prendre de médicaments)</li>
+        <li>au moins 24 heures se sont écoulées depuis que vos symptômes ont commencé à s’atténuer (si vous présentiez des symptômes)</li>
+      </ul>
+      <p><strong>Si vous recevez un résultat de test positif (vous avez le virus) ou que vous êtes un contact étroit selon la définition de la santé publique</strong></p>
+      <p>Vous pouvez retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique vous autorise àle faire.</p>
+    </>
+  ],
+  GoingtoSchoolThem: [
+    <>
+      <p>Ils hésitent concernant leur retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
+      <p><strong>S’ils ne passent pas de test</strong></p>
+      <p>Ils peuvent retourner à l’école si tous les critères qui suivent s’appliquent :</p>
+      <ul>
+        <li>un médecin leur a diagnostiqué une autre maladie</li>
+        <li>ils ne font pas de fièvre (sans prendre de médicaments)</li>
+        <li>au moins 24 heures se sont écoulées depuis que leurs symptômes ont commencé à s’atténuer (s’ils présentaient des symptômes)</li>
+      </ul>
+      <p><strong>S’ils reçoivent un résultat de test négatif (ils n’ont pas le virus)</strong></p>
+      <p>Ils peuvent retourner à l’école si tous les critères qui suivent s’appliquent :</p>
+      <ul>
+        <li>ils ne font pas de fièvre (sans prendre de médicaments)</li>
+        <li>au moins 24 heures se sont écoulées depuis que leurs symptômes ont commencé à s’atténuer (s’ils présentaient des symptômes)</li>
+      </ul>
+      <p><strong>S’ils reçoivent un résultat de test positif (ils ont le virus) ou qu’ils sont un contact étroit selon la définition de la santé publique</strong></p>
+      <p>Ils peuvent retourner à l’école seulement lorsqu’un médecin ou un bureau de santépublique les autorise à le faire.</p>
+    </>
+  ],
 },
 }
 

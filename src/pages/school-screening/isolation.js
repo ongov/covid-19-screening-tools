@@ -17,13 +17,13 @@ const SelfIsolation = () => {
     >
       {state.screenie && state.screenie === "guardian" ? (
         <h2>
-          Has a doctor, health care provider, or public health unit told them that they should be self-isolating
-          (staying at home) today?
+          Has a doctor, health care provider, or public health unit told them that they should currently be isolating
+          (staying at home)?
         </h2>
       ) : (
         <h2>
-          Has a doctor, health care provider, or public health unit told you that you should be self-isolating (staying
-          at home) today?
+          Has a doctor, health care provider, or public health unit told you that you should currently be isolating (staying
+          at home)?
         </h2>
       )}
     </QuestionTemplate>

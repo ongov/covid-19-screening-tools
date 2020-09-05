@@ -51,7 +51,7 @@ const general = {
     school: {
       screeningType: "scolaire",
       basePath: "/depistage-scolaire/",
-      title: "COVID-19 dépistage scolaire",
+      title: "Dépistage scolaire de la COVID-19",
     },
     backButtonText: "Retour à la page précédente",
     continueButtonText: "Continuer",

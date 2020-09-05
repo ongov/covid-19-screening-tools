@@ -23,9 +23,9 @@ const Contact = () => {
           <p>Ceci comprend la réception d’une notification d’exposition envoyée par l’application Alerte COVID.</p>
             <p>« Contact physique étroit » signifie :</p>
             <ul>
-            <li>se trouver à moins de deux mètres de la personne dans la même pièce, dans le même lieu de travail ou au même endroit;</li>
-            <li>vivre dans le même logement;</li>
-            <li>se trouver dans la même salle de classe.</li>
+            <li>se trouver à moins de deux mètres de la personne dans la même pièce, dans le même lieu de travail ou au même endroit</li>
+            <li>vivre dans le même logement</li>
+            <li>se trouver dans la même salle de classe</li>
             </ul>
   </QuestionTemplate>
 )

@@ -182,7 +182,7 @@ const Approved = ({ children, lang, screenerType }) => {
               {resultsSchool[lang].nextStepsInstruction}
             </p>
           </ContentBlock>
-          <ContentBlock lang={lang}>
+          <ContentBlock lang={lang} heading={`${resultsSchool[lang].HealthAndSafetyTipsHeading}`}>
             {state.screenie && state.screenie === "guardian" ? (
               <>{resultsSchool[lang].HealthAndSafetyTipsThem} </>
             ) : (
