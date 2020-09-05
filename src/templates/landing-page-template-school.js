@@ -110,7 +110,9 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             <p className="ontario-lead-statement">{schoolLanding[lang].additionalInfoText}</p>
             <p className="ontario-margin-top-32-!">
               {screeningInfoStart}
-              <a href={schoolLanding[lang].link} target="_blank" rel="noopener">{schoolLanding[lang].linkText}</a>
+              <a href={schoolLanding[lang].link} target="_blank" rel="noopener">
+                {schoolLanding[lang].linkText}
+              </a>
               {screeningInfoEnd}
             </p>
             <AutocompleteDropdown
@@ -145,6 +147,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                     type: "SCHOOL_SELECTED",
                     school: option,
                   })
+                  setNotFound(false)
                 }}
                 selectError={schoolSelectError}
                 selectErrorMessage={schoolLanding[lang].schoolSelectError}
@@ -154,7 +157,8 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             <div className="ontario-checkboxes__not-found-container">
               <Checkbox
                 id="not-found"
-                value={false}
+                value={notFound}
+                checkboxState={notFound}
                 text={schoolLanding[lang].cantFindSchoolLabel}
                 labelStyle="--large"
                 checkboxOnChange={e => {
