@@ -146,22 +146,26 @@ const Approved = ({ children, lang, screenerType }) => {
             color={Green}
             titleColor={"#d1efd4"}
           />
-          <ContentBlock lang={lang} icon={<IconDownload />}>
-            <>
-              <HyperlinkButton
-                onClick={() =>
-                  savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
-                    paperSize: "auto",
-                    avoidLinks: true,
-                    margin: 40,
-                    fileName: `${resultsSchool[lang].pdfFileName} - ${formatDate(new Date(), lang)}.pdf`,
-                  })
-                }
-              >
-                {resultsSchool[lang].downloadPDF}
-              </HyperlinkButton>{" "}
-            </>
-          </ContentBlock>
+          <span className="downloadPDF">
+            <ContentBlock lang={lang} icon={<IconDownload />}>
+              <>
+                <HyperlinkButton
+                  className="downloadPDF"
+                  onClick={() =>
+                    savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
+                      paperSize: "auto",
+                      avoidLinks: true,
+                      margin: 40,
+                      fileName: `${resultsSchool[lang].pdfFileName} - ${formatDate(new Date(), lang)}.pdf`,
+                    })
+                  }
+                >
+                  {resultsSchool[lang].downloadPDF}
+                </HyperlinkButton>{" "}
+
+              </>
+            </ContentBlock>
+          </span>
           {children}
           {school && school.value && school.value[localizedSchoolNameField] && (
             <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>

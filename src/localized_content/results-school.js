@@ -67,7 +67,7 @@ const resultsSchool = {
             to get a COVID-19 test
           </li>
           <li>
-            Check the school reopening guidance posted on their local public health unit’s website for any other actions
+            Check the school reopening guidance posted on your local public health unit’s website for any other actions
             they or the people they live with need to take
           </li>
         </ol>
@@ -78,22 +78,26 @@ const resultsSchool = {
     HealthAndSafetyTipsHeading: "Health and safety tips",
     HealthAndSafetyTipsYou: [
       <>
-        <p>Try to keep 2 metres away from people as much as possible.</p>
-        <p>
-          If you are wearing a face covering or mask, make sure you have it on whenever you are indoors and that it
-          covers both your mouth and nose.
-        </p>
-        <p>Wash or sanitize your hands often.</p>
+        <ul>
+          <li>Try to keep 2 metres away from people as much as possible</li>
+          <li>
+            If you are wearing a face covering or mask, make sure you have it on whenever you are indoors and that it
+            covers both your mouth and nose
+          </li>
+          <li>Wash or sanitize your hands often</li>
+        </ul>
       </>,
     ],
     HealthAndSafetyTipsThem: [
       <>
-        <p>Try to keep 2 metres away from people as much as possible.</p>
-        <p>
-          If they are wearing a face covering or mask, make sure they have it on whenever they are indoors and that it
-          covers both their mouth and nose.
-        </p>
-        <p>Wash or sanitize their hands often.</p>
+        <ul>
+          <li>They should try to keep 2 metres away from people as much as possible</li>
+          <li>
+            If they are wearing a face covering or mask, make sure they have it on whenever they are indoors and that it
+            covers both their mouth and nose
+          </li>
+          <li>They should wash or sanitize their hands often</li>
+        </ul>
       </>,
     ],
     HealthAndSafetyLinkText: "Learn how students and staff will be protected.",
@@ -137,7 +141,7 @@ const resultsSchool = {
     ],
     GoingtoSchoolThem: [
       <>
-        <p>Are they not sure about returning to school? Talk with a health care provider. </p>
+        <p>Not sure about returning to school? Talk with a health care provider. </p>
         <p>
           <strong>If they do not get tested</strong>
         </p>
@@ -184,7 +188,7 @@ const resultsSchool = {
       <>
         <ol>
           <li>Se présenter à l’école </li>
-          <li>Informer un membre du personnel de ce résultat (si on le leur demande)</li>
+          <li>Informer un membre du personnel de ce résultat (si on vous le demande)</li>
         </ol>
       </>,
     ],
@@ -233,7 +237,7 @@ const resultsSchool = {
             <a href="https://covid-19.ontario.ca/emplacements-centres-devaluation/" rel="noopener" target="_blank">
               présentez-vous dans un centre d’évaluation
             </a>{" "}
-            s’ils veulent subir un test de dépistage de la COVID-19.
+            pour passer un test de dépistage de la COVID-19.
           </li>
         </ol>
       </>,
@@ -243,22 +247,26 @@ const resultsSchool = {
     HealthAndSafetyTipsHeading: "Conseils de santé et sécurité",
     HealthAndSafetyTipsYou: [
       <>
-        <p>Essayez autant que possible de rester à deux mètres des autres. </p>
-        <p>
-          Si vous portez un couvre-visage ou un masque, assurez-vous de le porter chaque fois que vous vous trouvez à
-          l’intérieur et qu’il couvre votre bouche et votre nez.
-        </p>
-        <p>Lavez-vous ou désinfectez-vous les mains souvent.</p>
+        <ul>
+          <li>Essayez autant que possible de rester à deux mètres des autres</li>
+          <li>
+            Si vous portez un couvre-visage ou un masque, assurez-vous de le porter chaque fois que vous vous trouvez à
+            l’intérieur et qu’il couvre votre bouche et votre nez
+          </li>
+          <li>Lavez-vous ou désinfectez-vous les mains souvent</li>
+        </ul>
       </>,
     ],
     HealthAndSafetyTipsThem: [
       <>
-        <p>Ils doivent essayer autant que possible de rester à deux mètres des autres. </p>
-        <p>
-          S’ils portent un couvre-visage ou un masque, assurez-vous qu’ils le portent chaque fois qu’ils se trouvent à
-          l’intérieur et qu’il couvre leur bouche et leur nez.
-        </p>
-        <p>Ils doivent se laver ou se désinfecter les mains souvent.</p>
+        <ul>
+          <li>Ils doivent essayer autant que possible de rester à deux mètres des autres</li>
+          <li>
+            S’ils portent un couvre-visage ou un masque, assurez-vous qu’ils le portent chaque fois qu’ils se trouvent à
+            l’intérieur et qu’il couvre leur bouche et leur nez
+          </li>
+          <li>Ils doivent se laver ou se désinfecter les mains souvent</li>
+        </ul>
       </>,
     ],
     HealthAndSafetyLinkText: "Apprenez comment les élèves et les membres du personnel seront protégés.",
@@ -311,7 +319,7 @@ const resultsSchool = {
     ],
     GoingtoSchoolThem: [
       <>
-        <p>Ils hésitent concernant leur retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
+        <p>Vous hésitez concernant leur retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
         <p>
           <strong>S’ils ne passent pas de test</strong>
         </p>
