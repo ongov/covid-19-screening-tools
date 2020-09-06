@@ -214,6 +214,9 @@ const resultsSchool = {
             </a>{" "}
             si vous voulez subir un test de dépistage de la COVID-19.
           </li>
+          <li>Pour connaître toute autre mesure que vous ou les personnes avec qui vous vivez devez prendre, veuillez lire les directives relatives à la
+              réouverture des écoles, publiées sur le site Web de votre bureau local de santé publique
+          </li>
         </ol>
       </>,
     ],
@@ -239,6 +242,7 @@ const resultsSchool = {
             </a>{" "}
             pour passer un test de dépistage de la COVID-19.
           </li>
+          <li>Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire les directives relatives à la réouverture des écoles, publiées sur le site Web de votre bureau local de santé publique </li>
         </ol>
       </>,
     ],
