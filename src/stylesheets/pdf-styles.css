@@ -31,3 +31,8 @@
   font-weight: 700;
   text-shadow: 0 0 0;
 }
+
+.k-pdf-export .downloadPDF {
+  display: none;
+  border: thin solid red;
+}

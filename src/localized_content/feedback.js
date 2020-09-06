@@ -7,7 +7,7 @@ const feedback = {
   },
   fr: {
     title: "Commentaires ",
-    content: "Faites-nous part de vos commentaires concernant vos impressions sur le dépistage scolaire aujourd’hui.",
+    content: "Faites-nous part de vos impressions sur le dépistage scolaire aujourd’hui.",
     assessment_centres_content:
       "Faites-nous part de vos commentaires à propos de votre expérience de l’utilisation des services en ligne pour la COVID-19 aujourd’hui.",
     link: "https://stage-c19d.ontariogovernment.ca/fr/commentaires/depistage-scolaire",
