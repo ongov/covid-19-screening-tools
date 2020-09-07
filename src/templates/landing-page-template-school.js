@@ -27,16 +27,6 @@ const CenteredDiv = styled.div`
 
 const screenerType = "school"
 
-const SchoolOptions = props => (
-  <components.Option {...props}>
-    <span>
-      <strong>{props.label}</strong>
-    </span>
-    <br />
-    <span>{props.value["Street"]}</span>
-  </components.Option>
-)
-
 const SchoolLandingPageTemplate = ({ lang }) => {
   const {
     currentBuildDate: { currentDate },
@@ -49,10 +39,11 @@ const SchoolLandingPageTemplate = ({ lang }) => {
   `)
 
   const localizedSchools = lang === "en" ? schools : schools_fr
-  const localizedSchoolBoardFieldName = lang === "en" ? "Board Name" : schoolDataFields["Board Name"]
-  const localizedNameFieldName = lang === "en" ? "School Name" : schoolDataFields["School Name"]
+
+  const localizedDataField = (lang, field) => (lang === "en" ? field : schoolDataFields[field])
+
   const localizedSchoolBoards = Array.from(
-    new Set(localizedSchools.map(school => school[localizedSchoolBoardFieldName]))
+    new Set(localizedSchools.map(school => school[localizedDataField(lang, "Board Name")]))
   ).map(item => ({ label: replaceSchoolBoardAcronyms(item), value: item }))
 
   const [schoolBoard, setSchoolBoard] = useState()
@@ -62,6 +53,16 @@ const SchoolLandingPageTemplate = ({ lang }) => {
 
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
+
+  const SchoolOptions = props => (
+    <components.Option {...props}>
+      <span>
+        <strong>{props.label}</strong>
+      </span>
+      <br />
+      <span>{props.value[localizedDataField(lang, "Street")]}</span>
+    </components.Option>
+  )
 
   const [screeningInfoStart, screeningInfoEnd] = schoolLanding[lang].screeningInfo.split(
     `[${schoolLanding[lang].linkText}]`
@@ -135,8 +136,13 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             {schoolBoard && (
               <AutocompleteDropdown
                 selectOptions={localizedSchools
-                  .filter(school => school[localizedSchoolBoardFieldName] === schoolBoard.value)
-                  .map(school => ({ label: `${school[localizedNameFieldName]} - ${school["City"]}`, value: school }))}
+                  .filter(school => school[localizedDataField(lang, "Board Name")] === schoolBoard.value)
+                  .map(school => ({
+                    label: `${school[localizedDataField(lang, "School Name")]} - ${
+                      school[localizedDataField(lang, "City")]
+                    }`,
+                    value: school,
+                  }))}
                 selectValue={state.school}
                 selectId="schools"
                 selectTitle={schoolLanding[lang].schoolSelect}
