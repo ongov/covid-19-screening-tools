@@ -10,6 +10,7 @@ import schoolDataFields from "./school-data-fields"
 import { schoolContextChoices, schoolContextContent } from "./context-choices-school"
 import feedback from "./feedback"
 import resultsSchool from "./results-school"
+import screening from "./screening"
 
 const general = {
   en: {
@@ -107,4 +108,5 @@ export {
   schoolContextContent,
   feedback,
   resultsSchool,
+  screening,
 }
