@@ -16,6 +16,7 @@ export default {
     button: "Start school screening",
     cantFindSchoolLabel: "I can't find my school board or school",
     placeholderText: "Start typing or select from the list...",
+    noOptionsText: "No options",
   },
   fr: {
     lead: "Veuillez répondre aux questions qui suivent avant de vous présenter dans une école de l'Ontario.",
@@ -35,5 +36,6 @@ export default {
     button: "Commencer le dépistage",
     cantFindSchoolLabel: "Je ne trouve pas mon conseil scolaire ou mon école",
     placeholderText: "Commencez à taper ou sélectionnez...",
+    noOptionsText: "Aucune option",
   },
 }

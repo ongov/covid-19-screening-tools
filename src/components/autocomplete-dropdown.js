@@ -122,6 +122,7 @@ const AutocompleteDropdown = ({
   selectError,
   selectErrorMessage,
   placeholerText,
+  noOptionsText,
 }) => {
   // This allows us to pass in a customized option component for the dropdown menu
   const CustomOption = selectOptionComponent
@@ -145,6 +146,7 @@ const AutocompleteDropdown = ({
             getOptionLabel={getSelectOptionLabel}
             getOptionValue={getSelectOptionValue}
             onChange={onSelectChange}
+            noOptionsMessage={() => noOptionsText}
           />
         </StyledDropDown>
         {selectError && <ErrorDiv>{selectErrorMessage}</ErrorDiv>}
