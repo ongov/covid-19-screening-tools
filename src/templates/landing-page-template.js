@@ -34,12 +34,11 @@ const LandingPageTemplate = ({ lang, screenerType }) => {
   `)
 
   const [courthouseSelectError, setCourthouseSelectError] = useState(false)
-  const [courthouseName, setCourthouseName] = useState("")
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
 
   const handleClick = () => {
-    if (!courthouseName) {
+    if (!state.courthouse) {
       setCourthouseSelectError(true)
       return
     }
@@ -84,7 +83,6 @@ const LandingPageTemplate = ({ lang, screenerType }) => {
               }))}
               getOptionLabel={option => option.label}
               onSelectChange={option => {
-                setCourthouseName(option.label)
                 setCourthouseSelectError(false)
                 dispatch({
                   type: "COURTHOUSE_SELECTED",
@@ -93,7 +91,13 @@ const LandingPageTemplate = ({ lang, screenerType }) => {
                   },
                 })
               }}
-              selectValue={{ label: courthouseName, value: state.courthouse }}
+              selectValue={
+                (state.courthouse && {
+                  label: state.courthouse[`court_name_display${lang === "fr" ? "_fr" : ""}`],
+                  value: state.courthouse,
+                }) ||
+                null
+              }
               selectTitle={landing[lang].courthouseSelect}
               selectError={courthouseSelectError}
               selectErrorMessage={landing[lang].courthouseSelectError}
