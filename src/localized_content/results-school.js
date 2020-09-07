@@ -205,14 +205,14 @@ const resultsSchool = {
             >
               isoler
             </a>{" "}
-            (rester à la maison) et ne pas sortir, sauf pour subir un test ou en cas d’urgence médicale.
+            (rester à la maison) et ne pas sortir, sauf pour subir un test ou en cas d’urgence médicale
           </li>
           <li>
             Discutez avec un médecin ou un fournisseur de soins de santé, ou{" "}
             <a href="https://covid-19.ontario.ca/emplacements-centres-devaluation/" rel="noopener" target="_blank">
               présentez-vous dans un centre d’évaluation
             </a>{" "}
-            si vous voulez subir un test de dépistage de la COVID-19.
+            si vous voulez subir un test de dépistage de la COVID-19
           </li>
           <li>Pour connaître toute autre mesure que vous ou les personnes avec qui vous vivez devez prendre, veuillez lire les directives relatives à la
               réouverture des écoles, publiées sur le site Web de votre bureau local de santé publique
@@ -233,14 +233,14 @@ const resultsSchool = {
             >
               s'isoler
             </a>{" "}
-            (rester à la maison) et ne pas sortir, sauf pour subir un test ou en cas d’urgence médicale.
+            (rester à la maison) et ne pas sortir, sauf pour subir un test ou en cas d’urgence médicale
           </li>
           <li>
             Discutez avec un médecin ou un fournisseur de soins de santé, ou{" "}
             <a href="https://covid-19.ontario.ca/emplacements-centres-devaluation/" rel="noopener" target="_blank">
               présentez-vous dans un centre d’évaluation
             </a>{" "}
-            pour passer un test de dépistage de la COVID-19.
+            pour passer un test de dépistage de la COVID-19
           </li>
           <li>Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire les directives relatives à la réouverture des écoles, publiées sur le site Web de votre bureau local de santé publique </li>
         </ol>
@@ -316,7 +316,7 @@ const resultsSchool = {
           </strong>
         </p>
         <p>
-          Vous pouvez retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique vous autorise àle
+          Vous pouvez retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique vous autorise à le
           faire.
         </p>
       </>,

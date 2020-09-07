@@ -32,7 +32,13 @@
   text-shadow: 0 0 0;
 }
 
-.k-pdf-export .downloadPDF {
+.k-pdf-export .downloadPDF,
+.k-pdf-export .ontario-main-header__link,
+.k-pdf-export [class^='callout-blue__Container']
+{
   display: none;
-  border: thin solid red;
+}
+
+.k-pdf-export a:not(.ontario-main-header__logo-link)::after {
+  content: " (" attr(href) ") ";
 }
