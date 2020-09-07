@@ -23,7 +23,6 @@ import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import DownloadIcon from "../images/ontario-icon-download.svg"
 
 import { navigateHome } from "../shared"
-import { navigate } from "gatsby"
 
 const Green = "#118847"
 
@@ -126,9 +125,6 @@ const Approved = ({ children, lang, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
   const localizedSchoolNameField = isEn(lang) ? "School Name" : schoolDataFields["School Name"]
-  const localizedSchoolStreetField = isEn(lang) ? "Street" : schoolDataFields["Street"]
-  const localizedSchoolPostalCodeField = isEn(lang) ? "Postal Code" : schoolDataFields["Postal Code"]
-  const localizedSchoolCityField = isEn(lang) ? "City" : schoolDataFields["City"]
 
   return (
     <span ref={elToPrintRef}>
@@ -162,7 +158,6 @@ const Approved = ({ children, lang, screenerType }) => {
                 >
                   {resultsSchool[lang].downloadPDF}
                 </HyperlinkButton>{" "}
-
               </>
             </ContentBlock>
           </span>
@@ -170,12 +165,6 @@ const Approved = ({ children, lang, screenerType }) => {
           {school && school.value && school.value[localizedSchoolNameField] && (
             <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
               {school.value[localizedSchoolNameField]}
-              <br />
-              {school.value[localizedSchoolStreetField]}
-              <br />
-              {school.value[localizedSchoolCityField]} Ontario
-              <br />
-              {school.value[localizedSchoolPostalCodeField]}
             </ContentBlock>
           )}
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
