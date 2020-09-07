@@ -32,8 +32,8 @@ export default {
     boardSelectError: "Sélectionnez un conseil scolaire",
     schoolSelect: "Sélectionnez une école",
     schoolSelectError: "Sélectionnez une école",
-    button: "Commencer le dépistage pour les écoles",
+    button: "Commencer le dépistage",
     cantFindSchoolLabel: "Je ne trouve pas mon conseil scolaire ou mon école",
-    placeholderText: "Commencez à taper ou sélectionnez dans la liste...",
+    placeholderText: "Commencez à taper ou sélectionnez...",
   },
 }
