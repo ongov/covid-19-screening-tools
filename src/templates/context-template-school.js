@@ -8,6 +8,7 @@ import { GlobalStateContext, GlobalDispatchContext } from "../context/global-con
 import { general, schoolContextChoices, schoolContextContent } from "../localized_content"
 import Radio from "../components/radio"
 import { logic, questions } from "../shared"
+import SEO from "../components/seo";
 
 const ContextTemplate = ({ lang }) => {
   const state = useContext(GlobalStateContext)
@@ -32,6 +33,7 @@ const ContextTemplate = ({ lang }) => {
 
   return (
     <Layout lang={lang} screenerType="school">
+    <SEO lang={lang} screenerType="school" />
       <Question
         screenerType="school"
         lang={lang}

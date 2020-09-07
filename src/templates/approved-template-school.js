@@ -129,7 +129,7 @@ const Approved = ({ children, lang, screenerType }) => {
   return (
     <span ref={elToPrintRef}>
       <Layout lang={lang} screenerType={screenerType} hideFooter>
-        <SEO lang={lang} screenerType={screenerType} />
+        <SEO lang={lang} screenerType="school" />
         <SkipNavContent>
           <Header
             title={

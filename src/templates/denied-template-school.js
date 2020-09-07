@@ -62,7 +62,7 @@ const Denied = ({ lang, children, screenerType }) => {
 
   return (
     <Layout lang={lang} screenerType={screenerType} hideFooter>
-      <SEO lang={lang} screenerType={screenerType} />
+      <SEO lang={lang} screenerType="school" />
       <SkipNavContent>
         <Header
           title={

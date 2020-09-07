@@ -15,6 +15,7 @@ import schools_fr from "../data/schools_fr.json"
 
 import { questions, replaceSchoolBoardAcronyms } from "../shared"
 import { general, schoolLanding, formatDate, schoolDataFields } from "../localized_content"
+import SEO from "../components/seo";
 
 const CenteredDiv = styled.div`
   display: block;
@@ -85,6 +86,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
 
   return (
     <Layout lang={lang} screenerType={screenerType}>
+      <SEO lang={lang} screenerType="school" />
       <nav role="navigation">
         <div className="ontario-row">
           <div className="ontario-small-12 ontario-columns">

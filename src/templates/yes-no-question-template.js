@@ -15,7 +15,7 @@ const QuestionTemplate = ({ lang, screenerType, yesLink, noLink, children }) => 
 
   return (
     <Layout lang={lang} screenerType={screenerType}>
-      <SEO lang={lang} />
+      <SEO lang={lang} screenerType={screenerType}/>
       <SkipNavContent>
         <Question
           lang={lang}
