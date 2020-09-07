@@ -132,6 +132,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
               selectError={boardSelectError}
               selectErrorMessage={schoolLanding[lang].boardSelectError}
               placeholerText={schoolLanding[lang].placeholderText}
+              noOptionsText={schoolLanding[lang].noOptionsText}
             />
             {schoolBoard && (
               <AutocompleteDropdown
@@ -158,6 +159,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
                 selectError={schoolSelectError}
                 selectErrorMessage={schoolLanding[lang].schoolSelectError}
                 placeholerText={schoolLanding[lang].placeholderText}
+                noOptionsText={schoolLanding[lang].noOptionsText}
               />
             )}
             <div className="ontario-checkboxes__not-found-container">
