@@ -37,7 +37,10 @@ function SEO({ lang, screenerType, meta = {} }) {
       htmlAttributes={{
         lang,
       }}
-      title={site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screenerType)}
+      title={site.siteMetadata[lang].title.replace(
+        /\|\|SCREENER_TYPE\|\|/,
+        lang === "en" ? screenerType : screenerType === "school" ? "scolaire" : "tribunaux"
+      )}
       meta={[
         {
           name: `description`,
