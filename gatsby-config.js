@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     en: {
-      title: `Coronavirus (COVID-19) ||SCREENER_TYPE|| screener`,
+      title: `Coronavirus (COVID-19) ||SCREENER_TYPE|| screening`,
       description: `Coronavirus (COVID-19) ||SCREENER_TYPE|| screener. Your result will tell you if you can or cannot enter. If you are told you cannot enter, you will get information about what to do next.`,
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
-      og_url: `https://covid-19.ontario.ca/||SCREENER_TYPE||-screener`,
+      og_url: `https://covid-19.ontario.ca/||SCREENER_TYPE||-screening`,
       og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_en.png`,
       og_locale: `en_CA`,
     },
