@@ -22,7 +22,6 @@ const HeaderDate = styled.span`
 
 const Denie = () => {
   const { school } = useContext(GlobalStateContext)
-  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
   return (
     <DeniedTemplate lang={lang} screenerType="school">
@@ -32,7 +31,7 @@ const Denie = () => {
           icon={<Warning />}
           heading={`${resultsSchool[lang].deniedSubHeading} ${(school &&
             school.value &&
-            school.value[localizedSchoolNameField]) ||
+            school.value[getLocalizedSchoolDataField(lang, "School Name")]) ||
             "l’école"}`}
         >
           le {format(new Date(), "PPP", { locale: fr })}
