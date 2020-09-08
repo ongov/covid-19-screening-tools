@@ -22,7 +22,7 @@ import StaySafe from "../images/ontario-icon-stay-safe.svg"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import DownloadIcon from "../images/ontario-icon-download.svg"
 
-import { navigateHome } from "../shared"
+import { navigateHome, pushSchoolOutcomeDataToGTM } from "../shared"
 
 const Green = "#118847"
 
@@ -122,9 +122,13 @@ const isEn = lang => lang === "en"
 
 const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
-  const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
+  const { school } = state
   const localizedSchoolNameField = isEn(lang) ? "School Name" : schoolDataFields["School Name"]
+
+  useEffect(() => {
+    pushSchoolOutcomeDataToGTM({ state, lang, pass: true })
+  }, [])
 
   return (
     <span ref={elToPrintRef}>

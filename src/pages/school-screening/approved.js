@@ -37,7 +37,7 @@ const Approved = () => {
           icon={<IconCalendar />}
           heading={`Valid ${format(date, "MMMM d, yyyy", { locale: en })}`}
         >
-          from {format(date, "' 'h':'mm' 'aaaa' ", { locale: en })} to 11:59 p.m.
+          {`from ${format(date, "' 'h':'mm' 'aaaa' ", { locale: en })} to 11:59 p.m.`}
         </ContentBlock>
       </HeaderDate>
     </ApprovedTemplate>
