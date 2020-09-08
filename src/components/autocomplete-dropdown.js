@@ -75,6 +75,8 @@ const customSelectStyles = {
     backgroundColor: "white",
     overflowY: "auto",
   }),
+  valueContainer: () => ({
+  }),
   indicatorsContainer: () => ({
     marginTop: "-2rem",
   }),
