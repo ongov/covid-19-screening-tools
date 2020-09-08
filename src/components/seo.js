@@ -43,15 +43,15 @@ function SEO({ lang, screenerType, meta = {} }) {
       meta={[
         {
           name: `description`,
-          content: site.siteMetadata[lang].description,
+          content: site.siteMetadata[lang].description.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
         {
           property: `og:title`,
-          content: site.siteMetadata[lang].title,
+          content: site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
         {
           property: `og:description`,
-          content: site.siteMetadata[lang].description,
+          content: site.siteMetadata[lang].description.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
         {
           property: `og:type`,
@@ -59,7 +59,7 @@ function SEO({ lang, screenerType, meta = {} }) {
         },
         {
           property: `og:url`,
-          content: site.siteMetadata[lang].og_url,
+          content: site.siteMetadata[lang].og_url.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
         {
           property: `og:image`,
