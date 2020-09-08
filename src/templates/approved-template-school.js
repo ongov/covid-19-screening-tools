@@ -159,6 +159,7 @@ const Approved = ({ children, lang, screenerType }) => {
             <ContentBlock lang={lang} icon={<IconDownload />}>
               <>
                 <HyperlinkButton
+                  tabIndex="0"
                   className="downloadPDF"
                   onClick={() =>
                     savePDF(ReactDOM.findDOMNode(elToPrintRef.current), {
@@ -191,7 +192,7 @@ const Approved = ({ children, lang, screenerType }) => {
           </ContentBlock>
           <ContentBlock lang={lang}>
             <p>
-              <Hyperlink onClick={() => navigateHome(lang, screenerType)}>
+              <Hyperlink onClick={() => navigateHome(lang, screenerType)} tabIndex="0" className="retake-test">
                 {resultsSchool[lang].nextStepsLinkText}
               </Hyperlink>
               &nbsp;

@@ -39,6 +39,12 @@
   display: none;
 }
 
-.k-pdf-export a:not(.ontario-main-header__logo-link)::after {
+.k-pdf-export a:not(.ontario-main-header__logo-link):not(.retake-test)::after {
   content: " (" attr(href) ") ";
+}
+
+.k-pdf-export a.retake-test {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: normal;
 }

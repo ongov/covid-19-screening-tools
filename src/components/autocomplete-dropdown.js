@@ -91,6 +91,10 @@ const customSelectStyles = {
     right: "0.5rem",
     top: "-0.3rem",
   }),
+  placeholder: () => ({
+    color: "#666",
+    position: "absolute",
+  }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1
     const transition = "opacity 300ms"
