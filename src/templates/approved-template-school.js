@@ -192,7 +192,7 @@ const Approved = ({ children, lang, screenerType }) => {
           </ContentBlock>
           <ContentBlock lang={lang}>
             <p>
-              <Hyperlink onClick={() => navigateHome(lang, screenerType)} tabIndex="0">
+              <Hyperlink onClick={() => navigateHome(lang, screenerType)} tabIndex="0" className="retake-test">
                 {resultsSchool[lang].nextStepsLinkText}
               </Hyperlink>
               &nbsp;
