@@ -12,7 +12,7 @@ import Callout from "../components/callout-blue"
 import SEO from "../components/seo"
 import { GlobalStateContext } from "../context/global-context-provider"
 
-import { feedback, resultsSchool, schoolDataFields, formatDate } from "../localized_content"
+import { feedback, resultsSchool, getLocalizedSchoolDataField, formatDate } from "../localized_content"
 
 import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
@@ -124,7 +124,7 @@ const Approved = ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const state = useContext(GlobalStateContext)
   const { school } = state
-  const localizedSchoolNameField = isEn(lang) ? "School Name" : schoolDataFields["School Name"]
+  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
   useEffect(() => {
     pushSchoolOutcomeDataToGTM({ state, lang, pass: true })

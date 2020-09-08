@@ -15,7 +15,7 @@ import { pushSchoolOutcomeDataToGTM } from "../shared"
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
 
-import { feedback, resultsSchool, schoolDataFields } from "../localized_content"
+import { feedback, resultsSchool, getLocalizedSchoolDataField } from "../localized_content"
 import Callout from "../components/callout-blue"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import Information from "../images/ontario-icon-information-red.svg"
@@ -48,7 +48,7 @@ const IconFeedback = styled.span`
 const Denied = ({ lang, children, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
-  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
+  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
   useEffect(() => {
     pushSchoolOutcomeDataToGTM({ state, lang, pass: false })
