@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import Select, { components } from "react-select"
 
@@ -48,6 +48,11 @@ const StyledDropDown = styled.div`
 const customSelectStyles = {
   control: () => ({}),
   input: () => ({
+    "&:focus-within": {
+      boxShadow: "0 0 0 4px #009adb",
+      outline: "4px solid transparent",
+      transition: "box-shadow .1s ease-in-out",
+    },
     border: "2px solid #1a1a1a",
     borderRadius: "4px",
     boxSizing: "border-box",
@@ -57,7 +62,7 @@ const customSelectStyles = {
     color: "#1a1a1a",
     fontSize: "1rem",
     fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
-}),
+  }),
   menu: () => ({
     backgroundColor: "white",
     width: "calc(100% - 4px)",
@@ -75,8 +80,7 @@ const customSelectStyles = {
     backgroundColor: "white",
     overflowY: "auto",
   }),
-  valueContainer: () => ({
-  }),
+  valueContainer: () => ({}),
   indicatorsContainer: () => ({
     marginTop: "-2rem",
   }),
@@ -99,10 +103,7 @@ const customSelectStyles = {
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1
     const transition = "opacity 300ms"
-    return { ...provided, opacity, transition,
-      width: "calc(100% - 50px)",
-      padding: ".625rem 1rem",
-    }
+    return { ...provided, opacity, transition, width: "calc(100% - 50px)", padding: ".625rem 1rem" }
   },
 }
 
@@ -119,6 +120,7 @@ const DropdownIndicator = props => {
 }
 
 const AutocompleteDropdown = ({
+  autoFocus,
   selectId,
   selectTitle,
   selectOptions,
@@ -136,6 +138,18 @@ const AutocompleteDropdown = ({
   const CustomOption = selectOptionComponent
   const customSelectComponents = CustomOption ? { DropdownIndicator, Option: CustomOption } : { DropdownIndicator }
 
+  const selectRef = useRef(null)
+
+  useEffect(() => {
+    selectRef.current.focus()
+  }, [selectRef])
+
+  useEffect(() => {
+    if (selectError) {
+      selectRef.current.focus()
+    }
+  }, [selectError])
+
   return (
     <div className="ontario-row ontario-margin-top-32-! ontario-margin-bottom-0-!">
       <div className="ontario-small-12 ontario-medium-8 ontario-large-6 ontario-columns ontario-small-centered">
@@ -148,13 +162,15 @@ const AutocompleteDropdown = ({
             value={[selectValue]}
             components={customSelectComponents}
             styles={customSelectStyles}
-            id={selectId}
+            id={`${selectId}-select`}
+            inputId={selectId}
             name={selectId}
             options={selectOptions}
             getOptionLabel={getSelectOptionLabel}
             getOptionValue={getSelectOptionValue}
             onChange={onSelectChange}
             noOptionsMessage={() => noOptionsText}
+            ref={selectRef}
           />
         </StyledDropDown>
         {selectError && <ErrorDiv>{selectErrorMessage}</ErrorDiv>}

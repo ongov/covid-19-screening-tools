@@ -15,7 +15,7 @@ import schools_fr from "../data/schools_fr.json"
 
 import { questions, replaceSchoolBoardAcronyms } from "../shared"
 import { general, schoolLanding, formatDate, getLocalizedSchoolDataField } from "../localized_content"
-import SEO from "../components/seo";
+import SEO from "../components/seo"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -117,6 +117,8 @@ const SchoolLandingPageTemplate = ({ lang }) => {
               {screeningInfoEnd}
             </p>
             <AutocompleteDropdown
+              tabOrder="1"
+              autoFocus={true}
               selectOptions={localizedSchoolBoards}
               selectValue={schoolBoard}
               selectId="boards"
@@ -136,6 +138,8 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             />
             {schoolBoard && (
               <AutocompleteDropdown
+                tabOrder="2"
+                autoFocus={true}
                 selectOptions={localizedSchools
                   .filter(school => school[getLocalizedSchoolDataField(lang, "Board Name")] === schoolBoard.value)
                   .map(school => ({
@@ -164,6 +168,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             )}
             <div className="ontario-checkboxes__not-found-container">
               <Checkbox
+                tabOrder="3"
                 id="not-found"
                 value={notFound}
                 checkboxState={notFound}
@@ -187,7 +192,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
               />
             </div>
             <CenteredDiv>
-              <Button text={schoolLanding[lang].button} clickHandler={handleClick} />
+              <Button tabOrder="4" text={schoolLanding[lang].button} clickHandler={handleClick} />
             </CenteredDiv>
           </div>
         </div>
