@@ -83,11 +83,11 @@ function SEO({ lang, screenerType, meta = {} }) {
         },
         {
           name: `twitter:title`,
-          content: site.siteMetadata[lang].title,
+          content: site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
         {
           name: `twitter:description`,
-          content: site.siteMetadata[lang].description,
+          content: site.siteMetadata[lang].description.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
       ].concat(meta)}
     />
