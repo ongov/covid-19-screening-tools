@@ -17,7 +17,7 @@ const Icon = styled.div`
   float: left;
 `
 
-const Heading = styled.div`
+const Heading = styled.h2`
   font-family: "Raleway", "Open Sans", Arial, sans-serif;
   font-size: 1.4375rem;
   font-weight: bold;
