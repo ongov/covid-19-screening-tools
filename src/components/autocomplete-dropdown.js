@@ -93,7 +93,6 @@ const customSelectStyles = {
     position: "absolute",
     padding: ".625rem 1rem",
     top: "0.2rem",
-    focus: "border: thin solid red;"
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1
