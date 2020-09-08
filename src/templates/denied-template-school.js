@@ -52,6 +52,7 @@ const IconSchool = styled.span`
   display: inline-block;
   width: 3.35rem;
   height: 3.1rem;
+  margin-top: -0.4rem;
 `
 
 const Denied = ({ lang, children, screenerType }) => {
