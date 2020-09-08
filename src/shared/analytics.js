@@ -26,7 +26,7 @@ const pushSchoolOutcomeDataToGTM = ({ state, lang, pass }) => {
 
     if (school && school.value) {
       dataLayerObject.school = school.value[getLocalizedSchoolDataField(lang, "School Name")]
-      dataLayerObject.schoolBoard = school.value[getLocalizedSchoolDataField(lang, "Board Number")]
+      dataLayerObject.schoolBoard = school.value[getLocalizedSchoolDataField(lang, "Board Name")]
       dataLayerObject.schoolNumber = school.value[getLocalizedSchoolDataField(lang, "School Number")]
     }
 
