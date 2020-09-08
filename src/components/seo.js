@@ -63,7 +63,7 @@ function SEO({ lang, screenerType, meta = {} }) {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata[lang].og_image,
+          content: site.siteMetadata[lang].og_image.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
         },
         {
           property: `og:locale`,

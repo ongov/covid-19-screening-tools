@@ -6,7 +6,7 @@ module.exports = {
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
       og_url: `https://covid-19.ontario.ca/||SCREENER_TYPE||-screening`,
-      og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_en.png`,
+      og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/||SCREENER_TYPE||_social_image_en.png`,
       og_locale: `en_CA`,
     },
     fr: {
@@ -15,7 +15,7 @@ module.exports = {
       author: `@ONThealth`,
       twitter_site: `@ONThealth`,
       og_url: `https://covid-19.ontario.ca/depistage-||SCREENER_TYPE||`,
-      og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/social_image_fr.png`,
+      og_image: `https://covid-19.ontario.ca/covid-19-cs-assets/||SCREENER_TYPE||_social_image_fr.png`,
       og_locale: `fr_CA`,
     },
   },
