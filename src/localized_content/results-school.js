@@ -74,7 +74,8 @@ const resultsSchool = {
       </>,
     ],
     nextStepsLinkText: "Retake this screening",
-    nextStepsInstruction: "every day before going to school.",
+    nextStepsInstructionYou: "every day before going to school.",
+    nextStepsInstructionThem: "every day before going to school.",
     HealthAndSafetyTipsHeading: "Health and safety tips",
     HealthAndSafetyTipsYou: [
       <>
@@ -247,7 +248,8 @@ const resultsSchool = {
       </>,
     ],
     nextStepsLinkText: "Passer à nouveau ce dépistage",
-    nextStepsInstruction: "chaque jour avant de vous rendre à l’école.",
+    nextStepsInstructionYou: "chaque jour avant de vous rendre à l’école.",
+    nextStepsInstructionThem: "chaque jour avant de se rendre à l’école.",
     HealthAndSafetyTipsHeading: "Conseils de santé et sécurité",
     HealthAndSafetyTipsYou: [
       <>
@@ -354,7 +356,7 @@ const resultsSchool = {
           </strong>
         </p>
         <p>
-          Ils peuvent retourner à l’école seulement lorsqu’un médecin ou un bureau de santépublique les autorise à le
+          Ils peuvent retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique les autorise à le
           faire.
         </p>
       </>,

@@ -186,7 +186,11 @@ const Approved = ({ children, lang, screenerType }) => {
                 {resultsSchool[lang].nextStepsLinkText}
               </Hyperlink>
               &nbsp;
-              {resultsSchool[lang].nextStepsInstruction}
+              {state.screenie && state.screenie === "guardian" ? (
+                <>{resultsSchool[lang].nextStepsInstructionThem} </>
+              ) : (
+              <>{resultsSchool[lang].nextStepsInstructionYou}</>
+              )}
             </p>
           </ContentBlock>
           <ContentBlock lang={lang} heading={`${resultsSchool[lang].HealthAndSafetyTipsHeading}`}>
