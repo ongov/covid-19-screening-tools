@@ -21,6 +21,7 @@ import MapPin from "../images/ontario-icon-map-pin.svg"
 import StaySafe from "../images/ontario-icon-stay-safe.svg"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import DownloadIcon from "../images/ontario-icon-download.svg"
+import HealthSafetyIcon from "../images/healthandsafety.svg"
 
 import { navigateHome, pushSchoolOutcomeDataToGTM } from "../shared"
 
@@ -118,6 +119,14 @@ const IconDownload = styled.span`
   height: 2.8rem;
 `
 
+const IconHealthSafety = styled.span`
+  background-image: url(${HealthSafetyIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 2.8rem;
+`
+
 const isEn = lang => lang === "en"
 
 const Approved = ({ children, lang, screenerType }) => {
@@ -193,7 +202,7 @@ const Approved = ({ children, lang, screenerType }) => {
               )}
             </p>
           </ContentBlock>
-          <ContentBlock lang={lang} heading={`${resultsSchool[lang].HealthAndSafetyTipsHeading}`}>
+          <ContentBlock lang={lang} icon={<IconHealthSafety />} heading={`${resultsSchool[lang].HealthAndSafetyTipsHeading}`}>
             {state.screenie && state.screenie === "guardian" ? (
               <>{resultsSchool[lang].HealthAndSafetyTipsThem} </>
             ) : (

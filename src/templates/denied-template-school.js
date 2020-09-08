@@ -19,6 +19,7 @@ import { feedback, resultsSchool, getLocalizedSchoolDataField } from "../localiz
 import Callout from "../components/callout-blue"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import Information from "../images/ontario-icon-information-red.svg"
+import SchoolIcon from "../images/return_to_school.svg"
 
 const Red = "#D81A21"
 
@@ -43,6 +44,14 @@ const IconFeedback = styled.span`
   display: inline-block;
   width: 2.35rem;
   height: 2.1rem;
+`
+
+const IconSchool = styled.span`
+  background-image: url(${SchoolIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 3.35rem;
+  height: 3.1rem;
 `
 
 const Denied = ({ lang, children, screenerType }) => {
@@ -83,7 +92,7 @@ const Denied = ({ lang, children, screenerType }) => {
             )}
           </>
         </ContentBlock>
-        <ContentBlock lang={lang} heading={`${resultsSchool[lang].GoingtoSchoolHeading}`}>
+        <ContentBlock lang={lang} icon={<IconSchool />} heading={`${resultsSchool[lang].GoingtoSchoolHeading}`}>
           <>
             {state.screenie && state.screenie === "guardian" ? (
               <>
