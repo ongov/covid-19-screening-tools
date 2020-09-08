@@ -48,8 +48,16 @@ const StyledDropDown = styled.div`
 const customSelectStyles = {
   control: () => ({}),
   input: () => ({
-    padding: "0",
-  }),
+    border: "2px solid #1a1a1a",
+    borderRadius: "4px",
+    boxSizing: "border-box",
+    padding: ".625rem 1rem",
+    maxWidth: "46em",
+    lineHeight: "1.5",
+    color: "#1a1a1a",
+    fontSize: "1rem",
+    fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
+}),
   menu: () => ({
     backgroundColor: "white",
     width: "calc(100% - 4px)",
@@ -68,15 +76,6 @@ const customSelectStyles = {
     overflowY: "auto",
   }),
   valueContainer: () => ({
-    border: "2px solid #1a1a1a",
-    borderRadius: "4px",
-    boxSizing: "border-box",
-    padding: ".625rem 1rem",
-    maxWidth: "46em",
-    lineHeight: "1.5",
-    color: "#1a1a1a",
-    fontSize: "1rem",
-    fontFamily: '"Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif',
   }),
   indicatorsContainer: () => ({
     marginTop: "-2rem",
@@ -94,12 +93,15 @@ const customSelectStyles = {
   placeholder: () => ({
     color: "#666",
     position: "absolute",
+    padding: ".625rem 1rem",
+    top: "0.2rem",
   }),
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1
     const transition = "opacity 300ms"
     return { ...provided, opacity, transition,
       width: "calc(100% - 50px)",
+      padding: ".625rem 1rem",
     }
   },
 }
