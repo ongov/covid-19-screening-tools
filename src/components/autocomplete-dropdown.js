@@ -94,7 +94,9 @@ const customSelectStyles = {
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 1 : 1
     const transition = "opacity 300ms"
-    return { ...provided, opacity, transition }
+    return { ...provided, opacity, transition,
+      width: "calc(100% - 50px)",
+    }
   },
 }
 
