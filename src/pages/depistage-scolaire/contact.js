@@ -16,9 +16,9 @@ const Contact = () => {
       noLink={logic[screenerType].q5.no}
     >
         {state.screenie && state.screenie === "guardian" ? (
-            <h2>Au cours des 14 derniers jours, ont-ils été en contact physique étroit avec une personne qui est actuellement atteinte de la COVID-19?</h2>
+            <h2>Au cours des 14 derniers jours, ont-ils été en contact physique étroit avec une personne qui est actuellement atteinte de la COVID&#8209;19?</h2>
       ) : (
-            <h2>Au cours des 14 derniers jours, avez-vous été en contact physique étroit avec une personne qui est actuellement atteinte de la COVID-19?</h2>
+            <h2>Au cours des 14 derniers jours, avez-vous été en contact physique étroit avec une personne qui est actuellement atteinte de la COVID&#8209;19?</h2>
       )}
           <p>Ceci comprend la réception d’une notification d’exposition envoyée par l’application Alerte COVID.</p>
             <p>« Contact physique étroit » signifie :</p>

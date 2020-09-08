@@ -22,7 +22,7 @@ const SymptomsTemplate = ({ lang, screenerType }) => {
 
   return (
     <Layout lang={lang} screenerType={screenerType}>
-      <SEO lang={lang} />
+      <SEO lang={lang} screenerType={screenerType}/>
       <SkipNavContent>
         <Question
           lang={lang}
