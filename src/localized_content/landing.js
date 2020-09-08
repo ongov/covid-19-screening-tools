@@ -1,8 +1,7 @@
 const landing = {
   en: {
     lead: "Answer the following questions before you enter an Ontario courthouse.",
-    infoText:
-      "Your result will tell you if you can or cannot enter, and what to do next.",
+    infoText: "Your result will tell you if you can or cannot enter, and what to do next.",
     screeningInfo:
       "This screening is only meant for entering Ontario courthouses and cannot diagnose you. If you have medical questions, consult a health care provider or your",
     link: "http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx",
@@ -10,6 +9,8 @@ const landing = {
     courthouseSelect: "Select the courthouse you want to enter",
     courthouseSelectError: "Select a courthouse",
     button: "Start courthouse screening",
+    placeholderText: "Start typing or select from the list...",
+    noOptionsText: "No options",
   },
   fr: {
     lead: "Répondez aux questions suivantes avant d’entrer dans un palais de justice de l’Ontario.",
@@ -22,6 +23,8 @@ const landing = {
     courthouseSelect: "Sélectionnez le palais de justice dans lequel vous voulez entrer",
     courthouseSelectError: "Sélectionner un palais de justice",
     button: "Commencer le dépistage",
+    placeholderText: "Commencez à taper ou sélectionnez...",
+    noOptionsText: "Aucune option",
   },
 }
 

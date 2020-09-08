@@ -14,7 +14,7 @@ import schools from "../data/schools.json"
 import schools_fr from "../data/schools_fr.json"
 
 import { questions, replaceSchoolBoardAcronyms } from "../shared"
-import { general, schoolLanding, formatDate, schoolDataFields } from "../localized_content"
+import { general, schoolLanding, formatDate, getLocalizedSchoolDataField } from "../localized_content"
 import SEO from "../components/seo";
 
 const CenteredDiv = styled.div`
@@ -41,10 +41,8 @@ const SchoolLandingPageTemplate = ({ lang }) => {
 
   const localizedSchools = lang === "en" ? schools : schools_fr
 
-  const localizedDataField = (lang, field) => (lang === "en" ? field : schoolDataFields[field])
-
   const localizedSchoolBoards = Array.from(
-    new Set(localizedSchools.map(school => school[localizedDataField(lang, "Board Name")]))
+    new Set(localizedSchools.map(school => school[getLocalizedSchoolDataField(lang, "Board Name")]))
   ).map(item => ({ label: replaceSchoolBoardAcronyms(item), value: item }))
 
   const [schoolBoard, setSchoolBoard] = useState()
@@ -61,7 +59,7 @@ const SchoolLandingPageTemplate = ({ lang }) => {
         <strong>{props.label}</strong>
       </span>
       <br />
-      <span>{props.value[localizedDataField(lang, "Street")]}</span>
+      <span>{props.value[getLocalizedSchoolDataField(lang, "Street")]}</span>
     </components.Option>
   )
 
@@ -139,10 +137,10 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             {schoolBoard && (
               <AutocompleteDropdown
                 selectOptions={localizedSchools
-                  .filter(school => school[localizedDataField(lang, "Board Name")] === schoolBoard.value)
+                  .filter(school => school[getLocalizedSchoolDataField(lang, "Board Name")] === schoolBoard.value)
                   .map(school => ({
-                    label: `${school[localizedDataField(lang, "School Name")]} - ${
-                      school[localizedDataField(lang, "City")]
+                    label: `${school[getLocalizedSchoolDataField(lang, "School Name")]} - ${
+                      school[getLocalizedSchoolDataField(lang, "City")]
                     }`,
                     value: school,
                   }))}

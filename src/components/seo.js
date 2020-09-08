@@ -2,6 +2,8 @@ import React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { screening } from "../localized_content"
+
 function SEO({ lang, screenerType, meta = {} }) {
   const { site } = useStaticQuery(
     graphql`
@@ -37,10 +39,7 @@ function SEO({ lang, screenerType, meta = {} }) {
       htmlAttributes={{
         lang,
       }}
-      title={site.siteMetadata[lang].title.replace(
-        /\|\|SCREENER_TYPE\|\|/,
-        lang === "en" ? screenerType : screenerType === "school" ? "scolaire" : "tribunaux"
-      )}
+      title={site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType])}
       meta={[
         {
           name: `description`,

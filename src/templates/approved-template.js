@@ -23,7 +23,6 @@ import StaySafe from "../images/ontario-icon-stay-safe.svg"
 import ContactTracing from "../images/ontario-contact-tracing.svg"
 
 import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../shared"
-import { navigate } from "gatsby"
 
 const Green = "#118847"
 
@@ -90,7 +89,7 @@ const Approved = ({ children, lang, screenerType }) => {
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
 
   useEffect(() => {
-    if (courthouse && !courthouse.reload)
+    if (courthouse)
       pushOutcomeDataToGTM({
         pass: true,
         courthouse,

@@ -9,7 +9,7 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"
 import styled from "styled-components"
-import { resultsSchool, schoolDataFields } from "../../localized_content"
+import { resultsSchool, getLocalizedSchoolDataField } from "../../localized_content"
 
 const lang = "fr"
 
@@ -22,7 +22,7 @@ const HeaderDate = styled.span`
 
 const Denie = () => {
   const { school } = useContext(GlobalStateContext)
-  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
+  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
   return (
     <DeniedTemplate lang={lang} screenerType="school">

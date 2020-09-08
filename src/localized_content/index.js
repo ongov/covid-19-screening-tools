@@ -6,10 +6,11 @@ import landing from "./landing"
 import schoolLanding from "./school-landing"
 import results from "./results"
 import formatDate from "./date-format"
-import schoolDataFields from "./school-data-fields"
+import getLocalizedSchoolDataField from "./school-data-fields"
 import { schoolContextChoices, schoolContextContent } from "./context-choices-school"
 import feedback from "./feedback"
 import resultsSchool from "./results-school"
+import screening from "./screening"
 
 const general = {
   en: {
@@ -102,9 +103,10 @@ export {
   noSymptomsId,
   results,
   formatDate,
-  schoolDataFields,
+  getLocalizedSchoolDataField,
   schoolContextChoices,
   schoolContextContent,
   feedback,
   resultsSchool,
+  screening,
 }

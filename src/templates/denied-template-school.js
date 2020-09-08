@@ -10,12 +10,12 @@ import Footer from "../components/outcome-footer"
 import ContentBlock from "../components/outcome-content-block-with-icon"
 import SEO from "../components/seo"
 
-import { navigateHome, pushOutcomeDataToGTM } from "../shared"
+import { pushSchoolOutcomeDataToGTM } from "../shared"
 
 import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
 import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
 
-import { feedback, resultsSchool, schoolDataFields } from "../localized_content"
+import { feedback, resultsSchool, getLocalizedSchoolDataField } from "../localized_content"
 import Callout from "../components/callout-blue"
 import FeedbackIcon from "../images/ontario-icon-feedback.svg"
 import Information from "../images/ontario-icon-information-red.svg"
@@ -48,17 +48,11 @@ const IconFeedback = styled.span`
 const Denied = ({ lang, children, screenerType }) => {
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
-  const localizedSchoolNameField = lang === "en" ? "School Name" : schoolDataFields["School Name"]
+  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
-  // useEffect(() => {
-  //   if (!courthouse) return
-
-  //   pushOutcomeDataToGTM({
-  //     pass: false,
-  //     courthouse,
-  //     lang,
-  //   })
-  // }, [])
+  useEffect(() => {
+    pushSchoolOutcomeDataToGTM({ state, lang, pass: false })
+  }, [])
 
   return (
     <Layout lang={lang} screenerType={screenerType} hideFooter>
@@ -90,17 +84,17 @@ const Denied = ({ lang, children, screenerType }) => {
           </>
         </ContentBlock>
         <ContentBlock lang={lang} heading={`${resultsSchool[lang].GoingtoSchoolHeading}`}>
-            <>
-              {state.screenie && state.screenie === "guardian" ? (
-                <>
-                <p>{resultsSchool[lang].GoingtoSchoolThem}</p>
-                </>
-              ) : (
+          <>
+            {state.screenie && state.screenie === "guardian" ? (
               <>
-              <p>{resultsSchool[lang].GoingtoSchoolYou}</p>
+                <p>{resultsSchool[lang].GoingtoSchoolThem}</p>
               </>
-              )}
-            </>
+            ) : (
+              <>
+                <p>{resultsSchool[lang].GoingtoSchoolYou}</p>
+              </>
+            )}
+          </>
         </ContentBlock>
         <Callout lang={lang} icon={<IconFeedback />} heading={`${feedback[lang].title}`}>
           <a href={feedback[lang].link} rel="noopener" target="_blank">

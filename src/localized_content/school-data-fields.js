@@ -1,4 +1,4 @@
-export default {
+const schoolDataFields = {
   Region: "la région",
   "Board Number": "le numéro du conseil",
   "Board Name": "le nom du conseil",
@@ -22,3 +22,7 @@ export default {
   "School Website": "le site web de l’école",
   "Board Website": "le site web du conseil",
 }
+
+const getLocalizedSchoolDataField = (lang, fieldName) => (lang === "en" ? fieldName : schoolDataFields[fieldName])
+
+export default getLocalizedSchoolDataField
