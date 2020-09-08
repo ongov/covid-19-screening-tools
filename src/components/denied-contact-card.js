@@ -37,6 +37,7 @@ const DeniedContactCard = ({ lang, courthouse }) => {
   const dutyCounselNum = getPhoneNumbers(courthouse && courthouse.duty_counsel_phone)
   const courthouseNum = getPhoneNumbers(courthouse && courthouse.phone)
   const crownNum = getPhoneNumbers(courthouse && courthouse.crowns_office_phone)
+  const juryNum = getPhoneNumbers(courthouse && courthouse.jury_office_phone)
 
   return (
     <Container>
@@ -45,6 +46,17 @@ const DeniedContactCard = ({ lang, courthouse }) => {
           <strong>{content[lang].employees}</strong>
         </p>
         <p>{content[lang].employeesContact}</p>
+        {juryNum && (
+          <>
+            <p className="ontario-margin-top-32-!">
+              <strong>{content[lang].jurors}</strong>
+            </p>
+            <p>
+              {content[lang].jurorsContact}&nbsp;
+              <PhoneNumber phoneNumbers={juryNum} lang={lang} />.
+            </p>
+          </>
+        )}
       </ContentBlock>
       <ContentBlock>
         <p>
