@@ -30,7 +30,7 @@ const Denied = () => {
           lang={lang}
           icon={<Warning />}
           heading={`${resultsSchool[lang].deniedSubHeading} ${
-            school && school.value ? getLocalizedSchoolDataField(lang, "School Name") : "school"
+            school && school.value ? school.value[getLocalizedSchoolDataField(lang, "School Name")] : "school"
           }`}
         >
           on {format(new Date(), "MMMM d, yyyy", { locale: en })}
