@@ -118,7 +118,6 @@ const SchoolLandingPageTemplate = ({ lang }) => {
             </p>
             <AutocompleteDropdown
               tabOrder="1"
-              autoFocus={true}
               selectOptions={localizedSchoolBoards}
               selectValue={schoolBoard}
               selectId="boards"

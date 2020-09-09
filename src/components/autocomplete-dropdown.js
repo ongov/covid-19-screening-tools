@@ -137,18 +137,6 @@ const AutocompleteDropdown = ({
   const selectRef = useRef(null)
 
   /***
-   * We are using this to automatically focus on the
-   * select dropdown when it's rendered. This may become
-   * an issue as more screeners are added so we could add
-   * a prop to control the focus on render. React-select
-   * has such a prop built-in and we could simply leverage
-   * that if the need arises.
-   */
-  useEffect(() => {
-    selectRef.current.focus()
-  }, [selectRef])
-
-  /***
    * This focuses select on error
    */
   useEffect(() => {
@@ -165,6 +153,7 @@ const AutocompleteDropdown = ({
         </label>
         <StyledDropDown>
           <Select
+            autoFocus={autoFocus}
             placeholder={placeholerText}
             value={[selectValue]}
             components={customSelectComponents}
