@@ -5,17 +5,18 @@ import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 
-import Layout from "../components/layout"
-import Button from "../components/button"
-import Checkbox from "../components/checkbox"
-import AutocompleteDropdown from "../components/autocomplete-dropdown"
-import { GlobalDispatchContext, GlobalStateContext } from "../context/global-context-provider"
-import schools from "../data/schools.json"
-import schools_fr from "../data/schools_fr.json"
+import SEO from "../../components/seo"
+import Layout from "../../components/layout"
+import Button from "../../components/button"
+import Checkbox from "../../components/checkbox"
+import AutocompleteDropdown from "../../components/autocomplete-dropdown"
 
-import { questions, replaceSchoolBoardAcronyms } from "../shared"
-import { general, schoolLanding, formatDate, getLocalizedSchoolDataField } from "../localized_content"
-import SEO from "../components/seo"
+import { GlobalDispatchContext, GlobalStateContext } from "../../context/global-context-provider"
+import { questions, replaceSchoolBoardAcronyms } from "../../shared"
+import { general, schoolLanding, formatDate, getLocalizedSchoolDataField } from "../../localized_content"
+
+import schools from "../../data/schools.json"
+import schools_fr from "../../data/schools_fr.json"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -28,7 +29,7 @@ const CenteredDiv = styled.div`
 
 const screenerType = "school"
 
-const SchoolLandingPageTemplate = ({ lang }) => {
+export default ({ lang }) => {
   const {
     currentBuildDate: { currentDate },
   } = useStaticQuery(graphql`
@@ -199,5 +200,3 @@ const SchoolLandingPageTemplate = ({ lang }) => {
     </Layout>
   )
 }
-
-export default SchoolLandingPageTemplate

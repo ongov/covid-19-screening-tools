@@ -2,23 +2,22 @@ import React, { useContext, useEffect } from "react"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
 
-import { GlobalStateContext } from "../context/global-context-provider"
+import Layout from "../../components/layout"
+import Header from "../../components/outcome-header"
+import Footer from "../../components/outcome-footer"
+import DeniedContactCard from "../../components/denied-contact-card"
+import ContentBlock from "../../components/outcome-content-block-with-icon"
+import CalloutBlueBorder from "../../components/callout-blue-border"
+import SEO from "../../components/seo"
 
-import Layout from "../components/layout"
-import Header from "../components/outcome-header"
-import Footer from "../components/outcome-footer"
-import DeniedContactCard from "../components/denied-contact-card"
-import ContentBlock from "../components/outcome-content-block-with-icon"
-import CalloutBlueBorder from "../components/callout-blue-border"
-import SEO from "../components/seo"
+import { pushOutcomeDataToGTM } from "../../shared"
+import { GlobalStateContext } from "../../context/global-context-provider"
 
-import { pushOutcomeDataToGTM } from "../shared"
-
-import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
-import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
-import SpeechBubble from "../images/inline-svgs/ontario-icon-speech-bubble.inline.svg"
-import { results } from "../localized_content"
-import InfoIcon from "../images/ontario-icon-information_blue.svg";
+import CancelLarge from "../../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
+import CancelSmall from "../../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
+import SpeechBubble from "../../images/inline-svgs/ontario-icon-speech-bubble.inline.svg"
+import { results } from "../../localized_content"
+import InfoIcon from "../../images/ontario-icon-information_blue.svg"
 
 const Red = "#D81A21"
 
@@ -29,7 +28,7 @@ const HeadingDeniedIcon = styled(CancelLarge)`
   background-color: ${Red};
 `
 
-const IconInfo = styled.span `
+const IconInfo = styled.span`
   background-image: url(${InfoIcon});
   background-size: 100%;
   display: inline-block;
@@ -37,8 +36,9 @@ const IconInfo = styled.span `
   height: 2.35rem;
   margin-top: -0.25rem;
 `
+const screenerType = "courthouse"
 
-const Denied = ({ lang, children, screenerType }) => {
+export default ({ lang, children }) => {
   const { courthouse } = useContext(GlobalStateContext)
 
   useEffect(() => {
@@ -79,5 +79,3 @@ const Denied = ({ lang, children, screenerType }) => {
     </Layout>
   )
 }
-
-export default Denied

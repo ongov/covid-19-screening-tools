@@ -1,6 +1,4 @@
 import React from "react"
-import SchoolLandingPageTemplate from "../../templates/landing-page-template-school"
+import SchoolLandingPageTemplate from "../../templates/school/landing-page-template"
 
-const IndexPage = () => <SchoolLandingPageTemplate lang="fr" screenerType="school" />
-
-export default IndexPage
+export default () => <SchoolLandingPageTemplate lang="fr" />

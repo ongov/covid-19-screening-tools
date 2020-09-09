@@ -2,27 +2,25 @@ import React, { useEffect, useRef, useContext } from "react"
 import ReactDOM from "react-dom"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
-
 import { savePDF } from "@progress/kendo-react-pdf"
 
-import Layout from "../components/layout"
-import Header from "../components/outcome-header"
-import Footer from "../components/outcome-footer"
-import ContentBlock from "../components/outcome-content-block-with-icon"
-import Callout from "../components/callout-blue"
-import SEO from "../components/seo"
-import { GlobalStateContext } from "../context/global-context-provider"
+import Layout from "../../components/layout"
+import Header from "../../components/outcome-header"
+import Footer from "../../components/outcome-footer"
+import ContentBlock from "../../components/outcome-content-block-with-icon"
+import Callout from "../../components/callout-blue"
+import SEO from "../../components/seo"
 
-import { general, results } from "../localized_content"
+import { GlobalStateContext } from "../../context/global-context-provider"
+import { results } from "../../localized_content"
+import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../../shared"
 
-import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
-import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
-import Information from "../images/ontario-icon-information.svg"
-import MapPin from "../images/ontario-icon-map-pin.svg"
-import StaySafe from "../images/ontario-icon-stay-safe.svg"
-import ContactTracing from "../images/ontario-contact-tracing.svg"
-
-import { pushOutcomeDataToGTM, navigateHome, getAddressPieces } from "../shared"
+import LargeCheckmark from "../../images/ontario-icon-checkmark-large.svg"
+import SmallCheckmark from "../../images/ontario-icon-checkmark-small.svg"
+import Information from "../../images/ontario-icon-information.svg"
+import MapPin from "../../images/ontario-icon-map-pin.svg"
+import StaySafe from "../../images/ontario-icon-stay-safe.svg"
+import ContactTracing from "../../images/ontario-contact-tracing.svg"
 
 const Green = "#118847"
 
@@ -83,7 +81,9 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
-export default ({ children, lang, screenerType }) => {
+const screenerType = "courthouse"
+
+export default ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)

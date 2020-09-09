@@ -4,26 +4,25 @@ import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
 import { savePDF } from "@progress/kendo-react-pdf"
 
-import Layout from "../components/layout"
-import Header from "../components/outcome-header"
-import Footer from "../components/outcome-footer"
-import ContentBlock from "../components/outcome-content-block-with-icon"
-import Callout from "../components/callout-blue"
-import SEO from "../components/seo"
-import { GlobalStateContext } from "../context/global-context-provider"
+import SEO from "../../components/seo"
+import Layout from "../../components/layout"
+import Header from "../../components/outcome-header"
+import Footer from "../../components/outcome-footer"
+import ContentBlock from "../../components/outcome-content-block-with-icon"
+import Callout from "../../components/callout-blue"
 
-import { feedback, resultsSchool, getLocalizedSchoolDataField, formatDate } from "../localized_content"
+import { GlobalStateContext } from "../../context/global-context-provider"
+import { navigateHome, pushSchoolOutcomeDataToGTM } from "../../shared"
+import { feedback, resultsSchool, getLocalizedSchoolDataField, formatDate } from "../../localized_content"
 
-import LargeCheckmark from "../images/ontario-icon-checkmark-large.svg"
-import SmallCheckmark from "../images/ontario-icon-checkmark-small.svg"
-import Information from "../images/ontario-icon-information.svg"
-import MapPin from "../images/ontario-icon-map-pin.svg"
-import StaySafe from "../images/ontario-icon-stay-safe.svg"
-import FeedbackIcon from "../images/ontario-icon-feedback.svg"
-import DownloadIcon from "../images/ontario-icon-download.svg"
-import HealthSafetyIcon from "../images/healthandsafety.svg"
-
-import { navigateHome, pushSchoolOutcomeDataToGTM } from "../shared"
+import LargeCheckmark from "../../images/ontario-icon-checkmark-large.svg"
+import SmallCheckmark from "../../images/ontario-icon-checkmark-small.svg"
+import Information from "../../images/ontario-icon-information.svg"
+import MapPin from "../../images/ontario-icon-map-pin.svg"
+import StaySafe from "../../images/ontario-icon-stay-safe.svg"
+import FeedbackIcon from "../../images/ontario-icon-feedback.svg"
+import DownloadIcon from "../../images/ontario-icon-download.svg"
+import HealthSafetyIcon from "../../images/healthandsafety.svg"
 
 const Green = "#118847"
 
@@ -119,7 +118,9 @@ const HyperlinkButton = styled.a`
   }
 `
 
-export default ({ children, lang, screenerType }) => {
+const screenerType = "school"
+
+export default ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const state = useContext(GlobalStateContext)
   const { school } = state

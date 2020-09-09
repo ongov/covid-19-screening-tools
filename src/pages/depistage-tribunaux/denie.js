@@ -4,7 +4,7 @@ import fr from "date-fns/locale/fr-CA"
 
 import { GlobalStateContext } from "../../context/global-context-provider"
 
-import DeniedTemplate from "../../templates/denied-template"
+import DeniedTemplate from "../../templates/courthouse/denied-template"
 import ContentBlock from "../../components/outcome-content-block-with-icon"
 
 import Warning from "../../images/inline-svgs/ontario-icon-warning.inline.svg"

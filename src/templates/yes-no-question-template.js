@@ -10,12 +10,12 @@ import Question from "../components/question"
 import YesNoButtons from "../components/yes-no-buttons"
 import { questions } from "../shared"
 
-const QuestionTemplate = ({ lang, screenerType, yesLink, noLink, children }) => {
+export default ({ lang, screenerType, yesLink, noLink, children }) => {
   const state = useContext(GlobalStateContext)
 
   return (
     <Layout lang={lang} screenerType={screenerType}>
-      <SEO lang={lang} screenerType={screenerType}/>
+      <SEO lang={lang} screenerType={screenerType} />
       <SkipNavContent>
         <Question
           lang={lang}
@@ -34,5 +34,3 @@ const QuestionTemplate = ({ lang, screenerType, yesLink, noLink, children }) => 
     </Layout>
   )
 }
-
-export default QuestionTemplate

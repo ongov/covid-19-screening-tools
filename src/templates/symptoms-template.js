@@ -11,7 +11,7 @@ import Checkbox from "../components/checkbox"
 import { general, symptomsTitle, symptoms } from "../localized_content"
 import { logic, questions } from "../shared"
 
-const SymptomsTemplate = ({ lang, screenerType }) => {
+export default ({ lang, screenerType }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
 
@@ -22,7 +22,7 @@ const SymptomsTemplate = ({ lang, screenerType }) => {
 
   return (
     <Layout lang={lang} screenerType={screenerType}>
-      <SEO lang={lang} screenerType={screenerType}/>
+      <SEO lang={lang} screenerType={screenerType} />
       <SkipNavContent>
         <Question
           lang={lang}
@@ -60,5 +60,3 @@ const SymptomsTemplate = ({ lang, screenerType }) => {
     </Layout>
   )
 }
-
-export default SymptomsTemplate

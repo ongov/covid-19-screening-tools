@@ -2,24 +2,22 @@ import React, { useContext, useEffect } from "react"
 import styled from "styled-components"
 import { SkipNavContent } from "@reach/skip-nav"
 
-import { GlobalStateContext } from "../context/global-context-provider"
+import SEO from "../../components/seo"
+import Layout from "../../components/layout"
+import Header from "../../components/outcome-header"
+import Footer from "../../components/outcome-footer"
+import ContentBlock from "../../components/outcome-content-block-with-icon"
+import Callout from "../../components/callout-blue"
 
-import Layout from "../components/layout"
-import Header from "../components/outcome-header"
-import Footer from "../components/outcome-footer"
-import ContentBlock from "../components/outcome-content-block-with-icon"
-import SEO from "../components/seo"
+import { pushSchoolOutcomeDataToGTM } from "../../shared"
+import { feedback, resultsSchool, getLocalizedSchoolDataField } from "../../localized_content"
+import { GlobalStateContext } from "../../context/global-context-provider"
 
-import { pushSchoolOutcomeDataToGTM } from "../shared"
-
-import CancelLarge from "../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
-import CancelSmall from "../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
-
-import { feedback, resultsSchool, getLocalizedSchoolDataField } from "../localized_content"
-import Callout from "../components/callout-blue"
-import FeedbackIcon from "../images/ontario-icon-feedback.svg"
-import Information from "../images/ontario-icon-information-red.svg"
-import SchoolIcon from "../images/return_to_school.svg"
+import CancelLarge from "../../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
+import CancelSmall from "../../images/inline-svgs/ontario-icon-cancel-small.inline.svg"
+import FeedbackIcon from "../../images/ontario-icon-feedback.svg"
+import Information from "../../images/ontario-icon-information-red.svg"
+import SchoolIcon from "../../images/return_to_school.svg"
 
 const Red = "#D81A21"
 
@@ -55,7 +53,9 @@ const IconSchool = styled.span`
   margin-top: -0.4rem;
 `
 
-const Denied = ({ lang, children, screenerType }) => {
+const screenerType = "school"
+
+export default ({ lang, children }) => {
   const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
   const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
@@ -116,5 +116,3 @@ const Denied = ({ lang, children, screenerType }) => {
     </Layout>
   )
 }
-
-export default Denied

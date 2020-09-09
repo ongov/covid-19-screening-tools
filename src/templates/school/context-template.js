@@ -1,16 +1,19 @@
 import React, { useContext, useState } from "react"
 import { navigate } from "@reach/router"
 
-import Layout from "../components/layout"
-import Question from "../components/question"
-import ContinueButton from "../components/continue-button"
-import { GlobalStateContext, GlobalDispatchContext } from "../context/global-context-provider"
-import { general, schoolContextChoices, schoolContextContent } from "../localized_content"
-import Radio from "../components/radio"
-import { logic, questions } from "../shared"
-import SEO from "../components/seo";
+import SEO from "../../components/seo"
+import Layout from "../../components/layout"
+import Question from "../../components/question"
+import ContinueButton from "../../components/continue-button"
+import Radio from "../../components/radio"
 
-const ContextTemplate = ({ lang }) => {
+import { GlobalStateContext, GlobalDispatchContext } from "../../context/global-context-provider"
+import { logic, questions } from "../../shared"
+import { general, schoolContextChoices, schoolContextContent } from "../../localized_content"
+
+const screenerType = "school"
+
+export default ({ lang }) => {
   const state = useContext(GlobalStateContext)
   const dispatch = useContext(GlobalDispatchContext)
 
@@ -32,10 +35,10 @@ const ContextTemplate = ({ lang }) => {
   }
 
   return (
-    <Layout lang={lang} screenerType="school">
-    <SEO lang={lang} screenerType="school" />
+    <Layout lang={lang} screenerType={screenerType}>
+      <SEO lang={lang} screenerType={screenerType} />
       <Question
-        screenerType="school"
+        screenerType={screenerType}
         lang={lang}
         title={general[lang]["school"].title}
         buttons={<ContinueButton lang={lang} clickHandler={handleContinueClick} isDisabled={continueDisabled} />}
@@ -65,5 +68,3 @@ const ContextTemplate = ({ lang }) => {
     </Layout>
   )
 }
-
-export default ContextTemplate

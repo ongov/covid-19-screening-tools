@@ -1,5 +1,5 @@
 import React from "react"
-import ContextTemplate from "../../templates/context-template-school"
+import ContextTemplate from "../../templates/school/context-template"
 
 const Context = () => <ContextTemplate lang="en" />
 

@@ -4,14 +4,15 @@ import { navigate } from "@reach/router"
 import { SkipNavContent } from "@reach/skip-nav"
 import styled from "styled-components"
 
-import Layout from "../components/layout"
-import Button from "../components/button"
-import AutocompleteDropdown from "../components/autocomplete-dropdown"
-import { GlobalDispatchContext, GlobalStateContext } from "../context/global-context-provider"
-import courthouses from "../data/courthouses.json"
+import Layout from "../../components/layout"
+import Button from "../../components/button"
+import AutocompleteDropdown from "../../components/autocomplete-dropdown"
 
-import { questions } from "../shared"
-import { general, landing, formatDate } from "../localized_content"
+import { GlobalDispatchContext, GlobalStateContext } from "../../context/global-context-provider"
+import { questions } from "../../shared"
+import { general, landing, formatDate } from "../../localized_content"
+
+import courthouses from "../../data/courthouses.json"
 
 const CenteredDiv = styled.div`
   display: block;
@@ -22,7 +23,9 @@ const CenteredDiv = styled.div`
   }
 `
 
-const LandingPageTemplate = ({ lang, screenerType }) => {
+const screenerType = "courthouse"
+
+export default ({ lang }) => {
   const {
     currentBuildDate: { currentDate },
   } = useStaticQuery(graphql`
@@ -113,5 +116,3 @@ const LandingPageTemplate = ({ lang, screenerType }) => {
     </Layout>
   )
 }
-
-export default LandingPageTemplate
