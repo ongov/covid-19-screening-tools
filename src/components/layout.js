@@ -11,7 +11,7 @@ import "../stylesheets/theme.css"
 import "../stylesheets/sat-style.css"
 import "../stylesheets/print.css"
 
-const Layout = ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, children }) => {
+export default ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, children }) => {
   const state = useContext(GlobalStateContext)
 
   useEffect(() => {
@@ -32,5 +32,3 @@ const Layout = ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, 
     </>
   )
 }
-
-export default Layout

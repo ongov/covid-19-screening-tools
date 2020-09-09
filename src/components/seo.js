@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import { screening } from "../localized_content"
 
-function SEO({ lang, screenerType, meta = {} }) {
+export default ({ lang, screenerType, meta = {} }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -93,5 +93,3 @@ function SEO({ lang, screenerType, meta = {} }) {
     />
   )
 }
-
-export default SEO

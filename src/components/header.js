@@ -5,8 +5,8 @@ import "../stylesheets/header.css"
 import logo from "../images/ontario-logo.png"
 import printLogo from "../images/ontario@2x-print.png"
 
-const Header = ({ lang, link, screenerType }) => {
-  const altLang = lang === "fr" ? "en" : "fr"
+export default ({ lang, link, screenerType }) => {
+  const altLang = { en: "fr", fr: "en" }[lang]
 
   return (
     <header className="ontario-main-header">
@@ -37,5 +37,3 @@ const Header = ({ lang, link, screenerType }) => {
     </header>
   )
 }
-
-export default Header

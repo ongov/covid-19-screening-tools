@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  background-color: #DEF2FA;
-  border-left: 4px solid #1080A6;
+  background-color: #def2fa;
+  border-left: 4px solid #1080a6;
   position: relative;
   margin: 2rem auto;
   max-width: 72rem;
@@ -31,12 +31,10 @@ const Content = styled.div`
   margin: 0.25rem 2rem 1rem 6rem;
 `
 
-export default function({ lang, icon, heading, children, }) {
-  return (
-    <Container>
+export default ({ icon, heading, children }) => (
+  <Container>
     <Icon>{icon}</Icon>
     <Heading>{heading}</Heading>
-      {children && <Content>{children}</Content>}
-    </Container>
-  )
-}
+    {children && <Content>{children}</Content>}
+  </Container>
+)

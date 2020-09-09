@@ -73,12 +73,10 @@ const Icon = styled.div`
   }
 `
 
-export default function({ title, heading, icon, color, titleColor }) {
-  return (
-    <Container color={color}>
-      <Title color={titleColor}>{title}</Title>
-      <Heading>{heading}</Heading>
-      <Icon>{icon}</Icon>
-    </Container>
-  )
-}
+export default ({ title, heading, icon, color, titleColor }) => (
+  <Container color={color}>
+    <Title color={titleColor}>{title}</Title>
+    <Heading>{heading}</Heading>
+    <Icon>{icon}</Icon>
+  </Container>
+)

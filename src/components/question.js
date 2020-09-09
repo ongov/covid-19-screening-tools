@@ -23,7 +23,7 @@ const BackBlueChevron = styled(BackBlueIcon)`
   height: 0.9rem;
 `
 
-const Question = ({ lang, title, buttons, children }) => {
+export default ({ lang, title, buttons, children }) => {
   const state = useContext(GlobalStateContext)
   const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
@@ -58,5 +58,3 @@ const Question = ({ lang, title, buttons, children }) => {
     </div>
   )
 }
-
-export default Question

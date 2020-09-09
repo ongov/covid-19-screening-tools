@@ -2,7 +2,7 @@ import React from "react"
 import "../stylesheets/footer.css"
 import { footer, queensPrinter } from "../localized_content"
 
-const Footer = ({ lang }) => (
+export default ({ lang }) => (
   <footer>
     <div className="ontario-grid-container">
       <div className="ontario-row ontario-row--collapse">
@@ -34,5 +34,3 @@ const Footer = ({ lang }) => (
     </div>
   </footer>
 )
-
-export default Footer

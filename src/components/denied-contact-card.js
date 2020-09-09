@@ -33,7 +33,7 @@ const ContentBlock = styled.div`
   }
 `
 
-const DeniedContactCard = ({ lang, courthouse }) => {
+export default ({ lang, courthouse }) => {
   const dutyCounselNum = getPhoneNumbers(courthouse && courthouse.duty_counsel_phone)
   const courthouseNum = getPhoneNumbers(courthouse && courthouse.phone)
   const crownNum = getPhoneNumbers(courthouse && courthouse.crowns_office_phone)
@@ -62,45 +62,50 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         <p>
           <strong>{content[lang].plaintiffsOrDefendants}</strong>
         </p>
-          {courthouseNum ? (
-            <>
-              <p>{content[lang].plaintiffsOrDefendantsContactHeadingEither}</p>
-              <ul>
-                <li>{content[lang].plaintiffsOrDefendantsContactList.lawyer}</li>
-                {courthouseNum && (
-                  <li>
+        {courthouseNum ? (
+          <>
+            <p>{content[lang].plaintiffsOrDefendantsContactHeadingEither}</p>
+            <ul>
+              <li>{content[lang].plaintiffsOrDefendantsContactList.lawyer}</li>
+              {courthouseNum && (
+                <li>
                   {content[lang].plaintiffsOrDefendantsContactList.courthouse}&nbsp;
                   <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />
-                  </li>
-                )}
-              </ul>
-            </>
-          ):(
-            <>
-              <p>{content[lang].plaintiffsOrDefendantsContactHeading} {content[lang].plaintiffsOrDefendantsContactList.lawyer}.</p>
-            </>
-          )}
+                </li>
+              )}
+            </ul>
+          </>
+        ) : (
+          <>
+            <p>
+              {content[lang].plaintiffsOrDefendantsContactHeading}{" "}
+              {content[lang].plaintiffsOrDefendantsContactList.lawyer}.
+            </p>
+          </>
+        )}
 
         <p className="ontario-margin-top-32-!">
           <strong>{content[lang].accusedPersons}</strong>
         </p>
         {dutyCounselNum ? (
           <>
-          <p>{content[lang].accusedPersonsContactHeadingEither} </p>
-          <ul>
-            <li>{content[lang].accusedPersonsContactList.lawyer}</li>
-            {dutyCounselNum && (
-            <li>
-              {content[lang].accusedPersonsContactList.dutyCounsel}&nbsp;
-              <PhoneNumber phoneNumbers={dutyCounselNum} lang={lang} />
-            </li>
-          )}
-        </ul>
-        </>
-        ):(
-        <>
-          <p>{content[lang].accusedPersonsContactHeading} {content[lang].accusedPersonsContactList.lawyer}.</p>
-        </>
+            <p>{content[lang].accusedPersonsContactHeadingEither} </p>
+            <ul>
+              <li>{content[lang].accusedPersonsContactList.lawyer}</li>
+              {dutyCounselNum && (
+                <li>
+                  {content[lang].accusedPersonsContactList.dutyCounsel}&nbsp;
+                  <PhoneNumber phoneNumbers={dutyCounselNum} lang={lang} />
+                </li>
+              )}
+            </ul>
+          </>
+        ) : (
+          <>
+            <p>
+              {content[lang].accusedPersonsContactHeading} {content[lang].accusedPersonsContactList.lawyer}.
+            </p>
+          </>
         )}
       </ContentBlock>
       <ContentBlock>
@@ -109,27 +114,28 @@ const DeniedContactCard = ({ lang, courthouse }) => {
         </p>
         <p>{content[lang].witnessesContactHeading}</p>
         <ul>
-        <li>{content[lang].witnessesContactList.contactPersonSubpoena}</li>
-        <li>{content[lang].witnessesContactList.contactPerson}</li>
-        {crownNum && (
-          <li>{content[lang].witnessesContactList.crownsOffice}&nbsp;<PhoneNumber phoneNumbers={crownNum} lang={lang} /></li>
-        )}
-      </ul>
+          <li>{content[lang].witnessesContactList.contactPersonSubpoena}</li>
+          <li>{content[lang].witnessesContactList.contactPerson}</li>
+          {crownNum && (
+            <li>
+              {content[lang].witnessesContactList.crownsOffice}&nbsp;
+              <PhoneNumber phoneNumbers={crownNum} lang={lang} />
+            </li>
+          )}
+        </ul>
       </ContentBlock>
 
       {courthouseNum && (
-          <ContentBlock>
-            <p>
-              <strong>{content[lang].others}</strong>
-            </p>
-              <p>
-                {content[lang].othersContact}&nbsp;
-                <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />.
-              </p>
-          </ContentBlock>
+        <ContentBlock>
+          <p>
+            <strong>{content[lang].others}</strong>
+          </p>
+          <p>
+            {content[lang].othersContact}&nbsp;
+            <PhoneNumber phoneNumbers={courthouseNum} lang={lang} />.
+          </p>
+        </ContentBlock>
       )}
     </Container>
   )
 }
-
-export default DeniedContactCard

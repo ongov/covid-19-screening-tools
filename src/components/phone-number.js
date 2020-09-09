@@ -2,7 +2,7 @@ import React from "react"
 
 const orStr = { en: "or", fr: "ou" }
 
-const PhoneNumber = ({ phoneNumbers, lang }) =>
+export default ({ phoneNumbers, lang }) =>
   Array.isArray(phoneNumbers) ? (
     <>
       {phoneNumbers.reduce((acc, cur) => {
@@ -18,5 +18,3 @@ const PhoneNumber = ({ phoneNumbers, lang }) =>
   ) : (
     <a href={`tel:${phoneNumbers}`}>{phoneNumbers}</a>
   )
-
-export default PhoneNumber

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  background: #DEF2FA;
+  background: #def2fa;
   position: relative;
   margin: 2rem auto;
   max-width: 72rem;
@@ -30,12 +30,10 @@ const Content = styled.div`
   margin: 0.25rem 2rem 1rem 6rem;
 `
 
-export default function({ lang, icon, heading, children, altContentProperty }) {
-  return (
-    <Container>
+export default ({ icon, heading, children }) => (
+  <Container>
     <Icon>{icon}</Icon>
     <Heading>{heading}</Heading>
-  {children && <Content>{children}</Content>}
+    {children && <Content>{children}</Content>}
   </Container>
-  )
-}
+)

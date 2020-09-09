@@ -37,13 +37,11 @@ const OntarioLogo = styled.img`
   }
 `
 
-export default function({ icon, color }) {
-  return (
-    <Container color={color}>
-      <InnerContainer>
-        <Icon>{icon}</Icon>
-        <OntarioLogo src={OntarioLogoImg} alt="Ontario Logo" />
-      </InnerContainer>
-    </Container>
-  )
-}
+export default ({ icon, color }) => (
+  <Container color={color}>
+    <InnerContainer>
+      <Icon>{icon}</Icon>
+      <OntarioLogo src={OntarioLogoImg} alt="Ontario Logo" />
+    </InnerContainer>
+  </Container>
+)
