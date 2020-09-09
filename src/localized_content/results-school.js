@@ -108,7 +108,7 @@ const resultsSchool = {
     staySafe: "Download the COVID Alert mobile app",
     downloadApp:
       "Protect yourself and your community. Get a phone alert if you have been exposed to COVID-19 and let others know if you test positive, without sharing any personal information.",
-    downloadAppLinkText: "Learn how it works",
+    downloadAppLinkText: "Learn how it works.",
     downloadAppLink: "http://ontario.ca/covidalert",
     GoingtoSchoolHeading: "Going to school again",
     GoingtoSchoolYou: [
@@ -282,7 +282,7 @@ const resultsSchool = {
     staySafe: "Téléchargez l’application mobile Alerte COVID ",
     downloadApp:
       "Protégez-vous et protégez votre collectivité. Recevez une alerte sur votre téléphone si vous avez possiblement été exposé à la COVID-19, et informez les autres si vous recevez un résultat de test positif, sans que vos renseignements personnels soient divulgués.",
-    downloadAppLinkText: "Apprenez comment l’application fonctionne",
+    downloadAppLinkText: "Apprenez comment l’application fonctionne.",
     downloadAppLink: "https://covid-19.ontario.ca/fr/covidalerte",
     GoingtoSchoolHeading: "Retourner à l’école",
     GoingtoSchoolYou: [
