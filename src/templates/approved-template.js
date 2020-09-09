@@ -83,7 +83,7 @@ const Hyperlink = styled.a`
   font-weight: bold;
 `
 
-const Approved = ({ children, lang, screenerType }) => {
+export default ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const { courthouse } = useContext(GlobalStateContext)
   const { address, city, postalCode } = getAddressPieces(courthouse, lang)
@@ -162,5 +162,3 @@ const Approved = ({ children, lang, screenerType }) => {
     </span>
   )
 }
-
-export default Approved

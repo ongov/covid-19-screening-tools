@@ -37,36 +37,52 @@ const HeadingCheckmark = styled.div`
   background-color: ${Green};
 `
 
-const IconMapPin = styled.span`
-  background-image: url(${MapPin});
+const IconBase = IconComponent => `
+  background-image: url(${IconComponent});
   background-size: 100%;
   display: inline-block;
+`
+
+const IconMapPin = styled.span`
+  ${IconBase(MapPin)}
   width: 2.35rem;
   height: 3rem;
 `
 
 const IconInfo = styled.span`
-  background-image: url(${Information});
-  background-size: 100%;
-  display: inline-block;
+  ${IconBase(Information)}
   width: 2.35rem;
   height: 2.35rem;
 `
 
 const IconStaySafe = styled.span`
-  background-image: url(${StaySafe});
-  background-size: 100%;
-  display: inline-block;
+  ${IconBase(StaySafe)}
   width: 2.35rem;
   height: 2.75rem;
 `
 
 const FooterCheckmark = styled.span`
-  background-image: url(${SmallCheckmark});
-  background-size: 100%;
-  display: inline-block;
+  ${IconBase(SmallCheckmark)}
   width: 2.35rem;
   height: 1.8rem;
+`
+
+const IconFeedback = styled.span`
+  ${IconBase(FeedbackIcon)}
+  width: 2.35rem;
+  height: 2.1rem;
+`
+
+const IconDownload = styled.span`
+  ${IconBase(DownloadIcon)}
+  width: 2.35rem;
+  height: 2.8rem;
+`
+
+const IconHealthSafety = styled.span`
+  ${IconBase(HealthSafetyIcon)}
+  width: 2.35rem;
+  height: 2.8rem;
 `
 
 const Hyperlink = styled.a`
@@ -103,33 +119,7 @@ const HyperlinkButton = styled.a`
   }
 `
 
-const IconFeedback = styled.span`
-  background-image: url(${FeedbackIcon});
-  background-size: 100%;
-  display: inline-block;
-  width: 2.35rem;
-  height: 2.1rem;
-`
-
-const IconDownload = styled.span`
-  background-image: url(${DownloadIcon});
-  background-size: 100%;
-  display: inline-block;
-  width: 2.35rem;
-  height: 2.8rem;
-`
-
-const IconHealthSafety = styled.span`
-  background-image: url(${HealthSafetyIcon});
-  background-size: 100%;
-  display: inline-block;
-  width: 2.35rem;
-  height: 2.8rem;
-`
-
-const isEn = lang => lang === "en"
-
-const Approved = ({ children, lang, screenerType }) => {
+export default ({ children, lang, screenerType }) => {
   const elToPrintRef = useRef(null)
   const state = useContext(GlobalStateContext)
   const { school } = state
@@ -199,11 +189,15 @@ const Approved = ({ children, lang, screenerType }) => {
               {state.screenie && state.screenie === "guardian" ? (
                 <>{resultsSchool[lang].nextStepsInstructionThem} </>
               ) : (
-              <>{resultsSchool[lang].nextStepsInstructionYou}</>
+                <>{resultsSchool[lang].nextStepsInstructionYou}</>
               )}
             </p>
           </ContentBlock>
-          <ContentBlock lang={lang} icon={<IconHealthSafety />} heading={`${resultsSchool[lang].HealthAndSafetyTipsHeading}`}>
+          <ContentBlock
+            lang={lang}
+            icon={<IconHealthSafety />}
+            heading={`${resultsSchool[lang].HealthAndSafetyTipsHeading}`}
+          >
             {state.screenie && state.screenie === "guardian" ? (
               <>{resultsSchool[lang].HealthAndSafetyTipsThem} </>
             ) : (
@@ -234,5 +228,3 @@ const Approved = ({ children, lang, screenerType }) => {
     </span>
   )
 }
-
-export default Approved
