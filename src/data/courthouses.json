@@ -481,6 +481,19 @@
     "jury_office_phone": "905-853-4811"
   },
   {
+    "court_name_display": "Newmarket - Newmarket Provincial Offences Courthouse",
+    "court_name_display_fr": "Newmarket - Palais de justice des infractions provinciales de Newmarket",
+    "municipality": "Newmarket",
+    "court_name": "Newmarket Provincial Offences Courthouse",
+    "address": "17150 Yonge Street, Newmarket ON L3Y 8V3",
+    "court_name_fr": "Palais de justice des infractions provinciales de Newmarket",
+    "address_fr": "17150, rue Yonge, Newmarket ON L3Y 8V3",
+    "phone": "905-898-0425",
+    "duty_counsel_phone": "N/A",
+    "crowns_office_phone": "N/A",
+    "jury_office_phone": "N/A"
+  },
+  {
     "court_name_display": "North Bay - North Bay Courthouse",
     "court_name_display_fr": "North Bay - Palais de justice de North Bay",
     "municipality": "North Bay",
@@ -635,6 +648,19 @@
     "duty_counsel_phone": "613-962 9106 (ext 2750) ",
     "crowns_office_phone": "613-476-6267",
     "jury_office_phone": "613-962-9106 x2022"
+  },
+  {
+    "court_name_display": "Richmomd Hill - Richmond Hill Provincial Offences Courthouse",
+    "court_name_display_fr": "Richmond Hill - Palais de justice des infractions provinciales de Richmond Hill",
+    "municipality": "Richmond Hill",
+    "court_name": "Richmond Hill Provincial Offences Courthouse",
+    "address": "50 High Tech Road, Richmond Hill ON L4B 4N7",
+    "court_name_fr": "Palais de justice des infractions provinciales de Richmond Hill",
+    "address_fr": "50, rue High Tech, Richmond Hill ON L4B 4N7",
+    "phone": "905-762-2105",
+    "duty_counsel_phone": "N/A",
+    "crowns_office_phone": "N/A",
+    "jury_office_phone": "N/A"
   },
   {
     "court_name_display": "Sarnia - Sarnia Lambton County Courthouse",
@@ -883,7 +909,7 @@
     "jury_office_phone": "416-327-5999"
   },
   {
-    "court_name_display": "Toronto - Superior Court of Justice -Metro Toronto Convention Centre",
+    "court_name_display": "Superior Court of Justice -Metro Toronto Convention Centre",
     "court_name_display_fr": "Palais De Justice De Toronto -  Palais des congrès du Toronto métropolitain",
     "municipality": "Toronto",
     "court_name": "Superior Court of Justice -Metro Toronto Convention Centre",
