@@ -112,7 +112,7 @@ const symptoms = {
     en: { text: "Sluggishness or lack of appetite", sup_text: "For young children and infants" },
     fr: { text: "Léthargie ou manque d’appétit", sup_text:"Chez les jeunes enfants et les nourrissons" },
   },
-  none_of_the_above: { en: { text: "None of the above" }, fr: { text: "Aucun des énoncés ci-dessus" } },
+  none_of_the_above: { en: { text: "None of the above" }, fr: { text: "Aucun des énoncés ci\u2011dessus" } },
 }
 
 const noSymptomsId = "none_of_the_above"
