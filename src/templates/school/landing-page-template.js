@@ -1,5 +1,4 @@
-import React, { useState, useContext } from "react"
-import { components } from "react-select"
+import React, { useContext } from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import { navigate } from "@reach/router"

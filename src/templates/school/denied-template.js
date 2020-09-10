@@ -10,7 +10,7 @@ import ContentBlock from "../../components/outcome-content-block-with-icon"
 import Callout from "../../components/callout-blue"
 
 import { pushSchoolOutcomeDataToGTM } from "../../shared"
-import { feedback, resultsSchool, getLocalizedSchoolDataField } from "../../localized_content"
+import { feedback, resultsSchool } from "../../localized_content"
 import { GlobalStateContext } from "../../context/global-context-provider"
 
 import CancelLarge from "../../images/inline-svgs/ontario-icon-cancel-large.inline.svg"
@@ -56,9 +56,7 @@ const IconSchool = styled.span`
 const screenerType = "school"
 
 export default ({ lang, children }) => {
-  const { school } = useContext(GlobalStateContext)
   const state = useContext(GlobalStateContext)
-  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
   useEffect(() => {
     pushSchoolOutcomeDataToGTM({ state, lang, pass: false })
@@ -69,11 +67,7 @@ export default ({ lang, children }) => {
       <SEO lang={lang} screenerType="school" />
       <SkipNavContent>
         <Header
-          title={
-            school && school.value && school.value[localizedSchoolNameField]
-              ? `${school.value[localizedSchoolNameField]} ${resultsSchool[lang].title}`
-              : resultsSchool[lang].title
-          }
+          title={resultsSchool[lang].title}
           heading={`${resultsSchool[lang].deniedHeading}`}
           icon={<HeadingDeniedIcon />}
           color={Red}

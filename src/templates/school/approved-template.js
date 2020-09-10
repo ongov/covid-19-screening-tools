@@ -13,7 +13,7 @@ import Callout from "../../components/callout-blue"
 
 import { GlobalStateContext } from "../../context/global-context-provider"
 import { navigateHome, pushSchoolOutcomeDataToGTM } from "../../shared"
-import { feedback, resultsSchool, getLocalizedSchoolDataField, formatDate } from "../../localized_content"
+import { feedback, resultsSchool, formatDate } from "../../localized_content"
 
 import LargeCheckmark from "../../images/ontario-icon-checkmark-large.svg"
 import SmallCheckmark from "../../images/ontario-icon-checkmark-small.svg"
@@ -123,8 +123,6 @@ const screenerType = "school"
 export default ({ children, lang }) => {
   const elToPrintRef = useRef(null)
   const state = useContext(GlobalStateContext)
-  const { school } = state
-  const localizedSchoolNameField = getLocalizedSchoolDataField(lang, "School Name")
 
   useEffect(() => {
     pushSchoolOutcomeDataToGTM({ state, lang, pass: true })
@@ -136,11 +134,7 @@ export default ({ children, lang }) => {
         <SEO lang={lang} screenerType="school" />
         <SkipNavContent>
           <Header
-            title={
-              school && school.value && school.value[localizedSchoolNameField]
-                ? `${school.value[localizedSchoolNameField]} ${resultsSchool[lang].title}`
-                : resultsSchool[lang].title
-            }
+            title={resultsSchool[lang].title}
             heading={`${resultsSchool[lang].approveHeading}`}
             icon={<HeadingCheckmark />}
             color={Green}
@@ -167,11 +161,6 @@ export default ({ children, lang }) => {
             </ContentBlock>
           </span>
           {children}
-          {school && school.value && school.value[localizedSchoolNameField] && (
-            <ContentBlock lang={lang} icon={<IconMapPin />} heading={`${resultsSchool[lang].approveSubHeading}`}>
-              {school.value[localizedSchoolNameField]}
-            </ContentBlock>
-          )}
           <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
             <>
               {state.screenie && state.screenie === "guardian" ? (

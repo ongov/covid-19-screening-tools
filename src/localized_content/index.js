@@ -6,7 +6,6 @@ import landing from "./landing"
 import schoolLanding from "./school-landing"
 import results from "./results"
 import formatDate from "./date-format"
-import getLocalizedSchoolDataField from "./school-data-fields"
 import { schoolContextChoices, schoolContextContent } from "./context-choices-school"
 import feedback from "./feedback"
 import resultsSchool from "./results-school"
@@ -103,7 +102,6 @@ export {
   noSymptomsId,
   results,
   formatDate,
-  getLocalizedSchoolDataField,
   schoolContextChoices,
   schoolContextContent,
   feedback,

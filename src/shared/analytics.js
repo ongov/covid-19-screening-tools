@@ -1,5 +1,3 @@
-import { getLocalizedSchoolDataField } from "../localized_content"
-
 const pushOutcomeDataToGTM = ({ courthouse, lang, pass }) => {
   if (window && window.dataLayer) {
     window.dataLayer.push({
@@ -12,25 +10,16 @@ const pushOutcomeDataToGTM = ({ courthouse, lang, pass }) => {
 }
 
 const pushSchoolOutcomeDataToGTM = ({ state, lang, pass }) => {
-  const { screenie, school, q1 } = state
-
   if (window && window.dataLayer) {
-    const dataLayerObject = {
+    const { screenie, q1 } = state
+
+    window.dataLayer.push({
       event: "covid-19-ss-outcome",
       pass,
       lang,
-      school: "none selected",
       userType: screenie,
       symptoms: q1 && Object.keys(q1),
-    }
-
-    if (school && school.value) {
-      dataLayerObject.school = school.value[getLocalizedSchoolDataField(lang, "School Name")]
-      dataLayerObject.schoolBoard = school.value[getLocalizedSchoolDataField(lang, "Board Name")]
-      dataLayerObject.schoolNumber = school.value[getLocalizedSchoolDataField(lang, "School Number")]
-    }
-
-    window.dataLayer.push(dataLayerObject)
+    })
   }
 }
 
