@@ -114,58 +114,46 @@ const resultsSchool = {
     GoingtoSchoolYou: [
       <>
         <p>Not sure about returning to school? Talk with a health care provider.</p>
-        <p>
-          <strong>If you do not get tested</strong>
-        </p>
+        <h3 className="h4-style">If you do not get tested</h3>
         <p>You can return to school if all the following apply:</p>
         <ul>
           <li>a doctor diagnosed you with another illness</li>
           <li>you do not have a fever (without using medication)</li>
           <li>it has been at least 24 hours since your symptoms started improving (if you had symptoms)</li>
         </ul>
-        <p>
-          <strong>If you test negative (you do not have the virus)</strong>
-        </p>
+        <h3 className="h4-style">If you test negative (you do not have the virus)</h3>
         <p>You can return to school if all the following apply:</p>
         <ul>
           <li>you do not have a fever (without using medication)</li>
           <li>it has been at least 24 hours since your symptoms started improving (if you had symptoms)</li>
         </ul>
-        <p>
-          <strong>
-            If you test positive (you have the virus) or are a close contact of someone with COVID-19 as determined by
-            public health
-          </strong>
-        </p>
+        <h3 className="h4-style">
+          If you test positive (you have the virus) or are a close contact of someone with COVID-19 as determined by
+          public health
+        </h3>
         <p>You can return to school only when you are cleared by a doctor or public health unit.</p>
       </>,
     ],
     GoingtoSchoolThem: [
       <>
         <p>Not sure about returning to school? Talk with a health care provider. </p>
-        <p>
-          <strong>If they do not get tested</strong>
-        </p>
+          <h3 className="h4-style">If they do not get tested</h3>
         <p>They can return to school if all the following apply:</p>
         <ul>
           <li>a doctor diagnosed them with another illness </li>
           <li>they do not have a fever (without using medication) </li>
           <li>it has been at least 24 hours since their symptoms started improving (if they had symptoms) </li>
         </ul>
-        <p>
-          <strong>If they test negative (they do not have the virus)</strong>
-        </p>
+        <h3 className="h4-style">If they test negative (they do not have the virus)</h3>
         <p>They can return to school if all the following apply:</p>
         <ul>
           <li>they do not have a fever (without using medication)</li>
           <li>it has been at least 24 hours since their symptoms started improving (if they had symptoms)</li>
         </ul>
-        <p>
-          <strong>
-            If they test positive (they have the virus) or are a close contact of someone with COVID-19 as determined by
-            public health
-          </strong>
-        </p>
+        <h3 className="h4-style">
+          If they test positive (they have the virus) or are a close contact of someone with COVID-19 as determined by
+          public health
+        </h3>
         <p>They can return to school only when they are cleared by a doctor or public health unit. </p>
       </>,
     ],
@@ -288,9 +276,7 @@ const resultsSchool = {
     GoingtoSchoolYou: [
       <>
         <p>Vous hésitez concernant votre retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
-        <p>
-          <strong>Si vous ne passez pas de test</strong>
-        </p>
+        <h3 className="h4-style">Si vous ne passez pas de test</h3>
         <p>Vous pouvez retourner à l’école si tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>un médecin vous a diagnostiqué une autre maladie</li>
@@ -300,9 +286,7 @@ const resultsSchool = {
             des symptômes)
           </li>
         </ul>
-        <p>
-          <strong>Si vous recevez un résultat de test négatif (vous n’avez pas le virus)</strong>
-        </p>
+        <h3 className="h4-style">Si vous recevez un résultat de test négatif (vous n’avez pas le virus)</h3>
         <p>Vous pouvez retourner à l’école si tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>vous ne faites pas de fièvre (sans prendre de médicaments)</li>
@@ -311,12 +295,10 @@ const resultsSchool = {
             des symptômes)
           </li>
         </ul>
-        <p>
-          <strong>
-            Si vous recevez un résultat de test positif (vous avez le virus) ou que vous êtes un contact étroit selon la
-            définition de la santé publique
-          </strong>
-        </p>
+        <h3 className="h4-style">
+          Si vous recevez un résultat de test positif (vous avez le virus) ou que vous êtes un contact étroit selon la
+          définition de la santé publique
+        </h3>
         <p>
           Vous pouvez retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique vous autorise à le
           faire.
@@ -326,9 +308,7 @@ const resultsSchool = {
     GoingtoSchoolThem: [
       <>
         <p>Vous hésitez concernant leur retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
-        <p>
-          <strong>S’ils ne passent pas de test</strong>
-        </p>
+        <h3 className="h4-style">S’ils ne passent pas de test</h3>
         <p>Ils peuvent retourner à l’école si tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>un médecin leur a diagnostiqué une autre maladie</li>
@@ -338,9 +318,7 @@ const resultsSchool = {
             des symptômes)
           </li>
         </ul>
-        <p>
-          <strong>S’ils reçoivent un résultat de test négatif (ils n’ont pas le virus)</strong>
-        </p>
+        <h3 className="h4-style">S’ils reçoivent un résultat de test négatif (ils n’ont pas le virus)</h3>
         <p>Ils peuvent retourner à l’école si tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>ils ne font pas de fièvre (sans prendre de médicaments)</li>
@@ -349,12 +327,9 @@ const resultsSchool = {
             des symptômes)
           </li>
         </ul>
-        <p>
-          <strong>
-            S’ils reçoivent un résultat de test positif (ils ont le virus) ou qu’ils sont un contact étroit selon la
-            définition de la santé publique
-          </strong>
-        </p>
+        <h3 className="h4-style">
+          S’ils reçoivent un résultat de test positif (ils ont le virus) ou qu’ils sont un contact étroit selon la définition de la santé publique
+        </h3>
         <p>
           Ils peuvent retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique les autorise à le
           faire.
