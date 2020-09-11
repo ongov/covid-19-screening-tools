@@ -348,3 +348,9 @@ ul.ontario-no-bullet {
   font-size: 1.5rem;
   letter-spacing: 0.0313rem;
 }
+
+h3.h4-style {
+  font-size: 1.2375rem;
+  letter-spacing: 0.0313rem;
+  line-height: 1.5;
+}
