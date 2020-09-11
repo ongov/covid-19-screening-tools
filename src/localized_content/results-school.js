@@ -53,8 +53,7 @@ const resultsSchool = {
             to get a COVID-19 test
           </li>
           <li>
-            Check the school reopening guidance posted on your
-            <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">local public health unit’s website</a>{" "}for any other actions they or the people they live with need to take
+            Check the school reopening guidance posted on your{" "}<a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">local public health unit’s website</a>{" "}for any other actions they or the people they live with need to take
           </li>
         </ol>
       </>,
