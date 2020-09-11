@@ -22,6 +22,8 @@ const CenteredDiv = styled.div`
     margin: 1rem auto 1.75rem;
   }
 `
+console.log(`${general[lang][screenerType]}`)
+console.log(`${general[lang][screenerType].basePath}${questions.q1[lang]}`)
 
 const screenerType = "courthouse"
 
