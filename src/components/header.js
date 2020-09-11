@@ -7,7 +7,7 @@ import printLogo from "../images/ontario@2x-print.png"
 
 export default ({ lang, link, screenerType }) => {
   const altLang = lang === "en" ? "fr" : "en"
-  console.log(general[altLang][screenerType].basePath)
+
   return (
     <header className="ontario-main-header">
       <div className="ontario-row">
