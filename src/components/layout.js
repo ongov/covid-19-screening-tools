@@ -15,7 +15,11 @@ export default ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, 
   const state = useContext(GlobalStateContext)
 
   useEffect(() => {
-    if (process.env.GATSBY_IS_PROD_ENV && !state.in_progress) {
+    if (
+      process.env.GATSBY_IS_PROD_ENV &&
+      !state.in_progress &&
+      window.location.pathname !== general[lang][screenerType].basePath
+    ) {
       navigateHome(lang, screenerType)
     }
   }, [])
