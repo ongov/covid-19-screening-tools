@@ -161,12 +161,12 @@ export default ({ children, lang }) => {
             </ContentBlock>
           </span>
           {children}
-          <ContentBlock lang={lang} icon={<IconInfo />} heading={`${resultsSchool[lang].nextSteps}`}>
+          <ContentBlock lang={lang} icon={<IconInfo />}>
             <>
               {state.screenie && state.screenie === "guardian" ? (
-                <>{resultsSchool[lang].nextStepsContentThem}</>
+                <>{resultsSchool[lang].instructionsThem}</>
               ) : (
-                <>{resultsSchool[lang].nextStepsContentYou}</>
+                <>{resultsSchool[lang].instructionsYou}</>
               )}
             </>
           </ContentBlock>

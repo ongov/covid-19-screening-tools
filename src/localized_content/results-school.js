@@ -1,28 +1,14 @@
 import React from "react"
 const resultsSchool = {
   en: {
-    title: "COVID-19 screening result",
+    title: "COVID-19 school screening result",
     approveHeading: "Go to school",
     approveSubHeading: "School",
     deniedHeading: "Do not go to school",
     deniedSubHeading: "Do not go to",
+    instructionsYou: "You can go to school because you seem to be healthy and have not been exposed to COVID-19.",
+    instructionsThem: "They can go to school because they seem to be healthy and have not been exposed to COVID-19.",
     nextSteps: "Next steps",
-    nextStepsContentYou: [
-      <>
-        <ol>
-          <li>Go to school</li>
-          <li>Tell a staff member about this result (if asked)</li>
-        </ol>
-      </>,
-    ],
-    nextStepsContentThem: [
-      <>
-        <ol>
-          <li>Go to school</li>
-          <li>Tell a staff member about this result (if asked)</li>
-        </ol>
-      </>,
-    ],
     nextStepsDeniedContentYou: [
       <>
         <ol>
@@ -42,8 +28,8 @@ const resultsSchool = {
             to get a COVID-19 test
           </li>
           <li>
-            Check the school reopening guidance posted on your local public health unit’s website for any other actions
-            you or the people you live with need to take
+            Check the school reopening guidance posted on your <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">
+            local public health unit’s website</a>{" "}for any other actions you or the people you live with need to take
           </li>
         </ol>
       </>,
@@ -67,8 +53,8 @@ const resultsSchool = {
             to get a COVID-19 test
           </li>
           <li>
-            Check the school reopening guidance posted on your local public health unit’s website for any other actions
-            they or the people they live with need to take
+            Check the school reopening guidance posted on your
+            <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">local public health unit’s website</a>{" "}for any other actions they or the people they live with need to take
           </li>
         </ol>
       </>,
@@ -131,7 +117,7 @@ const resultsSchool = {
           If you test positive (you have the virus) or are a close contact of someone with COVID-19 as determined by
           public health
         </h3>
-        <p>You can return to school only when you are cleared by a doctor or public health unit.</p>
+        <p>You can return to school only when you are cleared by your local public health unit.</p>
       </>,
     ],
     GoingtoSchoolThem: [
@@ -154,7 +140,7 @@ const resultsSchool = {
           If they test positive (they have the virus) or are a close contact of someone with COVID-19 as determined by
           public health
         </h3>
-        <p>They can return to school only when they are cleared by a doctor or public health unit. </p>
+        <p>They can return to school only when they are cleared by your local public health unit. </p>
       </>,
     ],
   },
@@ -164,23 +150,9 @@ const resultsSchool = {
     approveSubHeading: "École",
     deniedHeading: "Ne pas se présenter à l’école ",
     deniedSubHeading: "Ne pas se présenter à",
+    instructionsYou: "Vous pouvez aller à l’école parce que vous semblez être en bonne santé et que vous n’avez pas été exposé à la COVID-19.",
+    instructionsThem: "Ils peuvent aller à l’école parce qu’ils semblent être en bonne santé et qu’ils n’ont pas été exposés à la COVID-19.",
     nextSteps: "Prochaines étapes",
-    nextStepsContentYou: [
-      <>
-        <ol>
-          <li>Se présenter à l’école </li>
-          <li>Informer un membre du personnel de ce résultat (si on vous le demande)</li>
-        </ol>
-      </>,
-    ],
-    nextStepsContentThem: [
-      <>
-        <ol>
-          <li>Se présenter à l’école </li>
-          <li>Informer un membre du personnel de ce résultat (si on vous le demande)</li>
-        </ol>
-      </>,
-    ],
     nextStepsDeniedContentYou: [
       <>
         <ol>
@@ -204,7 +176,7 @@ const resultsSchool = {
             si vous voulez subir un test de dépistage de la COVID-19
           </li>
           <li>Pour connaître toute autre mesure que vous ou les personnes avec qui vous vivez devez prendre, veuillez lire les directives relatives à la
-              réouverture des écoles, publiées sur le site Web de votre bureau local de santé publique
+              réouverture des écoles, publiées sur <a href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">le site Web de votre bureau local de santé publique</a>
           </li>
         </ol>
       </>,
@@ -231,7 +203,7 @@ const resultsSchool = {
             </a>{" "}
             pour passer un test de dépistage de la COVID-19
           </li>
-          <li>Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire les directives relatives à la réouverture des écoles, publiées sur le site Web de votre bureau local de santé publique </li>
+          <li>Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire les directives relatives à la réouverture des écoles, publiées sur <a href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">le site Web de votre bureau local de santé publique</a> </li>
         </ol>
       </>,
     ],
@@ -300,7 +272,7 @@ const resultsSchool = {
           définition de la santé publique
         </h3>
         <p>
-          Vous pouvez retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique vous autorise à le
+          Vous pouvez retourner à l’école seulement lorsqu’un bureau de santé publique vous autorise à le
           faire.
         </p>
       </>,
@@ -331,7 +303,7 @@ const resultsSchool = {
           S’ils reçoivent un résultat de test positif (ils ont le virus) ou qu’ils sont un contact étroit selon la définition de la santé publique
         </h3>
         <p>
-          Ils peuvent retourner à l’école seulement lorsqu’un médecin ou un bureau de santé publique les autorise à le
+          Ils peuvent retourner à l’école seulement lorsqu’un bureau de santé publique les autorise à le
           faire.
         </p>
       </>,
