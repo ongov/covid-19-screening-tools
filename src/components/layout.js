@@ -16,7 +16,7 @@ export default ({ lang, screenerType, hideFooter, isResultsPage, altHeaderLink, 
 
   useEffect(() => {
     if (process.env.GATSBY_IS_PROD_ENV && !state.in_progress) {
-      navigateHome(lang)
+      navigateHome(lang, screenerType)
     }
   }, [])
 
