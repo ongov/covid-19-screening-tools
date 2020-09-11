@@ -36,9 +36,6 @@ export default ({ lang }) => {
     }
   `)
 
-  console.log(`${general[lang][screenerType]}`)
-  console.log(`${general[lang][screenerType].basePath}${questions.q1[lang]}`)
-
   const [courthouseSelectError, setCourthouseSelectError] = useState(false)
   const dispatch = useContext(GlobalDispatchContext)
   const state = useContext(GlobalStateContext)
