@@ -89,7 +89,7 @@ const resultsSchool = {
     HealthAndSafetyLinkText: "Learn how students and staff will be protected.",
     HealthAndSafetyLink: "https://www.ontario.ca/page/covid-19-reopening-schools#section-5",
     downloadPDF: "Download results (PDF)",
-    pdfFileName: "COVID-19 School Screening Results",
+    pdfFileName: "COVID-19 school screening result",
     staySafe: "Download the COVID Alert mobile app",
     downloadApp:
       "Protect yourself and your community. Get a phone alert if you have been exposed to COVID-19 and let others know if you test positive, without sharing any personal information.",
