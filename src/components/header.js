@@ -6,7 +6,7 @@ import logo from "../images/ontario-logo.png"
 import printLogo from "../images/ontario@2x-print.png"
 
 export default ({ lang, link, screenerType }) => {
-  const altLang = { en: "fr", fr: "en" }[lang]
+  const altLang = lang === "en" ? "fr" : "en"
 
   return (
     <header className="ontario-main-header">
