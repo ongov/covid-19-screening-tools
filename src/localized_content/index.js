@@ -49,9 +49,9 @@ const general = {
       title: "COVID-19 dépistage tribunaux",
     },
     school: {
-      screeningType: "scolaire",
-      basePath: "/depistage-scolaire/",
-      title: "Dépistage scolaire de la COVID-19",
+      screeningType: "pour-les-ecoles",
+      basePath: "/depistage-pour-les-ecoles/",
+      title: "Dépistage de la COVID-19 pour les écoles",
     },
     backButtonText: "Retour à la page précédente",
     continueButtonText: "Continuer",

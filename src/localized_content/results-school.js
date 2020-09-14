@@ -28,8 +28,15 @@ const resultsSchool = {
             to get a COVID-19 test
           </li>
           <li>
-            Check the school reopening guidance posted on your <a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">
-            local public health unit’s website</a>{" "}for any other actions you or the people you live with need to take
+            Check the school reopening guidance posted on your{" "}
+            <a
+              href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx"
+              target="_blank"
+              rel="noopener"
+            >
+              local public health unit’s website
+            </a>{" "}
+            for any other actions you or the people you live with need to take
           </li>
         </ol>
       </>,
@@ -53,7 +60,15 @@ const resultsSchool = {
             to get a COVID-19 test
           </li>
           <li>
-            Check the school reopening guidance posted on your{" "}<a href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">local public health unit’s website</a>{" "}for any other actions they or the people they live with need to take
+            Check the school reopening guidance posted on your{" "}
+            <a
+              href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx"
+              target="_blank"
+              rel="noopener"
+            >
+              local public health unit’s website
+            </a>{" "}
+            for any other actions they or the people they live with need to take
           </li>
         </ol>
       </>,
@@ -120,7 +135,7 @@ const resultsSchool = {
     GoingtoSchoolThem: [
       <>
         <p>Not sure about returning to school? Talk with a health care provider. </p>
-          <h3 className="h4-style">If they do not get tested</h3>
+        <h3 className="h4-style">If they do not get tested</h3>
         <p>They should isolate for 14 days, unless all the following apply:</p>
         <ul>
           <li>a doctor diagnosed them with another illness </li>
@@ -142,13 +157,15 @@ const resultsSchool = {
     ],
   },
   fr: {
-    title: "Résultat du dépistage scolaire de la COVID-19",
+    title: "Résultat du dépistage de la COVID-19 pour les écoles",
     approveHeading: "Se présenter à l’école",
     approveSubHeading: "École",
     deniedHeading: "Ne pas se présenter à l’école ",
     deniedSubHeading: "Ne pas se présenter à",
-    instructionsYou: "Vous pouvez aller à l’école parce que vous semblez être en bonne santé et que vous n’avez pas été exposé à la COVID-19.",
-    instructionsThem: "Ils peuvent aller à l’école parce qu’ils semblent être en bonne santé et qu’ils n’ont pas été exposés à la COVID-19.",
+    instructionsYou:
+      "Vous pouvez aller à l’école parce que vous semblez être en bonne santé et que vous n’avez pas été exposé à la COVID-19.",
+    instructionsThem:
+      "Ils peuvent aller à l’école parce qu’ils semblent être en bonne santé et qu’ils n’ont pas été exposés à la COVID-19.",
     nextSteps: "Prochaines étapes",
     nextStepsDeniedContentYou: [
       <>
@@ -172,8 +189,16 @@ const resultsSchool = {
             </a>{" "}
             si vous voulez subir un test de dépistage de la COVID-19
           </li>
-          <li>Pour connaître toute autre mesure que vous ou les personnes avec qui vous vivez devez prendre, veuillez lire les directives relatives à la
-              réouverture des écoles, publiées sur <a href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">le site Web de votre bureau local de santé publique</a>
+          <li>
+            Pour connaître toute autre mesure que vous ou les personnes avec qui vous vivez devez prendre, veuillez lire
+            les directives relatives à la réouverture des écoles, publiées sur{" "}
+            <a
+              href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx"
+              target="_blank"
+              rel="noopener"
+            >
+              le site Web de votre bureau local de santé publique
+            </a>
           </li>
         </ol>
       </>,
@@ -200,7 +225,17 @@ const resultsSchool = {
             </a>{" "}
             pour passer un test de dépistage de la COVID-19
           </li>
-          <li>Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire les directives relatives à la réouverture des écoles, publiées sur <a href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx" target="_blank" rel="noopener">le site Web de votre bureau local de santé publique</a> </li>
+          <li>
+            Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire
+            les directives relatives à la réouverture des écoles, publiées sur{" "}
+            <a
+              href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx"
+              target="_blank"
+              rel="noopener"
+            >
+              le site Web de votre bureau local de santé publique
+            </a>{" "}
+          </li>
         </ol>
       </>,
     ],
@@ -233,7 +268,7 @@ const resultsSchool = {
     HealthAndSafetyLinkText: "Apprenez comment les élèves et les membres du personnel seront protégés.",
     HealthAndSafetyLink: "https://www.ontario.ca/fr/page/covid-19-reouverture-des-ecoles#section-5",
     downloadPDF: "Enregistrer le résultat (PDF)",
-    pdfFileName: "Résultat du dépistage scolaire de la COVID-19",
+    pdfFileName: "Résultat du dépistage de la COVID-19 pour les écoles",
     staySafe: "Téléchargez l’application mobile Alerte COVID ",
     downloadApp:
       "Protégez-vous et protégez votre collectivité. Recevez une alerte sur votre téléphone si vous avez possiblement été exposé à la COVID-19, et informez les autres si vous recevez un résultat de test positif, sans que vos renseignements personnels soient divulgués.",
@@ -266,10 +301,7 @@ const resultsSchool = {
           Si vous recevez un résultat de test positif (vous avez le virus) ou que vous êtes un contact étroit selon la
           définition de la santé publique
         </h3>
-        <p>
-          Vous pouvez retourner à l’école seulement lorsqu’un bureau de santé publique vous autorise à le
-          faire.
-        </p>
+        <p>Vous pouvez retourner à l’école seulement lorsqu’un bureau de santé publique vous autorise à le faire.</p>
       </>,
     ],
     GoingtoSchoolThem: [
@@ -295,12 +327,10 @@ const resultsSchool = {
           </li>
         </ul>
         <h3 className="h4-style">
-          S’ils reçoivent un résultat de test positif (ils ont le virus) ou qu’ils sont un contact étroit selon la définition de la santé publique
+          S’ils reçoivent un résultat de test positif (ils ont le virus) ou qu’ils sont un contact étroit selon la
+          définition de la santé publique
         </h3>
-        <p>
-          Ils peuvent retourner à l’école seulement lorsqu’un bureau de santé publique les autorise à le
-          faire.
-        </p>
+        <p>Ils peuvent retourner à l’école seulement lorsqu’un bureau de santé publique les autorise à le faire.</p>
       </>,
     ],
   },
