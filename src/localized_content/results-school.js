@@ -65,7 +65,6 @@ const resultsSchool = {
     HealthAndSafetyTipsYou: [
       <>
         <ul>
-          <li>Try to keep 2 metres away from people as much as possible</li>
           <li>
             If you are wearing a face covering or mask, make sure you have it on whenever you are indoors and that it
             covers both your mouth and nose
@@ -77,7 +76,6 @@ const resultsSchool = {
     HealthAndSafetyTipsThem: [
       <>
         <ul>
-          <li>They should try to keep 2 metres away from people as much as possible</li>
           <li>
             If they are wearing a face covering or mask, make sure they have it on whenever they are indoors and that it
             covers both their mouth and nose
@@ -213,7 +211,6 @@ const resultsSchool = {
     HealthAndSafetyTipsYou: [
       <>
         <ul>
-          <li>Essayez autant que possible de rester à deux mètres des autres</li>
           <li>
             Si vous portez un couvre-visage ou un masque, assurez-vous de le porter chaque fois que vous vous trouvez à
             l’intérieur et qu’il couvre votre bouche et votre nez
@@ -225,7 +222,6 @@ const resultsSchool = {
     HealthAndSafetyTipsThem: [
       <>
         <ul>
-          <li>Ils doivent essayer autant que possible de rester à deux mètres des autres</li>
           <li>
             S’ils portent un couvre-visage ou un masque, assurez-vous qu’ils le portent chaque fois qu’ils se trouvent à
             l’intérieur et qu’il couvre leur bouche et leur nez
