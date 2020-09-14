@@ -89,7 +89,7 @@ const resultsSchool = {
     HealthAndSafetyLinkText: "Learn how students and staff will be protected.",
     HealthAndSafetyLink: "https://www.ontario.ca/page/covid-19-reopening-schools#section-5",
     downloadPDF: "Download results (PDF)",
-    pdfFileName: "COVID-19 School Screening Results",
+    pdfFileName: "COVID-19 school screening result",
     staySafe: "Download the COVID Alert mobile app",
     downloadApp:
       "Protect yourself and your community. Get a phone alert if you have been exposed to COVID-19 and let others know if you test positive, without sharing any personal information.",
@@ -107,7 +107,7 @@ const resultsSchool = {
           <li>it has been at least 24 hours since your symptoms started improving (if you had symptoms)</li>
         </ul>
         <h3 className="h4-style">If you test negative (you do not have the virus)</h3>
-        <p>You can return to school if all the following apply:</p>
+        <p>You should isolate for 14 days unless all the following apply:</p>
         <ul>
           <li>you do not have a fever (without using medication)</li>
           <li>it has been at least 24 hours since your symptoms started improving (if you had symptoms)</li>
@@ -130,7 +130,7 @@ const resultsSchool = {
           <li>it has been at least 24 hours since their symptoms started improving (if they had symptoms) </li>
         </ul>
         <h3 className="h4-style">If they test negative (they do not have the virus)</h3>
-        <p>They can return to school if all the following apply:</p>
+        <p>They should isolate for 14 days, unless  all the following apply:</p>
         <ul>
           <li>they do not have a fever (without using medication)</li>
           <li>it has been at least 24 hours since their symptoms started improving (if they had symptoms)</li>
@@ -258,7 +258,7 @@ const resultsSchool = {
           </li>
         </ul>
         <h3 className="h4-style">Si vous recevez un résultat de test négatif (vous n’avez pas le virus)</h3>
-        <p>Vous pouvez retourner à l’école si tous les critères qui suivent s’appliquent :</p>
+        <p>Vous devriez vous isoler pendant 14 jours, à moins que tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>vous ne faites pas de fièvre (sans prendre de médicaments)</li>
           <li>
@@ -290,7 +290,7 @@ const resultsSchool = {
           </li>
         </ul>
         <h3 className="h4-style">S’ils reçoivent un résultat de test négatif (ils n’ont pas le virus)</h3>
-        <p>Ils peuvent retourner à l’école si tous les critères qui suivent s’appliquent :</p>
+        <p>Ils devriez vous isoler pendant 14 jours, à moins que tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>ils ne font pas de fièvre (sans prendre de médicaments)</li>
           <li>
