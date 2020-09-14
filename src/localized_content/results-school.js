@@ -276,7 +276,7 @@ const resultsSchool = {
       <>
         <p>Vous hésitez concernant leur retour à l’école? Discutez avec un fournisseur de soins de santé.</p>
         <h3 className="h4-style">S’ils ne passent pas de test</h3>
-        <p>Ils devriez vous isoler pendant 14 jours, à moins que tous les critères qui suivent s’appliquent :</p>
+        <p>Ils devraient s'isoler pendant 14 jours, à moins que tous les critères qui suivent s’appliquent :</p>
         <ul>
           <li>un médecin leur a diagnostiqué une autre maladie</li>
           <li>ils ne font pas de fièvre (sans prendre de médicaments)</li>
