@@ -48,7 +48,6 @@
 .k-pdf-export a:not(.ontario-main-header__logo-link):not(.retake-test)::after {
   content: " (" attr(href) ") ";
   display: block;
-  overflow: hidden;
   font: 10px "DejaVu Sans";
   font-weight: 400;
   text-shadow: 0 0 0;
