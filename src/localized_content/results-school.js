@@ -350,7 +350,7 @@ const resultsSchool = {
         <p>Ils peuvent retourner à l’école seulement lorsqu’un bureau de santé publique les autorise à le faire.</p>
       </>,
     ],
-    siblingsHeading: "Frères, sœurs et autres personnes vivant sous le même toit*",
+    siblingsHeading: "Frères, sœurs et autres personnes vivant sous le même toit",
     siblingsContent: [
       <>
         <p>
