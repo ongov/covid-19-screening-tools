@@ -26,7 +26,7 @@
 @font-face {
   font-family: "DejaVu Sans";
   font-weight: normal;
-  src: url("//kendo.cdn.telerik.com/2016.2.607/styles/fonts/DejaVu/DejaVuSans.ttf");
+  src: url("../fonts/DejaVu/DejaVuSans.ttf");
 }
 
 .k-pdf-export [class^='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Heading'],
