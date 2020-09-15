@@ -10,23 +10,45 @@ export default ({ lang, screenerType, meta = {} }) => {
       query {
         site {
           siteMetadata {
-            en {
-              title
-              description
-              author
-              twitter_site
-              og_url
-              og_image
-              og_locale
+            courthouse {
+              en {
+                title
+                description
+                author
+                twitter_site
+                og_url
+                og_image
+                og_locale
+              }
+              fr {
+                title
+                description
+                author
+                twitter_site
+                og_url
+                og_image
+                og_locale
+              }
             }
-            fr {
-              title
-              description
-              author
-              twitter_site
-              og_url
-              og_image
-              og_locale
+            school {
+              en {
+                title
+                description
+                author
+                twitter_site
+                og_url
+                og_image
+                og_locale
+              }
+              fr {
+                title
+                description
+                author
+                twitter_site
+                og_url
+                og_image
+                og_locale
+              }
             }
           }
         }
@@ -39,19 +61,19 @@ export default ({ lang, screenerType, meta = {} }) => {
       htmlAttributes={{
         lang,
       }}
-      title={site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType])}
+      title={site.siteMetadata[screenerType][lang].title}
       meta={[
         {
           name: `description`,
-          content: site.siteMetadata[lang].description.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].description,
         },
         {
           property: `og:title`,
-          content: site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].title,
         },
         {
           property: `og:description`,
-          content: site.siteMetadata[lang].description.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].description,
         },
         {
           property: `og:type`,
@@ -59,15 +81,15 @@ export default ({ lang, screenerType, meta = {} }) => {
         },
         {
           property: `og:url`,
-          content: site.siteMetadata[lang].og_url.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].og_url,
         },
         {
           property: `og:image`,
-          content: site.siteMetadata[lang].og_image.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].og_image,
         },
         {
           property: `og:locale`,
-          content: site.siteMetadata[lang].og_locale,
+          content: site.siteMetadata[screenerType][lang].og_locale,
         },
         {
           name: `twitter:card`,
@@ -75,19 +97,19 @@ export default ({ lang, screenerType, meta = {} }) => {
         },
         {
           name: `twitter:site`,
-          content: site.siteMetadata[lang].twitter_site,
+          content: site.siteMetadata[screenerType][lang].twitter_site,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata[lang].twitter_site,
+          content: site.siteMetadata[screenerType][lang].twitter_site,
         },
         {
           name: `twitter:title`,
-          content: site.siteMetadata[lang].title.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].title,
         },
         {
           name: `twitter:description`,
-          content: site.siteMetadata[lang].description.replace(/\|\|SCREENER_TYPE\|\|/, screening[lang][screenerType]),
+          content: site.siteMetadata[screenerType][lang].description,
         },
       ].concat(meta)}
     />
