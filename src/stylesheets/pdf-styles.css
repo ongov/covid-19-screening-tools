@@ -23,6 +23,12 @@
   src: url("../fonts/raleway-modified-700/raleway-modified-700.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "DejaVu Sans";
+  font-weight: normal;
+  src: url("../fonts/DejaVu/DejaVuSans.ttf");
+}
+
 .k-pdf-export [class^='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Heading'],
 .k-pdf-export[class*='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Heading'],
 .k-pdf-export [class^='approved__HeaderDate'] [class^='outcome-content-block-with-icon__Content'],
@@ -41,6 +47,10 @@
 
 .k-pdf-export a:not(.ontario-main-header__logo-link):not(.retake-test)::after {
   content: " (" attr(href) ") ";
+  display: block;
+  font: 10px "DejaVu Sans";
+  font-weight: 400;
+  text-shadow: 0 0 0;
 }
 
 .k-pdf-export a.retake-test {
