@@ -18,6 +18,7 @@ import CancelSmall from "../../images/inline-svgs/ontario-icon-cancel-small.inli
 import FeedbackIcon from "../../images/ontario-icon-feedback.svg"
 import Information from "../../images/ontario-icon-information-red.svg"
 import SchoolIcon from "../../images/return_to_school.svg"
+import SiblingsIcon from "../../images/ontario-icon-siblings.svg"
 
 const Red = "#D81A21"
 
@@ -50,6 +51,15 @@ const IconSchool = styled.span`
   display: inline-block;
   width: 3.35rem;
   height: 3.1rem;
+  margin-top: -0.4rem;
+`
+
+const IconSiblings = styled.span`
+  background-image: url(${SiblingsIcon});
+  background-size: 100%;
+  display: inline-block;
+  width: 2.35rem;
+  height: 3rem;
   margin-top: -0.4rem;
 `
 
@@ -86,6 +96,9 @@ export default ({ lang, children }) => {
               </>
             )}
           </>
+        </ContentBlock>
+        <ContentBlock lang={lang} icon={<IconSiblings />} heading={resultsSchool[lang].siblingsHeading}>
+          {resultsSchool[lang].siblingsContent}
         </ContentBlock>
         <ContentBlock lang={lang} icon={<IconSchool />} heading={`${resultsSchool[lang].GoingtoSchoolHeading}`}>
           <>

@@ -155,6 +155,23 @@ const resultsSchool = {
         <p>They can return to school only when they are cleared by your local public health unit. </p>
       </>,
     ],
+    siblingsHeading: "Siblings or other people you live with",
+    siblingsContent: [
+      <>
+        <p>They can go to school if they do not have symptoms and take the screening.</p>
+        <p>
+          <strong>However, some public health units have different rules</strong>. Check your{" "}
+          <a
+            href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx"
+            target="_blank"
+            rel="noopener"
+          >
+            local public health unit’s website
+          </a>{" "}
+          for school reopening guidance and any other actions to take.
+        </p>
+      </>,
+    ],
   },
   fr: {
     title: "Résultat du dépistage de la COVID-19 pour les écoles",
@@ -331,6 +348,26 @@ const resultsSchool = {
           définition de la santé publique
         </h3>
         <p>Ils peuvent retourner à l’école seulement lorsqu’un bureau de santé publique les autorise à le faire.</p>
+      </>,
+    ],
+    siblingsHeading: "Frères, sœurs et autres personnes vivant sous le même toit*",
+    siblingsContent: [
+      <>
+        <p>
+          Les frères, les sœurs et les autres personnes vivant sous le même toit peuvent aller à l’école si elles ne
+          présentent aucun symptôme et si elles font le test de dépistage de la COVID-19 pour les écoles.
+        </p>
+        <p>
+          <strong>Cependant, certains bureaux de santé publique appliquent des règles différentes</strong>. Consultez{" "}
+          <a
+            href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx"
+            target="_blank"
+            rel="noopener"
+          >
+            le site Web de votre bureau de santé publique local
+          </a>{" "}
+          pour connaître les directives relatives à la réouverture des écoles et toute autre mesure à prendre.
+        </p>
       </>,
     ],
   },
