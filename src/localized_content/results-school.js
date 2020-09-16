@@ -136,17 +136,16 @@ const resultsSchool = {
     siblingsHeading: "Siblings or other people you live with",
     siblingsContent: [
       <>
-        <p>They can go to school if they do not have symptoms and take the screening.</p>
         <p>
-          <strong>However, some public health units have different rules</strong>. Check your{" "}
+          If someone in your household has symptoms, contact your{" "}
           <a
             href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx"
             target="_blank"
             rel="noopener"
           >
-            local public health unit’s website
+            local public health unit
           </a>{" "}
-          for school reopening guidance and any other actions to take.
+          to see if those without symptoms should go to school as these rules are based on local risk.
         </p>
       </>,
     ],
