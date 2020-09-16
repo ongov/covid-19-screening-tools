@@ -27,17 +27,6 @@ const resultsSchool = {
             </a>{" "}
             to get a COVID-19 test
           </li>
-          <li>
-            Check the school reopening guidance posted on your{" "}
-            <a
-              href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx"
-              target="_blank"
-              rel="noopener"
-            >
-              local public health unit’s website
-            </a>{" "}
-            for any other actions you or the people you live with need to take
-          </li>
         </ol>
       </>,
     ],
@@ -58,17 +47,6 @@ const resultsSchool = {
               visit an assessment centre
             </a>{" "}
             to get a COVID-19 test
-          </li>
-          <li>
-            Check the school reopening guidance posted on your{" "}
-            <a
-              href="http://www.health.gov.on.ca/en/common/system/services/phu/locations.aspx"
-              target="_blank"
-              rel="noopener"
-            >
-              local public health unit’s website
-            </a>{" "}
-            for any other actions they or the people they live with need to take
           </li>
         </ol>
       </>,
@@ -206,17 +184,6 @@ const resultsSchool = {
             </a>{" "}
             si vous voulez subir un test de dépistage de la COVID-19
           </li>
-          <li>
-            Pour connaître toute autre mesure que vous ou les personnes avec qui vous vivez devez prendre, veuillez lire
-            les directives relatives à la réouverture des écoles, publiées sur{" "}
-            <a
-              href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx"
-              target="_blank"
-              rel="noopener"
-            >
-              le site Web de votre bureau local de santé publique
-            </a>
-          </li>
         </ol>
       </>,
     ],
@@ -241,17 +208,6 @@ const resultsSchool = {
               présentez-vous dans un centre d’évaluation
             </a>{" "}
             pour passer un test de dépistage de la COVID-19
-          </li>
-          <li>
-            Pour connaître toute autre mesure qu’ils ou les personnes avec qui ils vivent devez prendre, veuillez lire
-            les directives relatives à la réouverture des écoles, publiées sur{" "}
-            <a
-              href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx"
-              target="_blank"
-              rel="noopener"
-            >
-              le site Web de votre bureau local de santé publique
-            </a>{" "}
           </li>
         </ol>
       </>,
