@@ -133,7 +133,7 @@ const resultsSchool = {
         <p>They can return to school only when they are cleared by your local public health unit. </p>
       </>,
     ],
-    siblingsHeading: "Siblings or other people you live with",
+    siblingsHeading: "Siblings or other people you live with who do not have symptoms",
     siblingsContent: [
       <>
         <p>
@@ -145,8 +145,9 @@ const resultsSchool = {
           >
             local public health unit
           </a>{" "}
-          to see if those without symptoms should go to school as these rules are based on local risk.
+          to see if those without symptoms should go to school.
         </p>
+        <p>Some public health units, like Ottawa and Peel, have different rules based on local risk.</p>
       </>,
     ],
   },
@@ -305,7 +306,7 @@ const resultsSchool = {
         <p>Ils peuvent retourner à l’école seulement lorsqu’un bureau de santé publique les autorise à le faire.</p>
       </>,
     ],
-    siblingsHeading: "Frères, sœurs et autres personnes vivant sous le même toit",
+    siblingsHeading: "Frères, sœurs et autres personnes vivant sous le même toit et ne présentant pas de symptômes",
     siblingsContent: [
       <>
         <p>
@@ -315,10 +316,13 @@ const resultsSchool = {
             target="_blank"
             rel="noopener"
           >
-            votre bureau de santé publique local
+            votre bureau de santé publique
           </a>{" "}
-          pour savoir si les membres de votre foyer qui ne présentent pas de symptômes peuvent se rendre à l’école, car
-          ce sont les risques locaux qui détermineront les mesures en la matière.
+          local pour savoir si les membres de votre foyer ne présentant pas de symptômes peuvent se rendre à l’école.
+        </p>
+        <p>
+          Certains bureaux de santé publique, comme ceux d’Ottawa et de Peel, appliquent des règles différentes en
+          fonction du risque local.
         </p>
       </>,
     ],
