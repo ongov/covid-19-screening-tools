@@ -309,19 +309,16 @@ const resultsSchool = {
     siblingsContent: [
       <>
         <p>
-          Les frères, les sœurs et les autres personnes vivant sous le même toit peuvent aller à l’école si elles ne
-          présentent aucun symptôme et si elles font le test de dépistage de la COVID-19 pour les écoles.
-        </p>
-        <p>
-          <strong>Cependant, certains bureaux de santé publique appliquent des règles différentes</strong>. Consultez{" "}
+          Si une personne au sein de votre foyer présente des symptômes, veuillez communiquer avec{" "}
           <a
             href="http://www.health.gov.on.ca/fr/common/system/services/phu/locations.aspx"
             target="_blank"
             rel="noopener"
           >
-            le site Web de votre bureau de santé publique local
+            votre bureau de santé publique local
           </a>{" "}
-          pour connaître les directives relatives à la réouverture des écoles et toute autre mesure à prendre.
+          pour savoir si les membres de votre foyer qui ne présentent pas de symptômes peuvent se rendre à l’école, car
+          ce sont les risques locaux qui détermineront les mesures en la matière.
         </p>
       </>,
     ],
