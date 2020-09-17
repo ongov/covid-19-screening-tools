@@ -242,7 +242,7 @@
     "court_name_fr": "Palais De Justice De Gore Bay",
     "address_fr": "27, rue Phipps, Gore Bay ON P0P 1H0",
     "phone": "705-282-2461",
-    "duty_counsel_phone": "705-673-81832",
+    "duty_counsel_phone": "705-920-9369",
     "crowns_office_phone": "705 282-0194",
     "jury_office_phone": "705-282-2461"
   },
@@ -429,6 +429,19 @@
     "jury_office_phone": "519-660-3060"
   },
   {
+    "court_name_display": "London - London Community Justice Centre",
+    "court_name_display_fr": "London - Centre de Jusitice Communautaire",
+    "municipality": "London",
+    "court_name": "London Community Justice Centre",
+    "address": "332-333 Richmond St. London, ON, N6A 3C2",
+    "court_name_fr": "Centre de Jusitice Communautaire De London",
+    "address_fr": "332-333, rue Richmond, London, On, L9T1Y7",
+    "phone": "519-660-3050",
+    "duty_counsel_phone": "519-660-5095",
+    "crowns_office_phone": "226-219-8593",
+    "jury_office_phone": "NA"
+  },
+  {
     "court_name_display": "Milton - Milton Courthouse",
     "court_name_display_fr": "Milton - Palais de justice de Milton",
     "municipality": "Milton",
@@ -602,7 +615,7 @@
     "court_name_display_fr": "Palais De Justice De Perth",
     "municipality": "Perth",
     "court_name": "Perth Courthouse",
-    "address": "43 Drummond Street East, Perth ON K7H 1G1",
+    "address": "43 Drummond Street East. Perth ON K7H 1G1",
     "court_name_fr": "Palais De Justice De Perth",
     "address_fr": "43, rue Drummond, Perth ON K7H 1G1",
     "phone": "613-267-2021",
