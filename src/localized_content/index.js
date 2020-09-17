@@ -34,7 +34,6 @@ const general = {
     lastUpdated: "Last updated:",
     breadcrumbs: [
       { url: "https://www.ontario.ca/page/government-ontario", text: "Home" },
-      { url: "https://www.ontario.ca/page/health-care-ontario", text: "Health and wellness" },
       { url: "https://covid-19.ontario.ca/", text: "COVID-19" },
     ],
     outcome: "COVID-19 screening result",
@@ -61,7 +60,6 @@ const general = {
     lastUpdated: "Dernière version :",
     breadcrumbs: [
       { url: "https://www.ontario.ca/fr/page/gouvernement-de-lontario", text: "Accueil" },
-      { url: "https://www.ontario.ca/fr/page/les-soins-de-sante-en-ontario", text: "Les soins de santé en Ontario" },
       { url: "https://covid-19.ontario.ca/fr", text: "COVID-19" },
     ],
     outcome: "COVID-19 screening result",
