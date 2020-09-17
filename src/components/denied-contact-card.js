@@ -38,6 +38,7 @@ export default ({ lang, courthouse }) => {
   const courthouseNum = getPhoneNumbers(courthouse && courthouse.phone)
   const crownNum = getPhoneNumbers(courthouse && courthouse.crowns_office_phone)
   const juryNum = getPhoneNumbers(courthouse && courthouse.jury_office_phone)
+  const provincial_offences_court = lang==="fr" ? (courthouse && courthouse.court_name_display_fr.includes("infractions provinciales")) : (courthouse && courthouse.court_name_display.includes("Provincial Offences"));
 
   return (
     <Container>
@@ -58,6 +59,8 @@ export default ({ lang, courthouse }) => {
           </>
         )}
       </ContentBlock>
+      {!provincial_offences_court && (
+        <>
       <ContentBlock>
         <p>
           <strong>{content[lang].plaintiffsOrDefendants}</strong>
@@ -124,7 +127,8 @@ export default ({ lang, courthouse }) => {
           )}
         </ul>
       </ContentBlock>
-
+      </>
+      )}
       {courthouseNum && (
         <ContentBlock>
           <p>
